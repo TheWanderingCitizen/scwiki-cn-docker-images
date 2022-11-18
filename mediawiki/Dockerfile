@@ -1,6 +1,7 @@
 FROM php:7.4-fpm
 
 # System dependencies
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 RUN set -eux; \
 	\
 	apt-get update; \
@@ -10,6 +11,7 @@ RUN set -eux; \
 		imagemagick \
 		# Required for SyntaxHighlighting
 		python3 \
+		python-pygments \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
@@ -30,7 +32,7 @@ RUN set -eux; \
 		mbstring \
 		mysqli \
 		opcache \
-    luasandbox \
+    		luasandbox \
 	; \
 	\
 	pecl install APCu-5.1.21; \
@@ -74,17 +76,10 @@ ENV MEDIAWIKI_VERSION 1.35.8
 
 # MediaWiki setup
 RUN set -eux; \
-	fetchDeps=" \
-		gnupg \
-		dirmngr \
-	"; \
-	apt-get update; \
-	apt-get install -y --no-install-recommends $fetchDeps; \
 	\
-  git clone https://github.com/StarCitizenTools/mediawiki.git --single-branch --branch production --recurse-submodules . \
+  	git clone https://github.com/StarCitizenTools/mediawiki.git --single-branch --branch production --recurse-submodules .; \
 	chown -R www-data:www-data extensions skins cache images; \
 	\
-	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; \
-	rm -rf /var/lib/apt/lists/*
+	composer intall --no-dev
 
 CMD ["php-fpm"]
