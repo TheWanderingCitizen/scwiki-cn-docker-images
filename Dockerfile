@@ -24,7 +24,6 @@ RUN set -eux; \
 	apt-get install -y --no-install-recommends \
 		libicu-dev \
 		libonig-dev \
-		php-luasandbox \
 	; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
@@ -35,7 +34,10 @@ RUN set -eux; \
 		opcache \
 	; \
 	\
-	pecl install APCu-5.1.21; \
+	pecl install \ 
+		APCu-5.1.21 \
+		luasandbox \
+	; \
 	docker-php-ext-enable \
 		apcu \
 		luasandbox \
