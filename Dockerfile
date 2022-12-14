@@ -25,6 +25,7 @@ RUN set -eux; \
 	apt-get install -y --no-install-recommends \
 		libicu-dev \
 		libonig-dev \
+		php-magick \
 	; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
