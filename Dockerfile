@@ -25,7 +25,7 @@ RUN set -eux; \
 	apt-get install -y --no-install-recommends \
 		libicu-dev \
 		libonig-dev \
-		php-magick \
+		libmagickwand-dev \
 	; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
@@ -34,12 +34,12 @@ RUN set -eux; \
 		mbstring \
 		mysqli \
 		opcache \
-		imagick \ 
 	; \
 	\
 	pecl install \ 
 		APCu-5.1.21 \
 		luasandbox \
+		imagick \
 	; \
 	docker-php-ext-enable \
 		apcu \
