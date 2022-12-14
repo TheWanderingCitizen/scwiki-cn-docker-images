@@ -42,6 +42,7 @@ RUN set -eux; \
 	docker-php-ext-enable \
 		apcu \
 		luasandbox \
+		imagemagick \
 	; \
 	rm -r /tmp/pear; \
 	\
