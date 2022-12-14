@@ -11,7 +11,7 @@ RUN set -eux; \
 		imagemagick \
 		# Required for SyntaxHighlighting
 		python3 \
-		python-pygments \
+		python3-pygments \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
