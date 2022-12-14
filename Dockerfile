@@ -12,7 +12,8 @@ RUN set -eux; \
 		# Required for SyntaxHighlighting
 		python3 \
 		python3-pygments \
-		liblua5.1-0-dev \
+		7z \
+		openssh-client \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
@@ -26,6 +27,7 @@ RUN set -eux; \
 		libicu-dev \
 		libonig-dev \
 		libmagickwand-dev \
+		liblua5.1-0-dev \
 	; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
