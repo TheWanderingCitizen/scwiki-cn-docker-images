@@ -33,6 +33,7 @@ RUN set -eux; \
 		mbstring \
 		mysqli \
 		opcache \
+		imagick \ 
 	; \
 	\
 	pecl install \ 
@@ -42,7 +43,7 @@ RUN set -eux; \
 	docker-php-ext-enable \
 		apcu \
 		luasandbox \
-		imagemagick \
+		imagick  \
 	; \
 	rm -r /tmp/pear; \
 	\
