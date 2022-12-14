@@ -85,6 +85,6 @@ RUN set -eux; \
   	git clone https://github.com/StarCitizenTools/mediawiki.git --single-branch --branch production --recurse-submodules .; \
 	chown -R www-data:www-data extensions skins cache images; \
 	\
-	composer intall --no-dev
+	composer install --no-dev
 
 CMD ["php-fpm"]
