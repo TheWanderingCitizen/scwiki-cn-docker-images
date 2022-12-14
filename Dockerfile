@@ -12,6 +12,7 @@ RUN set -eux; \
 		# Required for SyntaxHighlighting
 		python3 \
 		python3-pygments \
+		liblua5.1-0-dev \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
