@@ -120,9 +120,7 @@ COPY ./config/robots.txt /var/www/mediawiki/robots.txt
 COPY ./resources/assets/favicon.ico /var/www/mediawiki/favicon.ico
 
 RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; \
-    echo 'max_execution_time = 60' >> /usr/local/etc/php/conf.d/docker-php-executiontime.ini; \
-    chown www-data:www-data /usr/local/bin/queue; \
-    chmod +x /usr/local/bin/queue
+    echo 'max_execution_time = 60' >> /usr/local/etc/php/conf.d/docker-php-executiontime.ini; 
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
