@@ -16,7 +16,6 @@ RUN set -eux; \
 		webp \
 		unzip \
 		openssh-client \
-		php-redis \
 		# Required for SyntaxHighlighting
 		python3 \
 		python3-pygments \
@@ -51,11 +50,13 @@ RUN set -eux; \
 		APCu-5.1.21 \
 		luasandbox \
 		imagick \
+		redis \
 	; \
 	docker-php-ext-enable \
 		apcu \
 		luasandbox \
 		imagick  \
+		redis \
 	; \
 	rm -r /tmp/pear; \
 	\
