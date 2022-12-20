@@ -2,7 +2,7 @@
         "require": {
                 "mediawiki/advanced-search": "1.35.0",
                 "mediawiki/babel": "2022.10",
-                "mediawiki/checkuser": "1.35.0"
+                "mediawiki/checkuser": "1.35.0",
                 "mediawiki/cirrus-search": "1.35.0",
                 "mediawiki/citizen-skin": "2.1.0",
                 "mediawiki/cldr": "2022.10",
@@ -49,7 +49,7 @@
                                 "extensions/CirrusSearch/composer.json",
                                 "extensions/Elastica/composer.json",
                                 "extensions/OATHAuth/composer.json",
-                                "extensions/TemplateStyles/composer.json",
+                                "extensions/TemplateStyles/composer.json"
                         ]
                 }
         },
