@@ -10,10 +10,21 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 #General Settings
 $wgSitename = "Star Citizen Wiki";
 $wgMetaNamespace = "Star_Citizen";
+$wgServer = "https://k8s.starcitizen.tools";
 $wgAllowSiteCSSOnRestrictedPages = true;
 $wgLocaltimezone = "UTC";
 $wgFragmentMode = [ 'html5', 'legacy' ];
 $wgMaxShellMemory = 0;
+$wgSecretKey = "${{ secrets.MEDIAWIKI_SECRETKEY }}";
+$wgUpgradeKey = "${{ secrets.MEDIAWIKI_UPGRADEKEY }}";
+
+# Database settings
+$wgDBtype = "mysql";
+$wgDBserver = "localhost";
+$wgDBname = "scw_PROD";
+$wgDBuser = "scw_PROD";
+$wgDBpassword = "${{ secrets.PRD_DB_PASSWORD }}";
+$wgDBprefix = "wiki";
 
 #Controls if the main page should be served as the domain root.
 $wgMainPageIsDomainRoot = true;
@@ -328,12 +339,15 @@ $wgPlausibleTrackCitizenMenuLinks = true;
 
 # MultiPurge
 $wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
+$wgMultiPurgeCloudFlareZoneId = '${{ secrets.CLOUDFLARE_ZONEID }}';
+$wgMultiPurgeCloudflareApiToken = '${{ secrets.CLOUDFLARE_APITOKEN }}';
 
 # PageImages
 $wgPageImagesNamespaces = array( 'NS_MAIN','NS_UPDATE', 'NS_GUIDE', 'NS_COMMLINK', 'NS_ORG' );
 $wgPageImagesOpenGraphFallbackImage = "$wgResourceBasePath/resources/assets/sitelogo.svg";
 
 #CirrusSearch
+$wgCirrusSearchIndexBaseName = 'scw_prod';
 $wgSearchType = 'CirrusSearch';
 $wgCirrusSearchUseCompletionSuggester = 'yes';
 $wgCirrusSearchCompletionSuggesterSubphrases = [
@@ -342,6 +356,9 @@ $wgCirrusSearchCompletionSuggesterSubphrases = [
     'type' => 'anywords',
     'limit' => 5,
 ];
+
+# Discord
+$wgDiscordWebhookURL = ["${{ secrets.DISCORD_WEBHOOKURL }}"];
 
 #DismissableSiteNotice
 $wgDismissableSiteNoticeForAnons = true;
@@ -355,6 +372,9 @@ $wgApiFrameOptions = 'SAMEORIGIN';
 $wgAllowCopyUploads = true;
 $wgCopyUploadsDomains = array( '*.flickr.com', '*.staticflickr.com' );
 $wgUploadNavigationUrl = '/Special:UploadWizard';
+$wgUploadWizardConfig = array(
+  'flickrApiKey' => '${{ secrets.FLICKR_APIKEY }}',
+  );
 $wgUploadWizardConfig = array(
   'debug' => false,
   'altUploadForm' => 'Special:Upload',
@@ -464,9 +484,10 @@ $wgMediaViewerEnableByDefault = true;
 $wgMediaViewerEnableByDefaultForAnonymous = true;
 
 #ConfirmEdit
-#$wgCaptchaClass = 'ReCaptchaNoCaptcha';
-$wgCaptchaTriggers['edit']          = true;
-$wgCaptchaTriggers['create']        = true;
+$wgHCaptchaSiteKey = '${{ secrets.HCAPTCHA_SITEKEY }}';
+$wgHCaptchaSecretKey = '${{ secrets.HCAPTCHA_SECRETKEY }}';
+$wgCaptchaTriggers['edit'] = true;
+$wgCaptchaTriggers['create'] = true;
 
 #CleanChanges
 #$wgCCTrailerFilter = true;

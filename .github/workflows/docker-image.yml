@@ -1,4 +1,4 @@
-name: ci
+name: Mediawiki Image Build
 
 on:
   push:
@@ -9,6 +9,69 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - 
+        name: Secret CLOUDFLARE_APITOKEN
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: config/LocalSettings.php
+          secret-name: CLOUDFLARE_APITOKEN
+          secret-value: ${{ secrets.CLOUDFLARE_APITOKEN }}
+      - 
+        name: Secret CLOUDFLARE_ZONEID
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: config/LocalSettings.php
+          secret-name: CLOUDFLARE_ZONEID
+          secret-value: ${{ secrets.CLOUDFLARE_ZONEID }}
+      - 
+        name: Secret DISCORD_WEBHOOKURL
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: config/LocalSettings.php
+          secret-name: DISCORD_WEBHOOKURL
+          secret-value: ${{ secrets.DISCORD_WEBHOOKURL }}
+      - 
+        name: Secret FLICKR_APIKEY
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: config/LocalSettings.php
+          secret-name: FLICKR_APIKEY
+          secret-value: ${{ secrets.FLICKR_APIKEY }}
+      - 
+        name: Secret HCAPTCHA_SECRETKEY
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: config/LocalSettings.php
+          secret-name: HCAPTCHA_SECRETKEY
+          secret-value: ${{ secrets.HCAPTCHA_SECRETKEY }}
+      - 
+        name: Secret HCAPTCHA_SITEKEY
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: config/LocalSettings.php
+          secret-name: HCAPTCHA_SITEKEY
+          secret-value: ${{ secrets.HCAPTCHA_SITEKEY }}
+      - 
+        name: Secret MEDIAWIKI_SECRETKEY
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: config/LocalSettings.php
+          secret-name: MEDIAWIKI_SECRETKEY
+          secret-value: ${{ secrets.MEDIAWIKI_SECRETKEY }}
+      - 
+        name: Secret MEDIAWIKI_UPGRADEKEY
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: config/LocalSettings.php
+          secret-name: MEDIAWIKI_UPGRADEKEY
+          secret-value: ${{ secrets.MEDIAWIKI_UPGRADEKEY }}
+      - 
+        name: Secret PRD_DB_PASSWORD
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: config/LocalSettings.php
+          secret-name: PRD_DB_PASSWORD
+          secret-value: ${{ secrets.PRD_DB_PASSWORD }}
       -
         name: Login to Docker Hub
         uses: docker/login-action@v2
