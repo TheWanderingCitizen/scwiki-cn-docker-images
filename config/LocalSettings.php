@@ -15,15 +15,15 @@ $wgAllowSiteCSSOnRestrictedPages = true;
 $wgLocaltimezone = "UTC";
 $wgFragmentMode = [ 'html5', 'legacy' ];
 $wgMaxShellMemory = 0;
-$wgSecretKey = "${{ secrets.MEDIAWIKI_SECRETKEY }}";
-$wgUpgradeKey = "${{ secrets.MEDIAWIKI_UPGRADEKEY }}";
+$wgSecretKey = "{$_ENV['MEDIAWIKI_SECRETKEY']}";
+$wgUpgradeKey = "{$_ENV['MEDIAWIKI_UPGRADEKEY']}";
 
 # Database settings
 $wgDBtype = "mysql";
 $wgDBserver = "localhost";
 $wgDBname = "scw_PROD";
 $wgDBuser = "scw_PROD";
-$wgDBpassword = "${{ secrets.PRD_DB_PASSWORD }}";
+$wgDBpassword = "{$_ENV['PRD_DB_PASSWORD']}";
 $wgDBprefix = "wiki";
 
 #Controls if the main page should be served as the domain root.
@@ -339,8 +339,8 @@ $wgPlausibleTrackCitizenMenuLinks = true;
 
 # MultiPurge
 $wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
-$wgMultiPurgeCloudFlareZoneId = '${{ secrets.CLOUDFLARE_ZONEID }}';
-$wgMultiPurgeCloudflareApiToken = '${{ secrets.CLOUDFLARE_APITOKEN }}';
+$wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
+$wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
 
 # PageImages
 $wgPageImagesNamespaces = array( 'NS_MAIN','NS_UPDATE', 'NS_GUIDE', 'NS_COMMLINK', 'NS_ORG' );
@@ -358,7 +358,7 @@ $wgCirrusSearchCompletionSuggesterSubphrases = [
 ];
 
 # Discord
-$wgDiscordWebhookURL = ["${{ secrets.DISCORD_WEBHOOKURL }}"];
+$wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
 
 #DismissableSiteNotice
 $wgDismissableSiteNoticeForAnons = true;
@@ -373,7 +373,7 @@ $wgAllowCopyUploads = true;
 $wgCopyUploadsDomains = array( '*.flickr.com', '*.staticflickr.com' );
 $wgUploadNavigationUrl = '/Special:UploadWizard';
 $wgUploadWizardConfig = array(
-  'flickrApiKey' => '${{ secrets.FLICKR_APIKEY }}',
+  'flickrApiKey' => "{$_ENV['FLICKR_APIKEY']}",
   );
 $wgUploadWizardConfig = array(
   'debug' => false,
@@ -484,8 +484,8 @@ $wgMediaViewerEnableByDefault = true;
 $wgMediaViewerEnableByDefaultForAnonymous = true;
 
 #ConfirmEdit
-$wgHCaptchaSiteKey = '${{ secrets.HCAPTCHA_SITEKEY }}';
-$wgHCaptchaSecretKey = '${{ secrets.HCAPTCHA_SECRETKEY }}';
+$wgHCaptchaSiteKey = "{$_ENV['HCAPTCHA_SITEKEY']}";
+$wgHCaptchaSecretKey = "{$_ENV['HCAPTCHA_SECRETKEY']}";
 $wgCaptchaTriggers['edit'] = true;
 $wgCaptchaTriggers['create'] = true;
 
