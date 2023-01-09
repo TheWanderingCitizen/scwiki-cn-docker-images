@@ -148,7 +148,8 @@ RUN set -eux; \
                             --no-scripts; \
 	\
 	mv /var/www/provisioning/extensions/WikiSeo /var/www/provisioning/extensions/WikiSEO; \
-	mv /var/www/provisioning/skins/citizen /var/www/provisioning/skins/Citize
+	mv /var/www/provisioning/skins/citizen /var/www/provisioning/skins/Citizen; \
+	chown -R www-data:www-data /var/www
 
 EXPOSE 80
 
