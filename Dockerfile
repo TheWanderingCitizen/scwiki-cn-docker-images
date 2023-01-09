@@ -153,6 +153,8 @@ RUN set -eux; \
 	mv /var/www/provisioning/skins/citizen /var/www/provisioning/skins/Citizen; \
 	chown -R www-data:www-data /var/www
 
+WORKDIR /var/www/mediawiki
+
 EXPOSE 80
 
 CMD ["php-fpm"]
