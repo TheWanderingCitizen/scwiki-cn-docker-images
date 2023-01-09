@@ -104,8 +104,9 @@ RUN set -eux; \
         1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 \
     ; \
     gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; \
+	mkdir /var/www/provisioning; \
 	mkdir /var/www/mediawiki; \
-    tar -x --strip-components=1 -f mediawiki.tar.gz -C /var/www/mediawiki; \
+    tar -x --strip-components=1 -f mediawiki.tar.gz -C /var/www/provisioning; \
     gpgconf --kill all; \
     rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; \
     \
@@ -124,12 +125,12 @@ RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
-COPY composer.local.json /var/www/mediawiki
+COPY composer.local.json /var/www/provisioning
 
 RUN set -eux; \
    chown -R www-data:www-data /var/www
 
-WORKDIR /var/www/mediawiki
+WORKDIR /var/www/provisioning
 
 USER www-data
 
@@ -146,8 +147,8 @@ RUN set -eux; \
                             --no-interaction \
                             --no-scripts; \
 	\
-	mv /var/www/mediawiki/extensions/WikiSeo /var/www/mediawiki/extensions/WikiSEO; \
-	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen
+	mv /var/www/provisioning/extensions/WikiSeo /var/www/provisioning/extensions/WikiSEO; \
+	mv /var/www/provisioning/skins/citizen /var/www/provisioning/skins/Citize
 
 EXPOSE 80
 
