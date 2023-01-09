@@ -19,6 +19,7 @@ RUN set -eux; \
 		# Required for SyntaxHighlighting
 		python3 \
 		python3-pygments \
+		rsync \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
