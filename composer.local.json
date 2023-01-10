@@ -635,9 +635,9 @@
                         "package": {
                                 "name": "mediawiki/citizen-skin",
                                 "type": "mediawiki-skin",
-                                "version": "2.1.0",
+                                "version": "1.35.0",
                                 "dist": {
-                                        "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen/archive/refs/heads/main.zip",
+                                        "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen/archive/REL1_35.zip",
                                         "type": "zip"
                                 },
                                 "source": {
