@@ -1,7 +1,7 @@
 {
         "require": {
                 "mediawiki/advanced-search": "1.35.0",
-                "mediawiki/babel": "2022.10",
+                "mediawiki/babel": "2021.12",
                 "mediawiki/checkuser": "1.35.0",
                 "mediawiki/cirrus-search": "1.35.0",
                 "mediawiki/citizen-skin": "1.35.0",
@@ -35,11 +35,11 @@
                 "mediawiki/template-styles-extender": "1.35.0",
                 "mediawiki/thanks": "1.35.0",
                 "mediawiki/upload-wizard": "1.35.0",
-                "mediawiki/universal-language-selector": "2022.10",
+                "mediawiki/universal-language-selector": "2021.12",
                 "mediawiki/variables": "1.35.0",
                 "mediawiki/wiki-seo": "1.35.0",
                 "starcitizenwiki/embedvideo": "3.1.0",
-                "universal-omega/dynamic-page-list3": "3.3.10"
+                "universal-omega/dynamic-page-list3": "3.4.6"
         },
         "extra": {
                 "merge-plugin": {
