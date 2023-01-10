@@ -22,7 +22,7 @@ $wgUpgradeKey = "{$_ENV['MEDIAWIKI_UPGRADEKEY']}";
 $wgDBtype = "mysql";
 $wgDBserver = "localhost";
 $wgDBname = "scw_PROD";
-$wgDBuser = "scw_PROD";
+$wgDBuser = "root";
 $wgDBpassword = "{$_ENV['PRD_DB_PASSWORD']}";
 $wgDBprefix = "wiki";
 
