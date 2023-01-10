@@ -20,7 +20,7 @@ $wgUpgradeKey = "{$_ENV['MEDIAWIKI_UPGRADEKEY']}";
 
 # Database settings
 $wgDBtype = "mysql";
-$wgDBserver = "mariadb-service";
+$wgDBserver = "mariadb-service.default.svc.cluster.local";
 $wgDBname = "scw_PROD";
 $wgDBuser = "root";
 $wgDBpassword = "{$_ENV['PRD_DB_PASSWORD']}";
@@ -350,6 +350,9 @@ $wgPageImagesOpenGraphFallbackImage = "$wgResourceBasePath/resources/assets/site
 $wgCirrusSearchIndexBaseName = 'scw_prod';
 $wgSearchType = 'CirrusSearch';
 $wgCirrusSearchUseCompletionSuggester = 'yes';
+$wgCirrusSearchClusters = [
+    'default' => ['elasticsearch-es-elasticsearch.default.svc.cluster.local'],
+];
 $wgCirrusSearchCompletionSuggesterSubphrases = [
     'build'  => true,
     'use' => true,
