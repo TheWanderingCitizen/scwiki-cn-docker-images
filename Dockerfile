@@ -1,4 +1,4 @@
-FROM clickhouse/clickhouse-server:22.6-apline
+FROM clickhouse/clickhouse-server:22.6-alpine
 
 # RUN apt-get update && apt-get install cron -y && apt-get install vim -y
 
