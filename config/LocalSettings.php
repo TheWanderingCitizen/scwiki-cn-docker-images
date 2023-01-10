@@ -255,7 +255,7 @@ wfLoadExtension( 'Disambiguator' );
 wfLoadExtension( 'Discord' );
 wfLoadExtension( 'DiscussionTools' );
 wfLoadExtension( 'DismissableSiteNotice' );
-wfLoadExtension( 'DynamicPageList' );
+wfLoadExtension( 'DynamicPageList3' );
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Elastica' );
 wfLoadExtension( 'EmbedVideo' );
