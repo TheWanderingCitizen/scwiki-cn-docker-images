@@ -1,9 +1,9 @@
-name: Mediawiki Image Build
+name: clickhouse Image Build
 
 on:
   push:
     branches:
-      - 'mediawiki'
+      - 'clickhouse'
 
 jobs:
   docker:
