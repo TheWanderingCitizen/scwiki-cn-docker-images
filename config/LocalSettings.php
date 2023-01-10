@@ -542,7 +542,7 @@ $wgAllowHTMLEmail = true;
 
 $wgObjectCaches['redis'] = array(
     'class'                => 'RedisBagOStuff',
-    'servers'              => array( '127.0.0.1:6379' ),
+    'servers'              => array( 'redis-service.default.svc.cluster.local' ),
     // 'connectTimeout'    => 1,
     // 'persistent'        => false,
     // 'password'          => 'secret',
@@ -552,14 +552,14 @@ $wgObjectCaches['redis'] = array(
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
 	'order' => 'fifo',
-	'redisServer' => '127.0.0.1:6379',
+	'redisServer' => 'redis-service.default.svc.cluster.local',
 	'checkDelay' => true,
 	'daemonized' => true
 ];
 
 $wgJobQueueAggregator = [
 	'class'       => 'JobQueueAggregatorRedis',
-	'redisServer' => '127.0.0.1:6379',
+	'redisServer' => 'redis-service.default.svc.cluster.local',
 ];
 
 #$wgJobTypeConf['default'] = array(
