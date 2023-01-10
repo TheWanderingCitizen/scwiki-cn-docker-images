@@ -20,7 +20,7 @@ $wgUpgradeKey = "{$_ENV['MEDIAWIKI_UPGRADEKEY']}";
 
 # Database settings
 $wgDBtype = "mysql";
-$wgDBserver = "localhost";
+$wgDBserver = "mariadb-service";
 $wgDBname = "scw_PROD";
 $wgDBuser = "root";
 $wgDBpassword = "{$_ENV['PRD_DB_PASSWORD']}";
