@@ -10,7 +10,7 @@
                 "mediawiki/commons-metadata": "1.35.0",
                 "mediawiki/cookie-warning": "1.35.0",
                 "mediawiki/disambiguator": "1.35.0",
-                "mediawiki/discord-notifications": "1.35.0",
+                "mediawiki/discord": "1.35.0",
                 "mediawiki/discussion-tools": "1.35.0",
                 "mediawiki/dismissablesitenotice": "1.35.0",
                 "mediawiki/echo": "1.35.0",
@@ -378,7 +378,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "mediawiki/discord-notifications",
+                                "name": "mediawiki/discord",
                                 "type": "mediawiki-extension",
                                 "version": "1.35.0",
                                 "dist": {

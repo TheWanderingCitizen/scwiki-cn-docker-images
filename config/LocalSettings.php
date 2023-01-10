@@ -43,9 +43,6 @@ $wgShowSQLErrors = false;
 $wgDebugDumpSql = false;
 $wgDebugComments = false;
 
-## The protocol and server name to use in fully-qualified URLs
-#$wgServer = ""; NOW PLACED IN EXTERNAL INCLUDES FOLDER
-
 ## Force HTTPS
 $wgForceHTTPS = true;
 
@@ -238,11 +235,6 @@ $wgNativeImageLazyLoading = true;
 #604800 - 1 week
 $wgFooterLinkCacheExpiry = 604800;
 
-#=============================================== External Includes ===============================================
-
-require_once("/home/www-data/external_includes/mysql_pw.php");
-require_once("/home/www-data/external_includes/secret_keys.php");
-
 #=============================================== Extension Load ===============================================
 
 #wfLoadExtension( 'CleanChanges' );
@@ -253,7 +245,7 @@ wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'CirrusSearch' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
-wfLoadExtension( 'cldr' );
+wfLoadExtension( 'Cldr' );
 wfLoadExtension( 'CodeEditor' );
 wfLoadExtension( 'CodeMirror' );
 wfLoadExtension( 'CommonsMetadata' );
@@ -324,8 +316,8 @@ $wgParsoidSettings = [
 ];
 
 # Plausible
-$wgPlausibleDomain = 'https://analytics.starcitizen.tools';
-$wgPlausibleDomainKey = 'starcitizen.tools';
+$wgPlausibleDomain = 'https://analytics.k8s.starcitizen.tools';
+$wgPlausibleDomainKey = 'k8s.starcitizen.tools';
 $wgPlausibleHonorDNT = true;
 $wgPlausibleTrackLoggedIn = true;
 $wgPlausibleTrackOutboundLinks = true;
@@ -896,8 +888,6 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 };
 
 #============================== Final External Includes ===============================================
-
-require_once("/home/www-data/external_includes/misc_server_settings.php");
 
 # Override multilingual interface messages
 #$wgHooks['MessageCache::get'][] = function ( &$key ) {
