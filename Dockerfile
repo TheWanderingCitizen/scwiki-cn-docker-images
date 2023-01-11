@@ -162,6 +162,4 @@ RUN set -eux; \
 
 WORKDIR /var/www/mediawiki
 
-EXPOSE 80
-
 CMD ["php-fpm"]
