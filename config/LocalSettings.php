@@ -46,10 +46,6 @@ $wgDebugComments = false;
 ## Force HTTPS
 $wgForceHTTPS = true;
 
-# Don't include jQuery Migrate
-# TODO: Remember to remove it after 1.36+
-$wgIncludejQueryMigrate = false;
-
 # Sitemap
 $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
 
