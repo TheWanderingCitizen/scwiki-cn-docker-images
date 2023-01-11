@@ -540,9 +540,8 @@ $wgScribuntoDefaultEngine = 'luasandbox';
 #Echo
 $wgAllowHTMLEmail = true;
 
-#Redis
+# Job Queue
 /** @see RedisBagOStuff for a full explanation of these options. **/
-
 $wgObjectCaches['redis'] = array(
     'class'                => 'RedisBagOStuff',
     'servers'              => array( 'redis-service.default.svc.cluster.local' ),
@@ -551,7 +550,6 @@ $wgObjectCaches['redis'] = array(
     // 'password'          => 'secret',
     // 'automaticFailOver' => true,
 );
-
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
 	'order' => 'fifo',
@@ -559,18 +557,7 @@ $wgJobTypeConf['default'] = [
 	'checkDelay' => true,
 	'daemonized' => true
 ];
-
-$wgJobQueueAggregator = [
-	'class'       => 'JobQueueAggregatorRedis',
-	'redisServer' => 'redis-service.default.svc.cluster.local',
-];
-
-#$wgJobTypeConf['default'] = array(
-#  'class'          => 'JobQueueRedis',
-#  'redisServer'    => '127.0.0.1:6379',
-
-#  'claimTTL'       => 3600
-#);
+$wgJobRunRate = 0;
 
 #CookieWarning
 $wgCookieWarningEnabled = true;
