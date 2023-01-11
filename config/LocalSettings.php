@@ -90,6 +90,7 @@ $wgCSPHeader = [
 	'script-src' => [ 
 		'\'self\'',
 		'https://analytics.starcitizen.tools',
+    'https://analytics.k8s.starcitizen.tools',
 		'https://www.google-analytics.com',
 		'https://hcaptcha.com',
 		'https://*.hcaptcha.com'
@@ -98,6 +99,8 @@ $wgCSPHeader = [
 		'\'self\'',
 		'https://api.flickr.com',
 		'https://analytics.starcitizen.tools',
+    'https://analytics.k8s.starcitizen.tools',
+    'https://starcitizen.tools',
 		'https://www.google-analytics.com',
 		'https://hcaptcha.com', 
 		'https://*.hcaptcha.com',
