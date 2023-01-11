@@ -11,7 +11,7 @@ USER www-data
 
 RUN git clone https://github.com/wikimedia/mediawiki-services-jobrunner.git
 
-RUN mv /var/www/provisioning /var/www/mediawiki
+RUN mv /var/www/provisioning/ /var/www/mediawiki
 
 COPY --chown=www-data:www-data ./jobrunner-conf.json /var/www/html/mediawiki-services-jobrunner
 
