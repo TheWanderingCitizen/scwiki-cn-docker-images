@@ -508,7 +508,7 @@ $wgULSIMEEnabled = false;
 # $edgCacheTable = 'ed_url_cache'; Need to run ExternalData.sql first
 # $wgHTTPTimeout = 60; Set HTTP request timeout to 60s
 $edgCacheExpireTime = 3 * 24 * 60 * 60;
-$edgAllowExternalDataFrom = array( 'https://starcitizen.tools' );
+$edgAllowExternalDataFrom = array( 'https://starcitizen.tools', 'https://k8s.starcitizen.tools' );
 $edgExternalValueVerbose = false;
 
 #Visual Editor
@@ -569,18 +569,22 @@ $wgDplSettings['allowUnlimitedResults'] = true;
 #TemplateStyles
 $wgTemplateStylesAllowedUrls = [
   "audio" => [
+    "<^https://k8s\\.starcitizen\\.tools/>",
     "<^https://starcitizen\\.tools/>",
     "<^https://scwdev\\.czen\\.me/>"
   ],
   "image" => [
+    "<^https://k8s\\.starcitizen\\.tools/>",
     "<^https://starcitizen\\.tools/>",
     "<^https://scwdev\\.czen\\.me/>"
   ],
   "svg" => [
+    "<^https://k8s\\.starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
     "<^https://starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
     "<^https://scwdev\\.czen\\.me/[^?#]*\\.svg(?:[?#]|$)>"
   ],
   "font" => [
+    "<^https://k8s\\.starcitizen\\.tools/>",
     "<^https://starcitizen\\.tools/>",
     "<^https://scwdev\\.czen\\.me/>"
   ],
