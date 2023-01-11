@@ -1,4 +1,4 @@
-FROM starcitizentools/mediawikiwiki:latest
+FROM starcitizentools/mediawiki:latest
 
 USER root
 
