@@ -307,7 +307,6 @@ $wgDefaultUserOptions['usebetatoolbar'] = 1; // user option provided by WikiEdit
 
 # CookieWarning
 $wgCookieWarningEnabled = true;
-$wgCookieWarningGeoIPLookup = 'none';
 
 # ConfirmEdit
 $wgHCaptchaSiteKey = "{$_ENV['HCAPTCHA_SITEKEY']}";
@@ -318,7 +317,7 @@ $wgCaptchaTriggers['create'] = true;
 # Discord
 $wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
 
- #DynamicPageList
+# DynamicPageList3
 $wgDplSettings['recursiveTagParse'] = true;
 $wgDplSettings['allowUnlimitedResults'] = true;
 
@@ -380,7 +379,7 @@ $wgPlausibleTrackCitizenSearchLinks = true;
 $wgPlausibleTrackCitizenMenuLinks = true;
 
 # Popups
-#Reference Previews are enabled for all users by default
+# Reference Previews are enabled for all users by default
 $wgPopupsReferencePreviewsBetaFeature = false;
 
 # RelatedArticles 
@@ -426,8 +425,6 @@ $wgExtractsRemoveClasses[] = 'dablink';
 $wgExtractsRemoveClasses[] = 'translate';
 
 # Universal Language Selector
-# Disable GeoService
-$wgULSGeoService = false;
 # Disable language detection as some message fallback are broken
 # Copyright notice and footer does not appear
 $wgULSLanguageDetection = false;
@@ -885,20 +882,3 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 };
 
 #============================== Final External Includes ===============================================
-
-# Override multilingual interface messages
-#$wgHooks['MessageCache::get'][] = function ( &$key ) {
-#    $keys = [
-#            'badaccess-groups',
-#            'citizen-footer-desc',
-#            'citizen-footer-tagline',
-#            'copyright',
-#            'noarticletext',
-#            'noarticletext-nopermission',
-#            'tagline',
-#    ];
-#
-#    if ( in_array( $key, $keys, true ) ) {
-#            $key = "i18n-$key";
-#    }
-#};
