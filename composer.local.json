@@ -38,6 +38,7 @@
                 "mediawiki/upload-wizard": "1.39.0",
                 "mediawiki/universal-language-selector": "2021.12",
                 "mediawiki/variables": "1.39.0",
+                "mediawiki/webauthn": "1.39.0",
                 "mediawiki/wiki-seo": "1.39.0",
                 "starcitizenwiki/embedvideo": "3.1.0",
                 "universal-omega/dynamic-page-list3": "3.4.6"
