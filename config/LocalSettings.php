@@ -13,7 +13,6 @@ $wgMetaNamespace = "Star_Citizen";
 $wgServer = "https://k8s.starcitizen.tools";
 $wgAllowSiteCSSOnRestrictedPages = true;
 $wgLocaltimezone = "UTC";
-$wgFragmentMode = [ 'html5', 'legacy' ];
 $wgMaxShellMemory = 0;
 $wgSecretKey = "{$_ENV['MEDIAWIKI_SECRETKEY']}";
 $wgUpgradeKey = "{$_ENV['MEDIAWIKI_UPGRADEKEY']}";
