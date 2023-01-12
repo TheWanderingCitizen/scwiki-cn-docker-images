@@ -24,6 +24,8 @@ $wgMainPageIsDomainRoot = true;
 $wgAllowSiteCSSOnRestrictedPages = true;
 # Use HTML5 encoding with minimal escaping
 $wgFragmentMode = [ 'html5' ];
+# Use Parsoid media HTML structure
+$wgParserEnableLegacyMediaDOM = false;
 $wgLocaltimezone = "UTC";
 $wgMaxShellMemory = 0;
 
