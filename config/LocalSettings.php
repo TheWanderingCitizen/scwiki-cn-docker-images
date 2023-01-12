@@ -368,7 +368,7 @@ $wgParsoidSettings = [
 $wgVisualEditorParsoidAutoConfig = false;
 $wgVirtualRestConfig['modules']['parsoid'] = [
 	// URL to the Parsoid instance - use port 8142 if you use the Debian package - the parameter 'URL' was first used but is now deprecated (string)
-	'url' => $wgServer . $wgResttPath,
+	'url' => $wgServer . $wgRestPath,
 	// Parsoid "domain" (string, optional) - MediaWiki >= 1.26
 	// 'domain' => 'localhost',
 ];
