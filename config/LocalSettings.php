@@ -297,6 +297,7 @@ wfLoadExtension( 'UploadWizard' );
 wfLoadExtension( 'Variables' );
 wfLoadExtension( 'VisualEditor' );
 #wfLoadExtension( 'WebP' );
+wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
 
