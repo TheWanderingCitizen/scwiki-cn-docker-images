@@ -49,7 +49,7 @@ $wgScriptPath = "";
 $wgScriptExtension = "$wgScriptPath/index.php";
 $wgRedirectScript   = "$wgScriptPath/redirect.php";
 $wgArticlePath = "/$1";
-
+	
 # Sitemap
 $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
 
@@ -299,18 +299,6 @@ wfLoadExtension( 'WikiSEO' );
 
 #=============================================== Extension Config ===============================================
 
-# Variables
-$egVariablesDisabledFunctions = [ 'var_final' ];
-
-#WebP 
-/*$wgWebPCompressionQuality = 50;
-$wgWebPFilterStrength = 50;
-$wgWebPAutoFilter = true;
-$wgWebPConvertInJobQueue = true;
-$wgWebPEnableConvertOnUpload = true;
-$wgWebPEnableConvertOnTransform = true;
-*/
-
 # CirrusSearch
 $wgCirrusSearchIndexBaseName = 'scw_prod';
 $wgSearchType = 'CirrusSearch';
@@ -369,8 +357,20 @@ $wgPageImagesNamespaces = array( 'NS_MAIN','NS_UPDATE', 'NS_GUIDE', 'NS_COMMLINK
 $wgPageImagesOpenGraphFallbackImage = "$wgResourceBasePath/resources/assets/sitelogo.svg";
 
 # Parsoid
+# Need to load Parsoid explicitly to make Linter work
+# @see https://github.com/StarCitizenWiki/WikiDocker/commit/ea149d74daba5cc13594cee57db70dab099e214d
+wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 $wgParsoidSettings = [
-  'linting' => false # Needed or Linter
+    'useSelser' => true,
+    'linting' => true,
+];
+# This belongs to VE but this is more relevant here
+$wgVisualEditorParsoidAutoConfig = false;
+$wgVirtualRestConfig['modules']['parsoid'] = [
+	// URL to the Parsoid instance - use port 8142 if you use the Debian package - the parameter 'URL' was first used but is now deprecated (string)
+	'url' => $wgServer . $wgResttPath,
+	// Parsoid "domain" (string, optional) - MediaWiki >= 1.26
+	// 'domain' => 'localhost',
 ];
 
 # Plausible
@@ -512,6 +512,9 @@ $wgUploadWizardConfig = array(
   )
 );
 
+# Variables
+$egVariablesDisabledFunctions = [ 'var_final' ];
+
 # Visual Editor
 $wgDefaultUserOptions['visualeditor-enable'] = 1;
 $wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
@@ -521,6 +524,15 @@ $wgVisualEditorEnableWikitext = true;
 $wgVisualEditorEnableDiffPage = true;
 $wgVisualEditorUseSingleEditTab = true;
 $wgVisualEditorEnableVisualSectionEditing = true;
+
+# WebP 
+/*$wgWebPCompressionQuality = 50;
+$wgWebPFilterStrength = 50;
+$wgWebPAutoFilter = true;
+$wgWebPConvertInJobQueue = true;
+$wgWebPEnableConvertOnUpload = true;
+$wgWebPEnableConvertOnTransform = true;
+*/
 
 # WikiSEO
 $wgTwitterSiteHandle = 'ToolsWiki';
