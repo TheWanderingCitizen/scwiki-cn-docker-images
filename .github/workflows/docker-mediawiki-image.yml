@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: starcitizentools/mediawiki:139-latest,starcitizentools/mediawiki:139-v0.3.3
+          tags: starcitizentools/mediawiki:139-latest,starcitizentools/mediawiki:139-v0.3.4

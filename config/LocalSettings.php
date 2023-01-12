@@ -235,8 +235,6 @@ $wgNativeImageLazyLoading = true;
 $wgFooterLinkCacheExpiry = 604800;
 
 #=============================================== Extension Load ===============================================
-
-#wfLoadExtension( 'CleanChanges' );
 wfLoadExtension( 'AdvancedSearch' );
 wfLoadExtension( 'Babel' );
 wfLoadExtension( 'CategoryTree' );
@@ -302,6 +300,9 @@ wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
 
 #=============================================== Extension Config ===============================================
+
+# Variables
+$egVariablesDisabledFunctions = [ 'var_final' ];
 
 #WebP 
 /*$wgWebPCompressionQuality = 50;
