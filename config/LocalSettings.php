@@ -202,22 +202,6 @@ $wgRightsIcon = "$wgResourceBasePath/resources/assets/licenses/cc-by-sa.png";
 # The following permissions were set based on your choice in the installer
 $wgAllowUserCss = true;
 
-## Default skin: you can change the default skin. Use the internal symbolic
-## names, ie 'vector', 'monobook':
-$wgDefaultSkin = 'citizen';
-
-# Enabled skins.
-# The following skins were automatically enabled:
-wfLoadSkin( 'Citizen' );
-
-# Citizen skin config
-# Use REST API search endpoint
-$wgCitizenSearchGateway = 'mwRestApi';
-# Search description source
-$wgCitizenSearchDescriptionSource = 'wikidata';
-# Number of search results in suggestion
-$wgCitizenMaxSearchResults = 10;
-
 #SVG Support
 $wgFileExtensions[] = 'svg';
 $wgAllowTitlesInSVG = true;
@@ -321,6 +305,10 @@ $wgCirrusSearchCompletionSuggesterSubphrases = [
 # Code Editor
 $wgDefaultUserOptions['usebetatoolbar'] = 1; // user option provided by WikiEditor extension
 
+# CookieWarning
+$wgCookieWarningEnabled = true;
+$wgCookieWarningGeoIPLookup = 'none';
+
 # ConfirmEdit
 $wgHCaptchaSiteKey = "{$_ENV['HCAPTCHA_SITEKEY']}";
 $wgHCaptchaSecretKey = "{$_ENV['HCAPTCHA_SECRETKEY']}";
@@ -329,6 +317,10 @@ $wgCaptchaTriggers['create'] = true;
 
 # Discord
 $wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
+
+ #DynamicPageList
+$wgDplSettings['recursiveTagParse'] = true;
+$wgDplSettings['allowUnlimitedResults'] = true;
 
 # Echo
 $wgAllowHTMLEmail = true;
@@ -399,6 +391,34 @@ $wgRelatedArticlesOnlyUseCirrusSearch = true;
 
 # Scribunto
 $wgScribuntoDefaultEngine = 'luasandbox';
+
+# TemplateStyles
+$wgTemplateStylesAllowedUrls = [
+  "audio" => [
+    "<^https://k8s\\.starcitizen\\.tools/>",
+    "<^https://starcitizen\\.tools/>",
+    "<^https://scwdev\\.czen\\.me/>"
+  ],
+  "image" => [
+    "<^https://k8s\\.starcitizen\\.tools/>",
+    "<^https://starcitizen\\.tools/>",
+    "<^https://scwdev\\.czen\\.me/>"
+  ],
+  "svg" => [
+    "<^https://k8s\\.starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
+    "<^https://starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
+    "<^https://scwdev\\.czen\\.me/[^?#]*\\.svg(?:[?#]|$)>"
+  ],
+  "font" => [
+    "<^https://k8s\\.starcitizen\\.tools/>",
+    "<^https://starcitizen\\.tools/>",
+    "<^https://scwdev\\.czen\\.me/>"
+  ],
+  "namespace" => [
+      "<.>"
+  ],
+  "css" => []
+];
 
 # TextExtracts
 $wgExtractsRemoveClasses[] = 'dd';
@@ -543,6 +563,21 @@ $wgWikiSeoDisableLogoFallbackImage = true;
 $wgWikiSeoEnableAutoDescription = true;
 $wgWikiSeoTryCleanAutoDescription = true;
 
+#=============================================== Skin ===============================================
+
+# Set Citizen to the default skin
+$wgDefaultSkin = 'citizen';
+
+# Citizen needs to be loaded after extensions to display correct icons for extensions
+wfLoadSkin( 'Citizen' );
+
+# Use REST API search endpoint
+$wgCitizenSearchGateway = 'mwRestApi';
+# Search description source
+$wgCitizenSearchDescriptionSource = 'wikidata';
+# Number of search results in suggestion
+$wgCitizenMaxSearchResults = 10;
+
 # Job Queue
 /** @see RedisBagOStuff for a full explanation of these options. **/
 $wgObjectCaches['redis'] = array(
@@ -561,41 +596,6 @@ $wgJobTypeConf['default'] = [
 	'daemonized' => true
 ];
 $wgJobRunRate = 0;
-
-#CookieWarning
-$wgCookieWarningEnabled = true;
-$wgCookieWarningGeoIPLookup = 'none';
-
-#DynamicPageList
-$wgDplSettings['recursiveTagParse'] = true;
-$wgDplSettings['allowUnlimitedResults'] = true;
-#TemplateStyles
-$wgTemplateStylesAllowedUrls = [
-  "audio" => [
-    "<^https://k8s\\.starcitizen\\.tools/>",
-    "<^https://starcitizen\\.tools/>",
-    "<^https://scwdev\\.czen\\.me/>"
-  ],
-  "image" => [
-    "<^https://k8s\\.starcitizen\\.tools/>",
-    "<^https://starcitizen\\.tools/>",
-    "<^https://scwdev\\.czen\\.me/>"
-  ],
-  "svg" => [
-    "<^https://k8s\\.starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
-    "<^https://starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
-    "<^https://scwdev\\.czen\\.me/[^?#]*\\.svg(?:[?#]|$)>"
-  ],
-  "font" => [
-    "<^https://k8s\\.starcitizen\\.tools/>",
-    "<^https://starcitizen\\.tools/>",
-    "<^https://scwdev\\.czen\\.me/>"
-  ],
-  "namespace" => [
-      "<.>"
-  ],
-  "css" => []
-];
 
 #=============================================== Namespaces ===============================================
 define("NS_COMMLINK", 3000);
