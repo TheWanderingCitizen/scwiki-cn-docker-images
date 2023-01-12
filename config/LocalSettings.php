@@ -274,7 +274,6 @@ wfLoadExtension( 'PageImages' );
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'Plausible' );
 wfLoadExtension( 'Popups' );
-wfLoadExtension( 'Purge' );
 wfLoadExtension( 'RelatedArticles' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'ReplaceText' );

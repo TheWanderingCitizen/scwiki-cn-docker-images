@@ -25,7 +25,6 @@
                 "mediawiki/nativesvghandler": "1.39.0",
                 "mediawiki/plausible": "1.39.0",
                 "mediawiki/popups": "1.39.0",
-                "mediawiki/purge": "1.39.0",
                 "mediawiki/related-articles": "1.39.0",
                 "mediawiki/revisionslider": "1.39.0",
                 "mediawiki/rss": "1.39.0",
@@ -153,23 +152,6 @@
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Loops.git",
                                         "reference": "REL1_39"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/purge",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/Hutchy68/Purge/archive/master.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/Hutchy68/Purge.git",
-                                        "reference": "master"
                                 }
                         }
                 },
