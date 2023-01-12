@@ -337,9 +337,6 @@ $wgHCaptchaSecretKey = "{$_ENV['HCAPTCHA_SECRETKEY']}";
 $wgCaptchaTriggers['edit'] = true;
 $wgCaptchaTriggers['create'] = true;
 
-# DismissableSiteNotice
-$wgDismissableSiteNoticeForAnons = true;
-
 # Discord
 $wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
 
