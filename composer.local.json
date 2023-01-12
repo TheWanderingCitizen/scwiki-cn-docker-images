@@ -1,7 +1,7 @@
 {
         "require": {
                 "mediawiki/advanced-search": "1.39.0",
-                "mediawiki/babel": "2021.12",
+                "mediawiki/babel": "2022.10",
                 "mediawiki/checkuser": "1.39.0",
                 "mediawiki/cirrus-search": "1.39.0",
                 "mediawiki/citizen-skin": "1.39.0",
@@ -36,7 +36,7 @@
                 "mediawiki/template-styles-extender": "1.39.0",
                 "mediawiki/thanks": "1.39.0",
                 "mediawiki/upload-wizard": "1.39.0",
-                "mediawiki/universal-language-selector": "2021.12",
+                "mediawiki/universal-language-selector": "2022.10",
                 "mediawiki/variables": "1.39.0",
                 "mediawiki/webauthn": "1.39.0",
                 "mediawiki/wiki-seo": "1.39.0",
