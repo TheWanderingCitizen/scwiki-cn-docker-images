@@ -6,15 +6,29 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 /* DEBUG ONLY */
 #$wgShowExceptionDetails = true;
+#$wgDebugDumpSql = true;
+#$wgDebugComments = true;
+#Maintenance
+#$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
 
-#General Settings
+# General Settings
 $wgSitename = "Star Citizen Wiki";
-$wgMetaNamespace = "Star_Citizen";
 $wgServer = "https://k8s.starcitizen.tools";
+# TODO: We should change this to "Star_Citizen_Wiki" at some point
+$wgMetaNamespace = "Star_Citizen";
+# Force HTTPS
+$wgForceHTTPS = true;
+# Main page is served as the domain root
+$wgMainPageIsDomainRoot = true;
+# Allow MediaWiki:Citizen.css to load on all pages
 $wgAllowSiteCSSOnRestrictedPages = true;
+# Use HTML5 encoding with minimal escaping
+$wgFragmentMode = [ 'html5' ];
+# Use Parsoid media HTML structure
+$wgParserEnableLegacyMediaDOM = false;
 $wgLocaltimezone = "UTC";
-$wgFragmentMode = [ 'html5', 'legacy' ];
 $wgMaxShellMemory = 0;
+
 $wgSecretKey = "{$_ENV['MEDIAWIKI_SECRETKEY']}";
 $wgUpgradeKey = "{$_ENV['MEDIAWIKI_UPGRADEKEY']}";
 
@@ -26,9 +40,6 @@ $wgDBuser = "root";
 $wgDBpassword = "{$_ENV['PRD_DB_PASSWORD']}";
 $wgDBprefix = "wiki";
 
-#Controls if the main page should be served as the domain root.
-$wgMainPageIsDomainRoot = true;
-
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
 ## For more information on customizing the URLs
@@ -38,14 +49,7 @@ $wgScriptPath = "";
 $wgScriptExtension = "$wgScriptPath/index.php";
 $wgRedirectScript   = "$wgScriptPath/redirect.php";
 $wgArticlePath = "/$1";
-
-$wgShowSQLErrors = false;
-$wgDebugDumpSql = false;
-$wgDebugComments = false;
-
-## Force HTTPS
-$wgForceHTTPS = true;
-
+	
 # Sitemap
 $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
 
@@ -86,8 +90,7 @@ $wgCSPHeader = [
 	'script-src' => [ 
 		'\'self\'',
 		'https://analytics.starcitizen.tools',
-    'https://analytics.k8s.starcitizen.tools',
-		'https://www.google-analytics.com',
+    		'https://analytics.k8s.starcitizen.tools',
 		'https://hcaptcha.com',
 		'https://*.hcaptcha.com'
 	],
@@ -95,9 +98,8 @@ $wgCSPHeader = [
 		'\'self\'',
 		'https://api.flickr.com',
 		'https://analytics.starcitizen.tools',
-    'https://analytics.k8s.starcitizen.tools',
-    'https://starcitizen.tools',
-		'https://www.google-analytics.com',
+    		'https://analytics.k8s.starcitizen.tools',
+    		'https://starcitizen.tools',
 		'https://hcaptcha.com', 
 		'https://*.hcaptcha.com',
 	],
@@ -216,9 +218,6 @@ $wgCitizenSearchDescriptionSource = 'wikidata';
 # Number of search results in suggestion
 $wgCitizenMaxSearchResults = 10;
 
-#Maintenance
-#$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
-
 #SVG Support
 $wgFileExtensions[] = 'svg';
 $wgAllowTitlesInSVG = true;
@@ -300,20 +299,78 @@ wfLoadExtension( 'WikiSEO' );
 
 #=============================================== Extension Config ===============================================
 
-# Variables
-$egVariablesDisabledFunctions = [ 'var_final' ];
+# CirrusSearch
+$wgCirrusSearchIndexBaseName = 'scw_prod';
+$wgSearchType = 'CirrusSearch';
+$wgCirrusSearchUseCompletionSuggester = 'yes';
+$wgCirrusSearchClusters = [
+    'default' => ['elasticsearch-es-elasticsearch.default.svc.cluster.local'],
+];
+$wgCirrusSearchCompletionSuggesterSubphrases = [
+    'build'  => true,
+    'use' => true,
+    'type' => 'anywords',
+    'limit' => 5,
+];
 
-#WebP 
-/*$wgWebPCompressionQuality = 50;
-$wgWebPFilterStrength = 50;
-$wgWebPAutoFilter = true;
-$wgWebPConvertInJobQueue = true;
-$wgWebPEnableConvertOnUpload = true;
-$wgWebPEnableConvertOnTransform = true;
-*/
+# CleanChanges
+#$wgCCTrailerFilter = true;
+#$wgCCUserFilter = false;
+#$wgDefaultUserOptions['usenewrc'] = 1;
+
+# Code Editor
+$wgDefaultUserOptions['usebetatoolbar'] = 1; // user option provided by WikiEditor extension
+
+# ConfirmEdit
+$wgHCaptchaSiteKey = "{$_ENV['HCAPTCHA_SITEKEY']}";
+$wgHCaptchaSecretKey = "{$_ENV['HCAPTCHA_SECRETKEY']}";
+$wgCaptchaTriggers['edit'] = true;
+$wgCaptchaTriggers['create'] = true;
+
+# Discord
+$wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
+
+# Echo
+$wgAllowHTMLEmail = true;
+
+# ExternalData
+# $edgCacheTable = 'ed_url_cache'; Need to run ExternalData.sql first
+# $wgHTTPTimeout = 60; Set HTTP request timeout to 60s
+$edgCacheExpireTime = 3 * 24 * 60 * 60;
+$edgAllowExternalDataFrom = array( 'https://starcitizen.tools', 'https://k8s.starcitizen.tools' );
+$edgExternalValueVerbose = false;
+
+# LocalicationUpdate
+$wgLocalisationUpdateDirectory = "$IP/cache";
+
+# MultimediaViewer
+$wgMediaViewerEnableByDefault = true;
+$wgMediaViewerEnableByDefaultForAnonymous = true;
+
+# MultiPurge
+$wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
+$wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
+$wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
+
+# PageImages
+$wgPageImagesNamespaces = array( 'NS_MAIN','NS_UPDATE', 'NS_GUIDE', 'NS_COMMLINK', 'NS_ORG' );
+$wgPageImagesOpenGraphFallbackImage = "$wgResourceBasePath/resources/assets/sitelogo.svg";
+
 # Parsoid
+# Need to load Parsoid explicitly to make Linter work
+# @see https://github.com/StarCitizenWiki/WikiDocker/commit/ea149d74daba5cc13594cee57db70dab099e214d
+wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 $wgParsoidSettings = [
-  'linting' => false # Needed or Linter
+    'useSelser' => true,
+    'linting' => true,
+];
+# This belongs to VE but this is more relevant here
+$wgVisualEditorParsoidAutoConfig = false;
+$wgVirtualRestConfig['modules']['parsoid'] = [
+	// URL to the Parsoid instance - use port 8142 if you use the Debian package - the parameter 'URL' was first used but is now deprecated (string)
+	'url' => $wgServer . $wgRestPath,
+	// Parsoid "domain" (string, optional) - MediaWiki >= 1.26
+	// 'domain' => 'localhost',
 ];
 
 # Plausible
@@ -330,40 +387,34 @@ $wgPlausibleTrackEditButtonClicks = true;
 $wgPlausibleTrackCitizenSearchLinks = true;
 $wgPlausibleTrackCitizenMenuLinks = true;
 
-# MultiPurge
-$wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
-$wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
-$wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
+# Popups
+#Reference Previews are enabled for all users by default
+$wgPopupsReferencePreviewsBetaFeature = false;
 
-# PageImages
-$wgPageImagesNamespaces = array( 'NS_MAIN','NS_UPDATE', 'NS_GUIDE', 'NS_COMMLINK', 'NS_ORG' );
-$wgPageImagesOpenGraphFallbackImage = "$wgResourceBasePath/resources/assets/sitelogo.svg";
+# RelatedArticles 
+$wgRelatedArticlesFooterWhitelistedSkins = [ 'citizen' ];
+$wgRelatedArticlesDescriptionSource = 'wikidata';
+$wgRelatedArticlesUseCirrusSearch = true;
+$wgRelatedArticlesOnlyUseCirrusSearch = true;
 
-#CirrusSearch
-$wgCirrusSearchIndexBaseName = 'scw_prod';
-$wgSearchType = 'CirrusSearch';
-$wgCirrusSearchUseCompletionSuggester = 'yes';
-$wgCirrusSearchClusters = [
-    'default' => ['elasticsearch-es-elasticsearch.default.svc.cluster.local'],
-];
-$wgCirrusSearchCompletionSuggesterSubphrases = [
-    'build'  => true,
-    'use' => true,
-    'type' => 'anywords',
-    'limit' => 5,
-];
+# Scribunto
+$wgScribuntoDefaultEngine = 'luasandbox';
 
-# Discord
-$wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
+# TextExtracts
+$wgExtractsRemoveClasses[] = 'dd';
+$wgExtractsRemoveClasses[] = 'dablink';
+$wgExtractsRemoveClasses[] = 'translate';
 
-#DismissableSiteNotice
-$wgDismissableSiteNoticeForAnons = true;
+# Universal Language Selector
+# Disable GeoService
+$wgULSGeoService = false;
+# Disable language detection as some message fallback are broken
+# Copyright notice and footer does not appear
+$wgULSLanguageDetection = false;
+# Disable IME
+$wgULSIMEEnabled = false;
 
-#Flow
-$wgFlowEditorList = array( 'visualeditor', 'none' );
-$wgFlowContentFormat = 'html';
-
-#UploadWizard
+# UploadWizard
 $wgApiFrameOptions = 'SAMEORIGIN';
 $wgAllowCopyUploads = true;
 $wgCopyUploadsDomains = array( '*.flickr.com', '*.staticflickr.com' );
@@ -461,55 +512,10 @@ $wgUploadWizardConfig = array(
   )
 );
 
-#TextExtracts
-$wgExtractsRemoveClasses[] = 'dd';
-$wgExtractsRemoveClasses[] = 'dablink';
-$wgExtractsRemoveClasses[] = 'translate';
+# Variables
+$egVariablesDisabledFunctions = [ 'var_final' ];
 
-#WikiSEO
-$wgTwitterSiteHandle = 'ToolsWiki';
-$wgWikiSeoDefaultLanguange = 'en-us';
-#Disable wgLogo as fallback image
-$wgWikiSeoDisableLogoFallbackImage = true;
-#TextExtracts description for SEO
-$wgWikiSeoEnableAutoDescription = true;
-$wgWikiSeoTryCleanAutoDescription = true;
-
-#MultimediaViewer
-$wgMediaViewerEnableByDefault = true;
-$wgMediaViewerEnableByDefaultForAnonymous = true;
-
-#ConfirmEdit
-$wgHCaptchaSiteKey = "{$_ENV['HCAPTCHA_SITEKEY']}";
-$wgHCaptchaSecretKey = "{$_ENV['HCAPTCHA_SECRETKEY']}";
-$wgCaptchaTriggers['edit'] = true;
-$wgCaptchaTriggers['create'] = true;
-
-#CleanChanges
-#$wgCCTrailerFilter = true;
-#$wgCCUserFilter = false;
-#$wgDefaultUserOptions['usenewrc'] = 1;
-
-#LocalicationUpdate
-$wgLocalisationUpdateDirectory = "$IP/cache";
-
-#Universal Language Selector
-# Disable GeoService
-$wgULSGeoService = false;
-# Disable language detection as some message fallback are broken
-# Copyright notice and footer does not appear
-$wgULSLanguageDetection = false;
-# Disable IME
-$wgULSIMEEnabled = false;
-
-#ExternalData
-# $edgCacheTable = 'ed_url_cache'; Need to run ExternalData.sql first
-# $wgHTTPTimeout = 60; Set HTTP request timeout to 60s
-$edgCacheExpireTime = 3 * 24 * 60 * 60;
-$edgAllowExternalDataFrom = array( 'https://starcitizen.tools', 'https://k8s.starcitizen.tools' );
-$edgExternalValueVerbose = false;
-
-#Visual Editor
+# Visual Editor
 $wgDefaultUserOptions['visualeditor-enable'] = 1;
 $wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
 $wgDefaultUserOptions['visualeditor-newwikitext'] = 1;
@@ -519,24 +525,23 @@ $wgVisualEditorEnableDiffPage = true;
 $wgVisualEditorUseSingleEditTab = true;
 $wgVisualEditorEnableVisualSectionEditing = true;
 
-#Code Editor
-$wgDefaultUserOptions['usebetatoolbar'] = 1; // user option provided by WikiEditor extension
+# WebP 
+/*$wgWebPCompressionQuality = 50;
+$wgWebPFilterStrength = 50;
+$wgWebPAutoFilter = true;
+$wgWebPConvertInJobQueue = true;
+$wgWebPEnableConvertOnUpload = true;
+$wgWebPEnableConvertOnTransform = true;
+*/
 
-#Popups
-#Reference Previews are enabled for all users by default
-$wgPopupsReferencePreviewsBetaFeature = false;
-
-#RelatedArticles 
-$wgRelatedArticlesFooterWhitelistedSkins = [ 'citizen' ];
-$wgRelatedArticlesDescriptionSource = 'wikidata';
-$wgRelatedArticlesUseCirrusSearch = true;
-$wgRelatedArticlesOnlyUseCirrusSearch = true;
-
-#Scribunto
-$wgScribuntoDefaultEngine = 'luasandbox';
-
-#Echo
-$wgAllowHTMLEmail = true;
+# WikiSEO
+$wgTwitterSiteHandle = 'ToolsWiki';
+$wgWikiSeoDefaultLanguange = 'en-us';
+#Disable wgLogo as fallback image
+$wgWikiSeoDisableLogoFallbackImage = true;
+#TextExtracts description for SEO
+$wgWikiSeoEnableAutoDescription = true;
+$wgWikiSeoTryCleanAutoDescription = true;
 
 # Job Queue
 /** @see RedisBagOStuff for a full explanation of these options. **/
