@@ -3,7 +3,7 @@ name: Mediawiki Image Build
 on:
   push:
     branches:
-      - 'mediawiki'
+      - 'mediawiki-1-39'
 
 jobs:
   docker:
