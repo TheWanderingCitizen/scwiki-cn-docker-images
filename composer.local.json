@@ -672,7 +672,7 @@
                                 "type": "mediawiki-skin",
                                 "version": "1.39.0",
                                 "dist": {
-                                        "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen/archive/REL1_39.zip",
+                                        "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen/archive/main.zip",
                                         "type": "zip"
                                 },
                                 "source": {
