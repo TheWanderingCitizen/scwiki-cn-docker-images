@@ -8,6 +8,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 #$wgShowExceptionDetails = true;
 #$wgDebugDumpSql = true;
 #$wgDebugComments = true;
+#Maintenance
+#$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
 
 # General Settings
 $wgSitename = "Star Citizen Wiki";
@@ -213,9 +215,6 @@ $wgCitizenSearchGateway = 'mwRestApi';
 $wgCitizenSearchDescriptionSource = 'wikidata';
 # Number of search results in suggestion
 $wgCitizenMaxSearchResults = 10;
-
-#Maintenance
-#$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
 
 #SVG Support
 $wgFileExtensions[] = 'svg';
