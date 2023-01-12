@@ -41,7 +41,7 @@
                 "mediawiki/webauthn": "1.39.0",
                 "mediawiki/wiki-seo": "1.39.0",
                 "starcitizenwiki/embedvideo": "3.1.0",
-                "universal-omega/dynamic-page-list3": "3.4.6"
+                "universal-omega/dynamic-page-list3": "3.5.1"
         },
         "extra": {
                 "merge-plugin": {
