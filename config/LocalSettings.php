@@ -6,14 +6,25 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 /* DEBUG ONLY */
 #$wgShowExceptionDetails = true;
+#$wgDebugDumpSql = true;
+#$wgDebugComments = true;
 
-#General Settings
+# General Settings
 $wgSitename = "Star Citizen Wiki";
-$wgMetaNamespace = "Star_Citizen";
 $wgServer = "https://k8s.starcitizen.tools";
+# TODO: We should change this to "Star_Citizen_Wiki" at some point
+$wgMetaNamespace = "Star_Citizen";
+# Force HTTPS
+$wgForceHTTPS = true;
+# Main page is served as the domain root
+$wgMainPageIsDomainRoot = true;
+# Allow MediaWiki:Citizen.css to load on all pages
 $wgAllowSiteCSSOnRestrictedPages = true;
+# Use HTML5 encoding with minimal escaping
+$wgFragmentMode = [ 'html5' ];
 $wgLocaltimezone = "UTC";
 $wgMaxShellMemory = 0;
+
 $wgSecretKey = "{$_ENV['MEDIAWIKI_SECRETKEY']}";
 $wgUpgradeKey = "{$_ENV['MEDIAWIKI_UPGRADEKEY']}";
 
@@ -25,9 +36,6 @@ $wgDBuser = "root";
 $wgDBpassword = "{$_ENV['PRD_DB_PASSWORD']}";
 $wgDBprefix = "wiki";
 
-#Controls if the main page should be served as the domain root.
-$wgMainPageIsDomainRoot = true;
-
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
 ## For more information on customizing the URLs
@@ -37,13 +45,6 @@ $wgScriptPath = "";
 $wgScriptExtension = "$wgScriptPath/index.php";
 $wgRedirectScript   = "$wgScriptPath/redirect.php";
 $wgArticlePath = "/$1";
-
-$wgShowSQLErrors = false;
-$wgDebugDumpSql = false;
-$wgDebugComments = false;
-
-## Force HTTPS
-$wgForceHTTPS = true;
 
 # Sitemap
 $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
@@ -85,8 +86,7 @@ $wgCSPHeader = [
 	'script-src' => [ 
 		'\'self\'',
 		'https://analytics.starcitizen.tools',
-    'https://analytics.k8s.starcitizen.tools',
-		'https://www.google-analytics.com',
+    		'https://analytics.k8s.starcitizen.tools',
 		'https://hcaptcha.com',
 		'https://*.hcaptcha.com'
 	],
@@ -94,9 +94,8 @@ $wgCSPHeader = [
 		'\'self\'',
 		'https://api.flickr.com',
 		'https://analytics.starcitizen.tools',
-    'https://analytics.k8s.starcitizen.tools',
-    'https://starcitizen.tools',
-		'https://www.google-analytics.com',
+    		'https://analytics.k8s.starcitizen.tools',
+    		'https://starcitizen.tools',
 		'https://hcaptcha.com', 
 		'https://*.hcaptcha.com',
 	],
