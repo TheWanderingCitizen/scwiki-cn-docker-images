@@ -309,6 +309,67 @@ $wgWebPConvertInJobQueue = true;
 $wgWebPEnableConvertOnUpload = true;
 $wgWebPEnableConvertOnTransform = true;
 */
+
+# CirrusSearch
+$wgCirrusSearchIndexBaseName = 'scw_prod';
+$wgSearchType = 'CirrusSearch';
+$wgCirrusSearchUseCompletionSuggester = 'yes';
+$wgCirrusSearchClusters = [
+    'default' => ['elasticsearch-es-elasticsearch.default.svc.cluster.local'],
+];
+$wgCirrusSearchCompletionSuggesterSubphrases = [
+    'build'  => true,
+    'use' => true,
+    'type' => 'anywords',
+    'limit' => 5,
+];
+
+# CleanChanges
+#$wgCCTrailerFilter = true;
+#$wgCCUserFilter = false;
+#$wgDefaultUserOptions['usenewrc'] = 1;
+
+# Code Editor
+$wgDefaultUserOptions['usebetatoolbar'] = 1; // user option provided by WikiEditor extension
+
+# ConfirmEdit
+$wgHCaptchaSiteKey = "{$_ENV['HCAPTCHA_SITEKEY']}";
+$wgHCaptchaSecretKey = "{$_ENV['HCAPTCHA_SECRETKEY']}";
+$wgCaptchaTriggers['edit'] = true;
+$wgCaptchaTriggers['create'] = true;
+
+# DismissableSiteNotice
+$wgDismissableSiteNoticeForAnons = true;
+
+# Discord
+$wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
+
+# Echo
+$wgAllowHTMLEmail = true;
+
+# ExternalData
+# $edgCacheTable = 'ed_url_cache'; Need to run ExternalData.sql first
+# $wgHTTPTimeout = 60; Set HTTP request timeout to 60s
+$edgCacheExpireTime = 3 * 24 * 60 * 60;
+$edgAllowExternalDataFrom = array( 'https://starcitizen.tools', 'https://k8s.starcitizen.tools' );
+$edgExternalValueVerbose = false;
+
+# LocalicationUpdate
+$wgLocalisationUpdateDirectory = "$IP/cache";
+
+# MultimediaViewer
+$wgMediaViewerEnableByDefault = true;
+$wgMediaViewerEnableByDefaultForAnonymous = true;
+
+# MultiPurge
+$wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
+$wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
+$wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
+
+# PageImages
+$wgPageImagesNamespaces = array( 'NS_MAIN','NS_UPDATE', 'NS_GUIDE', 'NS_COMMLINK', 'NS_ORG' );
+$wgPageImagesOpenGraphFallbackImage = "$wgResourceBasePath/resources/assets/sitelogo.svg";
+
 # Parsoid
 $wgParsoidSettings = [
   'linting' => false # Needed or Linter
@@ -328,40 +389,34 @@ $wgPlausibleTrackEditButtonClicks = true;
 $wgPlausibleTrackCitizenSearchLinks = true;
 $wgPlausibleTrackCitizenMenuLinks = true;
 
-# MultiPurge
-$wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
-$wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
-$wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
+# Popups
+#Reference Previews are enabled for all users by default
+$wgPopupsReferencePreviewsBetaFeature = false;
 
-# PageImages
-$wgPageImagesNamespaces = array( 'NS_MAIN','NS_UPDATE', 'NS_GUIDE', 'NS_COMMLINK', 'NS_ORG' );
-$wgPageImagesOpenGraphFallbackImage = "$wgResourceBasePath/resources/assets/sitelogo.svg";
+# RelatedArticles 
+$wgRelatedArticlesFooterWhitelistedSkins = [ 'citizen' ];
+$wgRelatedArticlesDescriptionSource = 'wikidata';
+$wgRelatedArticlesUseCirrusSearch = true;
+$wgRelatedArticlesOnlyUseCirrusSearch = true;
 
-#CirrusSearch
-$wgCirrusSearchIndexBaseName = 'scw_prod';
-$wgSearchType = 'CirrusSearch';
-$wgCirrusSearchUseCompletionSuggester = 'yes';
-$wgCirrusSearchClusters = [
-    'default' => ['elasticsearch-es-elasticsearch.default.svc.cluster.local'],
-];
-$wgCirrusSearchCompletionSuggesterSubphrases = [
-    'build'  => true,
-    'use' => true,
-    'type' => 'anywords',
-    'limit' => 5,
-];
+# Scribunto
+$wgScribuntoDefaultEngine = 'luasandbox';
 
-# Discord
-$wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
+# TextExtracts
+$wgExtractsRemoveClasses[] = 'dd';
+$wgExtractsRemoveClasses[] = 'dablink';
+$wgExtractsRemoveClasses[] = 'translate';
 
-#DismissableSiteNotice
-$wgDismissableSiteNoticeForAnons = true;
+# Universal Language Selector
+# Disable GeoService
+$wgULSGeoService = false;
+# Disable language detection as some message fallback are broken
+# Copyright notice and footer does not appear
+$wgULSLanguageDetection = false;
+# Disable IME
+$wgULSIMEEnabled = false;
 
-#Flow
-$wgFlowEditorList = array( 'visualeditor', 'none' );
-$wgFlowContentFormat = 'html';
-
-#UploadWizard
+# UploadWizard
 $wgApiFrameOptions = 'SAMEORIGIN';
 $wgAllowCopyUploads = true;
 $wgCopyUploadsDomains = array( '*.flickr.com', '*.staticflickr.com' );
@@ -459,55 +514,7 @@ $wgUploadWizardConfig = array(
   )
 );
 
-#TextExtracts
-$wgExtractsRemoveClasses[] = 'dd';
-$wgExtractsRemoveClasses[] = 'dablink';
-$wgExtractsRemoveClasses[] = 'translate';
-
-#WikiSEO
-$wgTwitterSiteHandle = 'ToolsWiki';
-$wgWikiSeoDefaultLanguange = 'en-us';
-#Disable wgLogo as fallback image
-$wgWikiSeoDisableLogoFallbackImage = true;
-#TextExtracts description for SEO
-$wgWikiSeoEnableAutoDescription = true;
-$wgWikiSeoTryCleanAutoDescription = true;
-
-#MultimediaViewer
-$wgMediaViewerEnableByDefault = true;
-$wgMediaViewerEnableByDefaultForAnonymous = true;
-
-#ConfirmEdit
-$wgHCaptchaSiteKey = "{$_ENV['HCAPTCHA_SITEKEY']}";
-$wgHCaptchaSecretKey = "{$_ENV['HCAPTCHA_SECRETKEY']}";
-$wgCaptchaTriggers['edit'] = true;
-$wgCaptchaTriggers['create'] = true;
-
-#CleanChanges
-#$wgCCTrailerFilter = true;
-#$wgCCUserFilter = false;
-#$wgDefaultUserOptions['usenewrc'] = 1;
-
-#LocalicationUpdate
-$wgLocalisationUpdateDirectory = "$IP/cache";
-
-#Universal Language Selector
-# Disable GeoService
-$wgULSGeoService = false;
-# Disable language detection as some message fallback are broken
-# Copyright notice and footer does not appear
-$wgULSLanguageDetection = false;
-# Disable IME
-$wgULSIMEEnabled = false;
-
-#ExternalData
-# $edgCacheTable = 'ed_url_cache'; Need to run ExternalData.sql first
-# $wgHTTPTimeout = 60; Set HTTP request timeout to 60s
-$edgCacheExpireTime = 3 * 24 * 60 * 60;
-$edgAllowExternalDataFrom = array( 'https://starcitizen.tools', 'https://k8s.starcitizen.tools' );
-$edgExternalValueVerbose = false;
-
-#Visual Editor
+# Visual Editor
 $wgDefaultUserOptions['visualeditor-enable'] = 1;
 $wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
 $wgDefaultUserOptions['visualeditor-newwikitext'] = 1;
@@ -517,24 +524,14 @@ $wgVisualEditorEnableDiffPage = true;
 $wgVisualEditorUseSingleEditTab = true;
 $wgVisualEditorEnableVisualSectionEditing = true;
 
-#Code Editor
-$wgDefaultUserOptions['usebetatoolbar'] = 1; // user option provided by WikiEditor extension
-
-#Popups
-#Reference Previews are enabled for all users by default
-$wgPopupsReferencePreviewsBetaFeature = false;
-
-#RelatedArticles 
-$wgRelatedArticlesFooterWhitelistedSkins = [ 'citizen' ];
-$wgRelatedArticlesDescriptionSource = 'wikidata';
-$wgRelatedArticlesUseCirrusSearch = true;
-$wgRelatedArticlesOnlyUseCirrusSearch = true;
-
-#Scribunto
-$wgScribuntoDefaultEngine = 'luasandbox';
-
-#Echo
-$wgAllowHTMLEmail = true;
+# WikiSEO
+$wgTwitterSiteHandle = 'ToolsWiki';
+$wgWikiSeoDefaultLanguange = 'en-us';
+#Disable wgLogo as fallback image
+$wgWikiSeoDisableLogoFallbackImage = true;
+#TextExtracts description for SEO
+$wgWikiSeoEnableAutoDescription = true;
+$wgWikiSeoTryCleanAutoDescription = true;
 
 # Job Queue
 /** @see RedisBagOStuff for a full explanation of these options. **/
