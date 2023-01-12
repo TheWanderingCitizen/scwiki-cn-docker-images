@@ -157,7 +157,6 @@ RUN set -eux; \
 	mv /var/www/provisioning/extensions/Revisionslider /var/www/provisioning/extensions/RevisionSlider; \
 	mv /var/www/provisioning/extensions/Rss /var/www/provisioning/extensions/RSS; \
 	mv /var/www/provisioning/extensions/Shortdescription /var/www/provisioning/extensions/ShortDescription; \
-	mv /var/www/provisioning/extensions/Webauthn /var/www/provisioning/extensions/WebAuthn; \
 	mv /var/www/provisioning/extensions/WikiSeo /var/www/provisioning/extensions/WikiSEO; \
 	mv /var/www/provisioning/skins/citizen /var/www/provisioning/skins/Citizen; \
 	chown -R www-data:www-data /var/www
