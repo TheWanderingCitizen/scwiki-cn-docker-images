@@ -20,6 +20,7 @@
                 "mediawiki/json-config": "1.39.0",
                 "mediawiki/linter": "1.39.0",
                 "mediawiki/loops": "1.39.0",
+                "mediawiki/mediasearch": "1.39.0",
                 "mediawiki/multi-purge": "1.39.0",
                 "mediawiki/nativesvghandler": "1.39.0",
                 "mediawiki/plausible": "1.39.0",
@@ -473,6 +474,23 @@
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Linter.git",
+                                        "reference": "REL1_39"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "mediawiki/mediasearch",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch/tree/REL1_39",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch.git",
                                         "reference": "REL1_39"
                                 }
                         }

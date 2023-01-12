@@ -266,6 +266,7 @@ wfLoadExtension( 'JsonConfig' );
 wfLoadExtension( 'Linter' );
 wfLoadExtension( 'LocalisationUpdate' );
 wfLoadExtension( 'Loops' );
+wfLoadExtension( 'MediaSearch' );
 wfLoadExtension( 'MultimediaViewer' );
 wfLoadExtension( 'MultiPurge' );
 wfLoadExtension( 'NativeSvgHandler' );
