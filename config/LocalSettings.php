@@ -97,7 +97,6 @@ $wgCSPHeader = [
 		'\'self\'',
 		'https://api.flickr.com',
 		'https://analytics.starcitizen.tools',
-    'https://starcitizen.tools',
 		'https://hcaptcha.com', 
 		'https://*.hcaptcha.com',
 	],
