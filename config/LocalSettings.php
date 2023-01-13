@@ -13,7 +13,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 # General Settings
 $wgSitename = "Star Citizen Wiki";
-$wgServer = "https://k8s.starcitizen.tools";
+$wgServer = "https://starcitizen.tools";
 # TODO: We should change this to "Star_Citizen_Wiki" at some point
 $wgMetaNamespace = "Star_Citizen";
 # Force HTTPS
@@ -90,7 +90,6 @@ $wgCSPHeader = [
 	'script-src' => [ 
 		'\'self\'',
 		'https://analytics.starcitizen.tools',
-    		'https://analytics.k8s.starcitizen.tools',
 		'https://hcaptcha.com',
 		'https://*.hcaptcha.com'
 	],
@@ -98,8 +97,7 @@ $wgCSPHeader = [
 		'\'self\'',
 		'https://api.flickr.com',
 		'https://analytics.starcitizen.tools',
-    		'https://analytics.k8s.starcitizen.tools',
-    		'https://starcitizen.tools',
+    'https://starcitizen.tools',
 		'https://hcaptcha.com', 
 		'https://*.hcaptcha.com',
 	],
@@ -337,7 +335,7 @@ $wgAllowHTMLEmail = true;
 # $edgCacheTable = 'ed_url_cache'; Need to run ExternalData.sql first
 # $wgHTTPTimeout = 60; Set HTTP request timeout to 60s
 $edgCacheExpireTime = 3 * 24 * 60 * 60;
-$edgAllowExternalDataFrom = array( 'https://starcitizen.tools', 'https://k8s.starcitizen.tools' );
+$edgAllowExternalDataFrom = array( 'https://starcitizen.tools' );
 $edgExternalValueVerbose = false;
 
 # LocalicationUpdate
@@ -374,8 +372,8 @@ $wgVirtualRestConfig['modules']['parsoid'] = [
 ];
 
 # Plausible
-$wgPlausibleDomain = 'https://analytics.k8s.starcitizen.tools';
-$wgPlausibleDomainKey = 'k8s.starcitizen.tools';
+$wgPlausibleDomain = 'https://analytics.starcitizen.tools';
+$wgPlausibleDomainKey = 'starcitizen.tools';
 $wgPlausibleHonorDNT = true;
 $wgPlausibleTrackLoggedIn = true;
 $wgPlausibleTrackOutboundLinks = true;
@@ -572,22 +570,18 @@ $wgDplSettings['allowUnlimitedResults'] = true;
 #TemplateStyles
 $wgTemplateStylesAllowedUrls = [
   "audio" => [
-    "<^https://k8s\\.starcitizen\\.tools/>",
     "<^https://starcitizen\\.tools/>",
     "<^https://scwdev\\.czen\\.me/>"
   ],
   "image" => [
-    "<^https://k8s\\.starcitizen\\.tools/>",
     "<^https://starcitizen\\.tools/>",
     "<^https://scwdev\\.czen\\.me/>"
   ],
   "svg" => [
-    "<^https://k8s\\.starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
     "<^https://starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
     "<^https://scwdev\\.czen\\.me/[^?#]*\\.svg(?:[?#]|$)>"
   ],
   "font" => [
-    "<^https://k8s\\.starcitizen\\.tools/>",
     "<^https://starcitizen\\.tools/>",
     "<^https://scwdev\\.czen\\.me/>"
   ],
