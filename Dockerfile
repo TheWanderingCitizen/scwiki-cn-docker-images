@@ -139,6 +139,7 @@ USER www-data
 RUN set -eux; \
    /usr/bin/composer config --no-plugins allow-plugins.composer/installers true; \
    /usr/bin/composer install --no-dev \
+	 --with-dependencies \
      --ignore-platform-reqs \
      --no-ansi \
      --no-interaction \
