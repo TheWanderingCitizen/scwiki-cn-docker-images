@@ -45,8 +45,12 @@
         "extra": {
                 "merge-plugin": {
                         "include": [
-                                "extensions/*/composer.json",
-                                "skins/*/composer.js"
+                                "extensions/Checkuser/composer.json",
+                                "extensions/CirrusSearch/composer.json",
+                                "extensions/Cite/composer.json",
+                                "extensions/Elastica/composer.json",
+                                "extensions/OATHAuth/composer.json",
+                                "extensions/TemplateStyles/composer.json"
                         ]
                 }
         },
