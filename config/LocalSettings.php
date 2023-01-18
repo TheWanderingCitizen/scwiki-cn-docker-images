@@ -559,6 +559,7 @@ $wgWebPEnableConvertOnTransform = true;
 # WikiSEO
 $wgTwitterSiteHandle = 'ToolsWiki';
 $wgWikiSeoDefaultLanguange = 'en-us';
+$wgWikiSeoEnableSocialImages = true;
 #Disable wgLogo as fallback image
 $wgWikiSeoDisableLogoFallbackImage = true;
 #TextExtracts description for SEO
