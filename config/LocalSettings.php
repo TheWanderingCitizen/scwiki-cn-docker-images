@@ -55,8 +55,10 @@ $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
 
 # Cloudflare CDN
 # IP range: https://www.cloudflare.com/ips/
+$wgUsePrivateIPs = true;
 $wgUseCdn = true;
 $wgCdnServersNoPurge = [
+  '10.0.0.0/8',
 	'173.245.48.0/20',
 	'103.21.244.0/22',
 	'103.22.200.0/22',
@@ -226,7 +228,7 @@ wfLoadExtension( 'Cldr' );
 wfLoadExtension( 'CodeEditor' );
 wfLoadExtension( 'CodeMirror' );
 wfLoadExtension( 'CommonsMetadata' );
-wfLoadExtensions([ 'ConfirmEdit', 'ConfirmEdit/hCaptcha' ]);
+wfLoadExtensions([ 'ConfirmEdit', 'ConfirmEdit/QuestyCaptcha' ]);
 wfLoadExtension( 'CookieWarning' );
 wfLoadExtension( 'Disambiguator' );
 wfLoadExtension( 'Discord' );
@@ -279,6 +281,14 @@ wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
 
 #=============================================== Extension Config ===============================================
+# Questy Catpcha
+$wgCaptchaQuestions = [
+  "What the name of site?" => [ 'sct', 'star citizen wiki', 'star citizen tools', 'starcitizen.tools' ],
+  "What is the name of the company that is developing the game?" => [ 'cig', 'rsi', 'cloud imperium', 'cloud imperium games', 'robert space industries', 'roberts space industries'],
+  "Who is the co-founder, CEO, director of the game's developer" => ['chris roberts','chris robert'],
+  "What is the single player part of the game named?" => ['squadron 42', 'sq42', 'squadron42'],
+  "Who is the in-lore manufacturer of the <a href='https://starcitizen.tools/Talon'> Talon</a>? " => ['esperia', 'espr', 'esperia (espr)']
+];
 
 # CirrusSearch
 $wgCirrusSearchIndexBaseName = 'scw_prod';
