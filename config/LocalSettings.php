@@ -84,23 +84,18 @@ $wgCdnServersNoPurge = [
 ];
 
 ## Content Security Policy
-## hCaptcha is required for VE
 ## Flickr API is required for UploadWizard
 $wgCSPHeader = [
 	'useNonces' => true,
 	'unsafeFallback' => false,
 	'script-src' => [ 
 		'\'self\'',
-		'https://analytics.starcitizen.tools',
-		'https://hcaptcha.com',
-		'https://*.hcaptcha.com'
+		'https://analytics.starcitizen.tools'
 	],
 	'default-src' => [ 
 		'\'self\'',
 		'https://api.flickr.com',
-		'https://analytics.starcitizen.tools',
-		'https://hcaptcha.com', 
-		'https://*.hcaptcha.com',
+		'https://analytics.starcitizen.tools'
 	],
 	'style-src' => [ '\'self\'',  ],
 	'object-src' => [ '\'none\'' ],
@@ -316,8 +311,8 @@ $wgDefaultUserOptions['usebetatoolbar'] = 1; // user option provided by WikiEdit
 $wgCookieWarningEnabled = true;
 
 # ConfirmEdit
-$wgHCaptchaSiteKey = "{$_ENV['HCAPTCHA_SITEKEY']}";
-$wgHCaptchaSecretKey = "{$_ENV['HCAPTCHA_SECRETKEY']}";
+#$wgHCaptchaSiteKey = "{$_ENV['HCAPTCHA_SITEKEY']}";
+#$wgHCaptchaSecretKey = "{$_ENV['HCAPTCHA_SECRETKEY']}";
 $wgCaptchaTriggers['edit'] = true;
 $wgCaptchaTriggers['create'] = true;
 
