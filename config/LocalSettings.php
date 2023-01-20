@@ -551,6 +551,9 @@ $wgWebPEnableConvertOnUpload = true;
 $wgWebPEnableConvertOnTransform = true;
 */
 
+# WikiEditor
+$wgWikiEditorRealtimePreview = true;
+
 # WikiSEO
 $wgTwitterSiteHandle = 'ToolsWiki';
 $wgWikiSeoDefaultLanguange = 'en-us';
