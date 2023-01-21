@@ -266,6 +266,7 @@ wfLoadExtension( 'TemplateStyles' );
 wfLoadExtension( 'TemplateStylesExtender' );
 wfLoadExtension( 'TextExtracts' );
 wfLoadExtension( 'Thanks' );
+wfLoadExtension( 'TwoColConflict' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'UploadWizard' );
 wfLoadExtension( 'Variables' );
@@ -423,6 +424,9 @@ $wgTemplateStylesAllowedUrls = [
 $wgExtractsRemoveClasses[] = 'dd';
 $wgExtractsRemoveClasses[] = 'dablink';
 $wgExtractsRemoveClasses[] = 'translate';
+
+# TwoColConflict
+$wgTwoColConflictBetaFeature = false;
 
 # Universal Language Selector
 # Disable language detection as some message fallback are broken
