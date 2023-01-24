@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: starcitizentools/clickhouse:latest,starcitizentools/clickhouse:v0.1.0
+          tags: starcitizentools/clickhouse:latest,starcitizentools/clickhouse:v1.0.0

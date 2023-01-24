@@ -154,8 +154,5 @@ if [[ $# -lt 1 ]] || [[ "$1" == "--"* ]]; then
     /usr/bin/clickhouse su "${USER}:${GROUP}" /usr/bin/clickhouse-server --config-file="$CLICKHOUSE_CONFIG" "$@"
 fi
 
-echo "Running crond"
-crond -b -c /etc/crontabs
-
 # Otherwise, we assume the user want to run his own process, for example a `bash` shell to explore this image
 exec "$@"
