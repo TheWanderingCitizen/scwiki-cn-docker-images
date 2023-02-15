@@ -21,6 +21,8 @@ RUN set -eux; \
 		python3-pygments \
 		rsync \
 		nano \
+        s3cmd \
+		throttle \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
