@@ -34,6 +34,7 @@
                 "mediawiki/template-styles": "1.39.0",
                 "mediawiki/template-styles-extender": "1.39.0",
                 "mediawiki/thanks": "1.39.0",
+                "mediawiki/twocolconflict": "1.39.0",
                 "mediawiki/upload-wizard": "1.39.0",
                 "mediawiki/universal-language-selector": "2022.10",
                 "mediawiki/variables": "1.39.0",
@@ -578,6 +579,23 @@
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Thanks.git",
+                                        "reference": "REL1_39"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "mediawiki/twocolconflict",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TwoColConflict/archive/REL1_39.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TwoColConflict.git",
                                         "reference": "REL1_39"
                                 }
                         }
