@@ -22,7 +22,6 @@ RUN set -eux; \
 		rsync \
 		nano \
         s3cmd \
-		throttle \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
