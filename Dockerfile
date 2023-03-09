@@ -161,6 +161,7 @@ RUN set -eux; \
 	mv /var/www/provisioning/extensions/Webauthn /var/www/provisioning/extensions/WebAuthn; \
 	mv /var/www/provisioning/extensions/WikiSeo /var/www/provisioning/extensions/WikiSEO; \
 	mv /var/www/provisioning/skins/citizen /var/www/provisioning/skins/Citizen; \
+	mv /var/www/provisioning/extensions/Twocolconflict /var/www/provisioning/extensions/TwoColConflict; \
 	chown -R www-data:www-data /var/www
 
 WORKDIR /var/www/mediawiki
