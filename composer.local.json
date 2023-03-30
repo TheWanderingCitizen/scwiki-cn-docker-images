@@ -42,7 +42,7 @@
                 "mediawiki/wiki-seo": "1.39.0",
                 "starcitizenwiki/embedvideo": "3.1.0",
                 "universal-omega/dynamic-page-list3": "dev-master",
-                "edwardspec/mediawiki-aws-s3": "v.12.0"
+                "edwardspec/mediawiki-aws-s3": "v0.12.0"
         },
         "extra": {
                 "merge-plugin": {
