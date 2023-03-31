@@ -213,6 +213,7 @@ $wgFooterLinkCacheExpiry = 604800;
 
 #=============================================== Extension Load ===============================================
 wfLoadExtension( 'AdvancedSearch' );
+#wfLoadExtension( 'AWS' );
 wfLoadExtension( 'Babel' );
 wfLoadExtension( 'CategoryTree' );
 wfLoadExtension( 'CheckUser' );
@@ -277,14 +278,19 @@ wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
 
 #=============================================== Extension Config ===============================================
-# Questy Catpcha
-$wgCaptchaQuestions = [
-  "What the name of site?" => [ 'sct', 'star citizen wiki', 'star citizen tools', 'starcitizen.tools' ],
-  "What is the name of the company that is developing the game?" => [ 'cig', 'rsi', 'cloud imperium', 'cloud imperium games', 'robert space industries', 'roberts space industries'],
-  "Who is the co-founder, CEO, director of the game's developer" => ['chris roberts','chris robert'],
-  "What is the single player part of the game named?" => ['squadron 42', 'sq42', 'squadron42'],
-  "Who is the in-lore manufacturer of the <a href='https://starcitizen.tools/Talon'> Talon</a>? " => ['esperia', 'espr', 'esperia (espr)']
-];
+
+# AWS
+#$wgAWSCredentials = [
+#  'key' => $_ENV['IMAGES_ACCESS_KEY'],
+#  'secret' => $_ENV['IMAGES_SECRET_KEY'],
+#  'token' => false
+#];
+#$wgAWSBucketName = 'media.starcitizen.tools';
+#$wgAWSBucketDomain = 'media.starcitizen.tools';
+#$wgAWSRepoHashLevels = '2';
+#$wgAWSRepoDeletedHashLevels = '3';
+#$wgFileBackends['s3']['endpoint'] = 'https://eu-central-1.linodeobjects.com';
+#$wgAWSRegion = 'eu-central-1';
 
 # CirrusSearch
 $wgCirrusSearchIndexBaseName = 'scw_prod';
@@ -386,6 +392,15 @@ $wgPlausibleTrackCitizenMenuLinks = true;
 # Popups
 # Reference Previews are enabled for all users by default
 $wgPopupsReferencePreviewsBetaFeature = false;
+
+# Questy Catpcha
+$wgCaptchaQuestions = [
+  "What the name of site?" => [ 'sct', 'star citizen wiki', 'star citizen tools', 'starcitizen.tools' ],
+  "What is the name of the company that is developing the game?" => [ 'cig', 'rsi', 'cloud imperium', 'cloud imperium games', 'robert space industries', 'roberts space industries'],
+  "Who is the co-founder, CEO, director of the game's developer" => ['chris roberts','chris robert'],
+  "What is the single player part of the game named?" => ['squadron 42', 'sq42', 'squadron42'],
+  "Who is the in-lore manufacturer of the <a href='https://starcitizen.tools/Talon'> Talon</a>? " => ['esperia', 'espr', 'esperia (espr)']
+];
 
 # RelatedArticles 
 $wgRelatedArticlesFooterWhitelistedSkins = [ 'citizen' ];
