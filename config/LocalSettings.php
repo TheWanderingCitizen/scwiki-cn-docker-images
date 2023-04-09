@@ -213,7 +213,7 @@ $wgFooterLinkCacheExpiry = 604800;
 
 #=============================================== Extension Load ===============================================
 wfLoadExtension( 'AdvancedSearch' );
-#wfLoadExtension( 'AWS' );
+wfLoadExtension( 'AWS' );
 wfLoadExtension( 'Babel' );
 wfLoadExtension( 'CategoryTree' );
 wfLoadExtension( 'CheckUser' );
@@ -280,17 +280,17 @@ wfLoadExtension( 'WikiSEO' );
 #=============================================== Extension Config ===============================================
 
 # AWS
-#$wgAWSCredentials = [
-#  'key' => $_ENV['IMAGES_ACCESS_KEY'],
-#  'secret' => $_ENV['IMAGES_SECRET_KEY'],
-#  'token' => false
-#];
-#$wgAWSBucketName = 'media.starcitizen.tools';
-#$wgAWSBucketDomain = 'media.starcitizen.tools';
-#$wgAWSRepoHashLevels = '2';
-#$wgAWSRepoDeletedHashLevels = '3';
-#$wgFileBackends['s3']['endpoint'] = 'https://eu-central-1.linodeobjects.com';
-#$wgAWSRegion = 'eu-central-1';
+$wgAWSCredentials = [
+  'key' => $_ENV['IMAGES_ACCESS_KEY'],
+  'secret' => $_ENV['IMAGES_SECRET_KEY'],
+  'token' => false
+];
+$wgAWSBucketName = 'media.starcitizen.tools';
+$wgAWSBucketDomain = 'media.starcitizen.tools';
+$wgAWSRepoHashLevels = '2';
+$wgAWSRepoDeletedHashLevels = '3';
+$wgFileBackends['s3']['endpoint'] = 'https://eu-central-1.linodeobjects.com';
+$wgAWSRegion = 'eu-central-1';
 
 # CirrusSearch
 $wgCirrusSearchIndexBaseName = 'scw_prod';
