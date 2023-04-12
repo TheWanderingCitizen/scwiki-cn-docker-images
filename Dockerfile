@@ -107,33 +107,32 @@ RUN set -eux; \
         1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 \
     ; \
     gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; \
-	mkdir /var/www/provisioning; \
 	mkdir /var/www/mediawiki; \
-    tar -x --strip-components=1 -f mediawiki.tar.gz -C /var/www/provisioning; \
+    tar -x --strip-components=1 -f mediawiki.tar.gz -C /var/www/mediawiki; \
     gpgconf --kill all; \
     rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; \
     \
     apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; \
     rm -rf /var/lib/apt/lists/*
     
-COPY ./config/LocalSettings.php /var/www/provisioning/LocalSettings.php
-COPY ./resources /var/www/provisioning/resources
+COPY ./config/LocalSettings.php /var/www/mediawiki/LocalSettings.php
+COPY ./resources /var/www/mediawiki/resources
 
 COPY ./config/php-config.ini /usr/local/etc/php/conf.d/php-config.ini
-COPY ./config/robots.txt /var/www/provisioning/robots.txt
-COPY ./resources/assets/favicon.ico /var/www/provisioning/favicon.ico
+COPY ./config/robots.txt /var/www/mediawiki/robots.txt
+COPY ./resources/assets/favicon.ico /var/www/mediawiki/favicon.ico
 
 RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; \
     echo 'max_execution_time = 60' >> /usr/local/etc/php/conf.d/docker-php-executiontime.ini; 
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
-COPY composer.local.json /var/www/provisioning
+COPY composer.local.json /var/www/mediawiki
 
 RUN set -eux; \
    chown -R www-data:www-data /var/www
 
-WORKDIR /var/www/provisioning
+WORKDIR /var/www/mediawiki
 
 USER www-data
 
@@ -150,20 +149,18 @@ RUN set -eux; \
                             --no-interaction \
                             --no-scripts; \
 	\
-	mv /var/www/provisioning/extensions/Checkuser /var/www/provisioning/extensions/CheckUser; \
-	mv /var/www/provisioning/extensions/Dismissablesitenotice /var/www/provisioning/extensions/DismissableSiteNotice; \
-	mv /var/www/provisioning/extensions/Externaldata /var/www/provisioning/extensions/ExternalData; \
-	mv /var/www/provisioning/extensions/Nativesvghandler /var/www/provisioning/extensions/NativeSvgHandler; \
-	mv /var/www/provisioning/extensions/Mediasearch /var/www/provisioning/extensions/MediaSearch; \
-	mv /var/www/provisioning/extensions/Revisionslider /var/www/provisioning/extensions/RevisionSlider; \
-	mv /var/www/provisioning/extensions/Rss /var/www/provisioning/extensions/RSS; \
-	mv /var/www/provisioning/extensions/Shortdescription /var/www/provisioning/extensions/ShortDescription; \
-	mv /var/www/provisioning/extensions/Webauthn /var/www/provisioning/extensions/WebAuthn; \
-	mv /var/www/provisioning/extensions/WikiSeo /var/www/provisioning/extensions/WikiSEO; \
-	mv /var/www/provisioning/skins/citizen /var/www/provisioning/skins/Citizen; \
-	mv /var/www/provisioning/extensions/Twocolconflict /var/www/provisioning/extensions/TwoColConflict; \
+	mv /var/www/mediawiki/extensions/Checkuser /var/www/mediawiki/extensions/CheckUser; \
+	mv /var/www/mediawiki/extensions/Dismissablesitenotice /var/www/mediawiki/extensions/DismissableSiteNotice; \
+	mv /var/www/mediawiki/extensions/Externaldata /var/www/mediawiki/extensions/ExternalData; \
+	mv /var/www/mediawiki/extensions/Nativesvghandler /var/www/mediawiki/extensions/NativeSvgHandler; \
+	mv /var/www/mediawiki/extensions/Mediasearch /var/www/mediawiki/extensions/MediaSearch; \
+	mv /var/www/mediawiki/extensions/Revisionslider /var/www/mediawiki/extensions/RevisionSlider; \
+	mv /var/www/mediawiki/extensions/Rss /var/www/mediawiki/extensions/RSS; \
+	mv /var/www/mediawiki/extensions/Shortdescription /var/www/mediawiki/extensions/ShortDescription; \
+	mv /var/www/mediawiki/extensions/Webauthn /var/www/mediawiki/extensions/WebAuthn; \
+	mv /var/www/mediawiki/extensions/WikiSeo /var/www/mediawiki/extensions/WikiSEO; \
+	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
+	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
 	chown -R www-data:www-data /var/www
-
-WORKDIR /var/www/mediawiki
 
 CMD ["php-fpm"]
