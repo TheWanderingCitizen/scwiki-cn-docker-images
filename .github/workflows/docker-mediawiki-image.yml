@@ -1,4 +1,4 @@
-name: Mediawiki Image Build
+name: Nginx Image Build
 
 on:
   push:
@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: starcitizentools/nginx:latest,starcitizentools/nginx:v0.0.3
+          tags: starcitizentools/nginx:latest,starcitizentools/nginx:v1.0.0
