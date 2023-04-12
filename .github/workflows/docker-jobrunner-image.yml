@@ -1,4 +1,4 @@
-name: Mediawiki Image Build
+name: Mediawiki Job Runner Image Build
 
 on:
   push:
@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: starcitizentools/mediawiki:jobrunner-lastest,starcitizentools/mediawiki:jobrunner-v1.1.0
+          tags: starcitizentools/mediawiki:jobrunner-lastest,starcitizentools/mediawiki:jobrunner-v2.0.0
