@@ -39,5 +39,3 @@ COPY ./resources/assets/favicon.ico /var/www/mediawiki/favicon.ico
 
 RUN set -eux; \
    chown -R www-data:www-data /var/www
-
-CMD ["nginx" "-g" "daemon off;"]
