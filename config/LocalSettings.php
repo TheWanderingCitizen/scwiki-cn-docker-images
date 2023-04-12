@@ -58,6 +58,7 @@ $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
 $wgUsePrivateIPs = true;
 $wgUseCdn = true;
 $wgCdnServersNoPurge = [
+  '172.104.231.164', # Linode Loadbalancer
   '10.0.0.0/8',
 	'173.245.48.0/20',
 	'103.21.244.0/22',
