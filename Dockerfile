@@ -1,4 +1,4 @@
-FROM starcitizentools/mediawiki:139-v1.0.0
+FROM starcitizentools/mediawiki:139-v1.2.3
 
 USER root
 
