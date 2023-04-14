@@ -327,6 +327,9 @@ $wgCaptchaTriggers['create'] = true;
 # Discord
 $wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
 
+# DismissableSiteNotice
+$wgDismissableSiteNoticeForAnons = true;
+
 # DynamicPageList3
 $wgDplSettings['recursiveTagParse'] = true;
 $wgDplSettings['allowUnlimitedResults'] = true;
