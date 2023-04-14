@@ -903,6 +903,14 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 			],
 			$sk->msg( 'footer-patreon' )->text()
 		);
+		$footerlinks['kofi'] = Html::element(
+			'a',
+			[
+				'href' => 'https://ko-fi.com/starcitizentools',
+				'rel' => $rel
+			],
+			$sk->msg( 'footer-kofi' )->text()
+		);
 	}
 };
 
