@@ -14,7 +14,7 @@
 # some misbehaved spiders out there that go _way_ too fast. If you're
 # irresponsible, your access to the site may be blocked.
 #
-Sitemap: https://sct-sitemaps.eu-central-1.linodeobjects.com/sitemap-index-starcitizentools.xml
+Sitemap: https://sitemap.starcitizen.tools/sitemap-index-starcitizentools.xml
 
 # Observed spamming large amounts of https://en.wikipedia.org/?curid=NNNNNN
 # and ignoring 429 ratelimit responses, claims to respect robots:
