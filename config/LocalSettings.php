@@ -241,7 +241,6 @@ wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'JsonConfig' );
 wfLoadExtension( 'Linter' );
-#wfLoadExtension( 'LocalisationUpdate' );
 wfLoadExtension( 'Loops' );
 wfLoadExtension( 'MediaSearch' );
 wfLoadExtension( 'MultimediaViewer' );
