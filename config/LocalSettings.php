@@ -420,14 +420,17 @@ $wgScribuntoDefaultEngine = 'luasandbox';
 $wgTemplateStylesAllowedUrls = [
   "audio" => [
     "<^https://starcitizen\\.tools/>",
+    "<^https://media\\.starcitizen\\.tools/>",
     "<^https://scwdev\\.czen\\.me/>"
   ],
   "image" => [
     "<^https://starcitizen\\.tools/>",
+    "<^https://media\\.starcitizen\\.tools/>",
     "<^https://scwdev\\.czen\\.me/>"
   ],
   "svg" => [
     "<^https://starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
+    "<^https://media\\.starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
     "<^https://scwdev\\.czen\\.me/[^?#]*\\.svg(?:[?#]|$)>"
   ],
   "font" => [
