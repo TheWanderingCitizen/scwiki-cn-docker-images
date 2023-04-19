@@ -47,7 +47,7 @@
                 "mediawiki/semantic-extra-special-properties": "~3.0",
                 "mediawiki/semantic-result-formats": "~4.0",
                 "mediawiki/semantic-scribunto": "~2.2",
-                "mediawiki/semantic-drilldown": "master"
+                "mediawiki/semantic-drilldown": "1.39.0"
         },
         "extra": {
                 "merge-plugin": {
@@ -697,7 +697,7 @@
                         "package": {
                                 "name": "mediawiki/semantic-drilldown",
                                 "type": "mediawiki-extension",
-                                "version": "master",
+                                "version": "1.39.0",
                                 "dist": {
                                         "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown/archive/master.zip",
                                         "type": "zip"
