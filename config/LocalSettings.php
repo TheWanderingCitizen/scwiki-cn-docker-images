@@ -329,7 +329,7 @@ $wgCaptchaTriggers['edit'] = true;
 $wgCaptchaTriggers['create'] = true;
 
 # Discord
-$wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
+// $wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
 
 # DismissableSiteNotice
 $wgDismissableSiteNoticeForAnons = true;
