@@ -42,7 +42,12 @@
                 "mediawiki/wiki-seo": "1.39.0",
                 "starcitizenwiki/embedvideo": "3.1.0",
                 "universal-omega/dynamic-page-list3": "dev-master",
-                "edwardspec/mediawiki-aws-s3": "v0.12.0"
+                "edwardspec/mediawiki-aws-s3": "v0.12.0",
+                "mediawiki/semantic-media-wiki": "~4.0",
+                "mediawiki/semantic-extra-special-properties": "~3.0",
+                "mediawiki/semantic-result-formats": "~4.0",
+                "mediawiki/semantic-scribunto": "~2.2",
+                "mediawiki/semantic-drilldown": "master"
         },
         "extra": {
                 "merge-plugin": {
@@ -684,6 +689,23 @@
                                         "type": "git",
                                         "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen.git",
                                         "reference": "main"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "mediawiki/semantic-drilldown",
+                                "type": "mediawiki-extension",
+                                "version": "master",
+                                "dist": {
+                                        "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown/archive/master.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown.git",
+                                        "reference": "master"
                                 }
                         }
                 }

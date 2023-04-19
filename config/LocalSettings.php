@@ -12,8 +12,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 #$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
 
 # General Settings
-$wgSitename = "Star Citizen Wiki";
-$wgServer = "https://starcitizen.tools";
+$wgSitename = "Star Citizen Wiki DEV";
+$wgServer = "https://dev.starcitizen.tools";
 # TODO: We should change this to "Star_Citizen_Wiki" at some point
 $wgMetaNamespace = "Star_Citizen";
 # Force HTTPS
@@ -244,13 +244,13 @@ wfLoadExtension( 'Linter' );
 wfLoadExtension( 'Loops' );
 wfLoadExtension( 'MediaSearch' );
 wfLoadExtension( 'MultimediaViewer' );
-wfLoadExtension( 'MultiPurge' );
+// wfLoadExtension( 'MultiPurge' );
 wfLoadExtension( 'NativeSvgHandler' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'OATHAuth' );
 wfLoadExtension( 'PageImages' );
 wfLoadExtension( 'ParserFunctions' );
-wfLoadExtension( 'Plausible' );
+#wfLoadExtension( 'Plausible' );
 wfLoadExtension( 'Popups' );
 wfLoadExtension( 'RelatedArticles' );
 wfLoadExtension( 'Renameuser' );
@@ -258,6 +258,11 @@ wfLoadExtension( 'ReplaceText' );
 wfLoadExtension( 'RevisionSlider' );
 wfLoadExtension( 'RSS' );
 wfLoadExtension( 'SandboxLink' );
+wfLoadExtension( 'SemanticDrilldown' );
+wfLoadExtension( 'SemanticExtraSpecialProperties' );
+wfLoadExtension( 'SemanticMediaWiki' );
+wfLoadExtension( 'SemanticResultFormats' );
+wfLoadExtension( 'SemanticScribunto' );
 wfLoadExtension( 'Scribunto' );
 wfLoadExtension( 'ShortDescription' );
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
@@ -340,20 +345,20 @@ $wgAllowHTMLEmail = true;
 # $edgCacheTable = 'ed_url_cache'; Need to run ExternalData.sql first
 # $wgHTTPTimeout = 60; Set HTTP request timeout to 60s
 $edgCacheExpireTime = 3 * 24 * 60 * 60;
-$edgAllowExternalDataFrom = array( 'https://starcitizen.tools' );
+$edgAllowExternalDataFrom = array( 'https://dev.starcitizen.tools' );
 $edgExternalValueVerbose = false;
 
 # LocalicationUpdate
-$wgLocalisationUpdateDirectory = "$IP/cache";
+// $wgLocalisationUpdateDirectory = "$IP/cache";
 
 # MultimediaViewer
 $wgMediaViewerEnableByDefault = true;
 $wgMediaViewerEnableByDefaultForAnonymous = true;
 
 # MultiPurge
-$wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
-$wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
-$wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
+// $wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
+// $wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
+// $wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
 
 # PageImages
 $wgPageImagesNamespaces = array( 'NS_MAIN','NS_UPDATE', 'NS_GUIDE', 'NS_COMMLINK', 'NS_ORG' );
@@ -371,26 +376,26 @@ $wgParsoidSettings = [
 $wgVisualEditorParsoidAutoConfig = false;
 $wgVirtualRestConfig['modules']['parsoid'] = [
 	// URL to the Parsoid instance - use port 8142 if you use the Debian package - the parameter 'URL' was first used but is now deprecated (string)
-	'url' => 'https://starcitizen.tools/rest.php',
+	'url' => 'https://dev.starcitizen.tools/rest.php',
 	// Parsoid "domain" (string, optional) - MediaWiki >= 1.26
-	'domain' => 'starcitizen.tools',
+	'domain' => 'dev.starcitizen.tools',
   'restbaseCompat' => false,
   'timeout' => 30,
 ];
 
 # Plausible
-$wgPlausibleDomain = 'https://analytics.starcitizen.tools';
-$wgPlausibleDomainKey = 'starcitizen.tools';
-$wgPlausibleHonorDNT = true;
-$wgPlausibleTrackLoggedIn = true;
-$wgPlausibleTrackOutboundLinks = true;
-$wgPlausibleIgnoredTitles = [ '/Special:*' ];
-$wgPlausibleEnableCustomEvents = true;
-$wgPlausibleTrack404 = true;
-$wgPlausibleTrackSearchInput = true;
-$wgPlausibleTrackEditButtonClicks = true;
-$wgPlausibleTrackCitizenSearchLinks = true;
-$wgPlausibleTrackCitizenMenuLinks = true;
+// $wgPlausibleDomain = 'https://analytics.starcitizen.tools';
+// $wgPlausibleDomainKey = 'starcitizen.tools';
+// $wgPlausibleHonorDNT = true;
+// $wgPlausibleTrackLoggedIn = true;
+// $wgPlausibleTrackOutboundLinks = true;
+// $wgPlausibleIgnoredTitles = [ '/Special:*' ];
+// $wgPlausibleEnableCustomEvents = true;
+// $wgPlausibleTrack404 = true;
+// $wgPlausibleTrackSearchInput = true;
+// $wgPlausibleTrackEditButtonClicks = true;
+// $wgPlausibleTrackCitizenSearchLinks = true;
+// $wgPlausibleTrackCitizenMenuLinks = true;
 
 # Popups
 # Reference Previews are enabled for all users by default
@@ -420,21 +425,25 @@ $wgTemplateStylesAllowedUrls = [
   "audio" => [
     "<^https://starcitizen\\.tools/>",
     "<^https://media\\.starcitizen\\.tools/>",
-    "<^https://scwdev\\.czen\\.me/>"
+    "<^https://scwdev\\.czen\\.me/>",
+    "<^https://dev\\.starcitizen\\.tools/>"
   ],
   "image" => [
     "<^https://starcitizen\\.tools/>",
     "<^https://media\\.starcitizen\\.tools/>",
-    "<^https://scwdev\\.czen\\.me/>"
+    "<^https://scwdev\\.czen\\.me/>",
+    "<^https://dev\\.starcitizen\\.tools/>"
   ],
   "svg" => [
     "<^https://starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
     "<^https://media\\.starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
-    "<^https://scwdev\\.czen\\.me/[^?#]*\\.svg(?:[?#]|$)>"
+    "<^https://scwdev\\.czen\\.me/[^?#]*\\.svg(?:[?#]|$)>",
+    "<^https://dev\\.starcitizen\\.tools/>"
   ],
   "font" => [
     "<^https://starcitizen\\.tools/>",
-    "<^https://scwdev\\.czen\\.me/>"
+    "<^https://scwdev\\.czen\\.me/>",
+    "<^https://dev\\.starcitizen\\.tools/>"
   ],
   "namespace" => [
       "<.>"
@@ -853,7 +862,7 @@ $wgFooterIcons = [
     "partof" => [
         "starcitizentools" => [
             "src" => "$wgResourceBasePath/resources/assets/badge-starcitizentools.svg",
-            "url" => "https://starcitizen.tools",
+            "url" => "https://dev.starcitizen.tools",
             "alt" => "Part of Star Citizen Tools",
 	    "height" => "50",
             "width" => "50",
@@ -918,3 +927,4 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 };
 
 #============================== Final External Includes ===============================================
+enableSemantics( 'dev.starcitizen.tools' );

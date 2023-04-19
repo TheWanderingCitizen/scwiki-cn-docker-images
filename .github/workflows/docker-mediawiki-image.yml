@@ -1,9 +1,9 @@
-name: Mediawiki Image Build
+name: SMW Mediawiki Image Build
 
 on:
   push:
     branches:
-      - 'mediawiki-1-39'
+      - 'smw'
 
 jobs:
   docker:
@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: starcitizentools/mediawiki:139-latest,starcitizentools/mediawiki:139-v2.0.5
+          tags: starcitizentools/mediawiki:smw-latest,starcitizentools/mediawiki:smw-v0.0.1
