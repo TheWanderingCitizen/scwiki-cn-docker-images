@@ -443,9 +443,7 @@ $wgTemplateStylesAllowedUrls = [
 ];
 
 # TextExtracts
-$wgExtractsRemoveClasses[] = 'dd';
-$wgExtractsRemoveClasses[] = 'dablink';
-$wgExtractsRemoveClasses[] = 'translate';
+$wgExtractsRemoveClasses = ['dd','dablink', 'translate', 'figcaption', 'li'];
 
 # TwoColConflict
 $wgTwoColConflictBetaFeature = false;
