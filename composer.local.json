@@ -42,7 +42,8 @@
                 "mediawiki/wiki-seo": "1.39.0",
                 "starcitizenwiki/embedvideo": "3.1.0",
                 "universal-omega/dynamic-page-list3": "dev-master",
-                "edwardspec/mediawiki-aws-s3": "v0.12.0"
+                "edwardspec/mediawiki-aws-s3": "v0.12.0",
+                "mediawiki/swiftmailer": "1.39.0"
         },
         "extra": {
                 "merge-plugin": {
@@ -53,7 +54,8 @@
                                 "extensions/Elastica/composer.json",
                                 "extensions/OATHAuth/composer.json",
                                 "extensions/TemplateStyles/composer.json",
-                                "extensions/AWS/composer.json"
+                                "extensions/AWS/composer.json",
+                                "extensions/SwiftMailer/composer.json"
                         ]
                 }
         },
@@ -683,6 +685,23 @@
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen.git",
+                                        "reference": "main"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "mediawiki/swiftmailer",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer/archive/REL1_39.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer.git",
                                         "reference": "main"
                                 }
                         }

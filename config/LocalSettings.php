@@ -131,11 +131,20 @@ $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
 $wgEmergencyContact = "webmaster@starcitizen.tools";
-$wgPasswordSender = "do-not-reply@starcitizen.tools";
+$wgPasswordSender = "no-reply@starcitizen.tools";
 
 $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
+
+$wgSMTP = [
+  'host' => 'mail.methean.com',
+  'IDHost' => 'starcitizen.tools',
+  'port' => 587,
+  'auth' => true,
+  'username' => 'no-reply@starcitizen.tools',
+  'password' => {$_ENV['SMTP_PASSWORD']},
+];
 
 ## Allow logged-in users to set a preference whether or not matches 
 ## in search results should force redirection to that page.
@@ -261,6 +270,7 @@ wfLoadExtension( 'SandboxLink' );
 wfLoadExtension( 'Scribunto' );
 wfLoadExtension( 'ShortDescription' );
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
+wfLoadExtension( 'SwiftMailer' );
 wfLoadExtension( 'TabberNeue' );
 wfLoadExtension( 'TemplateData' );
 wfLoadExtension( 'TemplateStyles' );
