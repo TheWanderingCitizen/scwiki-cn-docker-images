@@ -143,7 +143,7 @@ $wgSMTP = [
   'port' => 587,
   'auth' => true,
   'username' => 'no-reply@starcitizen.tools',
-  'password' => {$_ENV['SMTP_PASSWORD']},
+  'password' => $_ENV['SMTP_PASSWORD']
 ];
 
 ## Allow logged-in users to set a preference whether or not matches 
