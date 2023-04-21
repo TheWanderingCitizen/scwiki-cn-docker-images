@@ -166,7 +166,7 @@ RUN set -eux; \
 	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
 	chown -R www-data:www-data /var/www; \
 	\
-	mkdir /usr/bin/local/smw; \
-	chown www-data:www-data /usr/bin/local/smw
+	mkdir /usr/local/smw; \
+	chown www-data:www-data /usr/local/smw
 
 CMD ["php-fpm"]
