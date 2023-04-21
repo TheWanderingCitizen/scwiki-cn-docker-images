@@ -418,7 +418,7 @@ $wgRelatedArticlesUseCirrusSearch = true;
 $wgRelatedArticlesOnlyUseCirrusSearch = true;
 
 # Semantic Mediawiki
-$smwgConfigFileDir = /usr/local/smw;
+$smwgConfigFileDir = "/usr/local/smw";
 
 # Scribunto
 $wgScribuntoDefaultEngine = 'luasandbox';
