@@ -130,7 +130,10 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 COPY composer.local.json /var/www/mediawiki
 
 RUN set -eux; \
-   chown -R www-data:www-data /var/www
+   chown -R www-data:www-data /var/www; \
+   	\
+	 mkdir /usr/local/smw; \
+	 chown www-data:www-data /usr/local/smw
 
 WORKDIR /var/www/mediawiki
 
@@ -164,9 +167,6 @@ RUN set -eux; \
 	mv /var/www/mediawiki/extensions/WikiSeo /var/www/mediawiki/extensions/WikiSEO; \
 	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
 	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
-	chown -R www-data:www-data /var/www; \
-	\
-	mkdir /usr/local/smw; \
-	chown www-data:www-data /usr/local/smw
+	chown -R www-data:www-data /var/www
 
 CMD ["php-fpm"]
