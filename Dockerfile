@@ -141,7 +141,7 @@ USER www-data
 RUN set -eux; \
    /usr/bin/composer config --no-plugins allow-plugins.composer/installers true; \
 	# Required till 1.39.4
-   /usr/bin/composer config require "psr/http-message:1.0.1"; \ 
+   /usr/bin/composer require "psr/http-message:1.0.1"; \ 
    /usr/bin/composer install --no-dev \
      --ignore-platform-reqs \
      --no-ansi \
