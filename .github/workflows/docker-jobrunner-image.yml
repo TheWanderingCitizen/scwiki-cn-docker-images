@@ -1,9 +1,9 @@
-name: Mediawiki Job Runner Image Build
+name: Mediawiki SMW Job Runner Image Build
 
 on:
   push:
     branches:
-      - 'jobrunner'
+      - 'smw-jobrunner'
 
 jobs:
   docker:
