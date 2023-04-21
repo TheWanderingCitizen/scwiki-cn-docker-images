@@ -164,6 +164,9 @@ RUN set -eux; \
 	mv /var/www/mediawiki/extensions/WikiSeo /var/www/mediawiki/extensions/WikiSEO; \
 	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
 	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
-	chown -R www-data:www-data /var/www
+	chown -R www-data:www-data /var/www; \
+	\
+	mkdir /usr/bin/local/smw; \
+	chown www-data:www-data /usr/bin/local/smw
 
 CMD ["php-fpm"]
