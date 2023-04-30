@@ -139,6 +139,21 @@ WORKDIR /var/www/mediawiki
 USER www-data
 
 RUN set -eux; \
+	mv /var/www/mediawiki/extensions/Checkuser /var/www/mediawiki/extensions/CheckUser; \
+	mv /var/www/mediawiki/extensions/Dismissablesitenotice /var/www/mediawiki/extensions/DismissableSiteNotice; \
+	mv /var/www/mediawiki/extensions/Externaldata /var/www/mediawiki/extensions/ExternalData; \
+	mv /var/www/mediawiki/extensions/Nativesvghandler /var/www/mediawiki/extensions/NativeSvgHandler; \
+	mv /var/www/mediawiki/extensions/Mediasearch /var/www/mediawiki/extensions/MediaSearch; \
+	mv /var/www/mediawiki/extensions/Revisionslider /var/www/mediawiki/extensions/RevisionSlider; \
+	mv /var/www/mediawiki/extensions/Rss /var/www/mediawiki/extensions/RSS; \
+	mv /var/www/mediawiki/extensions/Shortdescription /var/www/mediawiki/extensions/ShortDescription; \
+	mv /var/www/mediawiki/extensions/Webauthn /var/www/mediawiki/extensions/WebAuthn; \
+	mv /var/www/mediawiki/extensions/WikiSeo /var/www/mediawiki/extensions/WikiSEO; \
+	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
+	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
+	mv /var/www/mediawiki/extensions/Swiftmailer /var/www/mediawiki/extensions/SwiftMailer; \
+	chown -R www-data:www-data /var/www; \
+
 	# Required till 1.39.4
    /usr/bin/composer require "guzzlehttp/psr7:2.4.4" --no-install; \ 
    /usr/bin/composer require "psr/http-message:1.0.1" --no-install; \ 
@@ -152,21 +167,7 @@ RUN set -eux; \
    /usr/bin/composer update --no-dev \
                             --no-ansi \
                             --no-interaction \
-                            --no-scripts; \
-	\
-	mv /var/www/mediawiki/extensions/Checkuser /var/www/mediawiki/extensions/CheckUser; \
-	mv /var/www/mediawiki/extensions/Dismissablesitenotice /var/www/mediawiki/extensions/DismissableSiteNotice; \
-	mv /var/www/mediawiki/extensions/Externaldata /var/www/mediawiki/extensions/ExternalData; \
-	mv /var/www/mediawiki/extensions/Nativesvghandler /var/www/mediawiki/extensions/NativeSvgHandler; \
-	mv /var/www/mediawiki/extensions/Mediasearch /var/www/mediawiki/extensions/MediaSearch; \
-	mv /var/www/mediawiki/extensions/Revisionslider /var/www/mediawiki/extensions/RevisionSlider; \
-	mv /var/www/mediawiki/extensions/Rss /var/www/mediawiki/extensions/RSS; \
-	mv /var/www/mediawiki/extensions/Shortdescription /var/www/mediawiki/extensions/ShortDescription; \
-	mv /var/www/mediawiki/extensions/Webauthn /var/www/mediawiki/extensions/WebAuthn; \
-	mv /var/www/mediawiki/extensions/WikiSeo /var/www/mediawiki/extensions/WikiSEO; \
-	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
-	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
-	chown -R www-data:www-data /var/www
+                            --no-scripts
 
 COPY ./config/swiftmailer-extension.json /var/www/mediawiki/extensions/SwiftMailer/extension.json
 
