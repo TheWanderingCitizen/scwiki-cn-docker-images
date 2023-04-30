@@ -152,7 +152,7 @@ RUN set -eux; \
    /usr/bin/composer update --no-dev \
                             --no-ansi \
                             --no-interaction \
-                            --no-scripts \
+                            --no-scripts; \
 	\
 	mv /var/www/mediawiki/extensions/Checkuser /var/www/mediawiki/extensions/CheckUser; \
 	mv /var/www/mediawiki/extensions/Dismissablesitenotice /var/www/mediawiki/extensions/DismissableSiteNotice; \
