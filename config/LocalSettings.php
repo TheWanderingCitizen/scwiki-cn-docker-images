@@ -362,6 +362,7 @@ $wgMediaViewerEnableByDefaultForAnonymous = true;
 
 # MultiPurge
 $wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
+$wgMultiPurgeServiceOrder = array ( 'Cloudflare' );
 $wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
 $wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
 
