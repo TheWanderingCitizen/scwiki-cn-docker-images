@@ -124,7 +124,7 @@ COPY ./resources/assets/favicon.ico /var/www/mediawiki/favicon.ico
 
 RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; \
     echo 'max_execution_time = 60' >> /usr/local/etc/php/conf.d/docker-php-executiontime.ini; \
-	echo 'pm.max_children = 20' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
+	echo 'pm.max_children = 16' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
     echo 'pm.max_requests = 500' >> /usr/local/etc/php-fpm.d/zz-docker.conf;
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
