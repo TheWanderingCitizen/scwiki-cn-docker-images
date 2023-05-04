@@ -807,6 +807,10 @@ $wgGroupPermissions['sysop']['delete'] = true;
 $wgGroupPermissions['sysop']['renameuser'] = true;
 $wgGroupPermissions['sysop']['import'] = true;
 $wgGroupPermissions['sysop']['importupload'] = true;
+$wgGroupPermissions['sysop']['smw-admin'] = true;
+$wgGroupPermissions['sysop']['smw-pageedit'] = true;
+$wgGroupPermissions['sysop']['smw-patternedit'] = true;
+$wgGroupPermissions['sysop']['smw-schemaedit'] = true;
 // To grant sysops permissions to edit interwiki data
 $wgGroupPermissions['sysop']['interwiki'] = true;
 
