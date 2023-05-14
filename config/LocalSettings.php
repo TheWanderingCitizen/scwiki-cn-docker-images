@@ -131,11 +131,20 @@ $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
 $wgEmergencyContact = "webmaster@starcitizen.tools";
-$wgPasswordSender = "do-not-reply@starcitizen.tools";
+$wgPasswordSender = "no-reply@starcitizen.tools";
 
 $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
+
+$wgSMTP = [
+  'host' => 'mail.methean.com',
+  'IDHost' => 'starcitizen.tools',
+  'port' => 2525,
+  'auth' => true,
+  'username' => 'no-reply@starcitizen.tools',
+  'password' => $_ENV['SMTP_PASSWORD']
+];
 
 ## Allow logged-in users to set a preference whether or not matches 
 ## in search results should force redirection to that page.
@@ -265,6 +274,7 @@ wfLoadExtension( 'SemanticResultFormats' );
 wfLoadExtension( 'SemanticScribunto' );
 wfLoadExtension( 'Scribunto' );
 wfLoadExtension( 'ShortDescription' );
+wfLoadExtension( 'SwiftMailer' );
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'TabberNeue' );
 wfLoadExtension( 'TemplateData' );
@@ -356,9 +366,10 @@ $wgMediaViewerEnableByDefault = true;
 $wgMediaViewerEnableByDefaultForAnonymous = true;
 
 # MultiPurge
-// $wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
-// $wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
-// $wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
+$wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
+$wgMultiPurgeServiceOrder = array ( 'Cloudflare' );
+$wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
+$wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
 
 # PageImages
 $wgPageImagesNamespaces = array( 'NS_MAIN','NS_UPDATE', 'NS_GUIDE', 'NS_COMMLINK', 'NS_ORG' );

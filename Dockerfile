@@ -123,7 +123,9 @@ COPY ./config/robots.txt /var/www/mediawiki/robots.txt
 COPY ./resources/assets/favicon.ico /var/www/mediawiki/favicon.ico
 
 RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; \
-    echo 'max_execution_time = 60' >> /usr/local/etc/php/conf.d/docker-php-executiontime.ini; 
+    echo 'max_execution_time = 60' >> /usr/local/etc/php/conf.d/docker-php-executiontime.ini; \
+	echo 'pm.max_children = 16' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
+    echo 'pm.max_requests = 500' >> /usr/local/etc/php-fpm.d/zz-docker.conf;
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
@@ -167,6 +169,9 @@ RUN set -eux; \
 	mv /var/www/mediawiki/extensions/WikiSeo /var/www/mediawiki/extensions/WikiSEO; \
 	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
 	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
+	mv /var/www/mediawiki/extensions/Swiftmailer /var/www/mediawiki/extensions/SwiftMailer; \
 	chown -R www-data:www-data /var/www
+
+COPY ./config/swiftmailer-extension.json /var/www/mediawiki/extensions/SwiftMailer/extension.json
 
 CMD ["php-fpm"]

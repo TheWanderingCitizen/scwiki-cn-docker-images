@@ -43,6 +43,7 @@
                 "starcitizenwiki/embedvideo": "3.1.0",
                 "universal-omega/dynamic-page-list3": "dev-master",
                 "edwardspec/mediawiki-aws-s3": "v0.12.0",
+                "mediawiki/swiftmailer": "1.39.0",
                 "mediawiki/semantic-media-wiki": "4.1.1",
                 "mediawiki/semantic-extra-special-properties": "~3.0",
                 "mediawiki/semantic-result-formats": "~4.0",
@@ -58,7 +59,8 @@
                                 "extensions/Elastica/composer.json",
                                 "extensions/OATHAuth/composer.json",
                                 "extensions/TemplateStyles/composer.json",
-                                "extensions/AWS/composer.json"
+                                "extensions/AWS/composer.json",
+                                "extensions/Swiftmailer/composer.json"
                         ]
                 }
         },
@@ -478,7 +480,7 @@
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch/tree/REL1_39.zip",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch/archive/REL1_39.zip",
                                         "type": "zip"
                                 },
                                 "source": {
@@ -706,6 +708,23 @@
                                         "type": "git",
                                         "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown.git",
                                         "reference": "master"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "mediawiki/swiftmailer",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer/archive/REL1_39.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer.git",
+                                        "reference": "main"
                                 }
                         }
                 }
