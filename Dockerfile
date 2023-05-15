@@ -27,7 +27,9 @@ RUN set -eux; \
 	mkdir -p /var/www/mediawiki; \
     tar -x --strip-components=1 -f mediawiki.tar.gz -C /var/www/mediawiki; \
     gpgconf --kill all; \
-    rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; \
+    curl -fSL "https://github.com/StarCitizenTools/mediawiki-skins-Citizen/archive/main.zip" -o citizenskin.zip; \
+    tar -x --strip-components=1 -f citizenskin.zip -C /var/www/mediawiki/Citizen; \
+    rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz citizenskin.zip; \
     \
     apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; \
     rm -rf /var/lib/apt/lists/*
