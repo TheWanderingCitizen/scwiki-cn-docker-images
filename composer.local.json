@@ -48,7 +48,8 @@
                 "mediawiki/semantic-extra-special-properties": "~3.0",
                 "mediawiki/semantic-result-formats": "~4.0",
                 "mediawiki/semantic-scribunto": "~2.2",
-                "mediawiki/semantic-drilldown": "1.39.0"
+                "mediawiki/semantic-drilldown": "1.39.0",
+                "mediawiki/apiunto": "1.39.0"
         },
         "extra": {
                 "merge-plugin": {
@@ -60,7 +61,8 @@
                                 "extensions/OATHAuth/composer.json",
                                 "extensions/TemplateStyles/composer.json",
                                 "extensions/AWS/composer.json",
-                                "extensions/Swiftmailer/composer.json"
+                                "extensions/Swiftmailer/composer.json",
+                                "extensions/Apiunto/composer.json"
                         ]
                 }
         },
@@ -725,6 +727,23 @@
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer.git",
                                         "reference": "main"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "mediawiki/apiunto",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/StarCitizenWiki/Apiunto/archive/master.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/StarCitizenWiki/Apiunto.git",
+                                        "reference": "master"
                                 }
                         }
                 }

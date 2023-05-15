@@ -223,6 +223,7 @@ $wgFooterLinkCacheExpiry = 604800;
 
 #=============================================== Extension Load ===============================================
 wfLoadExtension( 'AdvancedSearch' );
+wfLoadExtension( 'Apiunto' );
 wfLoadExtension( 'AWS' );
 wfLoadExtension( 'Babel' );
 wfLoadExtension( 'CategoryTree' );
@@ -292,7 +293,13 @@ wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
 
+enableSemantics( 'starcitizen.tools' );
 #=============================================== Extension Config ===============================================
+# Apiunto 
+$wgApiuntoKey = ''; 
+$wgApiuntoUrl = 'https://api.star-citizen.wiki';
+$wgApiuntoTimeout = '5'; // 5 seconds
+$wgApiuntoDefaultLocale = 'en_EN'; 
 
 # AWS
 $wgAWSCredentials = [
@@ -943,6 +950,3 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 		);
 	}
 };
-
-#============================== Final External Includes ===============================================
-enableSemantics( 'starcitizen.tools' );
