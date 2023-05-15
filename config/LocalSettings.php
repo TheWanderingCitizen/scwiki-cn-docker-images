@@ -12,8 +12,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 #$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
 
 # General Settings
-$wgSitename = "Star Citizen Wiki DEV";
-$wgServer = "https://dev.starcitizen.tools";
+$wgSitename = "Star Citizen Wiki";
+$wgServer = "https://starcitizen.tools";
 # TODO: We should change this to "Star_Citizen_Wiki" at some point
 $wgMetaNamespace = "Star_Citizen";
 # Force HTTPS
@@ -253,13 +253,13 @@ wfLoadExtension( 'Linter' );
 wfLoadExtension( 'Loops' );
 wfLoadExtension( 'MediaSearch' );
 wfLoadExtension( 'MultimediaViewer' );
-// wfLoadExtension( 'MultiPurge' );
+wfLoadExtension( 'MultiPurge' );
 wfLoadExtension( 'NativeSvgHandler' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'OATHAuth' );
 wfLoadExtension( 'PageImages' );
 wfLoadExtension( 'ParserFunctions' );
-#wfLoadExtension( 'Plausible' );
+wfLoadExtension( 'Plausible' );
 wfLoadExtension( 'Popups' );
 wfLoadExtension( 'RelatedArticles' );
 wfLoadExtension( 'Renameuser' );
@@ -355,7 +355,7 @@ $wgAllowHTMLEmail = true;
 # $edgCacheTable = 'ed_url_cache'; Need to run ExternalData.sql first
 # $wgHTTPTimeout = 60; Set HTTP request timeout to 60s
 $edgCacheExpireTime = 3 * 24 * 60 * 60;
-$edgAllowExternalDataFrom = array( 'https://dev.starcitizen.tools' );
+$edgAllowExternalDataFrom = array( 'https://starcitizen.tools' );
 $edgExternalValueVerbose = false;
 
 # LocalicationUpdate
@@ -387,26 +387,26 @@ $wgParsoidSettings = [
 $wgVisualEditorParsoidAutoConfig = false;
 $wgVirtualRestConfig['modules']['parsoid'] = [
 	// URL to the Parsoid instance - use port 8142 if you use the Debian package - the parameter 'URL' was first used but is now deprecated (string)
-	'url' => 'https://dev.starcitizen.tools/rest.php',
+	'url' => 'https://starcitizen.tools/rest.php',
 	// Parsoid "domain" (string, optional) - MediaWiki >= 1.26
-	'domain' => 'dev.starcitizen.tools',
+	'domain' => 'starcitizen.tools',
   'restbaseCompat' => false,
   'timeout' => 30,
 ];
 
 # Plausible
-// $wgPlausibleDomain = 'https://analytics.starcitizen.tools';
-// $wgPlausibleDomainKey = 'starcitizen.tools';
-// $wgPlausibleHonorDNT = true;
-// $wgPlausibleTrackLoggedIn = true;
-// $wgPlausibleTrackOutboundLinks = true;
-// $wgPlausibleIgnoredTitles = [ '/Special:*' ];
-// $wgPlausibleEnableCustomEvents = true;
-// $wgPlausibleTrack404 = true;
-// $wgPlausibleTrackSearchInput = true;
-// $wgPlausibleTrackEditButtonClicks = true;
-// $wgPlausibleTrackCitizenSearchLinks = true;
-// $wgPlausibleTrackCitizenMenuLinks = true;
+$wgPlausibleDomain = 'https://analytics.starcitizen.tools';
+$wgPlausibleDomainKey = 'starcitizen.tools';
+$wgPlausibleHonorDNT = true;
+$wgPlausibleTrackLoggedIn = true;
+$wgPlausibleTrackOutboundLinks = true;
+$wgPlausibleIgnoredTitles = [ '/Special:*' ];
+$wgPlausibleEnableCustomEvents = true;
+$wgPlausibleTrack404 = true;
+$wgPlausibleTrackSearchInput = true;
+$wgPlausibleTrackEditButtonClicks = true;
+$wgPlausibleTrackCitizenSearchLinks = true;
+$wgPlausibleTrackCitizenMenuLinks = true;
 
 # Popups
 # Reference Previews are enabled for all users by default
@@ -880,7 +880,7 @@ $wgFooterIcons = [
     "partof" => [
         "starcitizentools" => [
             "src" => "$wgResourceBasePath/resources/assets/badge-starcitizentools.svg",
-            "url" => "https://dev.starcitizen.tools",
+            "url" => "https://starcitizen.tools",
             "alt" => "Part of Star Citizen Tools",
 	    "height" => "50",
             "width" => "50",
@@ -945,4 +945,4 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 };
 
 #============================== Final External Includes ===============================================
-enableSemantics( 'dev.starcitizen.tools' );
+enableSemantics( 'starcitizen.tools' );
