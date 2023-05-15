@@ -1,4 +1,4 @@
-FROM starcitizentools/mediawiki:smw-v0.0.6
+FROM starcitizentools/mediawiki:smw-v1.0.0
 
 USER root
 
