@@ -9,6 +9,7 @@ RUN set -eux; \
     fetchDeps=" \
         gnupg \
         dirmngr \
+        unzip \
     "; \
     apt-get update; \
     apt-get install -y --no-install-recommends $fetchDeps; \
@@ -28,7 +29,8 @@ RUN set -eux; \
     tar -x --strip-components=1 -f mediawiki.tar.gz -C /var/www/mediawiki; \
     gpgconf --kill all; \
     curl -fSL "https://github.com/StarCitizenTools/mediawiki-skins-Citizen/archive/main.zip" -o citizenskin.zip; \
-    tar -x --strip-components=1 -f citizenskin.zip -C /var/www/mediawiki/Citizen; \
+    unzip citizenskin.zip -d /var/www/mediawiki/skins; \
+    mv /var/www/mediawiki/skins/mediawiki-skins-Citizen-main /var/www/mediawiki/skins/Citizen
     rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz citizenskin.zip; \
     \
     apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; \
