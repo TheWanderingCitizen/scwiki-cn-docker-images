@@ -440,6 +440,8 @@ $smwgConfigFileDir = "/usr/local/smw";
 
 # Scribunto
 $wgScribuntoDefaultEngine = 'luasandbox';
+$wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024; # 50 MB
+$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10; # Seconds
 
 # TemplateStyles
 $wgTemplateStylesAllowedUrls = [
