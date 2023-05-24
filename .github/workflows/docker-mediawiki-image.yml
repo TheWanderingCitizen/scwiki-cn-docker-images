@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: starcitizentools/mediawiki:smw-latest,starcitizentools/mediawiki:smw-v1.1.2
+          tags: starcitizentools/mediawiki:smw-latest,starcitizentools/mediawiki:smw-v1.1.3
