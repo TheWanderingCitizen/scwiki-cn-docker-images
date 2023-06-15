@@ -298,7 +298,7 @@ enableSemantics( 'starcitizen.tools' );
 # Apiunto 
 $wgApiuntoKey = ''; 
 $wgApiuntoUrl = 'https://api.star-citizen.wiki';
-$wgApiuntoTimeout = '5'; // 5 seconds
+$wgApiuntoTimeout = '10'; // 5 seconds
 $wgApiuntoDefaultLocale = 'en_EN'; 
 
 # AWS
