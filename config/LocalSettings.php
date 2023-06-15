@@ -153,6 +153,9 @@ $wgSearchMatchRedirectPreference = true;
 # Disable the real name field
 $wgHiddenPrefs[] = 'realname';
 
+# Use argon2 to hash user password (MW default: 'pbkdf2')
+$wgPasswordDefault = 'argon2';
+
 # MySQL table options to use during installation or update
 $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=utf8";
 
@@ -298,7 +301,7 @@ enableSemantics( 'starcitizen.tools' );
 # Apiunto 
 $wgApiuntoKey = ''; 
 $wgApiuntoUrl = 'https://api.star-citizen.wiki';
-$wgApiuntoTimeout = '5'; // 5 seconds
+$wgApiuntoTimeout = '10'; // 5 seconds
 $wgApiuntoDefaultLocale = 'en_EN'; 
 
 # AWS
@@ -844,7 +847,14 @@ $wgFooterIcons = [
             "alt" => "Powered by MediaWiki",
             "height" => "42",
             "width" => "127",
-        ]
+	],
+	"semanticmediawiki" => [
+            'src' => "$wgResourceBasePath/resources/assets/badge-semanticmediawiki.svg",
+            'url' => 'https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki',
+            'alt' => 'Powered by Semantic MediaWiki',
+            "height" => "42",
+            "width" => "131",
+	]
     ],
 /*
     "monitoredby" => [
