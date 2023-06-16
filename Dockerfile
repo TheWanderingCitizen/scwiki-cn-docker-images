@@ -1,4 +1,4 @@
-FROM php:8.1-fpm
+FROM php:8.1-fpm-bullseye
 
 # Version
 ENV MEDIAWIKI_MAJOR_VERSION 1.39
@@ -36,7 +36,7 @@ RUN set -eux; \
 		libonig-dev \
 		libcurl4-gnutls-dev \
 		libmagickwand-dev \
-		libwebp7 \
+		libwebp6 \
 		libzip-dev \
 		liblua5.1-0-dev \
 	; \
