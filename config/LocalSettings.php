@@ -441,6 +441,13 @@ $wgRelatedArticlesOnlyUseCirrusSearch = true;
 # Semantic Mediawiki
 $smwgConfigFileDir = "/usr/local/smw";
 
+# Semantic Extra Special Properties
+$sespgEnabledPropertyList = [
+	'_USERREG',
+	'_USEREDITCNT',
+	'_PAGEIMG'
+];
+
 # Scribunto
 $wgScribuntoDefaultEngine = 'luasandbox';
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024; # 50 MB
