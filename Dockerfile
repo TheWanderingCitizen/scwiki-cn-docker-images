@@ -1,4 +1,4 @@
-FROM php:8.1-fpm-bullseye
+FROM php:8.1-fpm
 
 # Version
 ENV MEDIAWIKI_MAJOR_VERSION 1.39
@@ -21,7 +21,9 @@ RUN set -eux; \
 		python3-pygments \
 		rsync \
 		nano \
-        s3cmd \
+  		liblua5.1-0 \
+  		libzip4 \
+        	s3cmd \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
@@ -36,7 +38,7 @@ RUN set -eux; \
 		libonig-dev \
 		libcurl4-gnutls-dev \
 		libmagickwand-dev \
-		libwebp6 \
+		libwebp7 \
 		libzip-dev \
 		liblua5.1-0-dev \
 	; \
@@ -47,6 +49,7 @@ RUN set -eux; \
 		mbstring \
 		mysqli \
 		opcache \
+  		zip \
 	; \
 	\
 	pecl install \ 
