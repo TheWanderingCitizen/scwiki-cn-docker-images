@@ -15,7 +15,6 @@
                 "mediawiki/dismissablesitenotice": "1.39.0",
                 "mediawiki/echo": "1.39.0",
                 "mediawiki/elastica": "1.39.0",
-                "mediawiki/externaldata": "1.39.0",
                 "mediawiki/graph": "1.39.0",
                 "mediawiki/json-config": "1.39.0",
                 "mediawiki/linter": "1.39.0",
