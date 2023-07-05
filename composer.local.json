@@ -120,23 +120,6 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "mediawiki/externaldata",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-ExternalData/archive/REL1_39.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-ExternalData.git",
-                                        "reference": "REL1_39"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
                                 "name": "mediawiki/graph",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
