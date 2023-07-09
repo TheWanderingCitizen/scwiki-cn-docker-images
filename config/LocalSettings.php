@@ -248,7 +248,6 @@ wfLoadExtension( 'DynamicPageList3' );
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Elastica' );
 wfLoadExtension( 'EmbedVideo' );
-wfLoadExtension( 'ExternalData' );
 wfLoadExtension( 'Graph' );
 wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'Interwiki' );
@@ -360,13 +359,6 @@ $wgDplSettings['allowUnlimitedResults'] = true;
 
 # Echo
 $wgAllowHTMLEmail = true;
-
-# ExternalData
-# $edgCacheTable = 'ed_url_cache'; Need to run ExternalData.sql first
-# $wgHTTPTimeout = 60; Set HTTP request timeout to 60s
-$edgCacheExpireTime = 3 * 24 * 60 * 60;
-$edgAllowExternalDataFrom = array( 'https://starcitizen.tools' );
-$edgExternalValueVerbose = false;
 
 # LocalicationUpdate
 // $wgLocalisationUpdateDirectory = "$IP/cache";
