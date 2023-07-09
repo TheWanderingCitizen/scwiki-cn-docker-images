@@ -434,6 +434,7 @@ $wgRelatedArticlesOnlyUseCirrusSearch = true;
 $smwgConfigFileDir = "/usr/local/smw";
 
 # Semantic Extra Special Properties
+$sespgUseFixedTables = true;
 $sespgEnabledPropertyList = [
 	'_USERREG',
 	'_USEREDITCNT',
