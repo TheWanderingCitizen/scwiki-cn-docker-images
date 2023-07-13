@@ -637,6 +637,8 @@ $wgCitizenSearchGateway = 'mwRestApi';
 $wgCitizenSearchDescriptionSource = 'wikidata';
 # Number of search results in suggestion
 $wgCitizenMaxSearchResults = 10;
+# Default to dark theme
+$wgCitizenThemeDefault = 'dark';
 
 # Job Queue
 /** @see RedisBagOStuff for a full explanation of these options. **/
