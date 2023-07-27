@@ -9,7 +9,7 @@ WORKDIR /var/www/html
 
 USER www-data
 
-RUN git clone https://github.com/wikimedia/mediawiki-services-jobrunner.git
+RUN git clone https://github.com/miraheze/jobrunner-service.git mediawiki-services-jobrunner 
 
 COPY --chown=www-data:www-data ./jobrunner-conf.json /var/www/html/mediawiki-services-jobrunner
 COPY --chown=www-data:www-data --chmod=770 ./entrypoint.sh /var/www/html/mediawiki-services-jobrunner
