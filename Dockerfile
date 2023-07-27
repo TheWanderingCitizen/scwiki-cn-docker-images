@@ -175,5 +175,6 @@ RUN set -eux; \
 	chown -R www-data:www-data /var/www
 
 COPY ./config/swiftmailer-extension.json /var/www/mediawiki/extensions/SwiftMailer/extension.json
+COPY ./config/smw-extension.json /var/www/mediawiki/extensions/SemanticMediaWiki/extension.json
 
 CMD ["php-fpm"]
