@@ -172,7 +172,7 @@ RUN set -eux; \
 	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
 	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
 	mv /var/www/mediawiki/extensions/Swiftmailer /var/www/mediawiki/extensions/SwiftMailer; \
-	mv /var/www/mediawiki/extensions/Pageviewinfo-REL1_39 /var/www/mediawiki/extensions/PageViewInfo; \
+	mv /var/www/mediawiki/extensions/Pageviewinfo /var/www/mediawiki/extensions/PageViewInfo; \
 	chown -R www-data:www-data /var/www
 
 COPY ./config/swiftmailer-extension.json /var/www/mediawiki/extensions/SwiftMailer/extension.json
