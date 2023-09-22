@@ -145,9 +145,6 @@ WORKDIR /var/www/mediawiki
 USER www-data
 
 RUN set -eux; \
-	# Required till 1.39.4
-#    /usr/bin/composer require "guzzlehttp/psr7:2.4.4" --no-install; \ 
-#    /usr/bin/composer require "psr/http-message:1.0.1" --no-install; \ 
    /usr/bin/composer config --no-plugins allow-plugins.composer/installers true; \
    /usr/bin/composer install --no-dev \
      --ignore-platform-reqs \
@@ -176,6 +173,5 @@ RUN set -eux; \
 	chown -R www-data:www-data /var/www
 
 COPY ./config/swiftmailer-extension.json /var/www/mediawiki/extensions/SwiftMailer/extension.json
-COPY ./config/smw-extension.json /var/www/mediawiki/extensions/SemanticMediaWiki/extension.json
 
 CMD ["php-fpm"]
