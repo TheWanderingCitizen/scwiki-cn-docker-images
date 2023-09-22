@@ -261,6 +261,7 @@ wfLoadExtension( 'NativeSvgHandler' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'OATHAuth' );
 wfLoadExtension( 'PageImages' );
+wfLoadExtension( 'PageViewInfo' )
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'Plausible' );
 wfLoadExtension( 'Popups' );
