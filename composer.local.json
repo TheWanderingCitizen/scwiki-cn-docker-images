@@ -62,7 +62,8 @@
                                 "extensions/TemplateStyles/composer.json",
                                 "extensions/AWS/composer.json",
                                 "extensions/Swiftmailer/composer.json",
-                                "extensions/Apiunto/composer.json"
+                                "extensions/Apiunto/composer.json",
+                                "extensions/PageViewInfo/composer.json"
                         ]
                 }
         },
