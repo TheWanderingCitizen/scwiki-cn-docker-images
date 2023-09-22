@@ -410,6 +410,7 @@ $wgPlausibleTrackSearchInput = true;
 $wgPlausibleTrackEditButtonClicks = true;
 $wgPlausibleTrackCitizenSearchLinks = true;
 $wgPlausibleTrackCitizenMenuLinks = true;
+$wgPlausibleApiKey = "{$_ENV['PLAUSIBLE_APIKEY']}";
 
 # Popups
 # Reference Previews are enabled for all users by default
