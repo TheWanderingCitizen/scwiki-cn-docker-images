@@ -91,13 +91,13 @@
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice/archive/master.zip",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice/archive/REL1_39.zip",
                                         "type": "zip"
                                 },
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice.git",
-                                        "reference": "master"
+                                        "reference": "REL1_39"
                                 }
                         }
                 },
@@ -743,7 +743,7 @@
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-PageViewInfo.git",
-                                        "reference": "master"
+                                        "reference": "REL1_39"
                                 }
                         }
                 }
