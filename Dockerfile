@@ -1,4 +1,4 @@
-FROM starcitizentools/mediawiki:smw-23.07.27.126
+FROM starcitizentools/mediawiki:smw-23.10.01.138
 
 USER root
 
