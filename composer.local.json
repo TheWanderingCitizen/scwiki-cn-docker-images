@@ -48,10 +48,10 @@
                 "mediawiki/semantic-result-formats": "4.0.x-dev",
                 "mediawiki/semantic-scribunto": "~2.2",
                 "mediawiki/semantic-drilldown": "1.39.0",
-                "mediawiki/apiunto": "1.39.0",
+                "starcitizenwiki/apiunto": "dev-master",
                 "mediawiki/pageviewinfo": "1.39.0",
                 "octfx/webp": "dev-develop",
-                "mediawiki/picturehtmlsupport": "master"
+                "starcitizenwiki/picture-html-support ": "dev-master"
         },
         "extra": {
                 "merge-plugin": {
@@ -651,23 +651,6 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "mediawiki/apiunto",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/StarCitizenWiki/Apiunto/archive/master.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/StarCitizenWiki/Apiunto.git",
-                                        "reference": "master"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
                                 "name": "mediawiki/pageviewinfo",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
@@ -679,23 +662,6 @@
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-PageViewInfo.git",
                                         "reference": "REL1_39"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/picturehtmlsupport",
-                                "type": "mediawiki-extension",
-                                "version": "master",
-                                "dist": {
-                                        "url": "https://github.com/StarCitizenWiki/mediawiki-extensions-PictureHtmlSupport/archive/master.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/StarCitizenWiki/mediawiki-extensions-PictureHtmlSupport.git",
-                                        "reference": "master"
                                 }
                         }
                 }
