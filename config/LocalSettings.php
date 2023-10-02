@@ -167,7 +167,7 @@ $wgMemCachedServers = array();
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
 $wgEnableUploads = true;
-$wgGenerateThumbnailOnParse = false;
+#$wgGenerateThumbnailOnParse = false;
 #$wgThumbnailScriptPath = "{$wgScriptPath}/thumb.php";
 $wgUseImageMagick = true;
 $wgThumbnailEpoch = "20190815000000";
@@ -607,7 +607,8 @@ $wgVisualEditorEnableVisualSectionEditing = true;
 # WebP 
 $wgWebPAutoFilter = true;
 $wgWebPConvertInJobQueue = true;
-$wgWebPEnableConvertOnUpload = false;
+$wgWebPEnableConvertOnUpload = true;
+$wgWebPCompressionQuality = 95;
 
 # WikiEditor
 $wgWikiEditorRealtimePreview = true;
