@@ -263,6 +263,7 @@ wfLoadExtension( 'OATHAuth' );
 wfLoadExtension( 'PageImages' );
 wfLoadExtension( 'PageViewInfo' );
 wfLoadExtension( 'ParserFunctions' );
+wfLoadExtension( 'PictureHtmlSupport' );
 wfLoadExtension( 'Plausible' );
 wfLoadExtension( 'Popups' );
 wfLoadExtension( 'RelatedArticles' );
@@ -291,7 +292,7 @@ wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'UploadWizard' );
 wfLoadExtension( 'Variables' );
 wfLoadExtension( 'VisualEditor' );
-#wfLoadExtension( 'WebP' );
+wfLoadExtension( 'WebP' );
 wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
@@ -604,13 +605,9 @@ $wgVisualEditorUseSingleEditTab = true;
 $wgVisualEditorEnableVisualSectionEditing = true;
 
 # WebP 
-/*$wgWebPCompressionQuality = 50;
-$wgWebPFilterStrength = 50;
 $wgWebPAutoFilter = true;
 $wgWebPConvertInJobQueue = true;
-$wgWebPEnableConvertOnUpload = true;
-$wgWebPEnableConvertOnTransform = true;
-*/
+$wgWebPEnableConvertOnUpload = false;
 
 # WikiEditor
 $wgWikiEditorRealtimePreview = true;

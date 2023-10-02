@@ -20,9 +20,9 @@
                 "mediawiki/linter": "1.39.0",
                 "mediawiki/loops": "1.39.0",
                 "mediawiki/mediasearch": "1.39.0",
-                "mediawiki/multi-purge": "1.39.0",
+                "octfx/multipurge": "dev-master",
                 "mediawiki/nativesvghandler": "1.39.0",
-                "mediawiki/plausible": "1.39.0",
+                "octfx/plausible": "dev-master",
                 "mediawiki/popups": "1.39.0",
                 "mediawiki/related-articles": "1.39.0",
                 "mediawiki/revisionslider": "1.39.0",
@@ -31,14 +31,14 @@
                 "mediawiki/shortdescription": "1.39.0",
                 "mediawiki/tabber-neue": "1.39.0",
                 "mediawiki/template-styles": "1.39.0",
-                "mediawiki/template-styles-extender": "1.39.0",
+                "octfx/template-styles-extender": "dev-master",
                 "mediawiki/thanks": "1.39.0",
                 "mediawiki/twocolconflict": "1.39.0",
                 "mediawiki/upload-wizard": "1.39.0",
                 "mediawiki/universal-language-selector": "2022.10",
                 "mediawiki/variables": "1.39.0",
                 "mediawiki/webauthn": "1.39.0",
-                "mediawiki/wiki-seo": "1.39.0",
+                "octfx/wiki-seo": "dev-REL1_39",
                 "starcitizenwiki/embedvideo": "3.1.0",
                 "universal-omega/dynamic-page-list3": "dev-master",
                 "edwardspec/mediawiki-aws-s3": "v0.12.0",
@@ -49,7 +49,9 @@
                 "mediawiki/semantic-scribunto": "~2.2",
                 "mediawiki/semantic-drilldown": "1.39.0",
                 "mediawiki/apiunto": "1.39.0",
-                "mediawiki/pageviewinfo": "1.39.0"
+                "mediawiki/pageviewinfo": "1.39.0",
+                "octfx/webp": "dev-develop",
+                "mediawiki/picturehtmlsupport": "master"
         },
         "extra": {
                 "merge-plugin": {
@@ -292,23 +294,6 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "mediawiki/template-styles-extender",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender/archive/master.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender.git",
-                                        "reference": "master"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
                                 "name": "mediawiki/advanced-search",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
@@ -479,23 +464,6 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "mediawiki/multi-purge",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/octfx/mediawiki-extensions-MultiPurge/archive/master.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/octfx/mediawiki-extensions-MultiPurge.git",
-                                        "reference": "master"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
                                 "name": "mediawiki/popups",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
@@ -615,23 +583,6 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "mediawiki/plausible",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/octfx/mediawiki-extension-Plausible/archive/master.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/octfx/mediawiki-extension-Plausible.git",
-                                        "reference": "master"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
                                 "name": "mediawiki/webauthn",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
@@ -642,23 +593,6 @@
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-WebAuthn.git",
-                                        "reference": "REL1_39"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/wiki-seo",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-WikiSEO/archive/REL1_39.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-WikiSEO.git",
                                         "reference": "REL1_39"
                                 }
                         }
@@ -745,6 +679,23 @@
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-PageViewInfo.git",
                                         "reference": "REL1_39"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "mediawiki/picturehtmlsupport",
+                                "type": "mediawiki-extension",
+                                "version": "master",
+                                "dist": {
+                                        "url": "https://github.com/StarCitizenWiki/mediawiki-extensions-PictureHtmlSupport/archive/master.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/StarCitizenWiki/mediawiki-extensions-PictureHtmlSupport.git",
+                                        "reference": "master"
                                 }
                         }
                 }
