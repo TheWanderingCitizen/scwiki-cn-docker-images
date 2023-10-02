@@ -170,7 +170,7 @@ RUN set -eux; \
 	mv /var/www/mediawiki/extensions/Swiftmailer /var/www/mediawiki/extensions/SwiftMailer; \
 	mv /var/www/mediawiki/extensions/Pageviewinfo /var/www/mediawiki/extensions/PageViewInfo; \
 	\
-	mv /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php; \
+	cp /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php; \
 	chown -R www-data:www-data /var/www
 
 COPY ./config/swiftmailer-extension.json /var/www/mediawiki/extensions/SwiftMailer/extension.json
