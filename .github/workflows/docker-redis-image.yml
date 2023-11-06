@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: starcitizentools/mediawiki:redis-latest,starcitizentools/mediawiki:redis-${{ steps.setcalver.outputs.package_version }}
+          tags: starcitizentools/redis:latest,starcitizentools/redis:${{ steps.setcalver.outputs.package_version }}
