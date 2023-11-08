@@ -139,19 +139,134 @@ Disallow: /
 User-agent: WebReaper
 Disallow: /
 
+# Crawler list from runescape.wiki
+# SEO bot
+User-agent: AhrefsBot
+Disallow: /
+
+# SEO bot
+User-agent: DotBot
+Disallow: /
+
+# Unknown
+User-agent: Mauibot
+Disallow: /
+
+# Huawei's web crawler. Ignores Disallow and gets caught in loops accessing special pages. Produces the majority of uncachable requests.
+User-agent: PetalBot
+Disallow: /
+
+# SEO bot
+User-agent: SemrushBot
+Disallow: /
+
+# SEO bot
+User-agent: DataForSeoBot
+Disallow: /
+
+# SEO bot
+User-agent: Neevabot
+Disallow: /
+
+# SEO bot
+User-agent: MegaIndex
+Disallow: /
+
+# SEO bot
+User-agent: Seekport
+Disallow: /
+
+# SEO bot
+User-agent: Barkrowler
+Disallow: /
+
 # Added rules from SCW
 User-agent: *
-Allow: /w/api.php?action=mobileview&
-Allow: /w/load.php?
-Allow: /Special:MyLanguage
-Disallow: /w/
-Disallow: /api/
-Disallow: /Special:
-Disallow: /wiki/Special:
-Disallow: /User:
-Disallow: /Talk:
-Disallow: /*_talk:
-Disallow: /Template:
+Disallow: /api.php
+Disallow: /rest.php
 Disallow: /ProjMGMT:
-Disallow: /MediaWiki:
+Disallow: /Mediawiki:
+Disallow: /Mediawiki%3A
+Disallow: /mediawiki:
+Disallow: /*?title=Mediawiki:
+Disallow: /*?title=Mediawiki%3A
+Disallow: /*?*&title=Mediawiki:
+Disallow: /*?*&title=Mediawiki%3A
+Disallow: /Property:
+Disallow: /Property%3A
+Disallow: /property:
+Disallow: /*?title=Property:
+Disallow: /*?title=Property%3A
+Disallow: /*?*&title=Property:
+Disallow: /*?*&title=Property%3A
+Disallow: /Special:
+Disallow: /Special%3A
+Disallow: /special:
+Disallow: /*?title=Special:
+Disallow: /*?title=Special%3A
+Disallow: /*?*&title=Special:
+Disallow: /*?*&title=Special%3A
+Disallow: /Talk:
+Disallow: /Talk%3A
+Disallow: /talk:
+Disallow: /*?title=Talk:
+Disallow: /*?title=Talk%3A
+Disallow: /*?*&title=Talk:
+Disallow: /*?*&title=Talk%3A
+Disallow: /*_talk:
+Disallow: /*_talk%3A
+Disallow: /*?title=*_talk:
+Disallow: /*?title=*_talk%3A
+Disallow: /*?*&title=*_talk:
+Disallow: /*?*&title=*_talk%3A
+Disallow: /Template:
+Disallow: /Template%3A
+Disallow: /template:
+Disallow: /*?title=Template:
+Disallow: /*?title=Template%3A
+Disallow: /*?*&title=Template:
+Disallow: /*?*&title=Template%3A
+Disallow: /User:
+Disallow: /User%3A
+Disallow: /User:
+Disallow: /*?title=User:
+Disallow: /*?title=User%3A
+Disallow: /*?*&title=User:
+Disallow: /*?*&title=User%3A
+Disallow: /*?action=
+Disallow: /*?*&action=
+Disallow: /*?feed=
+Disallow: /*?*&feed=
+Disallow: /*?from=
+Disallow: /*?*&from=
+Disallow: /*?oldid=
+Disallow: /*?*&oldid=
+Disallow: /*?printable=
+Disallow: /*?*&printable=
+Disallow: /*?redirect=
+Disallow: /*?*&redirect=
+Disallow: /*?uselang=
+Disallow: /*?*&uselang=
+Disallow: /*?useskin=
+Disallow: /*?*&useskin=
+Disallow: /*?veaction=
+Disallow: /*?*&veaction=
+Disallow: /*?filefrom=
+Disallow: /*?*&filefrom=
+Disallow: /*?fileuntil=
+Disallow: /*?*&fileuntil=
+Disallow: /*?navbox=
+Disallow: /*?*&navbox=
+Disallow: /*?pageuntil=
+Disallow: /*?*&pageuntil=
+Disallow: /*?pagefrom=
+Disallow: /*?*&pagefrom=
+Disallow: /*?diff=
+Disallow: /*?*&diff=
+Disallow: /*?curid=
+Disallow: /*?*&curid=
+Disallow: /*?search=
+Disallow: /*?*&search=
+Disallow: /*?section=
+Disallow: /*?*&section=
 crawl-delay: 5
