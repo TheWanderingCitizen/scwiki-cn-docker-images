@@ -249,6 +249,7 @@ wfLoadExtension( 'DynamicPageList3' );
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Elastica' );
 wfLoadExtension( 'EmbedVideo' );
+wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'Graph' );
 wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'Interwiki' );
