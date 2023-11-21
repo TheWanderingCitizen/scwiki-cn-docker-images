@@ -943,7 +943,7 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 		$footerlinks['github'] = Html::element(
 			'a',
 			[
-				'href' => 'https://github.com/StarCitizenTools/mediawiki',
+				'href' => 'https://github.com/StarCitizenTools',
 				'rel' => $rel
 			],
 			$sk->msg( 'footer-github' )->text()
