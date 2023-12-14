@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'smw'
+  workflow_dispatch:
 
 jobs:
   docker:
