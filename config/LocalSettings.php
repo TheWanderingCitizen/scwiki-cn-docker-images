@@ -436,6 +436,11 @@ $wgRelatedArticlesUseCirrusSearch = true;
 $wgRelatedArticlesOnlyUseCirrusSearch = true;
 
 # Semantic Mediawiki
+# Use Redis to cache SMW query result
+$smwgQueryResultCacheType = 'redis';
+# Enable tracking and storing of dependencies of embedded queries
+$smwgEnabledQueryDependencyLinksStore = true;
+# Duplicate query conditions should be removed from computing query results
 $smwgQFilterDuplicates = true;
 $smwgConfigFileDir = "/usr/local/smw";
 
