@@ -436,6 +436,7 @@ $wgRelatedArticlesUseCirrusSearch = true;
 $wgRelatedArticlesOnlyUseCirrusSearch = true;
 
 # Semantic Mediawiki
+$smwgQFilterDuplicates = true;
 $smwgConfigFileDir = "/usr/local/smw";
 
 # Semantic Extra Special Properties
