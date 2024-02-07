@@ -447,7 +447,7 @@ $smwgConfigFileDir = "/usr/local/smw";
 # Template namespace
 $smwgNamespacesWithSemanticLinks[NS_TEMPLATE] = true;
 # Module namespace
-$smwgNamespacesWithSemanticLinks[828] = true;
+$smwgNamespacesWithSemanticLinks[NS_MODULE] = true;
 
 # Semantic Extra Special Properties
 $sespgUseFixedTables = true;
