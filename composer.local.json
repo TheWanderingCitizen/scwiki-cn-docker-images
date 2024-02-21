@@ -43,7 +43,7 @@
                 "universal-omega/dynamic-page-list3": "dev-master",
                 "edwardspec/mediawiki-aws-s3": "v0.12.0",
                 "mediawiki/swiftmailer": "1.39.0",
-                "mediawiki/semantic-media-wiki": "4.1.2",
+                "mediawiki/semantic-media-wiki": "4.1.3",
                 "mediawiki/semantic-extra-special-properties": "~3.0",
                 "mediawiki/semantic-result-formats": "dev-master",
                 "mediawiki/semantic-scribunto": "~2.2",
