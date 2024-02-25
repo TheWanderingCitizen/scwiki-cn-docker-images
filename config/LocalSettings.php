@@ -263,10 +263,10 @@ wfLoadExtension( 'NativeSvgHandler' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'OATHAuth' );
 wfLoadExtension( 'PageImages' );
-wfLoadExtension( 'PageViewInfo' );
+#wfLoadExtension( 'PageViewInfo' );
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'PictureHtmlSupport' );
-wfLoadExtension( 'Plausible' );
+#wfLoadExtension( 'Plausible' );
 wfLoadExtension( 'Popups' );
 wfLoadExtension( 'RelatedArticles' );
 wfLoadExtension( 'Renameuser' );
@@ -401,19 +401,19 @@ $wgVirtualRestConfig['modules']['parsoid'] = [
 ];
 
 # Plausible
-$wgPlausibleDomain = 'https://analytics.starcitizen.tools';
-$wgPlausibleDomainKey = 'starcitizen.tools';
-$wgPlausibleHonorDNT = true;
-$wgPlausibleTrackLoggedIn = true;
-$wgPlausibleTrackOutboundLinks = true;
-$wgPlausibleIgnoredTitles = [ '/Special:*' ];
-$wgPlausibleEnableCustomEvents = true;
-$wgPlausibleTrack404 = true;
-$wgPlausibleTrackSearchInput = true;
-$wgPlausibleTrackEditButtonClicks = true;
-$wgPlausibleTrackCitizenSearchLinks = true;
-$wgPlausibleTrackCitizenMenuLinks = true;
-$wgPlausibleApiKey = "{$_ENV['PLAUSIBLE_APIKEY']}";
+#$wgPlausibleDomain = 'https://analytics.starcitizen.tools';
+#$wgPlausibleDomainKey = 'starcitizen.tools';
+#$wgPlausibleHonorDNT = true;
+#$wgPlausibleTrackLoggedIn = true;
+#$wgPlausibleTrackOutboundLinks = true;
+#$wgPlausibleIgnoredTitles = [ '/Special:*' ];
+#$wgPlausibleEnableCustomEvents = true;
+#$wgPlausibleTrack404 = true;
+#$wgPlausibleTrackSearchInput = true;
+#$wgPlausibleTrackEditButtonClicks = true;
+#$wgPlausibleTrackCitizenSearchLinks = true;
+#$wgPlausibleTrackCitizenMenuLinks = true;
+#$wgPlausibleApiKey = "{$_ENV['PLAUSIBLE_APIKEY']}";
 
 # Popups
 # Reference Previews are enabled for all users by default
