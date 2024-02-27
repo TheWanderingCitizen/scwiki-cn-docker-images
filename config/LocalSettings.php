@@ -91,13 +91,11 @@ $wgCSPHeader = [
 	'useNonces' => true,
 	'unsafeFallback' => false,
 	'script-src' => [ 
-		'\'self\'',
-		'https://analytics.starcitizen.tools'
+		'\'self\''
 	],
 	'default-src' => [ 
 		'\'self\'',
-		'https://api.flickr.com',
-		'https://analytics.starcitizen.tools'
+		'https://api.flickr.com'
 	],
 	'style-src' => [ '\'self\'',  ],
 	'object-src' => [ '\'none\'' ],
@@ -513,26 +511,18 @@ $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10; # Seconds
 $wgTemplateStylesAllowedUrls = [
   "audio" => [
     "<^https://starcitizen\\.tools/>",
-    "<^https://media\\.starcitizen\\.tools/>",
-    "<^https://scwdev\\.czen\\.me/>",
-    "<^https://dev\\.starcitizen\\.tools/>"
+    "<^https://media\\.starcitizen\\.tools/>"
   ],
   "image" => [
     "<^https://starcitizen\\.tools/>",
-    "<^https://media\\.starcitizen\\.tools/>",
-    "<^https://scwdev\\.czen\\.me/>",
-    "<^https://dev\\.starcitizen\\.tools/>"
+    "<^https://media\\.starcitizen\\.tools/>"
   ],
   "svg" => [
     "<^https://starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
-    "<^https://media\\.starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
-    "<^https://scwdev\\.czen\\.me/[^?#]*\\.svg(?:[?#]|$)>",
-    "<^https://dev\\.starcitizen\\.tools/>"
+    "<^https://media\\.starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>"
   ],
   "font" => [
-    "<^https://starcitizen\\.tools/>",
-    "<^https://scwdev\\.czen\\.me/>",
-    "<^https://dev\\.starcitizen\\.tools/>"
+    "<^https://starcitizen\\.tools/>"
   ],
   "namespace" => [
       "<.>"
@@ -982,14 +972,14 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 			],
 			$sk->msg( 'cookiestatement' )->text()
 		);
-		$footerlinks['analytics'] = Html::element(
-			'a',
-			[
-				'href' => 'https://analytics.starcitizen.tools/starcitizen.tools',
-				'rel' => $rel
-			],
-			$sk->msg( 'footer-analytics' )->text()
-		);
+		#$footerlinks['analytics'] = Html::element(
+		#	'a',
+		#	[
+		#		'href' => 'https://analytics.starcitizen.tools/starcitizen.tools',
+		#		'rel' => $rel
+		#	],
+		#	$sk->msg( 'footer-analytics' )->text()
+		#);
 		$footerlinks['statuspage'] = Html::element(
 			'a',
 			[
