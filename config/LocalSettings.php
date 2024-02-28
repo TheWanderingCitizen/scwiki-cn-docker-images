@@ -101,6 +101,9 @@ $wgCSPHeader = [
 	'object-src' => [ '\'none\'' ],
 ];
 
+# Set X-Frame-Options to DENY
+$wgBreakFrames = true;
+
 ## Cookies policy
 ## Strict - Cookies for me and not for thee
 $wgCookieSameSite = 'Strict';
@@ -222,6 +225,9 @@ $wgNativeImageLazyLoading = true;
 #Non-dynamic footer links cache
 #604800 - 1 week
 $wgFooterLinkCacheExpiry = 604800;
+
+#Fix double redirects after a page move
+$wgFixDoubleRedirects = true;
 
 #=============================================== Extension Load ===============================================
 wfLoadExtension( 'AdvancedSearch' );
