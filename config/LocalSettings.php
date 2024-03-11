@@ -574,7 +574,10 @@ $wgUploadWizardConfig = array(
   'licenses' => array(
     # Cloud Imperium license
     'rsilicense' => array(
-      'msg' => 'mwe-upwiz-license-rsi',
+      # HACK: Add custom license message
+      # Edit MediaWiki:mwe-upwiz-license-pd-usgov to the text you wanted
+      'msg' => 'mwe-upwiz-license-pd-usgov',
+      #'msg' => 'mwe-upwiz-license-rsi',
       'templates' => array('RSIlicense')
     ),
     # CC-BY-NC-SA-2.0 required by Flickr
@@ -603,7 +606,12 @@ $wgUploadWizardConfig = array(
       'defaults' => 'rsilicense',
       'licenseGroups' => array(
         array(
-          'head' => 'mwe-upwiz-license-sc-head',
+	  # Cloud Imperium license
+	  # HACK: Add custom license header
+          # Edit MediaWiki:mwe-upwiz-license-usgov-head to the text you wanted
+          # We have to use this because this message is loaded by UploadWizard and we don't use it
+	  'head' => 'mwe-upwiz-license-usgov-head',
+          #'head' => 'mwe-upwiz-license-sc-head',
           'licenses' => array(
             'rsilicense'
           )
