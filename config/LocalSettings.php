@@ -513,6 +513,9 @@ $wgScribuntoDefaultEngine = 'luasandbox';
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024; # 50 MB
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10; # Seconds
 
+# SyntaxHighlight
+$wgPygmentizePath = '/usr/local/bin/pygmentize';
+
 # TemplateStyles
 $wgTemplateStylesAllowedUrls = [
   "audio" => [
