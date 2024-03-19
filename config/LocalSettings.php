@@ -94,6 +94,7 @@ $wgCdnServersNoPurge = [
 
 ## Content Security Policy
 ## Flickr API is required for UploadWizard
+## nonces have limited support and removed in MW 1.41
 $wgCSPHeader = [
 	'useNonces' => false,
 	'script-src' => [ 
