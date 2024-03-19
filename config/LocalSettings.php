@@ -88,6 +88,7 @@ $wgCdnServersNoPurge = [
 ## Content Security Policy
 ## Flickr API is required for UploadWizard
 $wgCSPHeader = [
+	'useNonces' => false,
 	'script-src' => [ 
 		'\'self\''
 	],
