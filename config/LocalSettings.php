@@ -1,4 +1,11 @@
 <?php
+/**
+ * Star Citizen Wiki 
+ * https://starcitizen.tools/
+ *
+ * MediaWiki configuration file
+ */
+
 # Protect against web entry
 if ( !defined( 'MEDIAWIKI' ) ) {
   exit;
