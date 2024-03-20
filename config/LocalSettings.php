@@ -1,7 +1,7 @@
 <?php
 /**
  * Star Citizen Wiki 
- * https://starcitizen.tools/
+ * https://starcitizen.tools
  *
  * MediaWiki configuration file
  */
