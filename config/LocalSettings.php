@@ -261,7 +261,7 @@ wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Elastica' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'Gadgets' );
-wfLoadExtension( 'Graph' );
+#wfLoadExtension( 'Graph' );
 wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'JsonConfig' );
