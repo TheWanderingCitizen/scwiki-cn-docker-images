@@ -261,7 +261,7 @@ wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Elastica' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'Gadgets' );
-#wfLoadExtension( 'Graph' );
+#wfLoadExtension( 'Graph' ); -- Disabled due to security issue
 wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'JsonConfig' );
@@ -274,10 +274,10 @@ wfLoadExtension( 'NativeSvgHandler' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'OATHAuth' );
 wfLoadExtension( 'PageImages' );
-#wfLoadExtension( 'PageViewInfo' );
+#wfLoadExtension( 'PageViewInfo' ); -- Disabled with Extension:Plausible
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'PictureHtmlSupport' );
-#wfLoadExtension( 'Plausible' );
+#wfLoadExtension( 'Plausible' ); -- Disabled to allocate more resources to MW
 wfLoadExtension( 'Popups' );
 wfLoadExtension( 'RelatedArticles' );
 wfLoadExtension( 'Renameuser' );
