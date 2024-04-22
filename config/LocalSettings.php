@@ -123,6 +123,9 @@ $wgReferrerPolicy = array('strict-origin-when-cross-origin', 'strict-origin');
 ## Output a canonical meta tag on every page
 $wgEnableCanonicalServerLink = true;
 
+# Preconnect to the media subdomain
+$wgImagePreconnect = true;
+
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
 
