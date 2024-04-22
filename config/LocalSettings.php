@@ -171,12 +171,18 @@ $wgPasswordDefault = 'argon2';
 # MySQL table options to use during installation or update
 $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=utf8";
 
+## Set $wgCacheDirectory to a writable directory on the web server
+## to make your wiki go slightly faster. The directory should not
+## be publically accessible from the web.
+$wgCacheDirectory = "$IP/cache";
+
 ## Shared memory settings
 $wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
 $wgMemCachedServers = array();
 
 $wgEnableSidebarCache = true;
+$wgUseLocalMessageCache = true;
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
@@ -200,15 +206,6 @@ $wgGalleryOptions = [
 ## this, if it's not already uncommented:
 #$wgHashedUploadDirectory = false;
 
-## Set $wgCacheDirectory to a writable directory on the web server
-## to make your wiki go slightly faster. The directory should not
-## be publically accessible from the web.
-$wgCacheDirectory = "$IP/cache";
-
-# Expiry time for the footer link cache, in seconds, or 0 if disabled
-# 31536000 - 1 year
-$wgFooterLinkCacheExpiry = 31536000;
-
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
 ## License and Creative Commons licenses are supported so far.
@@ -230,10 +227,6 @@ $wgExternalLinkTarget = '_blank';
 
 #Enable native lazyloading
 $wgNativeImageLazyLoading = true;
-
-#Non-dynamic footer links cache
-#604800 - 1 week
-$wgFooterLinkCacheExpiry = 604800;
 
 #Fix double redirects after a page move
 $wgFixDoubleRedirects = true;
