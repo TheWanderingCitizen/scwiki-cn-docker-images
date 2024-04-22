@@ -176,6 +176,8 @@ $wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
 $wgMemCachedServers = array();
 
+$wgEnableSidebarCache = true;
+
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
 $wgEnableUploads = true;
@@ -191,9 +193,6 @@ $wgMaxImageArea = 6.4e7;
 $wgGalleryOptions = [
   'mode' => 'packed-overlay', // One of "traditional", "nolines", "packed", "packed-hover", "packed-overlay", "slideshow" (1.28+)
 ];
-
-# InstantCommons allows wiki to use images from https://commons.wikimedia.org
-$wgUseInstantCommons = true;
 
 ## If you want to use image uploads under safe mode,
 ## create the directories images/archive, images/thumb and
