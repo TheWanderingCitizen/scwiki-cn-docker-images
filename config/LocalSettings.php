@@ -135,8 +135,8 @@ $wgLogos = [
 	'svg' => "$wgResourceBasePath/resources/assets/sitelogo.svg",
 ];
 
-$wgFavicon = "$wgResourceBasePath/resources/assets/favicon.ico";
-$wgAppleTouchIcon = "$wgResourceBasePath/resources/assets/apple-touch-icon.png";
+# Favicon.ico is already in default location, no need to waste a link tag
+$wgFavicon = false;
 
 ## UPO means: this is also a user preference option
 $wgEnableEmail = true;

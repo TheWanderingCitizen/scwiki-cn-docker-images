@@ -124,6 +124,7 @@ COPY ./resources /var/www/mediawiki/resources
 COPY ./config/php-config.ini /usr/local/etc/php/conf.d/php-config.ini
 COPY ./config/robots.txt /var/www/mediawiki/robots.txt
 COPY ./resources/assets/favicon.ico /var/www/mediawiki/favicon.ico
+COPY ./resources/assets/apple-touch-icon.png /var/www/mediawiki/apple-touch-icon.png
 
 RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; \
     echo 'max_execution_time = 60' >> /usr/local/etc/php/conf.d/docker-php-executiontime.ini; \
