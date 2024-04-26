@@ -136,7 +136,7 @@ $wgLogos = [
 ];
 
 # Favicon.ico is already in default location, no need to waste a link tag
-$wgFavicon = false;
+$wgFavicon = '/favicon.svg';
 
 ## UPO means: this is also a user preference option
 $wgEnableEmail = true;

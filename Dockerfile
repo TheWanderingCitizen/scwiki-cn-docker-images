@@ -124,6 +124,9 @@ COPY ./resources /var/www/mediawiki/resources
 COPY ./config/php-config.ini /usr/local/etc/php/conf.d/php-config.ini
 COPY ./config/robots.txt /var/www/mediawiki/robots.txt
 COPY ./resources/assets/favicon.ico /var/www/mediawiki/favicon.ico
+COPY ./resources/assets/favicon-16x16.png /var/www/mediawiki/favicon-16x16.png
+COPY ./resources/assets/favicon-32x32.png /var/www/mediawiki/favicon-32x32.png
+COPY ./resources/assets/favicon.svg /var/www/mediawiki/favicon.svg
 COPY ./resources/assets/apple-touch-icon.png /var/www/mediawiki/apple-touch-icon.png
 
 RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; \
