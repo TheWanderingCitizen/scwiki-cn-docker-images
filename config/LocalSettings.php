@@ -3,7 +3,7 @@
  * Star Citizen Wiki 
  * https://starcitizen.tools
  *
- * MediaWiki settings file
+ * MediaWiki configurations file
  */
 
 # Protect against web entry
