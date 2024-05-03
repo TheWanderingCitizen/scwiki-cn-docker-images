@@ -3,7 +3,7 @@
  * Star Citizen Wiki 
  * https://starcitizen.tools
  *
- * MediaWiki configurations file
+ * MediaWiki settings file
  */
 
 # Protect against web entry
@@ -22,7 +22,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgSitename = "Star Citizen Wiki";
 $wgServer = "https://starcitizen.tools";
 # TODO: We should change this to "Star_Citizen_Wiki" at some point
-$wgMetaNamespace = "Star_Citizen";
+$wgMetaNamespace = "Star_Citizen_Wiki";
 # Force HTTPS
 $wgForceHTTPS = true;
 # Main page is served as the domain root
@@ -785,6 +785,9 @@ $wgNamespaceProtection[NS_GUIDE] = array( 'guide-edit' );
 $wgNamespaceProtection[NS_ORG] = array( 'org-edit' );
 
 # Namespace alias
+$wgNamespaceAliases['SCW'] = NS_PROJECT;
+# Legacy support
+$wgNamespaceAliases['Star_Citizen'] = NS_PROJECT;
 $wgNamespaceAliases['SC'] = NS_PROJECT;
 $wgNamespaceAliases['ST'] = NS_PROJECT_TALK;
 $wgNamespaceAliases['H'] = NS_HELP;
