@@ -275,7 +275,7 @@ wfLoadExtension( 'Gadgets' );
 #wfLoadExtension( 'Graph' ); -- Disabled due to security issue
 wfLoadExtension( 'ImageMap' );
 wfLoadExtension( 'InputBox' );
-wfLoadExtension( 'intersection' );
+#wfLoadExtension( 'intersection' ); --20240506 Disabled for testing
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'JsonConfig' );
 wfLoadExtension( 'Linter' );
