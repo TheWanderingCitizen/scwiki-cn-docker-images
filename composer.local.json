@@ -669,7 +669,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-PluggableAuth",
+                                "name": "wikimedia/mediawiki-extensions-pluggableauth",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -686,7 +686,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-OpenIDConnect",
+                                "name": "wikimedia/mediawiki-extensions-openidconnect",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -703,7 +703,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-DisplayTitle",
+                                "name": "wikimedia/mediawiki-extensions-displaytitle",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -720,7 +720,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-ImageMap",
+                                "name": "wikimedia/mediawiki-extensions-imagemap",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -737,7 +737,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-PdfHandler",
+                                "name": "wikimedia/mediawiki-extensions-pdfhandler",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -754,7 +754,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-Poem",
+                                "name": "wikimedia/mediawiki-extensions-poem",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -771,7 +771,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "AlPha5130/mediawiki-extensions-Purge",
+                                "name": "AlPha5130/mediawiki-extensions-purge",
                                 "type": "mediawiki-extension",
                                 "version": "2.1.1",
                                 "dist": {
@@ -788,7 +788,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-TemplateSandbox",
+                                "name": "wikimedia/mediawiki-extensions-templatesandbox",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -805,7 +805,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-UserGroups",
+                                "name": "wikimedia/mediawiki-extensions-usergroups",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -822,7 +822,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-NativeSvgHandler",
+                                "name": "wikimedia/mediawiki-extensions-nativesvgHandler",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -839,7 +839,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-TitleBlacklist",
+                                "name": "wikimedia/mediawiki-extensions-titleblacklist",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
