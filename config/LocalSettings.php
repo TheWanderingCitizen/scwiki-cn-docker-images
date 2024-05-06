@@ -182,8 +182,8 @@ $wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
 $wgMemCachedServers = array();
 
-# Extend parser cache to 2 days
-$wgParserCacheExpireTime = 172800;
+# Extend parser cache to 3 days
+$wgParserCacheExpireTime = 259200;
 
 $wgEnableSidebarCache = true;
 $wgUseLocalMessageCache = true;
