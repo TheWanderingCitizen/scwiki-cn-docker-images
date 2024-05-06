@@ -19,8 +19,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 #$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
 
 # General Settings
-$wgSitename = "Star Citizen Wiki";
-$wgServer = "https://starcitizen.tools";
+$wgSitename = $_ENV["SiteName"];
+$wgServer = $_ENV["Server"];
 # TODO: We should change this to "Star_Citizen_Wiki" at some point
 $wgMetaNamespace = "Star_Citizen_Wiki";
 # Force HTTPS
@@ -35,17 +35,23 @@ $wgFragmentMode = [ 'html5' ];
 $wgParserEnableLegacyMediaDOM = false;
 $wgLocaltimezone = "UTC";
 $wgMaxShellMemory = 0;
+$wgLanguageCode = "zh-cn";
 
-$wgSecretKey = "{$_ENV['MEDIAWIKI_SECRETKEY']}";
-$wgUpgradeKey = "{$_ENV['MEDIAWIKI_UPGRADEKEY']}";
+$wgSecretKey = $_ENV["SecretKey"];
+$wgUpgradeKey = $_ENV["UpgradeKey"];
+
+$wgAuthenticationTokenVersion = "1";
+
+# InstantCommons allows wiki to use images from https://commons.wikimedia.org
+$wgUseInstantCommons = false;
 
 # Database settings
-$wgDBtype = "mysql";
-$wgDBserver = "mariadb-service.default.svc.cluster.local";
-$wgDBname = "scw_PROD";
-$wgDBuser = "root";
-$wgDBpassword = "{$_ENV['PRD_DB_PASSWORD']}";
-$wgDBprefix = "wiki";
+$wgDBtype = $_ENV["DbType"];
+$wgDBserver = $_ENV["DbServer"];
+$wgDBname = $_ENV["DbName"];
+$wgDBuser = $_ENV["DbUser"];
+$wgDBpassword = $_ENV["DbPassword"];
+$wgDBprefix = "cnwiki_";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -56,6 +62,7 @@ $wgScriptPath = "";
 $wgScriptExtension = "$wgScriptPath/index.php";
 $wgRedirectScript   = "$wgScriptPath/redirect.php";
 $wgArticlePath = "/$1";
+$wgUsePathInfo = true;
 	
 # Sitemap
 $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
@@ -140,11 +147,11 @@ $wgLogos = [
 $wgFavicon = false;
 
 ## UPO means: this is also a user preference option
-$wgEnableEmail = true;
+$wgEnableEmail = false;
 $wgEnableUserEmail = true; # UPO
 
-$wgEmergencyContact = "webmaster@starcitizen.tools";
-$wgPasswordSender = "no-reply@starcitizen.tools";
+$wgEmergencyContact = "";
+$wgPasswordSender = "";
 
 $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
@@ -215,7 +222,7 @@ $wgGalleryOptions = [
 ## License and Creative Commons licenses are supported so far.
 $wgRightsPage = ""; # Set to the title of a wiki page that describes your license/copyright
 $wgRightsUrl = "https://creativecommons.org/licenses/by-sa/4.0/";
-$wgRightsText = "Creative Commons Attribution-ShareAlike";
+$wgRightsText = "知识共享署名-相同方式共享";
 $wgRightsIcon = "$wgResourceBasePath/resources/assets/licenses/cc-by-sa.png";
 
 # The following permissions were set based on your choice in the installer
@@ -234,6 +241,10 @@ $wgNativeImageLazyLoading = true;
 
 #Fix double redirects after a page move
 $wgFixDoubleRedirects = true;
+
+# Redirects Setting
+$wgDisplayTitleFollowRedirects = true;
+$wgSearchDefaultRedirects = true;
 
 #=============================================== Extension Load ===============================================
 wfLoadExtension( 'AdvancedSearch' );
@@ -256,12 +267,15 @@ wfLoadExtension( 'Discord' );
 wfLoadExtension( 'DiscussionTools' );
 wfLoadExtension( 'DismissableSiteNotice' );
 wfLoadExtension( 'DynamicPageList3' );
+wfLoadExtension( 'DisplayTitle' );
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Elastica' );
 wfLoadExtension( 'EmbedVideo' );
 wfLoadExtension( 'Gadgets' );
 #wfLoadExtension( 'Graph' ); -- Disabled due to security issue
+wfLoadExtension( 'ImageMap' );
 wfLoadExtension( 'InputBox' );
+wfLoadExtension( 'intersection' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'JsonConfig' );
 wfLoadExtension( 'Linter' );
@@ -272,12 +286,17 @@ wfLoadExtension( 'MultiPurge' );
 wfLoadExtension( 'NativeSvgHandler' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'OATHAuth' );
+wfLoadExtension( 'OpenIDConnect' );
 wfLoadExtension( 'PageImages' );
 #wfLoadExtension( 'PageViewInfo' ); -- Disabled with Extension:Plausible
 wfLoadExtension( 'ParserFunctions' );
+wfLoadExtension( 'PdfHandler' );
 wfLoadExtension( 'PictureHtmlSupport' );
+wfLoadExtension( 'PluggableAuth' );
 #wfLoadExtension( 'Plausible' ); -- Disabled to allocate more resources to MW
+wfLoadExtension( 'Poem' );
 wfLoadExtension( 'Popups' );
+wfLoadExtension( 'Purge' );
 wfLoadExtension( 'RelatedArticles' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'ReplaceText' );
@@ -295,13 +314,16 @@ wfLoadExtension( 'SwiftMailer' );
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'TabberNeue' );
 wfLoadExtension( 'TemplateData' );
+wfLoadExtension( 'TemplateSandbox' );
 wfLoadExtension( 'TemplateStyles' );
 wfLoadExtension( 'TemplateStylesExtender' );
+wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'TextExtracts' );
 wfLoadExtension( 'Thanks' );
 wfLoadExtension( 'TwoColConflict' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'UploadWizard' );
+wfLoadExtension( 'UserGroups' );
 wfLoadExtension( 'Variables' );
 wfLoadExtension( 'VisualEditor' );
 wfLoadExtension( 'WebP' );
@@ -309,7 +331,7 @@ wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
 
-enableSemantics( 'starcitizen.tools' );
+enableSemantics( 'citizenwiki.cn' );
 #=============================================== Extension Config ===============================================
 # Apiunto 
 $wgApiuntoKey = ''; 
@@ -319,16 +341,18 @@ $wgApiuntoDefaultLocale = 'en_EN';
 
 # AWS
 $wgAWSCredentials = [
-  'key' => $_ENV['IMAGES_ACCESS_KEY'],
-  'secret' => $_ENV['IMAGES_SECRET_KEY'],
+  'key' => $_ENV['S3Key'],
+  'secret' => $_ENV['S3Secret'],
   'token' => false
 ];
-$wgAWSBucketName = 'media.starcitizen.tools';
-$wgAWSBucketDomain = 'media.starcitizen.tools';
+$wgAWSBucketName = $_ENV["S3BucketName"];
+$wgAWSBucketDomain = $_ENV["S3BucketDomain"];
 $wgAWSRepoHashLevels = '2';
 $wgAWSRepoDeletedHashLevels = '3';
-$wgFileBackends['s3']['endpoint'] = 'https://eu-central-1.linodeobjects.com';
-$wgAWSRegion = 'eu-central-1';
+$wgFileBackends['s3']['endpoint'] = $_ENV["S3Endpoint"];
+$wgAWSRegion = $_ENV["S3Region"];
+$wgAWSBucketTopSubdirectory = ""; # leading slash is required
+$wgResponsiveImages = false;
 
 # CirrusSearch
 $wgCirrusSearchIndexBaseName = 'scw_prod';
@@ -382,10 +406,14 @@ $wgMediaViewerEnableByDefault = true;
 $wgMediaViewerEnableByDefaultForAnonymous = true;
 
 # MultiPurge
-$wgMultiPurgeEnabledServices = array ( 'Cloudflare' );
-$wgMultiPurgeServiceOrder = array ( 'Cloudflare' );
-$wgMultiPurgeCloudFlareZoneId = "{$_ENV['CLOUDFLARE_ZONEID']}";
-$wgMultiPurgeCloudflareApiToken = "{$_ENV['CLOUDFLARE_APITOKEN']}";
+$wgMultiPurgeEnabledServices = [
+	'cloudflare'
+];
+$wgMultiPurgeServiceOrder = [
+	'cloudflare'
+];
+$wgMultiPurgeCloudFlareZoneId = $_ENV["wgMultiPurgeCloudFlareZoneId"];
+$wgMultiPurgeCloudflareApiToken = $_ENV["wgMultiPurgeCloudFlareApiToken"];
 $wgMultiPurgeStaticPurges = [
   'Load Script' => 'load.php?lang=de&modules=startup&only=scripts&raw=1&skin=citizen'
 ];
@@ -412,6 +440,22 @@ $wgVirtualRestConfig['modules']['parsoid'] = [
 	'domain' => 'starcitizen.tools',
   'restbaseCompat' => false,
   'timeout' => 30,
+];
+
+# PluggableAuth
+$wgPluggableAuth_EnableAutoLogin = false;
+$wgPluggableAuth_EnableLocalLogin = true;
+$wgOpenIDConnect_MigrateUsersByEmail = true;
+$wgOpenIDConnect_MigrateUsersByUserName = true;
+$wgOpenIDConnect_SingleLogout = true;
+$wgPluggableAuth_Config[] = [
+    'plugin' => 'OpenIDConnect',
+	'buttonLabelMessage' => '[建议使用]42KIT 注册/登录',
+    'data' => [
+        'providerURL' => $_ENV["OpenIDConnectProviderUrl"],
+        'clientID' => $_ENV["OpenIDConnectClientID"],
+        'clientsecret' => $_ENV["OpenIDConnectClientSecret"],
+    ]
 ];
 
 # Plausible
@@ -719,21 +763,32 @@ $wgCitizenThemeDefault = 'dark';
 
 # Job Queue
 /** @see RedisBagOStuff for a full explanation of these options. **/
-$wgObjectCaches['redis'] = array(
+$wgObjectCaches['redis'] = [
     'class'                => 'RedisBagOStuff',
-    'servers'              => array( 'redis-service.default.svc.cluster.local' ),
-    // 'connectTimeout'    => 1,
-    // 'persistent'        => false,
-    // 'password'          => 'secret',
-    // 'automaticFailOver' => true,
-);
+    'servers'              => [ $_ENV["RedisAddress"] ],
+    'connectTimeout'    => 30,
+    'persistent'        => false,
+    'password'          => $_ENV["RedisPassword"],
+    'automaticFailOver' => true,
+];
+
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
 	'order' => 'fifo',
-	'redisServer' => 'redis-service.default.svc.cluster.local',
+	'redisServer' => $_ENV["RedisAddress"],
 	'checkDelay' => true,
 	'daemonized' => true
 ];
+
+$wgJobQueueAggregator = [
+	'class'       => 'JobQueueAggregatorRedis',
+	'redisServer' => $_ENV["RedisAddress"],
+];
+
+$wgMessageCacheType = 'redis';
+$wgParserCacheType = 'redis';
+$wgLanguageConverterCacheType = 'redis';
+// 
 $wgJobRunRate = 0;
 
 #=============================================== Namespaces ===============================================
@@ -826,6 +881,7 @@ $wgAutopromote = array(
 
 #all
 $wgGroupPermissions['*']['createaccount'] = true;
+$wgGroupPermissions['*']['autocreateaccount'] = true;
 $wgGroupPermissions['*']['edit'] = false;
 $wgGroupPermissions['*']['createpage'] = false;
 $wgGroupPermissions['*']['writeapi'] = true;
@@ -851,14 +907,43 @@ $wgGroupPermissions['user']['oathauth-enable'] = true;
 $wgGroupPermissions['ORG-Editor']['org-edit'] = true;
 
 #autoconfirmed
-$wgAutoConfirmAge = 86400*3; // three days
-$wgAutoConfirmCount = 20;
-$wgGroupPermissions['autoconfirmed']['upload_by_url'] = true;
-$wgGroupPermissions['autoconfirmed']['createpage'] = true;
-$wgGroupPermissions['autoconfirmed']['createtalk'] = true;
+# $wgAutoConfirmAge = 86400*3; // three days
+# $wgAutoConfirmCount = 20;
+# $wgGroupPermissions['autoconfirmed']['upload_by_url'] = true;
+# $wgGroupPermissions['autoconfirmed']['createpage'] = true;
+# $wgGroupPermissions['autoconfirmed']['createtalk'] = true;
+
+# Confirmed User
+$wgGroupPermissions['确认用户']['browsearchive'] = true;
+$wgGroupPermissions['确认用户']['createpage'] = true;
+$wgGroupPermissions['确认用户']['createtalk'] = true;
+$wgGroupPermissions['确认用户']['delete'] = true;
+$wgGroupPermissions['确认用户']['deletedhistory'] = true;
+$wgGroupPermissions['确认用户']['deletedtext'] = true;
+$wgGroupPermissions['确认用户']['deleterevision'] = true;
+$wgGroupPermissions['确认用户']['import'] = true;
+$wgGroupPermissions['确认用户']['importupload'] = true;
+$wgGroupPermissions['确认用户']['managechangetags'] = true;
+$wgGroupPermissions['确认用户']['mergehistory'] = true;
+$wgGroupPermissions['确认用户']['minoredit'] = true;
+$wgGroupPermissions['确认用户']['move'] = true;
+$wgGroupPermissions['确认用户']['move-categorypages'] = true;
+$wgGroupPermissions['确认用户']['move-subpages'] = true;
+$wgGroupPermissions['确认用户']['movefile'] = true;
+$wgGroupPermissions['确认用户']['noratelimit'] = true;
+$wgGroupPermissions['确认用户']['read'] = true;
+$wgGroupPermissions['确认用户']['reupload'] = true;
+$wgGroupPermissions['确认用户']['rollback'] = true;
+$wgGroupPermissions['确认用户']['writeapi'] = true;
+$wgGroupPermissions['确认用户']['edit'] = true;
+$wgGroupPermissions['确认用户']['editinterface'] = true;
+$wgGroupPermissions['确认用户']['editmyoptions'] = true;
+$wgGroupPermissions['确认用户']['editmyprivateinfo'] = true;
+$wgGroupPermissions['确认用户']['editmywatchlist'] = true;
+$wgGroupPermissions['确认用户']['upload'] = true;
 
 #verified
-$wgGroupPermissions['Verified'] = $wgGroupPermissions['autoconfirmed'];
+$wgGroupPermissions['Verified'] = $wgGroupPermissions['确认用户'];
 $wgGroupPermissions['Verified']['skipcaptcha'] = true;
 $wgGroupPermissions['Verified']['purge'] = true;
 $wgGroupPermissions['Verified']['reupload'] = true;
