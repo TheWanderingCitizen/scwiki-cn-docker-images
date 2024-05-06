@@ -331,7 +331,7 @@ wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
 
-enableSemantics( 'citizenwiki.cn' );
+enableSemantics( 'new.citizenwiki.cn' );
 #=============================================== Extension Config ===============================================
 # Apiunto 
 $wgApiuntoKey = ''; 
