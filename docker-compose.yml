@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  application:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: application
+    container_name: application
+    tty: true
+    volumes:
+      - .:/var/www
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - .:/var/www
+      - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - application
