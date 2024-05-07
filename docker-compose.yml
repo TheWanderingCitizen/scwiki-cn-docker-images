@@ -8,12 +8,32 @@ services:
       dockerfile: Dockerfile
     env_file:
       - '.env'
-    volumes:
-      # - html:/var/www
-      - ./config/LocalSettings.php:/var/www/mediawiki/LocalSettings.php
-    networks:
-      - mynetwork
-
+    environment:
+      - COMPOSER_ALLOW_SUPERUSER
+      - DbName
+      - DbPassword
+      - DbServer
+      - DbType
+      - DbUser
+      - OpenIDConnectClientID
+      - OpenIDConnectClientSecret
+      - OpenIDConnectProviderUrl
+      - RedisAddress
+      - RedisPassword
+      - S3BucketDomain
+      - S3BucketName
+      - S3Endpoint
+      - S3Key
+      - S3Region
+      - S3Secret
+      - SecretKey
+      - Server
+      - SiteName
+      - UpgradeKey
+      - php_debug_config
+      - production
+      - wgMultiPurgeCloudFlareApiToken
+      - wgMultiPurgeCloudFlareZoneId
   mediawiki-web:
     image: nginx:latest
     container_name: nginx
