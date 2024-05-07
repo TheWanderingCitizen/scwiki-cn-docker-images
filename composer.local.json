@@ -51,7 +51,17 @@
                 "starcitizenwiki/apiunto": "dev-develop",
                 "mediawiki/pageviewinfo": "1.39.0",
                 "octfx/webp": "dev-develop",
-                "starcitizenwiki/picture-html-support": "dev-master"
+                "starcitizenwiki/picture-html-support": "dev-master",
+                "wikimedia/mediawiki-extensions-pluggableauth": "1.39.0",
+                "wikimedia/mediawiki-extensions-openidconnect": "1.39.0",
+                "wikimedia/mediawiki-extensions-displaytitle": "1.39.0",
+                "wikimedia/mediawiki-extensions-imagemap": "1.39.0",
+                "wikimedia/mediawiki-extensions-pdfhandler": "1.39.0",
+                "wikimedia/mediawiki-extensions-poem": "1.39.0",
+                "AlPha5130/mediawiki-extensions-purge": "2.1.1",
+                "wikimedia/mediawiki-extensions-templatesandbox": "1.39.0",
+                "wikimedia/mediawiki-extensions-usergroups": "1.39.0",
+                "wikimedia/mediawiki-extensions-titleblacklist": "1.39.0"
         },
         "extra": {
                 "merge-plugin": {
@@ -815,23 +825,6 @@
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-UserGroups.git",
-                                        "reference": "REL1_39"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "wikimedia/mediawiki-extensions-nativesvgHandler",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-NativeSvgHandler/archive/REL1_39.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-NativeSvgHandler.git",
                                         "reference": "REL1_39"
                                 }
                         }
