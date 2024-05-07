@@ -42,5 +42,5 @@ services:
     depends_on:
       - mediawiki
     ports:
-      - "80:80"
-      - "443:443"
+      - "10080:80"
+      - "10443:443"
