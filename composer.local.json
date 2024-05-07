@@ -58,7 +58,7 @@
                 "wikimedia/mediawiki-extensions-imagemap": "1.39.0",
                 "wikimedia/mediawiki-extensions-pdfhandler": "1.39.0",
                 "wikimedia/mediawiki-extensions-poem": "1.39.0",
-                "AlPha5130/mediawiki-extensions-purge": "2.1.1",
+                "alpha5130/mediawiki-extensions-purge": "2.1.1",
                 "wikimedia/mediawiki-extensions-templatesandbox": "1.39.0",
                 "wikimedia/mediawiki-extensions-usergroups": "1.39.0",
                 "wikimedia/mediawiki-extensions-titleblacklist": "1.39.0"
@@ -781,7 +781,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "AlPha5130/mediawiki-extensions-purge",
+                                "name": "alpha5130/mediawiki-extensions-purge",
                                 "type": "mediawiki-extension",
                                 "version": "2.1.1",
                                 "dist": {
