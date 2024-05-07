@@ -154,6 +154,7 @@ RUN set -eux; \
      --no-interaction \
      --no-scripts; \
    rm -f composer.lock.json ;\
+   ls -la /var/www/mediawiki/extensions; \
    /usr/bin/composer update --no-dev \
                             --no-ansi \
                             --no-interaction \
@@ -171,6 +172,10 @@ RUN set -eux; \
 	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
 	mv /var/www/mediawiki/extensions/Swiftmailer /var/www/mediawiki/extensions/SwiftMailer; \
 	mv /var/www/mediawiki/extensions/Pageviewinfo /var/www/mediawiki/extensions/PageViewInfo; \
+	mv /var/www/mediawiki/extensions/Openidconnect /var/www/mediawiki/extensions/OpenIDConnect; \
+	mv /var/www/mediawiki/extensions/Pluggableauth /var/www/mediawiki/extensions/PluggableAuth; \
+	mv /var/www/mediawiki/extensions/Templatesandbox /var/www/mediawiki/extensions/TemplateSandbox; \
+	mv /var/www/mediawiki/extensions/Usergroups /var/www/mediawiki/extensions/UserGroups; \
 	\
 	cp /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php; \
 	chown -R www-data:www-data /var/www

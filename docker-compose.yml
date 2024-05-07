@@ -8,18 +8,29 @@ services:
       dockerfile: Dockerfile
     env_file:
       - '.env'
-    tty: true
     volumes:
-      - .:/var/www
+      # - html:/var/www
+      - ./config/LocalSettings.php:/var/www/mediawiki/LocalSettings.php
+    networks:
+      - mynetwork
 
   mediawiki-web:
-    image: docker-registry.wikimedia.org/dev/buster-apache2:2.0.0-s1
-    user: "${MW_DOCKER_UID}:${MW_DOCKER_GID}"
-    ports:
-      - "${MW_DOCKER_PORT:-8080}:8080"
+    image: nginx:latest
+    container_name: nginx
+    restart: always
     volumes:
-      - ./:/var/www/html/w:cached
-    env_file:
-      - '.env'
-    environment:
-      MW_LOG_DIR: /var/www/html/w/cache
+      # - html:/var/www
+      - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - mediawiki
+    ports:
+      - 8080:80
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    name: mynetwork
+
+volumes:
+  html:

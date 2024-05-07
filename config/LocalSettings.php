@@ -157,14 +157,14 @@ $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
-$wgSMTP = [
-  'host' => 'mail.methean.com',
-  'IDHost' => 'starcitizen.tools',
-  'port' => 2525,
-  'auth' => true,
-  'username' => 'no-reply@starcitizen.tools',
-  'password' => $_ENV['SMTP_PASSWORD']
-];
+#$wgSMTP = [
+#  'host' => 'mail.methean.com',
+#  'IDHost' => 'starcitizen.tools',
+#  'port' => 2525,
+#  'auth' => true,
+#  'username' => 'no-reply@starcitizen.tools',
+#  'password' => $_ENV['SMTP_PASSWORD']
+#];
 
 ## Allow logged-in users to set a preference whether or not matches 
 ## in search results should force redirection to that page.
@@ -267,7 +267,7 @@ wfLoadExtension( 'Discord' );
 wfLoadExtension( 'DiscussionTools' );
 wfLoadExtension( 'DismissableSiteNotice' );
 wfLoadExtension( 'DynamicPageList3' );
-wfLoadExtension( 'DisplayTitle' );
+#wfLoadExtension( 'DisplayTitle' );
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Elastica' );
 wfLoadExtension( 'EmbedVideo' );
@@ -772,23 +772,19 @@ $wgObjectCaches['redis'] = [
     'automaticFailOver' => true,
 ];
 
-$wgJobTypeConf['default'] = [
-	'class' => 'JobQueueRedis',
-	'order' => 'fifo',
-	'redisServer' => $_ENV["RedisAddress"],
-	'checkDelay' => true,
-	'daemonized' => true
+$wgJobTypeConf = [
+	'default' => [ 'class' => JobQueueDB::class, 'order' => 'random', 'claimTTL' => 3600 ],
 ];
 
-$wgJobQueueAggregator = [
-	'class'       => 'JobQueueAggregatorRedis',
-	'redisServer' => $_ENV["RedisAddress"],
-];
+# $wgJobQueueAggregator = [
+#	'class'       => 'JobQueueAggregatorRedis',
+#	'redisServer' => $_ENV["RedisAddress"],
+#];
 
-$wgMessageCacheType = 'redis';
-$wgParserCacheType = 'redis';
-$wgLanguageConverterCacheType = 'redis';
-// 
+#$wgMessageCacheType = 'redis';
+#$wgParserCacheType = 'redis';
+#$wgLanguageConverterCacheType = 'redis';
+
 $wgJobRunRate = 0;
 
 #=============================================== Namespaces ===============================================

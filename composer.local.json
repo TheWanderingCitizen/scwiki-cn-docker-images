@@ -52,16 +52,13 @@
                 "mediawiki/pageviewinfo": "1.39.0",
                 "octfx/webp": "dev-develop",
                 "starcitizenwiki/picture-html-support": "dev-master",
-                "wikimedia/mediawiki-extensions-pluggableauth": "1.39.0",
-                "wikimedia/mediawiki-extensions-openidconnect": "1.39.0",
-                "wikimedia/mediawiki-extensions-displaytitle": "1.39.0",
-                "wikimedia/mediawiki-extensions-imagemap": "1.39.0",
-                "wikimedia/mediawiki-extensions-pdfhandler": "1.39.0",
-                "wikimedia/mediawiki-extensions-poem": "1.39.0",
-                "alpha5130/mediawiki-extensions-purge": "2.1.1",
-                "wikimedia/mediawiki-extensions-templatesandbox": "1.39.0",
-                "wikimedia/mediawiki-extensions-usergroups": "1.39.0",
-                "wikimedia/mediawiki-extensions-titleblacklist": "1.39.0"
+                "wikimedia/pluggableauth": "1.39.0",
+                "wikimedia/openidconnect": "1.39.0",
+                "wikimedia/display-title": "1.39.0",
+                "wikimedia/poem": "1.39.0",
+                "alpha5130/purge": "2.1.1",
+                "wikimedia/templatesandbox": "1.39.0",
+                "wikimedia/usergroups": "1.39.0"
         },
         "extra": {
                 "merge-plugin": {
@@ -679,7 +676,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-pluggableauth",
+                                "name": "wikimedia/pluggableauth",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -696,7 +693,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-openidconnect",
+                                "name": "wikimedia/openidconnect",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -713,7 +710,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-displaytitle",
+                                "name": "wikimedia/display-title",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -730,41 +727,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-imagemap",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-ImageMap/archive/REL1_39.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-ImageMap.git",
-                                        "reference": "REL1_39"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "wikimedia/mediawiki-extensions-pdfhandler",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-PdfHandler/archive/REL1_39.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-PdfHandler.git",
-                                        "reference": "REL1_39"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "wikimedia/mediawiki-extensions-poem",
+                                "name": "wikimedia/poem",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -781,7 +744,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "alpha5130/mediawiki-extensions-purge",
+                                "name": "alpha5130/purge",
                                 "type": "mediawiki-extension",
                                 "version": "2.1.1",
                                 "dist": {
@@ -798,7 +761,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-templatesandbox",
+                                "name": "wikimedia/templatesandbox",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -815,7 +778,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/mediawiki-extensions-usergroups",
+                                "name": "wikimedia/usergroups",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -825,23 +788,6 @@
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-UserGroups.git",
-                                        "reference": "REL1_39"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "wikimedia/mediawiki-extensions-titleblacklist",
-                                "type": "mediawiki-extension",
-                                "version": "1.39.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TitleBlacklist/archive/REL1_39.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TitleBlacklist.git",
                                         "reference": "REL1_39"
                                 }
                         }
