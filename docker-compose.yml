@@ -41,3 +41,6 @@ services:
       - ./config/nginx:/etc/nginx/conf.d
     depends_on:
       - mediawiki
+    ports:
+      - "80:80"
+      - "443:443"
