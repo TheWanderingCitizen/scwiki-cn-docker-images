@@ -12,9 +12,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 /* DEBUG ONLY */
-#$wgShowExceptionDetails = true;
-#$wgDebugDumpSql = true;
-#$wgDebugComments = true;
+$wgShowExceptionDetails = true;
+$wgDebugDumpSql = true;
+$wgDebugComments = true;
 #Maintenance
 #$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
 
