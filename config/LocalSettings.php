@@ -426,21 +426,21 @@ $wgPageImagesOpenGraphFallbackImage = "$wgResourceBasePath/resources/assets/site
 # Parsoid
 # Need to load Parsoid explicitly to make Linter work
 # @see https://github.com/StarCitizenWiki/WikiDocker/commit/ea149d74daba5cc13594cee57db70dab099e214d
-wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
-$wgParsoidSettings = [
-    'useSelser' => true,
-    'linting' => true,
-];
+#wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
+#$wgParsoidSettings = [
+#    'useSelser' => true,
+#    'linting' => true,
+#];
 # This belongs to VE but this is more relevant here
-$wgVisualEditorParsoidAutoConfig = false;
-$wgVirtualRestConfig['modules']['parsoid'] = [
-	// URL to the Parsoid instance - use port 8142 if you use the Debian package - the parameter 'URL' was first used but is now deprecated (string)
-	'url' => 'https://starcitizen.tools/rest.php',
-	// Parsoid "domain" (string, optional) - MediaWiki >= 1.26
-	'domain' => 'starcitizen.tools',
-  'restbaseCompat' => false,
-  'timeout' => 30,
-];
+#$wgVisualEditorParsoidAutoConfig = false;
+#$wgVirtualRestConfig['modules']['parsoid'] = [
+#	// URL to the Parsoid instance - use port 8142 if you use the Debian package - the parameter 'URL' was first used but is now deprecated (string)
+#	'url' => 'https://starcitizen.tools/rest.php',
+#	// Parsoid "domain" (string, optional) - MediaWiki >= 1.26
+#	'domain' => 'starcitizen.tools',
+#  'restbaseCompat' => false,
+#  'timeout' => 30,
+#];
 
 # PluggableAuth
 $wgPluggableAuth_EnableAutoLogin = false;
