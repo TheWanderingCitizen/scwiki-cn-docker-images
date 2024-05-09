@@ -450,6 +450,8 @@ $wgRelatedArticlesUseCirrusSearch = true;
 $wgRelatedArticlesOnlyUseCirrusSearch = true;
 
 # Semantic Mediawiki
+# Set default property type to Text
+$smwgPDefaultType = '_txt'
 # Use Redis to cache SMW query result
 $smwgQueryResultCacheType = 'redis';
 # Enable tracking and storing of dependencies of embedded queries
