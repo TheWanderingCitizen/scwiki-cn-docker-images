@@ -322,7 +322,7 @@ wfLoadExtension( 'TextExtracts' );
 wfLoadExtension( 'Thanks' );
 wfLoadExtension( 'TwoColConflict' );
 wfLoadExtension( 'UniversalLanguageSelector' );
-wfLoadExtension( 'UploadWizard' );
+#wfLoadExtension( 'UploadWizard' );
 wfLoadExtension( 'UserGroups' );
 wfLoadExtension( 'Variables' );
 wfLoadExtension( 'VisualEditor' );
@@ -355,18 +355,18 @@ $wgAWSBucketTopSubdirectory = ""; # leading slash is required
 $wgResponsiveImages = false;
 
 # CirrusSearch
-$wgCirrusSearchIndexBaseName = 'scw_prod';
-$wgSearchType = 'CirrusSearch';
-$wgCirrusSearchUseCompletionSuggester = 'yes';
-$wgCirrusSearchClusters = [
-    'default' => ['elasticsearch-es-elasticsearch.default.svc.cluster.local'],
-];
-$wgCirrusSearchCompletionSuggesterSubphrases = [
-    'build'  => true,
-    'use' => true,
-    'type' => 'anywords',
-    'limit' => 5,
-];
+# $wgCirrusSearchIndexBaseName = 'scw_prod';
+# $wgSearchType = 'CirrusSearch';
+# $wgCirrusSearchUseCompletionSuggester = 'yes';
+# $wgCirrusSearchClusters = [
+#     'default' => ['elasticsearch-es-elasticsearch.default.svc.cluster.local'],
+# ];
+# $wgCirrusSearchCompletionSuggesterSubphrases = [
+#     'build'  => true,
+#     'use' => true,
+#     'type' => 'anywords',
+#     'limit' => 5,
+# ];
 
 # CleanChanges
 #$wgCCTrailerFilter = true;
@@ -386,7 +386,7 @@ $wgCaptchaTriggers['edit'] = true;
 $wgCaptchaTriggers['create'] = true;
 
 # Discord
-$wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
+# $wgDiscordWebhookURL = ["{$_ENV['DISCORD_WEBHOOKURL']}"];
 
 # DismissableSiteNotice
 $wgDismissableSiteNoticeForAnons = true;
@@ -573,19 +573,19 @@ $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10; # Seconds
 # TemplateStyles
 $wgTemplateStylesAllowedUrls = [
   "audio" => [
-    "<^https://starcitizen\\.tools/>",
-    "<^https://media\\.starcitizen\\.tools/>"
+    "<^https://citizenwiki\\.cn/>",
+    "<^https://files\\.citizenwiki\\.cn/>"
   ],
   "image" => [
-    "<^https://starcitizen\\.tools/>",
-    "<^https://media\\.starcitizen\\.tools/>"
+    "<^https://citizenwiki\\.cn/>",
+    "<^https://files\\.citizenwiki\\.cn/>"
   ],
   "svg" => [
-    "<^https://starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>",
-    "<^https://media\\.starcitizen\\.tools/[^?#]*\\.svg(?:[?#]|$)>"
+    "<^https://citizenwiki\\.cn/[^?#]*\\.svg(?:[?#]|$)>",
+    "<^https://files\\.citizenwiki\\.cn/[^?#]*\\.svg(?:[?#]|$)>"
   ],
   "font" => [
-    "<^https://starcitizen\\.tools/>"
+    "<^https://citizenwiki\\.cn/>"
   ],
   "namespace" => [
       "<.>"
