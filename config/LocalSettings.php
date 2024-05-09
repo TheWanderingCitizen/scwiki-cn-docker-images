@@ -561,6 +561,7 @@ $sespgEnabledPropertyList = [
 	'_PAGEIMG',
 	'_LINKSTO'
 ];
+$smwgPDefaultType = '_txt';
 
 # Scribunto
 $wgScribuntoDefaultEngine = 'luasandbox';
