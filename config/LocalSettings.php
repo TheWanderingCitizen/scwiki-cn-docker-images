@@ -253,7 +253,7 @@ wfLoadExtension( 'AWS' );
 wfLoadExtension( 'Babel' );
 wfLoadExtension( 'CategoryTree' );
 wfLoadExtension( 'CheckUser' );
-wfLoadExtension( 'CirrusSearch' );
+#wfLoadExtension( 'CirrusSearch' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
 wfLoadExtension( 'Cldr' );
