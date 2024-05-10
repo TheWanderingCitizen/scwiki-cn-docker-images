@@ -50,6 +50,7 @@ RUN set -eux; \
 		mysqli \
 		opcache \
   		zip \
+		curl \
 	; \
 	\
 	pecl install \ 
