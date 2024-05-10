@@ -443,7 +443,7 @@ $wgPageImagesOpenGraphFallbackImage = "$wgResourceBasePath/resources/assets/site
 #];
 
 # PluggableAuth
-$wgPluggableAuth_EnableAutoLogin = true;
+$wgPluggableAuth_EnableAutoLogin = false;
 $wgPluggableAuth_EnableLocalLogin = true;
 $wgOpenIDConnect_MigrateUsersByEmail = true;
 $wgOpenIDConnect_MigrateUsersByUserName = true;
