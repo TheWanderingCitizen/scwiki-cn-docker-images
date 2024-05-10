@@ -58,8 +58,7 @@
                 "wikimedia/poem": "1.39.0",
                 "alpha5130/purge": "2.1.1",
                 "wikimedia/templatesandbox": "1.39.0",
-                "wikimedia/usergroups": "1.39.0",
-                "jumbojett/openid-connect-php": "0.9.10"
+                "wikimedia/usergroups": "1.39.0"
         },
         "extra": {
                 "merge-plugin": {
