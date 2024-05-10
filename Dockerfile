@@ -173,8 +173,8 @@ RUN set -eux; \
 	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
 	mv /var/www/mediawiki/extensions/Swiftmailer /var/www/mediawiki/extensions/SwiftMailer; \
 	# mv /var/www/mediawiki/extensions/Pageviewinfo /var/www/mediawiki/extensions/PageViewInfo; \
-	mv /var/www/mediawiki/extensions/Openidconnect /var/www/mediawiki/extensions/OpenIDConnect; \
-	mv /var/www/mediawiki/extensions/Pluggableauth /var/www/mediawiki/extensions/PluggableAuth; \
+	# mv /var/www/mediawiki/extensions/Openidconnect /var/www/mediawiki/extensions/OpenIDConnect; \
+	# mv /var/www/mediawiki/extensions/Pluggableauth /var/www/mediawiki/extensions/PluggableAuth; \
 	mv /var/www/mediawiki/extensions/Templatesandbox /var/www/mediawiki/extensions/TemplateSandbox; \
 	mv /var/www/mediawiki/extensions/Usergroups /var/www/mediawiki/extensions/UserGroups; \
 	\

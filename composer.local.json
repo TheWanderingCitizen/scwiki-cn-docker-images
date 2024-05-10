@@ -52,8 +52,8 @@
                 "mediawiki/page-view-info": "1.39.0",
                 "octfx/webp": "dev-develop",
                 "starcitizenwiki/picture-html-support": "dev-master",
-                "wikimedia/pluggableauth": "1.39.0",
-                "wikimedia/openidconnect": "1.39.0",
+                "wikimedia/pluggable-auth": "1.39.0",
+                "wikimedia/open-i-d-connect": "1.39.0",
                 "wikimedia/display-title": "1.39.0",
                 "wikimedia/poem": "1.39.0",
                 "alpha5130/purge": "2.1.1",
@@ -68,7 +68,8 @@
                                 "extensions/Cite/composer.json",
                                 "extensions/Elastica/composer.json",
                                 "extensions/OATHAuth/composer.json",
-                                "extensions/Openidconnect/composer.json",
+                                "extensions/OpenIDConnect/composer.json",
+                                "extensions/PluggableAuth/composer.json",
                                 "extensions/TemplateStyles/composer.json",
                                 "extensions/AWS/composer.json",
                                 "extensions/Swiftmailer/composer.json",
@@ -676,7 +677,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/pluggableauth",
+                                "name": "wikimedia/pluggable-auth",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -693,7 +694,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/openidconnect",
+                                "name": "wikimedia/open-i-d-connect",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
