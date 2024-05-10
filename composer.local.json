@@ -49,7 +49,7 @@
                 "mediawiki/semantic-scribunto": "~2.2",
                 "mediawiki/semantic-drilldown": "1.39.0",
                 "starcitizenwiki/apiunto": "dev-develop",
-                "mediawiki/pageviewinfo": "1.39.0",
+                "mediawiki/page-view-info": "1.39.0",
                 "octfx/webp": "dev-develop",
                 "starcitizenwiki/picture-html-support": "dev-master",
                 "wikimedia/pluggableauth": "1.39.0",
@@ -68,7 +68,7 @@
                                 "extensions/Cite/composer.json",
                                 "extensions/Elastica/composer.json",
                                 "extensions/OATHAuth/composer.json",
-                                "extensions/OpenIDConnect/composer.json",
+                                "extensions/Openidconnect/composer.json",
                                 "extensions/TemplateStyles/composer.json",
                                 "extensions/AWS/composer.json",
                                 "extensions/Swiftmailer/composer.json",
@@ -659,7 +659,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "mediawiki/pageviewinfo",
+                                "name": "mediawiki/page-view-info",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
