@@ -6,6 +6,7 @@ services:
     env_file:
       - '.env'
     volumes:
+      - './config/LocalSettings.php:/var/www/mediawiki/LocalSettings.php'
       - 'semantic-wiki-data:/var/www/'
     environment:
       - COMPOSER_ALLOW_SUPERUSER

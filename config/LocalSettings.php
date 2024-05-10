@@ -501,6 +501,7 @@ $smwgEnabledQueryDependencyLinksStore = true;
 # Duplicate query conditions should be removed from computing query results
 $smwgQFilterDuplicates = true;
 $smwgConfigFileDir = "/usr/local/smw";
+$smwgPDefaultType = '_txt';
 # Enable SMW in the following namespaces
 # Template namespace
 $smwgNamespacesWithSemanticLinks[NS_TEMPLATE] = true;
@@ -561,7 +562,6 @@ $sespgEnabledPropertyList = [
 	'_PAGEIMG',
 	'_LINKSTO'
 ];
-$smwgPDefaultType = '_txt';
 
 # Scribunto
 $wgScribuntoDefaultEngine = 'luasandbox';
