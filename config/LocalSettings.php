@@ -11,6 +11,10 @@ if ( !defined( 'MEDIAWIKI' ) ) {
   exit;
 }
 
+#error_reporting( -1 );
+#ini_set( 'display_errors', 1 );
+#ini_set( 'display_startup_errors', 1 );
+
 /* DEBUG ONLY */
 #$wgShowExceptionDetails = true;
 #$wgDebugDumpSql = true;
@@ -29,13 +33,15 @@ $wgForceHTTPS = true;
 $wgMainPageIsDomainRoot = true;
 # Allow MediaWiki:Citizen.css to load on all pages
 $wgAllowSiteCSSOnRestrictedPages = true;
+# Enable CJK Fonts
+$wgCitizenEnableCJKFonts = true;
 # Use HTML5 encoding with minimal escaping
 $wgFragmentMode = [ 'html5' ];
 # Use Parsoid media HTML structure
 $wgParserEnableLegacyMediaDOM = false;
 $wgLocaltimezone = "UTC";
 $wgMaxShellMemory = 0;
-$wgLanguageCode = "zh-cn";
+$wgLanguageCode = "zh";
 
 $wgSecretKey = $_ENV["SecretKey"];
 $wgUpgradeKey = $_ENV["UpgradeKey"];
@@ -105,14 +111,28 @@ $wgCdnServersNoPurge = [
 $wgCSPHeader = [
 	'useNonces' => false,
 	'script-src' => [ 
-		'\'self\''
+		'\'self\'',
+		'https://citizenwiki.cn',
+		'https://new.citizenwiki.cn',
+		'https://www.clarity.ms',
+		'https://t.clarity.ms',
+		'https://hm.baidu.com',
+		'https://files.citizenwiki.cn',
 	],
 	'default-src' => [ 
 		'\'self\'',
-		'https://api.flickr.com'
+		'https://citizenwiki.cn',
+		'https://new.citizenwiki.cn',
+		'https://api.flickr.com',
+		'https://www.clarity.ms',
+		'https://t.clarity.ms',
+		'https://hm.baidu.com',
+		'https://files.citizenwiki.cn',
 	],
 	'style-src' => [ '\'self\'',  ],
-	'object-src' => [ '\'none\'' ],
+	'object-src' => [ 
+		'\'none\'',
+	],
 ];
 
 # Set X-Frame-Options to DENY
@@ -331,13 +351,13 @@ wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
 
-enableSemantics( 'new.citizenwiki.cn' );
+enableSemantics( 'citizenwiki.cn' );
 #=============================================== Extension Config ===============================================
 # Apiunto 
 $wgApiuntoKey = ''; 
 $wgApiuntoUrl = 'https://api.star-citizen.wiki';
 $wgApiuntoTimeout = '10'; // 5 seconds
-$wgApiuntoDefaultLocale = 'en_EN'; 
+$wgApiuntoDefaultLocale = 'zh_CN'; 
 
 # AWS
 $wgAWSCredentials = [
@@ -450,7 +470,7 @@ $wgOpenIDConnect_MigrateUsersByUserName = true;
 $wgOpenIDConnect_SingleLogout = true;
 $wgPluggableAuth_Config[] = [
     'plugin' => 'OpenIDConnect',
-	'buttonLabelMessage' => '[建议使用]42KIT 注册/登录',
+	'buttonLabelMessage' => '[维修中]42KIT 注册/登录',
     'data' => [
         'providerURL' => $_ENV["OpenIDConnectProviderUrl"],
         'clientID' => $_ENV["OpenIDConnectClientID"],
@@ -479,19 +499,18 @@ $wgPopupsReferencePreviewsBetaFeature = false;
 
 # Questy Catpcha
 $wgCaptchaQuestions = [
-  "What the name of site?" => [ 'sct', 'star citizen wiki', 'star citizen tools', 'starcitizen.tools' ],
-  "What is the name of the company that is developing the game?" => [ 'cig', 'rsi', 'cloud imperium', 'cloud imperium games', 'robert space industries', 'roberts space industries'],
-  "Who is the co-founder, CEO, director of the game's developer" => ['chris roberts','chris robert'],
-  "What is the single player part of the game named?" => ['squadron 42', 'sq42', 'squadron42'],
-  "Who is the in-lore manufacturer of the <a href='https://starcitizen.tools/Talon'> Talon</a>? " => ['esperia', 'espr', 'esperia (espr)']
+  "本站的名字是?" => [ 'citizenwiki', '星际公民中文百科', 'SC中文百科', '公民中文百科' ],
+  "开发该游戏的公司名称是什么？" => [ 'cig', 'rsi', 'cloud imperium', 'cloud imperium games', 'robert space industries', 'roberts space industries', '云帝国游戏'],
+  "谁是游戏开发商的联合创始人、首席执行官、总监？" => ['chris roberts','chris robert', '克里斯·罗伯特', '克里斯罗伯特', '萝卜'],
+  "游戏的单人部分的名称是什么？" => ['squadron 42', 'sq42', 'squadron42', '42中队']
 ];
 
 # RelatedArticles 
-$wgRelatedArticlesFooterWhitelistedSkins = [ 'citizen' ];
-$wgRelatedArticlesUseCirrusSearchApiUrl = '/api.php';
-$wgRelatedArticlesDescriptionSource = 'wikidata';
-$wgRelatedArticlesUseCirrusSearch = true;
-$wgRelatedArticlesOnlyUseCirrusSearch = true;
+#$wgRelatedArticlesFooterWhitelistedSkins = [ 'citizen' ];
+#$wgRelatedArticlesUseCirrusSearchApiUrl = '/api.php';
+#$wgRelatedArticlesDescriptionSource = 'wikidata';
+#$wgRelatedArticlesUseCirrusSearch = true;
+#$wgRelatedArticlesOnlyUseCirrusSearch = true;
 
 # Semantic Mediawiki
 # Use Redis to cache SMW query result
@@ -610,11 +629,11 @@ $wgULSIMEEnabled = false;
 # UploadWizard
 $wgApiFrameOptions = 'SAMEORIGIN';
 $wgAllowCopyUploads = true;
-$wgCopyUploadsDomains = array( '*.flickr.com', '*.staticflickr.com' );
+#$wgCopyUploadsDomains = array( '*.flickr.com', '*.staticflickr.com' );
 $wgUploadNavigationUrl = '/Special:UploadWizard';
-$wgUploadWizardConfig = array(
-  'flickrApiKey' => "{$_ENV['FLICKR_APIKEY']}",
-  );
+#$wgUploadWizardConfig = array(
+#  'flickrApiKey' => "{$_ENV['FLICKR_APIKEY']}",
+#  );
 $wgUploadWizardConfig = array(
   'debug' => false,
   'altUploadForm' => 'Special:Upload',
@@ -754,9 +773,9 @@ $wgDefaultSkin = 'citizen';
 wfLoadSkin( 'Citizen' );
 
 # Use REST API search endpoint
-$wgCitizenSearchGateway = 'mwRestApi';
+$wgCitizenSearchGateway = 'mwActionApi';
 # Search description source
-$wgCitizenSearchDescriptionSource = 'wikidata';
+$wgCitizenSearchDescriptionSource = 'textextracts';
 # Number of search results in suggestion
 $wgCitizenMaxSearchResults = 10;
 # Default to dark theme
