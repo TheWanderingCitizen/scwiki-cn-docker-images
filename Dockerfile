@@ -38,6 +38,7 @@ RUN set -eux; \
 		libicu-dev \
 		libonig-dev \
 		libcurl4-gnutls-dev \
+		libmagickwand-dev \
 		libwebp7 \
 		libzip-dev \
 		liblua5.1-0-dev \
