@@ -21,7 +21,6 @@ RUN set -eux; \
 		python3-pygments \
 		rsync \
 		nano \
-		php-wikidiff2 \
   		liblua5.1-0 \
   		libzip4 \
         	s3cmd \
