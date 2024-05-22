@@ -37,11 +37,13 @@ RUN set -eux; \
 		libicu-dev \
 		libonig-dev \
 		libcurl4-gnutls-dev \
+		libthai0 \
+		libthai-dev \
 		libmagickwand-dev \
 		libwebp7 \
 		libzip-dev \
 		liblua5.1-0-dev \
-		wikidiff2 \
+		php-wikidiff2 \
 	; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
