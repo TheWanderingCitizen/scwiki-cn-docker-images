@@ -21,6 +21,7 @@ RUN set -eux; \
 		python3-pygments \
 		rsync \
 		nano \
+		php-wikidiff2 \
   		liblua5.1-0 \
   		libzip4 \
         	s3cmd \
@@ -37,13 +38,9 @@ RUN set -eux; \
 		libicu-dev \
 		libonig-dev \
 		libcurl4-gnutls-dev \
-		libthai0 \
-		libthai-dev \
-		libmagickwand-dev \
 		libwebp7 \
 		libzip-dev \
 		liblua5.1-0-dev \
-		php-wikidiff2 \
 	; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
