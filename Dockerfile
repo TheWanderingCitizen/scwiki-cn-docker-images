@@ -45,6 +45,7 @@ RUN set -eux; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
 		calendar \
+  		exif \
 		intl \
 		mbstring \
 		mysqli \
