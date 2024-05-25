@@ -81,16 +81,6 @@ RUN set -eux; \
 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
 	rm -rf /var/lib/apt/lists/*
 
-
-# set recommended PHP.ini settings
-# see https://secure.php.net/manual/en/opcache.installation.php
-RUN { \
-		echo 'opcache.memory_consumption=128'; \
-		echo 'opcache.interned_strings_buffer=8'; \
-		echo 'opcache.max_accelerated_files=4000'; \
-		echo 'opcache.revalidate_freq=60'; \
-	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-
 # MediaWiki setup
 RUN set -eux; \
     fetchDeps=" \
@@ -123,6 +113,7 @@ COPY ./config/LocalSettings.php /var/www/mediawiki/LocalSettings.php
 COPY ./resources /var/www/mediawiki/resources
 
 COPY ./config/php-config.ini /usr/local/etc/php/conf.d/php-config.ini
+COPY ./config/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 COPY ./config/robots.txt /var/www/mediawiki/robots.txt
 
 RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; \
