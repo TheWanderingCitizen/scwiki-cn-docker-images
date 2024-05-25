@@ -21,7 +21,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 # General Settings
 $wgSitename = "Star Citizen Wiki";
 $wgServer = "https://starcitizen.tools";
-# TODO: We should change this to "Star_Citizen_Wiki" at some point
 $wgMetaNamespace = "Star_Citizen_Wiki";
 # Force HTTPS
 $wgForceHTTPS = true;
@@ -38,6 +37,8 @@ $wgMaxShellMemory = 0;
 
 $wgSecretKey = "{$_ENV['MEDIAWIKI_SECRETKEY']}";
 $wgUpgradeKey = "{$_ENV['MEDIAWIKI_UPGRADEKEY']}";
+
+$wgMiserMode = true;
 
 # Database settings
 $wgDBtype = "mysql";
