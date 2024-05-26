@@ -140,9 +140,7 @@ $wgLogos = [
 	'svg' => "$wgResourceBasePath/resources/assets/sitelogo.svg",
 ];
 
-# Restore old config to look for favicon.ico until someone look into the redirect issue
-#$wgFavicon = '/favicon.svg';
-$wgFavicon = false;
+$wgFavicon = '/favicon.svg';
 
 ## UPO means: this is also a user preference option
 $wgEnableEmail = true;
