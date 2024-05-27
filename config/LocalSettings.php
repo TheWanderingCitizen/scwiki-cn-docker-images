@@ -69,6 +69,8 @@ $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
 # IP range: https://www.cloudflare.com/ips/
 $wgUsePrivateIPs = true;
 $wgUseCdn = true;
+# 15 minutes, move to a longer time when MultiPurge is fixed
+$wgCdnMaxAge = 900;
 $wgCdnServersNoPurge = [
 	'194.233.168.70', # Linode Loadbalancer
 	'10.0.0.0/8',
