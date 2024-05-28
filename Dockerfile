@@ -17,7 +17,7 @@ RUN set -eux; \
 		unzip \
 		openssh-client \
 		# Required for SyntaxHighlighting
-		python3 \
+		python3-dev \
   		python3-pip \
 		rsync \
 		nano \
