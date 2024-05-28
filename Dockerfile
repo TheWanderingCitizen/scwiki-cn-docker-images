@@ -3,6 +3,7 @@ FROM php:8.1-fpm
 # Version
 ENV MEDIAWIKI_MAJOR_VERSION 1.39
 ENV MEDIAWIKI_VERSION 1.39.7
+ENV PYGMENTS_VERSION: 2.17.2
 
 # System dependencies
 RUN set -eux; \
@@ -26,12 +27,12 @@ RUN set -eux; \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
-# Directly download and install Pygment because bookworm is using an old version (2.14.1)
+# Directly download and install Pygments because bookworm is using an old version (2.14.1)
 # We need it for Extension:SyntaxHighlight
 RUN set -eux; \
 	\
- 	curl -o python3-pygments_2.17.2+dfsg-1_all.deb http://ftp.debian.org/debian/pool/main/p/pygments/python3-pygments_2.17.2+dfsg-1_all.deb \
-	dpkg -i python3-pygments_2.17.2+dfsg-1_all.deb
+ 	curl -fSL "https://ftp.debian.org/debian/pool/main/p/pygments/python3-pygments_${PYGMENTS_VERSION}+dfsg-1_all.deb" -o python3-pygments.deb \
+	dpkg -i python3-pygments.deb
 
 # Install the PHP extensions we need
 RUN set -eux; \
