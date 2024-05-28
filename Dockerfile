@@ -18,7 +18,7 @@ RUN set -eux; \
 		openssh-client \
 		# Required for SyntaxHighlighting
 		python3-dev \
-  		python3-pip \
+  		pipx \
 		rsync \
 		nano \
   		liblua5.1-0 \
@@ -29,9 +29,8 @@ RUN set -eux; \
 
 # Find where the Pygments library is located, because Python directory is not static
 # We need it for Extension:SyntaxHighlight
-RUN python3 -m pip install pip --upgrade
-RUN pip install pygments
-RUN pip show pygments
+RUN pipx install pygments
+RUN pipx list
 
 # Install the PHP extensions we need
 RUN set -eux; \
