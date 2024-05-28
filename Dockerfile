@@ -17,8 +17,7 @@ RUN set -eux; \
 		unzip \
 		openssh-client \
 		# Required for SyntaxHighlighting
-		python3-dev \
-  		pipx \
+		python3 \
 		rsync \
 		nano \
   		liblua5.1-0 \
@@ -27,10 +26,12 @@ RUN set -eux; \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
-# Find where the Pygments library is located, because Python directory is not static
+# Directly download and install Pygment because bookworm is using an old version (2.14.1)
 # We need it for Extension:SyntaxHighlight
-RUN pipx install pygments --global
-RUN pipx list
+RUN set -eux; \
+	\
+ 	wget -c http://ftp.debian.org/debian/pool/main/p/pygments/python3-pygments_2.17.2+dfsg-1_all.deb \
+  	apt-install ./python3-pygments_2.17.2+dfsg-1_all.deb
 
 # Install the PHP extensions we need
 RUN set -eux; \
