@@ -27,6 +27,10 @@ RUN set -eux; \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
+# Find where the Pygments library is located, because Python directory is not static
+# We need it for Extension:SyntaxHighlight
+RUN WHERETFRU_PYGMENTS=$(dpkg -L python3-pygments) && echo "$WHERETFRU_PYGMENTS"
+
 # Install the PHP extensions we need
 RUN set -eux; \
 	\
