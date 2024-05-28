@@ -30,8 +30,8 @@ RUN set -eux; \
 # We need it for Extension:SyntaxHighlight
 RUN set -eux; \
 	\
- 	wget -c http://ftp.debian.org/debian/pool/main/p/pygments/python3-pygments_2.17.2+dfsg-1_all.deb \
-  	apt-install ./python3-pygments_2.17.2+dfsg-1_all.deb
+ 	curl -o python3-pygments_2.17.2+dfsg-1_all.deb http://ftp.debian.org/debian/pool/main/p/pygments/python3-pygments_2.17.2+dfsg-1_all.deb \
+	dpkg -i python3-pygments_2.17.2+dfsg-1_all.deb
 
 # Install the PHP extensions we need
 RUN set -eux; \
