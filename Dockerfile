@@ -29,7 +29,7 @@ RUN set -eux; \
 
 # Find where the Pygments library is located, because Python directory is not static
 # We need it for Extension:SyntaxHighlight
-RUN pipx install pygments
+RUN pipx install pygments --global
 RUN pipx list
 
 # Install the PHP extensions we need
