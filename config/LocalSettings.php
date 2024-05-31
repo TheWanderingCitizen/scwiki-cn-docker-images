@@ -1052,13 +1052,18 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 	}
 };
 
-# Eager load image with image has the class 'sct-thumb-nolazyload'
+# Eager load the first image on the page
+# Currently we don't have a reliable way to set which image,
+# so we will just grab the first image with 400px as width,
+# since it is used by infoboxes usually.
+$hasSetImageEager = false;
 $wgHooks['ThumbnailBeforeProduceHTML'][] = function ( $thumbnail, &$attribs, &$linkAttribs ) {
-	# Classes in the wikitext image syntax are applied to linkAttribs
+	global $hasSetImageEager;
 	$class = $linkAttribs['class'] ?? '';
-	if ( strpos( $class, 'mw-image-nolazyload' ) !== false ) {
-		if ( isset( $attribs[ 'loading' ] ) ) {
-		 	unset( $attribs['loading'] );
+	if ( $hasSetImageEager !== true ) {
+		if ( isset( $attribs[ 'loading' ] ) && strpos( $class, 'mw-file-description' ) !== false && $attribs['width'] === 400 ) {
+			unset( $attribs['loading'] );
+			$hasSetImageEager = true;
 		}
 	}
 	return true;
