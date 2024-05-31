@@ -531,7 +531,7 @@ $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024; # 50 MB
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10; # Seconds
 
 # SyntaxHighlight
-# $wgPygmentizePath = '/usr/lib/python3/dist-packages/pygments';
+$wgPygmentizePath = '/usr/local/lib/python3.11/dist-packages/pygments';
 
 # TemplateStyles
 $wgTemplateStylesAllowedUrls = [
