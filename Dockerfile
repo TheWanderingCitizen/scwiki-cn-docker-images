@@ -22,9 +22,16 @@ RUN set -eux; \
   		liblua5.1-0 \
   		libzip4 \
         	s3cmd \
+	 	python3 \
+   		python3-pip \
 	; \
 	rm -rf /var/lib/apt/lists/*
-
+ 
+# Install the Python packages we need
+RUN set -eux; \
+	pip3 install Pygments \
+ 	;
+  
 # Install the PHP extensions we need
 RUN set -eux; \
 	\
