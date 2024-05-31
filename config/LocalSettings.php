@@ -1057,7 +1057,9 @@ $wgHooks['ThumbnailBeforeProduceHTML'][] = function ( $thumbnail, &$attribs, &$l
 	# Classes in the wikitext image syntax are applied to linkAttribs
 	$class = $linkAttribs['class'] ?? '';
 	if ( strpos( $class, 'mw-image-nolazyload' ) !== false ) {
-		 $attribs['loading'] = 'eager';
+		if ( isset( $attribs[ 'loading' ] ) ) {
+		 	unset( $attribs['loading'] );
+		}
 	}
 	return true;
 };
