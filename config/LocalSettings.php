@@ -1055,7 +1055,7 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 # Eager load image with image has the class 'sct-thumb-nolazyload'
 $wgHooks['ThumbnailBeforeProduceHTML'][] = function ( ThumbnailImage $thumbnail, array &$attribs, array &$linkAttribs ) {
 	$class = $attribs['class'] ?? '';
-	if ( strpos( $class, 'sct-image-nolazyload' ) !== false ) {
+	if ( strpos( $class, 'mw-image-nolazyload' ) !== false ) {
 		 $attribs['loading'] = 'eager';
 	}
 };
