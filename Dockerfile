@@ -29,7 +29,7 @@ RUN set -eux; \
  
 # Install the Python packages we need
 RUN set -eux; \
-	pip3 install Pygments \
+	pip3 install Pygments --break-system-packages\
  	;
   
 # Install the PHP extensions we need
