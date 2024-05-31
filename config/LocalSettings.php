@@ -65,40 +65,6 @@ $wgArticlePath = "/$1";
 # Sitemap
 $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
 
-# Cloudflare CDN
-# IP range: https://www.cloudflare.com/ips/
-$wgUsePrivateIPs = true;
-$wgUseCdn = true;
-# 15 minutes, move to a longer time when MultiPurge is fixed
-$wgCdnMaxAge = 900;
-$wgCdnServersNoPurge = [
-	'194.233.168.70', # Linode Loadbalancer
-	'10.0.0.0/8',
-	'173.245.48.0/20',
-	'103.21.244.0/22',
-	'103.22.200.0/22',
-	'103.31.4.0/22',
-	'141.101.64.0/18',
-	'108.162.192.0/18',
-	'190.93.240.0/20',
-	'188.114.96.0/20',
-	'197.234.240.0/22',
-	'198.41.128.0/17',
-	'162.158.0.0/15',
-	'104.16.0.0/13',
-	'104.24.0.0/14',
-	'172.64.0.0/13',
-	'131.0.72.0/22',
-	'2400:cb00::/32',
-	'2606:4700::/32',
-	'2803:f800::/32',
-	'2405:b500::/32',
-	'2405:8100::/32',
-	'2a06:98c0::/29',
-	'2c0f:f248::/32',
-	'2405:b500::/32'
-];
-
 ## Content Security Policy
 ## Flickr API is required for UploadWizard
 ## nonces have limited support and removed in MW 1.41
@@ -189,9 +155,42 @@ $wgMemCachedServers = array();
 
 # Extend parser cache to 3 days
 $wgParserCacheExpireTime = 259200;
-
 $wgEnableSidebarCache = true;
 $wgUseLocalMessageCache = true;
+
+# Cloudflare CDN
+# IP range: https://www.cloudflare.com/ips/
+$wgUsePrivateIPs = true;
+$wgUseCdn = true;
+# Align with parser cache
+$wgCdnMaxAge = 259200;
+$wgCdnServersNoPurge = [
+	'194.233.168.70', # Linode Loadbalancer
+	'10.0.0.0/8',
+	'173.245.48.0/20',
+	'103.21.244.0/22',
+	'103.22.200.0/22',
+	'103.31.4.0/22',
+	'141.101.64.0/18',
+	'108.162.192.0/18',
+	'190.93.240.0/20',
+	'188.114.96.0/20',
+	'197.234.240.0/22',
+	'198.41.128.0/17',
+	'162.158.0.0/15',
+	'104.16.0.0/13',
+	'104.24.0.0/14',
+	'172.64.0.0/13',
+	'131.0.72.0/22',
+	'2400:cb00::/32',
+	'2606:4700::/32',
+	'2803:f800::/32',
+	'2405:b500::/32',
+	'2405:8100::/32',
+	'2a06:98c0::/29',
+	'2c0f:f248::/32',
+	'2405:b500::/32'
+];
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
