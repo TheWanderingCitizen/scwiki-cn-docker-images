@@ -1058,4 +1058,5 @@ $wgHooks['ThumbnailBeforeProduceHTML'][] = function ( ThumbnailImage $thumbnail,
 	if ( strpos( $class, 'mw-image-nolazyload' ) !== false ) {
 		 $attribs['loading'] = 'eager';
 	}
+	return true;
 };
