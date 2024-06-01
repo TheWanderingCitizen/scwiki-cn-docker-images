@@ -468,9 +468,9 @@ $smwgConfigFileDir = "/usr/local/smw";
 $smwgNamespacesWithSemanticLinks[NS_TEMPLATE] = true;
 # Module namespace
 $smwgNamespacesWithSemanticLinks[828] = true;
-# Disable entity issue panel for all users by default since it is useless to most users
+# Disable entity examiner
 # This generates an uncached call to api.php which is not needed
-$wgDefaultUserOptions['smw-prefs-general-options-show-entity-issue-panel'] = false;
+$smwgCheckForConstraintErrors = SMW_CONSTRAINT_ERR_CHECK_NONE;
 
 # Semantic Extra Special Properties
 $sespgUseFixedTables = true;
