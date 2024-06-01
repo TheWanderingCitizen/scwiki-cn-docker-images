@@ -1,9 +1,8 @@
-FROM php:8.1-fpm
+FROM php:8.2-fpm
 
 # Version
 ENV MEDIAWIKI_MAJOR_VERSION 1.39
 ENV MEDIAWIKI_VERSION 1.39.7
-ENV PYGMENTS_VERSION 2.17.2
 
 # System dependencies
 RUN set -eux; \
