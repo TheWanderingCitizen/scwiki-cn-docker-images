@@ -49,9 +49,16 @@
                 "mediawiki/semantic-scribunto": "~2.2",
                 "mediawiki/semantic-drilldown": "1.39.0",
                 "starcitizenwiki/apiunto": "dev-develop",
-                "mediawiki/pageviewinfo": "1.39.0",
+                "mediawiki/page-view-info": "1.39.0",
                 "octfx/webp": "dev-develop",
-                "starcitizenwiki/picture-html-support": "dev-master"
+                "starcitizenwiki/picture-html-support": "dev-master",
+                "wikimedia/pluggable-auth": "1.39.0",
+                "wikimedia/open-i-d-connect": "1.39.0",
+                "wikimedia/display-title": "1.39.0",
+                "wikimedia/poem": "1.39.0",
+                "alpha5130/purge": "2.1.1",
+                "wikimedia/templatesandbox": "1.39.0",
+                "wikimedia/usergroups": "1.39.0"
         },
         "extra": {
                 "merge-plugin": {
@@ -61,6 +68,8 @@
                                 "extensions/Cite/composer.json",
                                 "extensions/Elastica/composer.json",
                                 "extensions/OATHAuth/composer.json",
+                                "extensions/OpenIDConnect/composer.json",
+                                "extensions/PluggableAuth/composer.json",
                                 "extensions/TemplateStyles/composer.json",
                                 "extensions/AWS/composer.json",
                                 "extensions/Swiftmailer/composer.json",
@@ -651,7 +660,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "mediawiki/pageviewinfo",
+                                "name": "mediawiki/page-view-info",
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
@@ -661,6 +670,125 @@
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-PageViewInfo.git",
+                                        "reference": "REL1_39"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "wikimedia/pluggable-auth",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-PluggableAuth/archive/REL1_39.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-PluggableAuth.git",
+                                        "reference": "REL1_39"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "wikimedia/open-i-d-connect",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-OpenIDConnect/archive/REL1_39.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-OpenIDConnect.git",
+                                        "reference": "REL1_39"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "wikimedia/display-title",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DisplayTitle/archive/REL1_39.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DisplayTitle.git",
+                                        "reference": "REL1_39"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "wikimedia/poem",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Poem/archive/REL1_39.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Poem.git",
+                                        "reference": "REL1_39"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "alpha5130/purge",
+                                "type": "mediawiki-extension",
+                                "version": "2.1.1",
+                                "dist": {
+                                        "url": "https://github.com/AlPha5130/mediawiki-extensions-Purge/archive/refs/tags/v2.1.1.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/AlPha5130/mediawiki-extensions-Purge/releases.git",
+                                        "reference": "master"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "wikimedia/templatesandbox",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox/archive/REL1_39.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox.git",
+                                        "reference": "REL1_39"
+                                }
+                        }
+                },
+                {
+                        "type": "package",
+                        "package": {
+                                "name": "wikimedia/usergroups",
+                                "type": "mediawiki-extension",
+                                "version": "1.39.0",
+                                "dist": {
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-UserGroups/archive/REL1_39.zip",
+                                        "type": "zip"
+                                },
+                                "source": {
+                                        "type": "git",
+                                        "url": "https://github.com/wikimedia/mediawiki-extensions-UserGroups.git",
                                         "reference": "REL1_39"
                                 }
                         }
