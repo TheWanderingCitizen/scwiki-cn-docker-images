@@ -51,6 +51,8 @@ $wgAuthenticationTokenVersion = "1";
 # InstantCommons allows wiki to use images from https://commons.wikimedia.org
 $wgUseInstantCommons = false;
 
+$wgMiserMode = true;
+
 # Database settings
 $wgDBtype = $_ENV["DbType"];
 $wgDBserver = $_ENV["DbServer"];
@@ -58,6 +60,10 @@ $wgDBname = $_ENV["DbName"];
 $wgDBuser = $_ENV["DbUser"];
 $wgDBpassword = $_ENV["DbPassword"];
 $wgDBprefix = "cnwiki_";
+
+# See T343492
+# TODO: Remove after updating to MW 1.43
+$wgResourceLoaderUseObjectCacheForDeps = true;
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -72,38 +78,6 @@ $wgUsePathInfo = true;
 	
 # Sitemap
 $wgSitemapNamespaces = array(0, 6, 12, 14, 3000, 3006, 3008, 3016);
-
-# Cloudflare CDN
-# IP range: https://www.cloudflare.com/ips/
-$wgUsePrivateIPs = true;
-$wgUseCdn = true;
-$wgCdnServersNoPurge = [
-	'194.195.247.40', # Linode Loadbalancer
-	'10.0.0.0/8',
-	'173.245.48.0/20',
-	'103.21.244.0/22',
-	'103.22.200.0/22',
-	'103.31.4.0/22',
-	'141.101.64.0/18',
-	'108.162.192.0/18',
-	'190.93.240.0/20',
-	'188.114.96.0/20',
-	'197.234.240.0/22',
-	'198.41.128.0/17',
-	'162.158.0.0/15',
-	'104.16.0.0/13',
-	'104.24.0.0/14',
-	'172.64.0.0/13',
-	'131.0.72.0/22',
-	'2400:cb00::/32',
-	'2606:4700::/32',
-	'2803:f800::/32',
-	'2405:b500::/32',
-	'2405:8100::/32',
-	'2a06:98c0::/29',
-	'2c0f:f248::/32',
-	'2405:b500::/32'
-];
 
 ## Content Security Policy
 ## Flickr API is required for UploadWizard
@@ -162,9 +136,7 @@ $wgLogos = [
 	'svg' => "$wgResourceBasePath/resources/assets/sitelogo.svg",
 ];
 
-# Restore old config to look for favicon.ico until someone look into the redirect issue
-#$wgFavicon = '/favicon.svg';
-$wgFavicon = false;
+$wgFavicon = '/favicon.svg';
 
 ## UPO means: this is also a user preference option
 $wgEnableEmail = false;
@@ -211,9 +183,42 @@ $wgMemCachedServers = array();
 
 # Extend parser cache to 3 days
 $wgParserCacheExpireTime = 259200;
-
 $wgEnableSidebarCache = true;
 $wgUseLocalMessageCache = true;
+
+# Cloudflare CDN
+# IP range: https://www.cloudflare.com/ips/
+$wgUsePrivateIPs = true;
+$wgUseCdn = true;
+# Align with parser cache
+$wgCdnMaxAge = 259200;
+$wgCdnServersNoPurge = [
+	'194.233.168.70', # Linode Loadbalancer
+	'10.0.0.0/8',
+	'173.245.48.0/20',
+	'103.21.244.0/22',
+	'103.22.200.0/22',
+	'103.31.4.0/22',
+	'141.101.64.0/18',
+	'108.162.192.0/18',
+	'190.93.240.0/20',
+	'188.114.96.0/20',
+	'197.234.240.0/22',
+	'198.41.128.0/17',
+	'162.158.0.0/15',
+	'104.16.0.0/13',
+	'104.24.0.0/14',
+	'172.64.0.0/13',
+	'131.0.72.0/22',
+	'2400:cb00::/32',
+	'2606:4700::/32',
+	'2803:f800::/32',
+	'2405:b500::/32',
+	'2405:8100::/32',
+	'2a06:98c0::/29',
+	'2c0f:f248::/32',
+	'2405:b500::/32'
+];
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
@@ -356,7 +361,7 @@ enableSemantics( 'citizenwiki.cn' );
 # Apiunto 
 $wgApiuntoKey = ''; 
 $wgApiuntoUrl = 'https://api.star-citizen.wiki';
-$wgApiuntoTimeout = '10'; // 5 seconds
+$wgApiuntoTimeout = '30'; // 5 seconds
 $wgApiuntoDefaultLocale = 'zh_CN'; 
 
 # AWS
@@ -513,6 +518,8 @@ $wgCaptchaQuestions = [
 #$wgRelatedArticlesOnlyUseCirrusSearch = true;
 
 # Semantic Mediawiki
+# Set default property type to Text
+$smwgPDefaultType = '_txt';
 # Use Redis to cache SMW query result
 $smwgQueryResultCacheType = 'redis';
 # Enable tracking and storing of dependencies of embedded queries
@@ -526,6 +533,9 @@ $smwgPDefaultType = '_txt';
 $smwgNamespacesWithSemanticLinks[NS_TEMPLATE] = true;
 # Module namespace
 $smwgNamespacesWithSemanticLinks[828] = true;
+# Disable entity issue panel for all users by default since it is useless to most users
+# This generates an uncached call to api.php which is not needed
+$wgDefaultUserOptions['smw-prefs-general-options-show-entity-issue-panel'] = false;
 
 # Semantic Extra Special Properties
 $sespgUseFixedTables = true;
@@ -588,7 +598,7 @@ $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024; # 50 MB
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10; # Seconds
 
 # SyntaxHighlight
-# $wgPygmentizePath = '/usr/lib/python3/dist-packages/pygments';
+$wgPygmentizePath = '/usr/local/bin/pygmentize';
 
 # TemplateStyles
 $wgTemplateStylesAllowedUrls = [
@@ -1144,4 +1154,21 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 			$sk->msg( 'footer-kofi' )->text()
 		);
 	}
+};
+
+# Eager load the first image on the page
+# Currently we don't have a reliable way to set which image,
+# so we will just grab the first image with 400px as width,
+# since it is used by infoboxes usually.
+$hasSetImageEager = false;
+$wgHooks['ThumbnailBeforeProduceHTML'][] = function ( $thumbnail, &$attribs, &$linkAttribs ) {
+	global $hasSetImageEager;
+	$class = $linkAttribs['class'] ?? '';
+	if ( $hasSetImageEager !== true ) {
+		if ( isset( $attribs[ 'loading' ] ) && strpos( $class, 'mw-file-description' ) !== false && $attribs['width'] === 400 ) {
+			unset( $attribs['loading'] );
+			$hasSetImageEager = true;
+		}
+	}
+	return true;
 };
