@@ -7,7 +7,6 @@ services:
       - '.env'
     volumes:
       - './config/LocalSettings.php:/var/www/mediawiki/LocalSettings.php'
-      - 'semantic-wiki-data:/var/www/'
     environment:
       - COMPOSER_ALLOW_SUPERUSER
       - DbName
@@ -42,7 +41,6 @@ services:
     restart: always
     volumes:
       - './config/nginx/default.conf:/etc/nginx/conf.d/default.conf'
-      - 'semantic-wiki-data:/var/www/'
     depends_on:
       - mediawiki
 volume:
