@@ -38,6 +38,6 @@ services:
     image: nginx:latest
     restart: always
     volumes:
-      - './config/nginx:/etc/nginx/conf.d'
+      - '/config/nginx/default.conf:/etc/nginx/conf.d/default.conf'
     depends_on:
       - mediawiki
