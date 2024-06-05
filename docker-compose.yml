@@ -41,7 +41,3 @@ services:
       - './config/nginx:/etc/nginx/conf.d'
     depends_on:
       - mediawiki
-volume:
-  semantic-wiki-data:
-   name: semantic-wiki-data
-   external: true
