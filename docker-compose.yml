@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - 'mediawiki-shared-data:/var/www/mediawiki-data'
     env_file:
       - '.env'
     environment:
@@ -39,5 +41,10 @@ services:
     restart: always
     volumes:
       - './nginx.template.conf:/etc/nginx/conf.d/default.conf'
+      - 'mediawiki-shared-data:/var/www/mediawiki-data'
     depends_on:
       - mediawiki
+volume:
+  mediawiki-shared-data:
+   name: mediawiki-shared-data
+   external: true
