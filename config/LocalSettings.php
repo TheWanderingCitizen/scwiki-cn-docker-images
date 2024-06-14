@@ -1107,7 +1107,7 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 				'href' => $sk->msg( 'cookiestatementpage' )->escaped(),
 				'title' => $sk->msg( 'cookiestatementpage' )->text()
 			],
-			$sk->msg( 'cookiestatement' )->text()
+			"Cookie 政策"
 		);
 		#$footerlinks['analytics'] = Html::element(
 		#	'a',
@@ -1117,37 +1117,21 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 		#	],
 		#	$sk->msg( 'footer-analytics' )->text()
 		#);
-		$footerlinks['statuspage'] = Html::element(
+		$footerlinks['afdian'] = Html::element(
 			'a',
 			[
-				'href' => 'https://status.starcitizen.tools',
+				'href' => 'https://afdian.net/a/fiercecatSC',
 				'rel' => $rel
 			],
-			$sk->msg( 'footer-statuspage' )->text()
+			'爱发电赞助'
 		);
 		$footerlinks['github'] = Html::element(
 			'a',
 			[
-				'href' => 'https://github.com/StarCitizenTools',
+				'href' => 'https://github.com/TheWanderingCitizen',
 				'rel' => $rel
 			],
-			$sk->msg( 'footer-github' )->text()
-		);
-		$footerlinks['patreon'] = Html::element(
-			'a',
-			[
-				'href' => 'https://www.patreon.com/starcitizentools',
-				'rel' => $rel
-			],
-			$sk->msg( 'footer-patreon' )->text()
-		);
-		$footerlinks['kofi'] = Html::element(
-			'a',
-			[
-				'href' => 'https://ko-fi.com/starcitizentools',
-				'rel' => $rel
-			],
-			$sk->msg( 'footer-kofi' )->text()
+			'Github'
 		);
 	}
 };
