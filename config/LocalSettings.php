@@ -207,7 +207,7 @@ $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=utf8";
 $wgCacheDirectory = "$IP/cache";
 
 $wgUseFileCache = true; // default: false
-$wgFileCacheDirectory = "$IP/cache/files";
+$wgFileCacheDirectory = "$IP/cache";
 $wgUseGzip = true;
 
 ## Shared memory settings
