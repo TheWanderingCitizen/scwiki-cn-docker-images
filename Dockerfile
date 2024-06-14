@@ -106,6 +106,9 @@ RUN set -eux; \
         # 1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 \
     # ; \
     # gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; \
+
+	# Delete the old mediawiki folder
+	rm -rf /var/www/mediawiki; \
 	mkdir /var/www/mediawiki; \
     tar -x --strip-components=1 -f mediawiki.tar.gz -C /var/www/mediawiki; \
     # gpgconf --kill all; \
