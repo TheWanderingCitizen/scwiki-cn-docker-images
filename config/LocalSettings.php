@@ -208,6 +208,7 @@ $wgCacheDirectory = "$IP/cache";
 
 $wgUseFileCache = true; // default: false
 $wgFileCacheDirectory = "$IP/cache/files";
+$wgUseGzip = true;
 
 ## Shared memory settings
 $wgMainCacheType = 'redis';
