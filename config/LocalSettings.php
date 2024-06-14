@@ -206,6 +206,9 @@ $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=utf8";
 ## be publically accessible from the web.
 $wgCacheDirectory = "$IP/cache";
 
+$wgUseFileCache = true; // default: false
+$wgFileCacheDirectory = "$IP/cache/files";
+
 ## Shared memory settings
 $wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
