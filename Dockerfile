@@ -118,8 +118,6 @@ RUN set -eux; \
     
 COPY ./config/LocalSettings.php /var/www/mediawiki/LocalSettings.php
 COPY ./resources /var/www/mediawiki/resources
-# Copy the resources folder into another volume that is connected to our nginx service.
-COPY ./resources /var/www/mediawiki-data/resources
 
 COPY ./config/php-config.ini /usr/local/etc/php/conf.d/php-config.ini
 COPY ./config/opcache.ini /usr/local/etc/php/conf.d/opcache.ini

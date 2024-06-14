@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
+      - './config/LocalSettings.php:/var/www/mediawiki/LocalSettings.php'
       - 'mediawiki-data:/var/www'
     env_file:
       - '.env'
