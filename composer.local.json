@@ -613,7 +613,7 @@
                                 "type": "mediawiki-skin",
                                 "version": "2.16.0",
                                 "dist": {
-                                        "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen/archive/refs/tags/v2.16.0.zip",
+                                        "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen/archive/refs/tags/v2.37.0.zip",
                                         "type": "zip"
                                 },
                                 "source": {
