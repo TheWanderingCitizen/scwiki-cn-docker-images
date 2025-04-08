@@ -1120,7 +1120,7 @@ $wgHooks['SkinAddFooterLinks'][] = function ( $sk, $key, &$footerlinks ) {
 		$footerlinks['afdian'] = Html::element(
 			'a',
 			[
-				'href' => 'https://afdian.net/a/fiercecatSC',
+				'href' => 'https://afdian.com/a/fiercecatSC',
 				'rel' => $rel
 			],
 			'爱发电赞助'
