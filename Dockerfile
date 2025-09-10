@@ -219,7 +219,7 @@ RUN mv /var/www/mediawiki/extensions/Checkuser /var/www/mediawiki/extensions/Che
 	mv /var/www/mediawiki/extensions/Templatesandbox /var/www/mediawiki/extensions/TemplateSandbox; \
 	mv /var/www/mediawiki/extensions/Usergroups /var/www/mediawiki/extensions/UserGroups; \
 	\
-	cp /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php; \
+	cp /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php;
 
 # Set final ownership
 RUN chown -R www-data:www-data /var/www/mediawiki
