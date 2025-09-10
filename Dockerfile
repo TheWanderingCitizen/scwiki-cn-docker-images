@@ -8,6 +8,7 @@ ENV MEDIAWIKI_VERSION 1.39.7
 RUN set -eux; \
 	\
 	apt-get update; \
+ 	apt-get purge libzip4 \
 	apt-get install -y --no-install-recommends \
 		git \
 		librsvg2-bin \
