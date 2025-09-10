@@ -180,10 +180,10 @@ RUN set -eux; \
 	chown -R www-data:www-data /var/www
 
 # Now purge build dependencies and clean up
-USER root
-RUN set -eux; \
-	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
-	rm -rf /var/lib/apt/lists/*
+# USER root
+# RUN set -eux; \
+# 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
+# 	rm -rf /var/lib/apt/lists/*
 
 COPY ./config/swiftmailer-extension.json /var/www/mediawiki/extensions/SwiftMailer/extension.json
 
