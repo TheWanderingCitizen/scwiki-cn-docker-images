@@ -46,7 +46,7 @@ $wgMainPageIsDomainRoot = true;
 # Allow MediaWiki:Citizen.css to load on all pages
 $wgAllowSiteCSSOnRestrictedPages = true;
 # Enable CJK Fonts
-$wgCitizenEnableCJKFonts = true;
+$wgCitizenEnableCJKFonts = false;
 # Use HTML5 encoding with minimal escaping
 $wgFragmentMode = [ 'html5' ];
 # Use Parsoid media HTML structure
@@ -218,9 +218,9 @@ $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=utf8";
 ## be publically accessible from the web.
 $wgCacheDirectory = "$IP/cache";
 
-$wgUseFileCache = true; // default: false
-$wgFileCacheDirectory = "$IP/cache";
-$wgUseGzip = true;
+#$wgUseFileCache = true; // default: false
+#$wgFileCacheDirectory = "$IP/cache";
+#$wgUseGzip = true;
 
 ## Shared memory settings
 $wgMainCacheType = 'redis';
@@ -283,6 +283,8 @@ $wgFixDoubleRedirects = true;
 # Redirects Setting
 $wgDisplayTitleFollowRedirects = true;
 $wgSearchDefaultRedirects = true;
+$wgAllowDisplayTitle = true;
+$wgRestrictDisplayTitle = false;
 
 #=============================================== Extension Load ===============================================
 #wfLoadExtension( 'AdvancedSearch' );
@@ -305,7 +307,7 @@ wfLoadExtension( 'Discord' );
 wfLoadExtension( 'DiscussionTools' );
 wfLoadExtension( 'DismissableSiteNotice' );
 wfLoadExtension( 'DynamicPageList3' );
-#wfLoadExtension( 'DisplayTitle' );
+wfLoadExtension( 'DisplayTitle' );
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Elastica' );
 wfLoadExtension( 'EmbedVideo' );
@@ -336,7 +338,7 @@ wfLoadExtension( 'Poem' );
 wfLoadExtension( 'Popups' );
 wfLoadExtension( 'Purge' );
 #wfLoadExtension( 'RelatedArticles' );
-wfLoadExtension( 'Renameuser' );
+#wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'ReplaceText' );
 wfLoadExtension( 'RevisionSlider' );
 wfLoadExtension( 'RSS' );
