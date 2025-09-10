@@ -206,21 +206,21 @@ COPY ./resources /var/www/mediawiki/resources
 COPY ./config/robots.txt /var/www/mediawiki/robots.txt
 
 # Copy extentions
-# RUN mv /var/www/mediawiki/extensions/Checkuser /var/www/mediawiki/extensions/CheckUser; \
-# 	mv /var/www/mediawiki/extensions/Dismissablesitenotice /var/www/mediawiki/extensions/DismissableSiteNotice; \
-# 	mv /var/www/mediawiki/extensions/Nativesvghandler /var/www/mediawiki/extensions/NativeSvgHandler; \
-# 	mv /var/www/mediawiki/extensions/Mediasearch /var/www/mediawiki/extensions/MediaSearch; \
-# 	mv /var/www/mediawiki/extensions/Revisionslider /var/www/mediawiki/extensions/RevisionSlider; \
-# 	mv /var/www/mediawiki/extensions/Rss /var/www/mediawiki/extensions/RSS; \
-# 	mv /var/www/mediawiki/extensions/Shortdescription /var/www/mediawiki/extensions/ShortDescription; \
-# 	mv /var/www/mediawiki/extensions/Webauthn /var/www/mediawiki/extensions/WebAuthn; \
-# 	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
-# 	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
-# 	mv /var/www/mediawiki/extensions/Swiftmailer /var/www/mediawiki/extensions/SwiftMailer; \
-# 	mv /var/www/mediawiki/extensions/Templatesandbox /var/www/mediawiki/extensions/TemplateSandbox; \
-# 	mv /var/www/mediawiki/extensions/Usergroups /var/www/mediawiki/extensions/UserGroups; \
-# 	\
-# 	cp /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php;
+RUN mv /var/www/mediawiki/extensions/Checkuser /var/www/mediawiki/extensions/CheckUser; \
+	mv /var/www/mediawiki/extensions/Dismissablesitenotice /var/www/mediawiki/extensions/DismissableSiteNotice; \
+	mv /var/www/mediawiki/extensions/Nativesvghandler /var/www/mediawiki/extensions/NativeSvgHandler; \
+	mv /var/www/mediawiki/extensions/Mediasearch /var/www/mediawiki/extensions/MediaSearch; \
+	mv /var/www/mediawiki/extensions/Revisionslider /var/www/mediawiki/extensions/RevisionSlider; \
+	mv /var/www/mediawiki/extensions/Rss /var/www/mediawiki/extensions/RSS; \
+	mv /var/www/mediawiki/extensions/Shortdescription /var/www/mediawiki/extensions/ShortDescription; \
+	mv /var/www/mediawiki/extensions/Webauthn /var/www/mediawiki/extensions/WebAuthn; \
+	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
+	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
+	mv /var/www/mediawiki/extensions/Swiftmailer /var/www/mediawiki/extensions/SwiftMailer; \
+	mv /var/www/mediawiki/extensions/Templatesandbox /var/www/mediawiki/extensions/TemplateSandbox; \
+	mv /var/www/mediawiki/extensions/Usergroups /var/www/mediawiki/extensions/UserGroups; \
+	\
+	cp /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php;
 
 # Set final ownership
 RUN chown -R www-data:www-data /var/www/mediawiki
