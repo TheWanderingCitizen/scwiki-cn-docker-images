@@ -8,7 +8,7 @@ ENV MEDIAWIKI_VERSION 1.39.7
 RUN set -eux; \
 	\
 	apt-get update; \
-	apt-get install -y --no-install-recommends \
+	apt-get install -y \
 		git \
 		librsvg2-bin \
 		imagemagick \
@@ -111,7 +111,6 @@ RUN set -eux; \
     tar -x --strip-components=1 -f mediawiki.tar.gz -C /var/www/mediawiki; \
     # gpgconf --kill all; \
     rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; \
-    \
     apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; \
     rm -rf /var/lib/apt/lists/*
     
@@ -142,22 +141,24 @@ RUN set -eux; \
 
 WORKDIR /var/www/mediawiki
 
+
 USER www-data
 
 RUN set -eux; \
-   /usr/bin/composer config --no-plugins allow-plugins.composer/installers true; \
-   /usr/bin/composer install --no-dev \
-     --ignore-platform-reqs \
-     --no-ansi \
-     --no-interaction \
-     --no-scripts; \
-   rm -f composer.lock.json ;\
-   ls -la /var/www/mediawiki/extensions; \
-   /usr/bin/composer update --no-dev \
-                            --no-ansi \
-                            --no-interaction \
-                            --no-scripts; \
-	\
+	/usr/bin/composer config --no-plugins allow-plugins.composer/installers true; \
+	/usr/bin/composer install --no-dev \
+	  --ignore-platform-reqs \
+	  --no-ansi \
+	  --no-interaction \
+	  --no-scripts; \
+	rm -f composer.lock.json ;\
+	ls -la /var/www/mediawiki/extensions; \
+	/usr/bin/composer update --no-dev \
+									 --ignore-platform-reqs \
+									 --no-ansi \
+									 --no-interaction \
+									 --no-scripts; \
+\
 	mv /var/www/mediawiki/extensions/Checkuser /var/www/mediawiki/extensions/CheckUser; \
 	mv /var/www/mediawiki/extensions/Dismissablesitenotice /var/www/mediawiki/extensions/DismissableSiteNotice; \
 	mv /var/www/mediawiki/extensions/Nativesvghandler /var/www/mediawiki/extensions/NativeSvgHandler; \
@@ -174,9 +175,15 @@ RUN set -eux; \
 	# mv /var/www/mediawiki/extensions/Pluggableauth /var/www/mediawiki/extensions/PluggableAuth; \
 	mv /var/www/mediawiki/extensions/Templatesandbox /var/www/mediawiki/extensions/TemplateSandbox; \
 	mv /var/www/mediawiki/extensions/Usergroups /var/www/mediawiki/extensions/UserGroups; \
-	\
+\
 	cp /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php; \
 	chown -R www-data:www-data /var/www
+
+# Now purge build dependencies and clean up
+USER root
+RUN set -eux; \
+	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
+	rm -rf /var/lib/apt/lists/*
 
 COPY ./config/swiftmailer-extension.json /var/www/mediawiki/extensions/SwiftMailer/extension.json
 
