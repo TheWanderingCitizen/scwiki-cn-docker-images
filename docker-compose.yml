@@ -1,8 +1,6 @@
 services:
   mediawiki:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/thewanderingcitizen/mediawiki:main-latest
     env_file:
       - '.env'
     environment:
