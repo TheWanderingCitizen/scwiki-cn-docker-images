@@ -53,6 +53,7 @@ RUN --mount=type=cache,target=/tmp/phpexts-cache \
 		luasandbox \
 		redis \
 		wikidiff2 \
+		imagick \
 	;
 
 # MediaWiki
@@ -164,6 +165,7 @@ RUN --mount=type=cache,target=/tmp/phpexts-cache \
 		exif \
 		intl \
 		mysqli \
+		imagick \
 		zip \
 		apcu \
 		luasandbox \
