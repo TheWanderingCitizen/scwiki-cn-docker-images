@@ -90,7 +90,7 @@ WORKDIR /var/www/mediawiki
 
 # Skins and extensions
 # Defined in composer.local.json
-COPY ./composer.json /var/www/mediawiki/composer.local.json
+COPY ./composer.local.json /var/www/mediawiki/composer.local.json
 
 RUN set -eux; \
 	mkdir /usr/local/smw; \
