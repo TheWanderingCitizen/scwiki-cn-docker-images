@@ -1,9 +1,21 @@
 <?php
 /**
- * Star Citizen Wiki 
- * https://starcitizen.tools
+ *  _____ _               _____ _ _   _                 _____           _     
+ * /  ___| |             /  __ (_) | (_)               |_   _|         | |    
+ * \ `--.| |_ __ _ _ __  | /  \/_| |_ _ _______ _ __     | | ___   ___ | |___ 
+ *  `--. \ __/ _` | '__| | |   | | __| |_  / _ \ '_ \    | |/ _ \ / _ \| / __|
+ * /\__/ / || (_| | |    | \__/\ | |_| |/ /  __/ | | |   | | (_) | (_) | \__ \
+ * \____/ \__\__,_|_|     \____/_|\__|_/___\___|_| |_|   \_/\___/ \___/|_|___/
  *
- * MediaWiki settings file
+ * MediaWiki configuration setting for Star Citizen Wiki
+ *
+ * MediaWiki branch: REL1_43
+ * When updating major MediaWiki version, please update the branch text above
+ * in this document, it will update the documentation links to the right version.
+ *
+ * @see https://www.mediawiki.org/wiki/Manual:LocalSettings.php Documentation
+ * @link https://starcitizen.tools/ Offical site
+ * @link https://discord.com/invite/XcKwqyD4sc Contact us
  */
 
 # Protect against web entry
