@@ -1,64 +1,64 @@
 {
         "require": {
-                "mediawiki/advanced-search": "1.39.0",
+                "mediawiki/advanced-search": "1.43.0",
                 "mediawiki/babel": "2023.12",
-                "mediawiki/checkuser": "1.39.0",
-                "mediawiki/cirrus-search": "1.39.0",
+                "mediawiki/checkuser": "1.43.0",
+                "mediawiki/cirrus-search": "1.43.0",
                 "mediawiki/citizen-skin": "2.16.0",
                 "mediawiki/cldr": "2023.12",
-                "mediawiki/code-mirror": "1.39.0",
-                "mediawiki/commons-metadata": "1.39.0",
-                "mediawiki/cookie-warning": "1.39.0",
-                "mediawiki/disambiguator": "1.39.0",
-                "mediawiki/discord": "1.39.0",
-                "mediawiki/discussion-tools": "1.39.0",
-                "mediawiki/dismissablesitenotice": "1.39.0",
-                "mediawiki/echo": "1.39.0",
-                "mediawiki/elastica": "1.39.0",
-                "mediawiki/graph": "1.39.0",
-                "mediawiki/json-config": "1.39.0",
-                "mediawiki/linter": "1.39.0",
-                "mediawiki/loops": "1.39.0",
-                "mediawiki/mediasearch": "1.39.0",
+                "mediawiki/code-mirror": "1.43.0",
+                "mediawiki/commons-metadata": "1.43.0",
+                "mediawiki/cookie-warning": "1.43.0",
+                "mediawiki/disambiguator": "1.43.0",
+                "mediawiki/discord": "1.43.0",
+                "mediawiki/discussion-tools": "1.43.0",
+                "mediawiki/dismissablesitenotice": "1.43.0",
+                "mediawiki/echo": "1.43.0",
+                "mediawiki/elastica": "1.43.0",
+                "mediawiki/graph": "1.43.0",
+                "mediawiki/json-config": "1.43.0",
+                "mediawiki/linter": "1.43.0",
+                "mediawiki/loops": "1.43.0",
+                "mediawiki/mediasearch": "1.43.0",
                 "octfx/multipurge": "dev-master",
-                "mediawiki/nativesvghandler": "1.39.0",
+                "mediawiki/nativesvghandler": "1.43.0",
                 "octfx/plausible": "dev-master",
-                "mediawiki/popups": "1.39.0",
-                "mediawiki/related-articles": "1.39.0",
-                "mediawiki/revisionslider": "1.39.0",
-                "mediawiki/rss": "1.39.0",
-                "mediawiki/sandbox-link": "1.39.0",
-                "mediawiki/shortdescription": "1.39.0",
-                "mediawiki/tabber-neue": "1.39.0",
-                "mediawiki/template-styles": "1.39.0",
+                "mediawiki/popups": "1.43.0",
+                "mediawiki/related-articles": "1.43.0",
+                "mediawiki/revisionslider": "1.43.0",
+                "mediawiki/rss": "1.43.0",
+                "mediawiki/sandbox-link": "1.43.0",
+                "mediawiki/shortdescription": "1.43.0",
+                "mediawiki/tabber-neue": "1.43.0",
+                "mediawiki/template-styles": "1.43.0",
                 "octfx/template-styles-extender": "dev-master",
-                "mediawiki/thanks": "1.39.0",
-                "mediawiki/twocolconflict": "1.39.0",
-                "mediawiki/upload-wizard": "1.39.0",
+                "mediawiki/thanks": "1.43.0",
+                "mediawiki/twocolconflict": "1.43.0",
+                "mediawiki/upload-wizard": "1.43.0",
                 "mediawiki/universal-language-selector": "2023.12",
-                "mediawiki/variables": "1.39.0",
-                "mediawiki/webauthn": "1.39.0",
+                "mediawiki/variables": "1.43.0",
+                "mediawiki/webauthn": "1.43.0",
                 "octfx/wiki-seo": "dev-REL1_39",
                 "starcitizenwiki/embedvideo": "dev-develop",
                 "universal-omega/dynamic-page-list3": "dev-main",
                 "edwardspec/mediawiki-aws-s3": "v0.13.0",
-                "mediawiki/swiftmailer": "1.39.0",
+                "mediawiki/swiftmailer": "1.43.0",
                 "mediawiki/semantic-media-wiki": "~4.0",
                 "mediawiki/semantic-extra-special-properties": "~3.0",
                 "mediawiki/semantic-result-formats": "~4.0",
                 "mediawiki/semantic-scribunto": "~2.2",
-                "mediawiki/semantic-drilldown": "1.39.0",
+                "mediawiki/semantic-drilldown": "1.43.0",
                 "starcitizenwiki/apiunto": "dev-develop",
-                "mediawiki/page-view-info": "1.39.0",
+                "mediawiki/page-view-info": "1.43.0",
                 "octfx/webp": "dev-develop",
                 "starcitizenwiki/picture-html-support": "dev-master",
-                "wikimedia/pluggable-auth": "1.39.0",
-                "wikimedia/open-i-d-connect": "1.39.0",
-                "wikimedia/display-title": "1.39.0",
-                "wikimedia/poem": "1.39.0",
+                "wikimedia/pluggable-auth": "1.43.0",
+                "wikimedia/open-i-d-connect": "1.43.0",
+                "wikimedia/display-title": "1.43.0",
+                "wikimedia/poem": "1.43.0",
                 "alpha5130/purge": "2.1.1",
-                "wikimedia/templatesandbox": "1.39.0",
-                "wikimedia/usergroups": "1.39.0"
+                "wikimedia/templatesandbox": "1.43.0",
+                "wikimedia/usergroups": "1.43.0"
         },
         "extra": {
                 "merge-plugin": {
@@ -84,7 +84,7 @@
                         "package": {
                                 "name": "mediawiki/checkuser",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-CheckUser/archive/REL1_39.zip",
                                         "type": "zip"
@@ -101,7 +101,7 @@
                         "package": {
                                 "name": "mediawiki/dismissablesitenotice",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice/archive/REL1_39.zip",
                                         "type": "zip"
@@ -118,7 +118,7 @@
                         "package": {
                                 "name": "mediawiki/nativesvghandler",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-NativeSvgHandler/archive/master.zip",
                                         "type": "zip"
@@ -135,7 +135,7 @@
                         "package": {
                                 "name": "mediawiki/graph",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Graph/archive/REL1_39.zip",
                                         "type": "zip"
@@ -152,7 +152,7 @@
                         "package": {
                                 "name": "mediawiki/loops",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Loops/archive/REL1_39.zip",
                                         "type": "zip"
@@ -169,7 +169,7 @@
                         "package": {
                                 "name": "mediawiki/revisionslider",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-RevisionSlider/archive/REL1_39.zip",
                                         "type": "zip"
@@ -186,7 +186,7 @@
                         "package": {
                                 "name": "mediawiki/shortdescription",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription/archive/main.zip",
                                         "type": "zip"
@@ -203,7 +203,7 @@
                         "package": {
                                 "name": "mediawiki/rss",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-RSS/archive/REL1_39.zip",
                                         "type": "zip"
@@ -220,7 +220,7 @@
                         "package": {
                                 "name": "mediawiki/variables",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Variables/archive/REL1_39.zip",
                                         "type": "zip"
@@ -237,7 +237,7 @@
                         "package": {
                                 "name": "mediawiki/echo",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Echo/archive/REL1_39.zip",
                                         "type": "zip"
@@ -254,7 +254,7 @@
                         "package": {
                                 "name": "mediawiki/code-mirror",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-CodeMirror/archive/REL1_39.zip",
                                         "type": "zip"
@@ -271,7 +271,7 @@
                         "package": {
                                 "name": "mediawiki/commons-metadata",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-CommonsMetadata/archive/REL1_39.zip",
                                         "type": "zip"
@@ -288,7 +288,7 @@
                         "package": {
                                 "name": "mediawiki/template-styles",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles/archive/REL1_39.zip",
                                         "type": "zip"
@@ -305,7 +305,7 @@
                         "package": {
                                 "name": "mediawiki/advanced-search",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-AdvancedSearch/archive/REL1_39.zip",
                                         "type": "zip"
@@ -322,7 +322,7 @@
                         "package": {
                                 "name": "mediawiki/cirrus-search",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-CirrusSearch/archive/REL1_39.zip",
                                         "type": "zip"
@@ -339,7 +339,7 @@
                         "package": {
                                 "name": "mediawiki/cookie-warning",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-CookieWarning/archive/REL1_39.zip",
                                         "type": "zip"
@@ -356,7 +356,7 @@
                         "package": {
                                 "name": "mediawiki/discord",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/jayktaylor/mw-discord/archive/2a560d9acc4af06dcb5f1f7fd9d695f848209160.zip",
                                         "type": "zip"
@@ -373,7 +373,7 @@
                         "package": {
                                 "name": "mediawiki/disambiguator",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Disambiguator/archive/REL1_39.zip",
                                         "type": "zip"
@@ -390,7 +390,7 @@
                         "package": {
                                 "name": "mediawiki/discussion-tools",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-DiscussionTools/archive/REL1_39.zip",
                                         "type": "zip"
@@ -407,7 +407,7 @@
                         "package": {
                                 "name": "mediawiki/elastica",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Elastica/archive/REL1_39.zip",
                                         "type": "zip"
@@ -424,7 +424,7 @@
                         "package": {
                                 "name": "mediawiki/json-config",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-JsonConfig/archive/REL1_39.zip",
                                         "type": "zip"
@@ -441,7 +441,7 @@
                         "package": {
                                 "name": "mediawiki/linter",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Linter/archive/REL1_39.zip",
                                         "type": "zip"
@@ -458,7 +458,7 @@
                         "package": {
                                 "name": "mediawiki/mediasearch",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch/archive/REL1_39.zip",
                                         "type": "zip"
@@ -475,7 +475,7 @@
                         "package": {
                                 "name": "mediawiki/popups",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Popups/archive/REL1_39.zip",
                                         "type": "zip"
@@ -492,7 +492,7 @@
                         "package": {
                                 "name": "mediawiki/related-articles",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-RelatedArticles/archive/REL1_39.zip",
                                         "type": "zip"
@@ -509,7 +509,7 @@
                         "package": {
                                 "name": "mediawiki/sandbox-link",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-SandboxLink/archive/REL1_39.zip",
                                         "type": "zip"
@@ -526,7 +526,7 @@
                         "package": {
                                 "name": "mediawiki/tabber-neue",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/StarCitizenTools/mediawiki-extensions-TabberNeue/archive/main.zip",
                                         "type": "zip"
@@ -543,7 +543,7 @@
                         "package": {
                                 "name": "mediawiki/thanks",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Thanks/archive/REL1_39.zip",
                                         "type": "zip"
@@ -560,7 +560,7 @@
                         "package": {
                                 "name": "mediawiki/twocolconflict",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-TwoColConflict/archive/REL1_39.zip",
                                         "type": "zip"
@@ -577,7 +577,7 @@
                         "package": {
                                 "name": "mediawiki/upload-wizard",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-UploadWizard/archive/REL1_39.zip",
                                         "type": "zip"
@@ -594,7 +594,7 @@
                         "package": {
                                 "name": "mediawiki/webauthn",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-WebAuthn/archive/REL1_39.zip",
                                         "type": "zip"
@@ -628,7 +628,7 @@
                         "package": {
                                 "name": "mediawiki/semantic-drilldown",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown/archive/master.zip",
                                         "type": "zip"
@@ -645,7 +645,7 @@
                         "package": {
                                 "name": "mediawiki/swiftmailer",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer/archive/REL1_39.zip",
                                         "type": "zip"
@@ -662,7 +662,7 @@
                         "package": {
                                 "name": "mediawiki/page-view-info",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-PageViewInfo/archive/REL1_39.zip",
                                         "type": "zip"
@@ -679,7 +679,7 @@
                         "package": {
                                 "name": "wikimedia/pluggable-auth",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-PluggableAuth/archive/REL1_39.zip",
                                         "type": "zip"
@@ -696,7 +696,7 @@
                         "package": {
                                 "name": "wikimedia/open-i-d-connect",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-OpenIDConnect/archive/REL1_39.zip",
                                         "type": "zip"
@@ -713,7 +713,7 @@
                         "package": {
                                 "name": "wikimedia/display-title",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-DisplayTitle/archive/REL1_39.zip",
                                         "type": "zip"
@@ -730,7 +730,7 @@
                         "package": {
                                 "name": "wikimedia/poem",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-Poem/archive/REL1_39.zip",
                                         "type": "zip"
@@ -764,7 +764,7 @@
                         "package": {
                                 "name": "wikimedia/templatesandbox",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox/archive/REL1_39.zip",
                                         "type": "zip"
@@ -781,7 +781,7 @@
                         "package": {
                                 "name": "wikimedia/usergroups",
                                 "type": "mediawiki-extension",
-                                "version": "1.39.0",
+                                "version": "1.43.0",
                                 "dist": {
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-UserGroups/archive/REL1_39.zip",
                                         "type": "zip"
