@@ -7,9 +7,7 @@ ENV MEDIAWIKI_VERSION 1.39.7
 # System dependencies
 RUN set -eux; \
 	\
- 	apt-add-repository universe; \
 	apt-get update; \
- 	apt-get purge libzip4; \
 	apt-get install -y --no-install-recommends \
 		git \
 		librsvg2-bin \
@@ -21,8 +19,7 @@ RUN set -eux; \
 		rsync \
 		nano \
   		liblua5.1-0 \
-  		libzip4 \
-        	s3cmd \
+        s3cmd \
 	 	python3 \
    		python3-pip \
 	; \
