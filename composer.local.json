@@ -188,13 +188,13 @@
                                 "type": "mediawiki-extension",
                                 "version": "1.39.0",
                                 "dist": {
-                                        "url": "https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription/archive/master.zip",
+                                        "url": "https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription/archive/main.zip",
                                         "type": "zip"
                                 },
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription.git",
-                                        "reference": "master"
+                                        "reference": "main"
                                 }
                         }
                 },
