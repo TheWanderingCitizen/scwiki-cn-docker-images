@@ -653,7 +653,7 @@
                                 "source": {
                                         "type": "git",
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer.git",
-                                        "reference": "main"
+                                        "reference": "master"
                                 }
                         }
                 },
