@@ -177,13 +177,19 @@ RUN --mount=type=cache,target=/tmp/phpexts-cache \
 # Copy PHP configs
 COPY ./config/php-config.ini /usr/local/etc/php/conf.d/php-config.ini
 COPY ./config/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
-RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; \
-	echo 'max_execution_time = 60' >> /usr/local/etc/php/conf.d/docker-php-executiontime.ini; \
-	echo 'pm.max_children = 30' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
-	echo 'pm.max_requests = 200' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
-	echo 'pm.start_servers = 10' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
-	echo 'pm.min_spare_servers = 10' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
-	echo 'pm.max_spare_servers = 30' >> /usr/local/etc/php-fpm.d/zz-docker.conf;
+RUN echo 'memory_limit = 256M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; \
+    echo 'max_execution_time = 120' >> /usr/local/etc/php/conf.d/docker-php-executiontime.ini; \
+    echo 'max_input_vars = 3000' >> /usr/local/etc/php/conf.d/docker-php-maxinputvars.ini; \
+    echo 'post_max_size = 64M' >> /usr/local/etc/php/conf.d/docker-php-uploads.ini; \
+    echo 'upload_max_filesize = 64M' >> /usr/local/etc/php/conf.d/docker-php-uploads.ini; \
+    echo 'pm = dynamic' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
+    echo 'pm.max_children = 32' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
+    echo 'pm.start_servers = 8' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
+    echo 'pm.min_spare_servers = 4' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
+    echo 'pm.max_spare_servers = 16' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
+    echo 'pm.max_requests = 1000' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
+    echo 'pm.process_idle_timeout = 60s' >> /usr/local/etc/php-fpm.d/zz-docker.conf; \
+    echo 'request_terminate_timeout = 120s' >> /usr/local/etc/php-fpm.d/zz-docker.conf;
 
 # Create required directories
 RUN mkdir -p /var/www/mediawiki /usr/local/smw; \
