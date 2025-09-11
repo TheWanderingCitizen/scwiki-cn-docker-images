@@ -50,7 +50,7 @@ services:
       - 'mediawiki-uploads:/var/www/mediawiki/images'
       - 'mediawiki-cache:/var/www/mediawiki/cache'
     ports:
-      - '8080:80'
+      - '8088:80'
 volumes:
   mediawiki-app:
     name: mediawiki-app
