@@ -33,6 +33,7 @@ services:
       - MEDIAWIKI_MAJOR_VERSION
     volumes:
       - './config/LocalSettings.php:/var/www/mediawiki/LocalSettings.php'
+      - 'mediawiki-app:/var/www/mediawiki'
       - 'mediawiki-uploads:/var/www/mediawiki/images'
       - 'mediawiki-cache:/var/www/mediawiki/cache'
     expose:
@@ -45,11 +46,14 @@ services:
       - mediawiki
     volumes:
       - './nginx.template.conf:/etc/nginx/conf.d/default.conf'
+      - 'mediawiki-app:/var/www/mediawiki:ro'  # Read-only access
       - 'mediawiki-uploads:/var/www/mediawiki/images'
       - 'mediawiki-cache:/var/www/mediawiki/cache'
     ports:
       - '8080:80'
 volumes:
+  mediawiki-app:
+    name: mediawiki-app
   mediawiki-uploads:
    name: mediawiki-uploads
   mediawiki-cache:
