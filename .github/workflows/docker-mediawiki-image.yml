@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - 
+        name: Checkout
+        uses: actions/checkout@v4
+      - 
         name: Set Calver Version
         uses: Nelyx/action-calver@v1.0.0
         id: setcalver
@@ -19,14 +22,21 @@ jobs:
           format: 'YY.MM.DD'
       -
         name: Login to Github Container Registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Build and push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v5
         with:
+          context: .
           push: true
+          build-args: |
+            MEDIAWIKI_MAJOR_VERSION=1.43
+            MEDIAWIKI_VERSION=1.43.3
+            UPDATE_SYSTEM_DEPENDENCIES=true
+            UPDATE_PHP_EXTENSIONS=true
+            UPDATE_COMPOSER_DEPENDENCIES=true
           tags: ghcr.io/thewanderingcitizen/mediawiki:main-latest,ghcr.io/thewanderingcitizen/mediawiki:main-${{ steps.setcalver.outputs.package_version }}
