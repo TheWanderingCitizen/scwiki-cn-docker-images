@@ -1,5 +1,5 @@
 # Builder stage
-FROM php:8.3-fpm AS builder
+FROM mediawiki:1.43-fpm AS builder
 
 # Version
 ARG MEDIAWIKI_MAJOR_VERSION='1.43'
@@ -27,10 +27,11 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
 
 # Pygments
 # Required for Extension:SyntaxHighlight
-# This is compiled from source because both the bundled and Debian packages are too old
-RUN --mount=type=cache,target=/root/.cache/pip \
-	set -eux; \
-	pip3 install Pygments --break-system-packages \
+# Try apt package first, fallback to pip if needed
+RUN set -eux; \
+	apt-get update; \
+	apt-get install -y --no-install-recommends python3-pygments || \
+	(pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org Pygments --break-system-packages) \
 	;
 
 # Create a tarball of the Python packages so that we can copy them to the final image
@@ -44,60 +45,27 @@ RUN --mount=type=cache,target=/tmp/phpexts-cache \
 	set -eux; \
 	echo "Updating PHP extensions: ${UPDATE_PHP_EXTENSIONS}"; \
 	install-php-extensions \
-		calendar \
 		exif \
-		intl \
-		mysqli \
+		imagick \
 		zip \
-		apcu \
-		luasandbox \
 		redis \
 		wikidiff2 \
-		imagick \
 	;
 
-# MediaWiki
-RUN set -eux; \
-	fetchDeps=" \
-		gnupg \
-		dirmngr \
-	"; \
-	apt-get update; \
-	apt-get install -y --no-install-recommends $fetchDeps; \
-	\
-	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; \
-	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; \
-	export GNUPGHOME="$(mktemp -d)"; \
-	# gpg key from https://www.mediawiki.org/keys/keys.txt
-	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys \
-		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 \
-		441276E9CCD15F44F6D97D18C119E1A64D70938E \
-		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 \
-		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 \
-		E059C034E7A430583C252F4AA8F734246D73B586 \
-	; \
-	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; \
-	rm -rf /var/www/mediawiki; \
-	mkdir /var/www/mediawiki; \
-	tar -x --strip-components=1 -f mediawiki.tar.gz -C /var/www/mediawiki; \
-	gpgconf --kill all; \
-	rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; \
-	\
-	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; \
-	rm -rf /var/lib/apt/lists/*
-
+# MediaWiki is already installed in the base image at /var/www/html
+# Copy composer from the official composer image
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
-WORKDIR /var/www/mediawiki
+WORKDIR /var/www/html
 
 # Skins and extensions
 # Defined in composer.local.json
-COPY ./composer.local.json /var/www/mediawiki/composer.local.json
+COPY ./composer.local.json /var/www/html/composer.local.json
 
 RUN set -eux; \
 	mkdir /usr/local/smw; \
 	mkdir -p /var/www/.composer; \
-	chown -R www-data:www-data /var/www/mediawiki /usr/local/smw /var/www/.composer
+	chown -R www-data:www-data /var/www/html /usr/local/smw /var/www/.composer
 
 USER www-data
 
@@ -125,7 +93,7 @@ RUN --mount=type=cache,target=/var/www/.composer/cache,uid=33,gid=33 \
 		--no-scripts;
 
 # Final image
-FROM php:8.3-fpm
+FROM mediawiki:1.43-fpm
 
 ARG UPDATE_SYSTEM_DEPENDENCIES=false
 ARG UPDATE_PHP_EXTENSIONS=false
@@ -162,14 +130,9 @@ RUN --mount=type=cache,target=/tmp/phpexts-cache \
 	set -eux; \
 	echo "Updating PHP extensions: ${UPDATE_PHP_EXTENSIONS}"; \
 	install-php-extensions \
-		calendar \
 		exif \
-		intl \
-		mysqli \
 		imagick \
 		zip \
-		apcu \
-		luasandbox \
 		redis \
 		wikidiff2 \
 	;
@@ -192,13 +155,13 @@ RUN echo 'memory_limit = 256M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.
     echo 'request_terminate_timeout = 120s' >> /usr/local/etc/php-fpm.d/zz-docker.conf;
 
 # Create required directories
-RUN mkdir -p /var/www/mediawiki /usr/local/smw; \
+RUN mkdir -p /var/www/html /usr/local/smw; \
 	chown www-data:www-data /usr/local/smw
 
-WORKDIR /var/www/mediawiki
+WORKDIR /var/www/html
 
 # Copy built application files and python packages from the builder stage
-COPY --from=builder /var/www/mediawiki /var/www/mediawiki
+COPY --from=builder /var/www/html /var/www/html
 COPY --from=builder /python-packages.tar.gz /python-packages.tar.gz
 RUN export PY_PACKAGES_PATH=$(python3 -c 'import sysconfig; print(sysconfig.get_path("platlib"))') && \
 	mkdir -p ${PY_PACKAGES_PATH} && \
@@ -207,29 +170,34 @@ RUN export PY_PACKAGES_PATH=$(python3 -c 'import sysconfig; print(sysconfig.get_
 COPY --from=builder /usr/local/bin/pygmentize /usr/local/bin/pygmentize
 
 # Copy final configs
-COPY ./config/LocalSettings.php /var/www/mediawiki/LocalSettings.php
-COPY ./resources /var/www/mediawiki/resources
-COPY ./config/robots.txt /var/www/mediawiki/robots.txt
+COPY ./config/LocalSettings.php /var/www/html/LocalSettings.php
+COPY ./resources /var/www/html/resources
+COPY ./config/robots.txt /var/www/html/robots.txt
 
 # Copy extentions
-RUN mv /var/www/mediawiki/extensions/Checkuser /var/www/mediawiki/extensions/CheckUser; \
-	mv /var/www/mediawiki/extensions/Dismissablesitenotice /var/www/mediawiki/extensions/DismissableSiteNotice; \
-	mv /var/www/mediawiki/extensions/Nativesvghandler /var/www/mediawiki/extensions/NativeSvgHandler; \
-	mv /var/www/mediawiki/extensions/Mediasearch /var/www/mediawiki/extensions/MediaSearch; \
-	mv /var/www/mediawiki/extensions/Revisionslider /var/www/mediawiki/extensions/RevisionSlider; \
-	mv /var/www/mediawiki/extensions/Rss /var/www/mediawiki/extensions/RSS; \
-	mv /var/www/mediawiki/extensions/Shortdescription /var/www/mediawiki/extensions/ShortDescription; \
-	mv /var/www/mediawiki/extensions/Webauthn /var/www/mediawiki/extensions/WebAuthn; \
-	mv /var/www/mediawiki/skins/citizen /var/www/mediawiki/skins/Citizen; \
-	mv /var/www/mediawiki/extensions/Twocolconflict /var/www/mediawiki/extensions/TwoColConflict; \
-	mv /var/www/mediawiki/extensions/Swiftmailer /var/www/mediawiki/extensions/SwiftMailer; \
-	mv /var/www/mediawiki/extensions/Templatesandbox /var/www/mediawiki/extensions/TemplateSandbox; \
-	mv /var/www/mediawiki/extensions/Usergroups /var/www/mediawiki/extensions/UserGroups; \
+RUN set -eux; \
+	# Rename extensions if they exist (only the ones installed via composer)
+	if [ -d "/var/www/html/extensions/Checkuser" ]; then mv /var/www/html/extensions/Checkuser /var/www/html/extensions/CheckUser; fi; \
+	if [ -d "/var/www/html/extensions/Dismissablesitenotice" ]; then mv /var/www/html/extensions/Dismissablesitenotice /var/www/html/extensions/DismissableSiteNotice; fi; \
+	if [ -d "/var/www/html/extensions/Nativesvghandler" ]; then mv /var/www/html/extensions/Nativesvghandler /var/www/html/extensions/NativeSvgHandler; fi; \
+	if [ -d "/var/www/html/extensions/Mediasearch" ]; then mv /var/www/html/extensions/Mediasearch /var/www/html/extensions/MediaSearch; fi; \
+	if [ -d "/var/www/html/extensions/Revisionslider" ]; then mv /var/www/html/extensions/Revisionslider /var/www/html/extensions/RevisionSlider; fi; \
+	if [ -d "/var/www/html/extensions/Rss" ]; then mv /var/www/html/extensions/Rss /var/www/html/extensions/RSS; fi; \
+	if [ -d "/var/www/html/extensions/Shortdescription" ]; then mv /var/www/html/extensions/Shortdescription /var/www/html/extensions/ShortDescription; fi; \
+	if [ -d "/var/www/html/extensions/Webauthn" ]; then mv /var/www/html/extensions/Webauthn /var/www/html/extensions/WebAuthn; fi; \
+	if [ -d "/var/www/html/skins/citizen" ]; then mv /var/www/html/skins/citizen /var/www/html/skins/Citizen; fi; \
+	if [ -d "/var/www/html/extensions/Twocolconflict" ]; then mv /var/www/html/extensions/Twocolconflict /var/www/html/extensions/TwoColConflict; fi; \
+	if [ -d "/var/www/html/extensions/Swiftmailer" ]; then mv /var/www/html/extensions/Swiftmailer /var/www/html/extensions/SwiftMailer; fi; \
+	if [ -d "/var/www/html/extensions/Templatesandbox" ]; then mv /var/www/html/extensions/Templatesandbox /var/www/html/extensions/TemplateSandbox; fi; \
+	if [ -d "/var/www/html/extensions/Usergroups" ]; then mv /var/www/html/extensions/Usergroups /var/www/html/extensions/UserGroups; fi; \
 	\
-	cp /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php;
+	# Copy custom file if the extension exists
+	if [ -f "/var/www/html/extensions/PictureHtmlSupport/includes/ThumbnailImage.php" ]; then \
+		cp /var/www/html/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/html/includes/media/ThumbnailImage.php; \
+	fi;
 
 # Set final ownership
-RUN chown -R www-data:www-data /var/www/mediawiki
+RUN chown -R www-data:www-data /var/www/html
 
 USER www-data
 
