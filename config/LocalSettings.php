@@ -29,8 +29,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 /* DEBUG ONLY */
 $wgShowExceptionDetails = true;
-#$wgDebugDumpSql = true;
-#$wgDebugComments = true;
+$wgDebugDumpSql = true;
+$wgDebugComments = true;
 #Maintenance
 #$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
 
@@ -40,7 +40,7 @@ $wgServer = $_ENV["Server"];
 # TODO: We should change this to "Star_Citizen_Wiki" at some point
 $wgMetaNamespace = "Star_Citizen_Wiki";
 # Force HTTPS
-$wgForceHTTPS = true;
+$wgForceHTTPS = false;
 # Main page is served as the domain root
 $wgMainPageIsDomainRoot = true;
 # Allow MediaWiki:Citizen.css to load on all pages
@@ -331,6 +331,7 @@ wfLoadExtension( 'PageImages' );
 #wfLoadExtension( 'PageViewInfo' ); -- Disabled with Extension:Plausible
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'PdfHandler' );
+# Temporarily disabled due to PHP 8.3 compatibility issues
 wfLoadExtension( 'PictureHtmlSupport' );
 wfLoadExtension( 'PluggableAuth' );
 #wfLoadExtension( 'Plausible' ); -- Disabled to allocate more resources to MW
