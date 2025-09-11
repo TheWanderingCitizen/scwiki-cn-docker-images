@@ -31,9 +31,18 @@ services:
       - wgMultiPurgeCloudFlareZoneId
       - MEDIAWIKI_VERSION
       - MEDIAWIKI_MAJOR_VERSION
+    volumes:
+      - './config/LocalSettings.php:/var/www/mediawiki/LocalSettings.php'
+      - 'mediawiki-data:/var/www'
 
   mediawiki-web:
     image: nginx:latest
     restart: always
     depends_on:
       - mediawiki
+    volumes:
+      - './nginx.template.conf:/etc/nginx/conf.d/default.conf'
+      - 'mediawiki-data:/var/www'
+volume:
+  mediawiki-data:
+   name: mediawiki-data
