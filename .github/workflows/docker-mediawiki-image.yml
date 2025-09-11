@@ -5,6 +5,22 @@ on:
     branches:
       - 'main'
   workflow_dispatch:
+    inputs:
+      update_composer_dependencies:
+        description: 'Force a full refresh of Composer dependencies'
+        required: true
+        type: boolean
+        default: false
+      update_system_dependencies:
+        description: 'Force a refresh of apt system packages'
+        required: true
+        type: boolean
+        default: false
+      update_php_extensions:
+        description: 'Force a refresh of PHP extensions'
+        required: true
+        type: boolean
+        default: false
 
 jobs:
   docker:
@@ -29,14 +45,15 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
-          context: .
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           push: true
           build-args: |
             MEDIAWIKI_MAJOR_VERSION=1.43
             MEDIAWIKI_VERSION=1.43.3
-            UPDATE_SYSTEM_DEPENDENCIES=true
-            UPDATE_PHP_EXTENSIONS=true
-            UPDATE_COMPOSER_DEPENDENCIES=true
+            UPDATE_COMPOSER_DEPENDENCIES=${{ github.event.inputs.update_composer_dependencies }}
+            UPDATE_SYSTEM_DEPENDENCIES=${{ github.event.inputs.update_system_dependencies }}
+            UPDATE_PHP_EXTENSIONS=${{ github.event.inputs.update_php_extensions }}
           tags: ghcr.io/thewanderingcitizen/mediawiki:main-latest,ghcr.io/thewanderingcitizen/mediawiki:main-${{ steps.setcalver.outputs.package_version }}
