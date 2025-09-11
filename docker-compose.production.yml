@@ -49,6 +49,9 @@ services:
       - 'mediawiki-app:/var/www/mediawiki:ro'  # Read-only access
       - 'mediawiki-uploads:/var/www/mediawiki/images'
       - 'mediawiki-cache:/var/www/mediawiki/cache'
+    expose:
+      - '80'
+      - '443'
 volumes:
   mediawiki-app:
     name: mediawiki-app
