@@ -40,6 +40,7 @@ RUN export PY_PACKAGES_PATH=$(python3 -c 'import sysconfig; print(sysconfig.get_
 
 # PHP extensions - install basic essential ones only for now
 # install-php-extensions is used for simplicity since it also supports pecl and it can install wikidiff2 correctly
+# Note: Additional extensions to add back: redis, imagick, wikidiff2
 COPY --from=mlocati/php-extension-installer:latest /usr/bin/install-php-extensions /usr/local/bin/
 RUN --mount=type=cache,target=/tmp/phpexts-cache \
 	set -eux; \
@@ -125,6 +126,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
 	;
 
 # PHP extensions - install basic essential ones only for now
+# Note: Additional extensions to add back: redis, imagick, wikidiff2
 COPY --from=mlocati/php-extension-installer:latest /usr/bin/install-php-extensions /usr/local/bin/
 RUN --mount=type=cache,target=/tmp/phpexts-cache \
 	set -eux; \
