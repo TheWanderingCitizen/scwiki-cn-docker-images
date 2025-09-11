@@ -4,6 +4,11 @@ FROM php:8.2-fpm
 ENV MEDIAWIKI_MAJOR_VERSION 1.39
 ENV MEDIAWIKI_VERSION 1.39.7
 
+# Build arguments
+ARG UPDATE_SYSTEM_DEPENDENCIES=false
+ARG UPDATE_PHP_EXTENSIONS=false
+ARG UPDATE_COMPOSER_DEPENDENCIES=false
+
 # System dependencies
 RUN set -eux; \
 	\
@@ -19,72 +24,43 @@ RUN set -eux; \
 		rsync \
 		nano \
   		liblua5.1-0 \
-  		libzip4 \
-        	s3cmd \
+        s3cmd \
 	 	python3 \
    		python3-pip \
 	; \
 	rm -rf /var/lib/apt/lists/*
  
-# Install the Python packages we need
-RUN set -eux; \
+# Pygments
+# Required for Extension:SyntaxHighlight
+# This is compiled from source because both the bundled and Debian packages are too old
+RUN --mount=type=cache,target=/root/.cache/pip \
+	set -eux; \
 	pip3 install Pygments --break-system-packages\
  	;
-  
-# Install the PHP extensions we need
-RUN set -eux; \
-	\
-	savedAptMark="$(apt-mark showmanual)"; \
-	\
-	apt-get update; \
-	apt-get install -y --no-install-recommends \
-		libicu-dev \
-		libonig-dev \
-		libcurl4-gnutls-dev \
-		libmagickwand-dev \
-		libwebp7 \
-		libzip-dev \
-		liblua5.1-0-dev \
-	; \
-	\
-	docker-php-ext-install -j "$(nproc)" \
+
+# Create a tarball of the Python packages so that we can copy them to the final image
+RUN export PY_PACKAGES_PATH=$(python3 -c 'import sysconfig; print(sysconfig.get_path("platlib"))') && \
+	tar -czf /python-packages.tar.gz -C ${PY_PACKAGES_PATH} .
+
+
+# PHP extensions
+# install-php-extensions is used for simplicity since it also supports pecl and it can install wikidiff2 correctly
+COPY --from=mlocati/php-extension-installer:latest /usr/bin/install-php-extensions /usr/local/bin/
+RUN --mount=type=cache,target=/tmp/phpexts-cache \
+	set -eux; \
+	echo "Updating PHP extensions: ${UPDATE_PHP_EXTENSIONS}"; \
+	install-php-extensions \
 		calendar \
-  		exif \
+		exif \
 		intl \
-		mbstring \
 		mysqli \
-		opcache \
-  		zip \
-		curl \
-	; \
-	\
-	pecl install \ 
-		APCu-5.1.23 \
-		luasandbox \
-		imagick \
-		redis \
-	; \
-	docker-php-ext-enable \
+		zip \
 		apcu \
 		luasandbox \
-		imagick  \
 		redis \
-	; \
-	rm -r /tmp/pear; \
-	\
-	# reset apt-mark's "manual" list so that "purge --auto-remove" will remove all build dependencies
-	apt-mark auto '.*' > /dev/null; \
-	apt-mark manual $savedAptMark; \
-	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so \
-		| awk '/=>/ { print $3 }' \
-		| sort -u \
-		| xargs -r dpkg-query -S \
-		| cut -d: -f1 \
-		| sort -u \
-		| xargs -rt apt-mark manual; \
-	\
-	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
-	rm -rf /var/lib/apt/lists/*
+		wikidiff2 \
+		imagick \
+	;
 
 # MediaWiki setup
 RUN set -eux; \
