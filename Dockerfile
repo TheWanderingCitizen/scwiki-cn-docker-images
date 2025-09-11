@@ -38,18 +38,21 @@ RUN set -eux; \
 RUN export PY_PACKAGES_PATH=$(python3 -c 'import sysconfig; print(sysconfig.get_path("platlib"))') && \
 	tar -czf /python-packages.tar.gz -C ${PY_PACKAGES_PATH} .
 
-# PHP extensions - install basic essential ones only for now
-# install-php-extensions is used for simplicity since it also supports pecl and it can install wikidiff2 correctly
-# Note: Additional extensions to add back: redis, imagick, wikidiff2
+# PHP extensions - install essential ones
+# install-php-extensions is used for simplicity since it also supports pecl and it can install wikidiff2 correctly  
+# The MediaWiki base image already includes: apcu, calendar, intl, mysqli, luasandbox
 COPY --from=mlocati/php-extension-installer:latest /usr/bin/install-php-extensions /usr/local/bin/
 RUN --mount=type=cache,target=/tmp/phpexts-cache \
 	set -eux; \
 	echo "Updating PHP extensions: ${UPDATE_PHP_EXTENSIONS}"; \
-	# Install basic extensions that should work
+	# Install basic extensions that work without network access
 	install-php-extensions \
 		exif \
 		zip \
-	;
+	; \
+	# Extensions to install when network access to pecl.php.net is available:
+	# Uncomment the following lines once network access is configured:
+	# install-php-extensions redis imagick wikidiff2
 
 # MediaWiki is already installed in the base image at /var/www/html
 # Copy composer from the official composer image
@@ -125,17 +128,20 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
 		libvips-tools \
 	;
 
-# PHP extensions - install basic essential ones only for now
-# Note: Additional extensions to add back: redis, imagick, wikidiff2
+# PHP extensions - install essential ones
+# The MediaWiki base image already includes: apcu, calendar, intl, mysqli, luasandbox
 COPY --from=mlocati/php-extension-installer:latest /usr/bin/install-php-extensions /usr/local/bin/
 RUN --mount=type=cache,target=/tmp/phpexts-cache \
 	set -eux; \
 	echo "Updating PHP extensions: ${UPDATE_PHP_EXTENSIONS}"; \
-	# Install basic extensions that should work
+	# Install basic extensions that work without network access
 	install-php-extensions \
 		exif \
 		zip \
-	;
+	; \
+	# Extensions to install when network access to pecl.php.net is available:
+	# Uncomment the following lines once network access is configured:
+	# install-php-extensions redis imagick wikidiff2
 
 # Copy PHP configs
 COPY ./config/php-config.ini /usr/local/etc/php/conf.d/php-config.ini
