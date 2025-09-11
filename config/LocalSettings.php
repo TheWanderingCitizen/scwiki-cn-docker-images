@@ -332,7 +332,7 @@ wfLoadExtension( 'PageImages' );
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'PdfHandler' );
 # Temporarily disabled due to PHP 8.3 compatibility issues
-wfLoadExtension( 'PictureHtmlSupport' );
+#wfLoadExtension( 'PictureHtmlSupport' );
 wfLoadExtension( 'PluggableAuth' );
 #wfLoadExtension( 'Plausible' ); -- Disabled to allocate more resources to MW
 wfLoadExtension( 'Poem' );
@@ -367,7 +367,7 @@ wfLoadExtension( 'UniversalLanguageSelector' );
 wfLoadExtension( 'UserGroups' );
 wfLoadExtension( 'Variables' );
 wfLoadExtension( 'VisualEditor' );
-wfLoadExtension( 'WebP' );
+#wfLoadExtension( 'WebP' );
 wfLoadExtension( 'WebAuthn' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
