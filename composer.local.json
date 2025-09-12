@@ -57,7 +57,7 @@
                 "octfx/webp": "dev-develop",
                 "starcitizenwiki/picture-html-support": "dev-master",
                 "wikimedia/pluggable-auth": "1.43.0",
-                "wikimedia/open-i-d-connect": "1.43.0",
+                "wikimedia/openidconnect": "1.43.0",
                 "mediawiki/display-title": "1.43.0",
                 "wikimedia/poem": "1.43.0",
                 "alpha5130/purge": "2.1.1",
@@ -729,7 +729,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/open-i-d-connect",
+                                "name": "wikimedia/openidconnect",
                                 "type": "mediawiki-extension",
                                 "version": "1.43.0",
                                 "dist": {
@@ -741,6 +741,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-OpenIDConnect.git",
                                         "reference": "REL1_43"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "OpenIDConnect"
                         }
                 },
                 {
