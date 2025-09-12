@@ -653,6 +653,9 @@
                                         "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen.git",
                                         "reference": "main"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "Citizen"
                         }
                 },
                 {
