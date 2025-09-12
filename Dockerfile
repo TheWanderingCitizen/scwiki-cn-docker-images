@@ -212,7 +212,7 @@ COPY ./resources /var/www/mediawiki/resources
 COPY ./config/robots.txt /var/www/mediawiki/robots.txt
 
 # Copy extentions
-RUN mv /var/www/mediawiki/extensions/PictureHtmlSupport /var/www/mediawiki/extensions/PictureHtmlSupport; 
+RUN cp /var/www/mediawiki/extensions/PictureHtmlSupport/includes/ThumbnailImage.php /var/www/mediawiki/includes/media/ThumbnailImage.php;
 
 # Set final ownership
 RUN chown -R www-data:www-data /var/www/mediawiki
