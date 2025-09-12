@@ -123,6 +123,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice.git",
                                         "reference": "REL1_43"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "DismissableSiteNotice"
                         }
                 },
                 {
@@ -140,6 +143,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-NativeSvgHandler.git",
                                         "reference": "master"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "NativeSvgHandler"
                         }
                 },
                 {
@@ -191,6 +197,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-RevisionSlider.git",
                                         "reference": "REL1_43"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "RevisionSlider"
                         }
                 },
                 {
@@ -208,6 +217,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-RSS.git",
                                         "reference": "REL1_43"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "RSS"
                         }
                 },
                 {
@@ -480,6 +492,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch.git",
                                         "reference": "REL1_43"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "MediaSearch"
                         }
                 },
                 {
@@ -585,6 +600,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-TwoColConflict.git",
                                         "reference": "REL1_43"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "TwoColConflict"
                         }
                 },
                 {
@@ -619,6 +637,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-WebAuthn.git",
                                         "reference": "REL1_43"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "WebAuthn"
                         }
                 },
                 {
@@ -666,6 +687,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer.git",
                                         "reference": "master"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "SwiftMailer"
                         }
                 },
                 {
@@ -785,6 +809,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox.git",
                                         "reference": "REL1_43"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "TemplateSandbox"
                         }
                 },
                 {
@@ -802,6 +829,9 @@
                                         "url": "https://github.com/wikimedia/mediawiki-extensions-UserGroups.git",
                                         "reference": "REL1_43"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "UserGroups"
                         }
                 },
                 {
@@ -815,6 +845,9 @@
                                         "url": "https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription.git",
                                         "reference": "main"
                                 }
+                        },
+                        "extra": {
+                            "installer-name": "ShortDescription"
                         }
                 },
                 {
