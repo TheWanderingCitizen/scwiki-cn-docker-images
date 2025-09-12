@@ -57,8 +57,8 @@
                 "octfx/webp": "dev-develop",
                 "starcitizenwiki/picture-html-support": "dev-master",
                 "wikimedia/pluggable-auth": "1.43.0",
-                "mediawiki/openidconnect": "dev-REL1_43",
-                "mediawiki/display-title": "dev-REL1_43",
+                "wikimedia/open-i-d-connect": "1.43.0",
+                "mediawiki/display-title": "1.43.0",
                 "wikimedia/poem": "1.43.0",
                 "alpha5130/purge": "2.1.1",
                 "wikimedia/templatesandbox": "1.43.0",
@@ -722,7 +722,7 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "wikimedia/display-title",
+                                "name": "mediawiki/display-title",
                                 "type": "mediawiki-extension",
                                 "version": "1.43.0",
                                 "dist": {
