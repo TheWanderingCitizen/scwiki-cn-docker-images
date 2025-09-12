@@ -645,22 +645,6 @@
                 {
                         "type": "package",
                         "package": {
-                                "name": "starcitizentools/citizen-skin",
-                                "type": "mediawiki-skin",
-                                "version": "dev-main",
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen.git",
-                                        "reference": "main"
-                                }
-                        },
-                        "extra": {
-                            "installer-name": "Citizen"
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
                                 "name": "mediawiki/semantic-drilldown",
                                 "type": "mediawiki-extension",
                                 "version": "1.43.0",
