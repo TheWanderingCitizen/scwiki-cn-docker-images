@@ -37,7 +37,7 @@ def refs(url, *patterns):
 
 settings = (ROOT / 'config/LocalSettings.php').read_text(encoding='utf-8')
 directories = {name.lower(): name for name in re.findall(r"wfLoad(?:Extension|Skin)\(\s*'([^']+)'", settings)}
-overrides = {'mediawiki/rss': 'RSS', 'wikimedia/openidconnect': 'OpenIDConnect', 'mediawiki/upload-wizard': 'UploadWizard'}
+overrides = {'mediawiki/rss': 'RSS', 'mediawiki/openidconnect': 'OpenIDConnect', 'mediawiki/upload-wizard': 'UploadWizard'}
 
 
 def pin(package):

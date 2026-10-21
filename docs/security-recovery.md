@@ -178,8 +178,11 @@ docker run --rm -v "${PWD}/scripts:/checks:ro" --entrypoint php scwiki-mediawiki
 Tests create unique isolated MariaDB/Redis/Nginx services and app volumes. Cleanup
 removes only those resources, including anonymous test DB volumes. `-Keep` retains
 them for diagnosis. Never point the test settings or dump scripts at production.
-External AWS/OIDC/PluggableAuth/Discord/MultiPurge loading is omitted from these
-offline tests, while offline AWS signing and all dependencies are still checked.
+All configured extensions, including external integrations, receive a boot test
+with placeholder credentials. The HTTP local-login tests retain OpenIDConnect
+and PluggableAuth loading; they do not contact or authenticate with the real IdP.
+AWS/Discord/MultiPurge loading is omitted from the remaining offline business
+tests, while offline AWS signing and all dependencies are still checked.
 
 Passed checks include complete image build, lock consistency, full platform
 requirements, all installed versions/references, live audit and its negative
@@ -248,7 +251,8 @@ database schema or generated-key TOTP tests passed.
    artifact and matching database/app/state backups; restore uploads consistently
    if writes occurred. Do not simply point old code at the migrated database.
 
-CI retains GHCR `main-latest` and `main-YY.MM.DD` publication targets. PR checks
+CI retains GHCR `main-latest` and dated `main-YY.MM.DD.RUN` publication targets
+(the workflow run number makes repeated releases on one day distinct). PR checks
 never publish. Main publication transfers the tested image as a short-lived
 artifact and verifies its image ID, rather than rebuilding after tests. Actions
 are pinned. Main publication requires local checks and

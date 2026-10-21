@@ -14,7 +14,9 @@ $defaults = [
 $_ENV = array_merge($_ENV, $defaults);
 $settings = file_get_contents('/production-settings.php');
 // External service behavior is explicitly outside this local smoke test.
-$settings = preg_replace("/^wfLoadExtension\( '(AWS|OpenIDConnect|PluggableAuth|Discord|MultiPurge)' \);/m", '', $settings);
+if (!getenv('TEST_FULL_EXTENSION_BOOT')) {
+    $settings = preg_replace("/^wfLoadExtension\( '(AWS|Discord|MultiPurge)' \);/m", '', $settings);
+}
 eval('?>' . $settings);
 unset($wgFileBackends['s3']);
 $wgForceHTTPS = false;

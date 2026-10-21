@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb5f60784deb60e6ee44903150e2a0f8",
+    "content-hash": "0f023006d674d47cc34127c0f1826d11",
     "packages": [
         {
             "name": "alpha5130/purge",
@@ -2589,7 +2589,7 @@
             },
             "type": "mediawiki-extension",
             "extra": {
-                "installer-name": "OpenID Connect"
+                "installer-name": "OpenIDConnect"
             },
             "license": [
                 "MIT"

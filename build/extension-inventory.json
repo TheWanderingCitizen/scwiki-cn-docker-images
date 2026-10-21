@@ -633,7 +633,7 @@
     "package": "mediawiki/openidconnect",
     "version": "8.3.0",
     "manifestVersion": "8.3.0",
-    "directory": "OpenID Connect",
+    "directory": "OpenIDConnect",
     "commit": "975992f2978e11f66b1ad5fd64e005592ba2fec3",
     "requires": {
       "MediaWiki": ">= 1.39.0",

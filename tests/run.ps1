@@ -42,6 +42,7 @@ try {
     if ($DatabaseDump) {
         Invoke-Docker exec $wiki php maintenance/createAndPromote.php --sysop UpgradeAdmin 'Local-test-password-2026!'
     }
+    Invoke-Docker exec -e TEST_FULL_EXTENSION_BOOT=1 $wiki php /test/full-boot.php
     Invoke-Docker exec $wiki php /test/smoke.php
     if ($DatabaseDump) { Invoke-Docker exec $wiki php /test/production-smoke.php }
     Invoke-Docker exec $wiki php maintenance/runJobs.php --maxjobs 30 --memory-limit 512M

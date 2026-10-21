@@ -52,11 +52,11 @@ $edit = api(['action'=>'edit','title'=>'HTTPUpgradeCheck','text'=>'HTTP_OK','tok
 if (($edit['edit']['result'] ?? '') !== 'Success') { throw new RuntimeException(json_encode($edit)); }
 echo "PASS HTTP API edit\n";
 $png = new Imagick();
-$png->newImage(3, 3, 'white');
+$png->newImage(3, 3, '#' . bin2hex(random_bytes(3)));
 $png->setImageFormat('png');
 $uploadPath = '/tmp/security-recovery-upload.png';
 $png->writeImage($uploadPath);
-$upload = api(['action'=>'upload', 'filename'=>'SecurityRecovery.png', 'ignorewarnings'=>'1',
+$upload = api(['action'=>'upload', 'filename'=>'SecurityRecovery-' . bin2hex(random_bytes(4)) . '.png', 'ignorewarnings'=>'1',
     'token'=>$token, 'file'=>new CURLFile($uploadPath, 'image/png', 'SecurityRecovery.png')], true);
 if (($upload['upload']['result'] ?? '') !== 'Success') { throw new RuntimeException(json_encode($upload)); }
 echo "PASS HTTP authenticated image upload\n";
