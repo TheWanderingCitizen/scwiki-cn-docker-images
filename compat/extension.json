@@ -1,0 +1,10 @@
+{
+  "name": "RecoveryCompat",
+  "version": "1.0.0",
+  "license-name": "GPL-2.0-or-later",
+  "requires": {"MediaWiki": ">= 1.43.0", "extensions": {"Apiunto": "3.0.1", "SemanticScribunto": "3.0.0"}},
+  "AutoloadNamespaces": {"Scwiki\\Recovery\\": ""},
+  "ExtensionFunctions": ["Scwiki\\Recovery\\Hooks::onSetup"],
+  "config": {"RecoveryApiuntoSource": {"value": "StarCitizenWikiAPI"}},
+  "manifest_version": 2
+}

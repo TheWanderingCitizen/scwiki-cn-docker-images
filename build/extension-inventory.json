@@ -1,0 +1,701 @@
+[
+  {
+    "package": "mediawiki/advanced-search",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "AdvancedSearch",
+    "commit": "3853b91e84e0f40851c2e40c0253b4cdf18051b0",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-AdvancedSearch.git"
+  },
+  {
+    "package": "mediawiki/babel",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "Babel",
+    "commit": "67edfe76943c19b2218d0f6187f5674487f45b15",
+    "requires": {
+      "MediaWiki": ">= 1.41.0"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Babel.git"
+  },
+  {
+    "package": "mediawiki/checkuser",
+    "version": "2.5",
+    "manifestVersion": "2.5",
+    "directory": "CheckUser",
+    "commit": "9d7c1d311e0ff2687498215c72bcc3e82cf8c90e",
+    "requires": {
+      "MediaWiki": ">= 1.43.0",
+      "platform": {
+        "ext-openssl": "*"
+      }
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-CheckUser.git"
+  },
+  {
+    "package": "mediawiki/cirrussearch",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "CirrusSearch",
+    "commit": "3175dbb503462f4fb725dcf3cbaccc4ad6d3afe2",
+    "requires": {
+      "MediaWiki": ">= 1.43",
+      "extensions": {
+        "Elastica": ">= 6.0.1"
+      }
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-CirrusSearch.git"
+  },
+  {
+    "package": "starcitizentools/citizen-skin",
+    "version": "3.24.0",
+    "manifestVersion": "3.24.0",
+    "directory": "Citizen",
+    "commit": "f137342f65b36ad13d3a60d902aa5e6ac13ce646",
+    "requires": {
+      "MediaWiki": ">= 1.43.0"
+    },
+    "source": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen.git"
+  },
+  {
+    "package": "mediawiki/cldr",
+    "version": "4.15.0",
+    "manifestVersion": "4.15.0",
+    "directory": "Cldr",
+    "commit": "8b36e6d82d0fff8e7f226472e81c65945f2c127f",
+    "requires": {
+      "MediaWiki": ">= 1.35.0"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-cldr.git"
+  },
+  {
+    "package": "mediawiki/code-mirror",
+    "version": "6.0.0",
+    "manifestVersion": "6.0.0",
+    "directory": "CodeMirror",
+    "commit": "5f8024885bded867def734d32e443cf9b83f3588",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-CodeMirror.git"
+  },
+  {
+    "package": "mediawiki/commons-metadata",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "CommonsMetadata",
+    "commit": "c3a523b6518985746a82d342df70e41f7312b5a4",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-CommonsMetadata.git"
+  },
+  {
+    "package": "mediawiki/cookie-warning",
+    "version": "0.3.0",
+    "manifestVersion": "0.3.0",
+    "directory": "CookieWarning",
+    "commit": "306b52c94c6112fb387e32e2d1ff80eb21fec675",
+    "requires": {
+      "MediaWiki": ">= 1.41.0"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-CookieWarning.git"
+  },
+  {
+    "package": "mediawiki/disambiguator",
+    "version": "1.4",
+    "manifestVersion": "1.4",
+    "directory": "Disambiguator",
+    "commit": "ab6e9e60581360ce5ae831b4a392dc427a14aaea",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Disambiguator.git"
+  },
+  {
+    "package": "mediawiki/discord",
+    "version": "1.0.13",
+    "manifestVersion": "1.0.13",
+    "directory": "Discord",
+    "commit": "2a560d9acc4af06dcb5f1f7fd9d695f848209160",
+    "requires": {
+      "MediaWiki": ">= 1.38.0"
+    },
+    "source": "https://github.com/jayktaylor/mw-discord.git"
+  },
+  {
+    "package": "mediawiki/discussion-tools",
+    "version": "0.0.0",
+    "manifestVersion": "0.0.0",
+    "directory": "DiscussionTools",
+    "commit": "b0c34619101b92b91f171767e4d1a275169ec1ea",
+    "requires": {
+      "MediaWiki": ">= 1.43.0",
+      "extensions": {
+        "VisualEditor": "*",
+        "Linter": "*"
+      }
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-DiscussionTools.git"
+  },
+  {
+    "package": "mediawiki/dismissablesitenotice",
+    "version": "1.0.1",
+    "manifestVersion": "1.0.1",
+    "directory": "DismissableSiteNotice",
+    "commit": "30318e187e24bc36609964146cf401505e6ff75b",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice.git"
+  },
+  {
+    "package": "chariz/mediawiki-extension-details",
+    "version": "1.3.0",
+    "manifestVersion": "1.3.0",
+    "directory": "Details",
+    "commit": "c0ef4d78a7c291eb6f99cfc2414f0f3ba3cae4d2",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "source": "https://github.com/chariz/mediawiki-extensions-Details.git"
+  },
+  {
+    "package": "mediawiki/echo",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "Echo",
+    "commit": "72a03a8a9f2163e3caabd28f178c927f409a4889",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Echo.git"
+  },
+  {
+    "package": "mediawiki/elastica",
+    "version": "6.2.0",
+    "manifestVersion": "6.2.0",
+    "directory": "Elastica",
+    "commit": "dc22ccac223a628226e0c6b42074b16361f2cbd5",
+    "requires": {
+      "MediaWiki": ">= 1.43",
+      "platform": {
+        "ext-curl": "*"
+      }
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Elastica.git"
+  },
+  {
+    "package": "mediawiki/json-config",
+    "version": "1.2.0",
+    "manifestVersion": "1.2.0",
+    "directory": "JsonConfig",
+    "commit": "e094b361cd65128128620f5d5f8547af96921500",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-JsonConfig.git"
+  },
+  {
+    "package": "mediawiki/linter",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "Linter",
+    "commit": "e8d3c7b8c1e837a05b02b0d39aca1b09c0232478",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Linter.git"
+  },
+  {
+    "package": "mediawiki/loops",
+    "version": "1.0.0-beta",
+    "manifestVersion": "1.0.0-beta",
+    "directory": "Loops",
+    "commit": "e8d412a46bda50eada9178bd4a834c81712b3e4d",
+    "requires": {
+      "MediaWiki": ">=1.29"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Loops.git"
+  },
+  {
+    "package": "mediawiki/mediasearch",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "MediaSearch",
+    "commit": "bb1d8c98e69c7670e0466989b0f437af6b4c3aef",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch.git"
+  },
+  {
+    "package": "octfx/multipurge",
+    "version": "2.0.0",
+    "manifestVersion": "2.0.0",
+    "directory": "MultiPurge",
+    "commit": "09f4457ba6302c950a5503541b97732a287ac8df",
+    "requires": {
+      "MediaWiki": ">= 1.43.0",
+      "platform": {
+        "php": ">=8.0"
+      }
+    },
+    "source": "https://github.com/octfx/mediawiki-extensions-MultiPurge.git"
+  },
+  {
+    "package": "mediawiki/parsermigration",
+    "version": "2.0.0",
+    "manifestVersion": "2.0.0",
+    "directory": "ParserMigration",
+    "commit": "8b7d1df4560dd02d9069bb4d8231eedc75e97352",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-ParserMigration.git"
+  },
+  {
+    "package": "mediawiki/native-svg-handler",
+    "version": "1.5.0",
+    "manifestVersion": "1.5.0",
+    "directory": "NativeSvgHandler",
+    "commit": "4eb0474815f240d747a339e9365214fc16430be6",
+    "requires": {
+      "MediaWiki": ">= 1.35.0"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-NativeSvgHandler.git"
+  },
+  {
+    "package": "octfx/plausible",
+    "version": "1.4.0",
+    "manifestVersion": "1.4.0",
+    "directory": "Plausible",
+    "commit": "d36aa56da250f8e0ffeaaa8d7bdf9c8ac5d1e220",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "php": ">=8.0"
+      }
+    },
+    "source": "https://github.com/octfx/mediawiki-extension-Plausible.git"
+  },
+  {
+    "package": "mediawiki/popups",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "Popups",
+    "commit": "13157a7d24a95572c66c2bddf9bf04ea7398525d",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Popups.git"
+  },
+  {
+    "package": "mediawiki/related-articles",
+    "version": "3.1.0",
+    "manifestVersion": "3.1.0",
+    "directory": "RelatedArticles",
+    "commit": "aa924c220ccbdc8462aee59ce3931e4cc9b2503d",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-RelatedArticles.git"
+  },
+  {
+    "package": "mediawiki/revisionslider",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "RevisionSlider",
+    "commit": "ff841a050ee27ae5e2245d7e244efe8eddeccd3b",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-RevisionSlider.git"
+  },
+  {
+    "package": "mediawiki/rss",
+    "version": "2.25.1",
+    "manifestVersion": "2.25.1",
+    "directory": "RSS",
+    "commit": "30fe44130573f3f26e4b6b7ebf30625638d00585",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-RSS.git"
+  },
+  {
+    "package": "mediawiki/sandbox-link",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "SandboxLink",
+    "commit": "2e1540131f1bc5a2a4b11aeaa0d2283ad92a38fd",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-SandboxLink.git"
+  },
+  {
+    "package": "starcitizentools/short-description",
+    "version": "4.0.2",
+    "manifestVersion": "4.0.2",
+    "directory": "ShortDescription",
+    "commit": "8e96b77024581fe25f0394d12eaa7ac7d7db5405",
+    "requires": {
+      "MediaWiki": ">= 1.43.0"
+    },
+    "source": "https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription.git"
+  },
+  {
+    "package": "starcitizentools/tabber-neue",
+    "version": "4.1.0",
+    "manifestVersion": "4.1.0",
+    "directory": "TabberNeue",
+    "commit": "cbdb62ba4b45c3060aa27001a0519e16cdc63523",
+    "requires": {
+      "MediaWiki": ">= 1.43.0"
+    },
+    "source": "https://github.com/StarCitizenTools/mediawiki-extensions-TabberNeue.git"
+  },
+  {
+    "package": "starcitizentools/thumbro",
+    "version": "2.1.1",
+    "manifestVersion": "2.1.1",
+    "directory": "Thumbro",
+    "commit": "b67cbd3fdd9227ce154d767cf2efd93afda5b2c5",
+    "requires": {
+      "MediaWiki": ">= 1.43.0"
+    },
+    "source": "https://github.com/StarCitizenTools/mediawiki-extensions-Thumbro.git"
+  },
+  {
+    "package": "starcitizentools/floating-ui",
+    "version": "1.0.5",
+    "manifestVersion": "1.0.5",
+    "directory": "FloatingUI",
+    "commit": "a3335dd9ae9d1eb80bfb408570a6204687937677",
+    "requires": {
+      "MediaWiki": ">= 1.43.0"
+    },
+    "source": "https://github.com/StarCitizenTools/mediawiki-extensions-FloatingUI.git"
+  },
+  {
+    "package": "mediawiki/template-styles",
+    "version": "1.0",
+    "manifestVersion": "1.0",
+    "directory": "TemplateStyles",
+    "commit": "e74200b2bcc2d5b36c1b0c02086c2907caa49eb1",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles.git"
+  },
+  {
+    "package": "octfx/template-styles-extender",
+    "version": "3.0.0",
+    "manifestVersion": "3.0.0",
+    "directory": "TemplateStylesExtender",
+    "commit": "3fe48353290c0d64fa5f172970dc0844a0c2be9e",
+    "requires": {
+      "MediaWiki": ">= 1.43.9",
+      "extensions": {
+        "TemplateStyles": ">= 1.0"
+      }
+    },
+    "source": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender.git"
+  },
+  {
+    "package": "mediawiki/thanks",
+    "version": "1.2.0",
+    "manifestVersion": "1.2.0",
+    "directory": "Thanks",
+    "commit": "4f6b3773711c2119696bdde6edd9a1de9a3ac29a",
+    "requires": {
+      "MediaWiki": ">= 1.43",
+      "extensions": {
+        "Echo": "*"
+      }
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Thanks.git"
+  },
+  {
+    "package": "mediawiki/twocolconflict",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "TwoColConflict",
+    "commit": "d140c8ee8e96ea4b4171a15a3fff965692a28fd2",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-TwoColConflict.git"
+  },
+  {
+    "package": "mediawiki/upload-wizard",
+    "version": "1.5.0",
+    "manifestVersion": "1.5.0",
+    "directory": "UploadWizard",
+    "commit": "f66453997d66f7e7657678f1e99836a9d643e230",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-UploadWizard.git"
+  },
+  {
+    "package": "mediawiki/universal-language-selector",
+    "version": "dev-REL1_43",
+    "manifestVersion": "2024-07-16",
+    "directory": "UniversalLanguageSelector",
+    "commit": "92ba94a8369e583e232c0519167ac2cc79d5d959",
+    "requires": {
+      "MediaWiki": ">= 1.41.0"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-UniversalLanguageSelector.git"
+  },
+  {
+    "package": "mediawiki/variables",
+    "version": "2.6.0-beta",
+    "manifestVersion": "2.6.0-beta",
+    "directory": "Variables",
+    "commit": "12ad832a68e1a002c821f5d1c127b04ac047181e",
+    "requires": {
+      "MediaWiki": ">= 1.29.0"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Variables.git"
+  },
+  {
+    "package": "octfx/wiki-seo",
+    "version": "2.7.0",
+    "manifestVersion": "2.7.0",
+    "directory": "WikiSEO",
+    "commit": "3b135415f9fe0eff4d23659b4143bd50009238ab",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "php": ">=7.4.0"
+      }
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-WikiSEO.git"
+  },
+  {
+    "package": "starcitizenwiki/embedvideo",
+    "version": "4.2.0",
+    "manifestVersion": "4.2.0",
+    "directory": "EmbedVideo",
+    "commit": "d0aa2a3245c1308362b2ce77df1f6bb3e2bf6579",
+    "requires": {
+      "MediaWiki": ">= 1.43.0",
+      "platform": {
+        "php": ">=8.1"
+      }
+    },
+    "source": "https://github.com/StarCitizenWiki/mediawiki-extensions-EmbedVideo.git"
+  },
+  {
+    "package": "universal-omega/dynamic-page-list4",
+    "version": "4.0.0",
+    "manifestVersion": "4.0.0",
+    "directory": "DynamicPageList4",
+    "commit": "c50712c64f6d8b111eeb68f91fdd73dc83aef9fa",
+    "requires": {
+      "MediaWiki": ">= 1.43.0"
+    },
+    "source": "https://github.com/Universal-Omega/DynamicPageList4.git"
+  },
+  {
+    "package": "edwardspec/mediawiki-aws-s3",
+    "version": "0.14.0",
+    "manifestVersion": "0.14.0",
+    "directory": "AWS",
+    "commit": "87134a4d19d87c1bc3329efde7f0bde642668015",
+    "requires": {
+      "MediaWiki": ">= 1.43.0"
+    },
+    "source": "https://github.com/edwardspec/mediawiki-aws-s3.git"
+  },
+  {
+    "package": "mediawiki/swiftmailer",
+    "version": "1.1",
+    "manifestVersion": "1.1",
+    "directory": "SwiftMailer",
+    "commit": "3e97ae1e9050db78d969b2b881b3fcf380944084",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "php": ">=8.0.0"
+      }
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer.git"
+  },
+  {
+    "package": "mediawiki/semantic-media-wiki",
+    "version": "7.3.1",
+    "manifestVersion": "7.3.1",
+    "directory": "SemanticMediaWiki",
+    "commit": "60637e855c294f3d223ddeef57af24338def7a8a",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/SemanticMediaWiki/SemanticMediaWiki.git"
+  },
+  {
+    "package": "mediawiki/semantic-extra-special-properties",
+    "version": "5.0.2",
+    "manifestVersion": "5.0.2",
+    "directory": "SemanticExtraSpecialProperties",
+    "commit": "7c472825a17d6e307dd4e3c4df987da22c910d2b",
+    "requires": {
+      "MediaWiki": ">= 1.43",
+      "extensions": {
+        "SemanticMediaWiki": ">= 7.0"
+      }
+    },
+    "source": "https://github.com/SemanticMediaWiki/SemanticExtraSpecialProperties.git"
+  },
+  {
+    "package": "mediawiki/semantic-result-formats",
+    "version": "6.0.0",
+    "manifestVersion": "6.0.0",
+    "directory": "SemanticResultFormats",
+    "commit": "f3f55e7b1af50f0f991c03e2bed98715db7c055f",
+    "requires": {
+      "MediaWiki": ">= 1.43",
+      "extensions": {
+        "SemanticMediaWiki": ">= 7.2"
+      }
+    },
+    "source": "https://github.com/SemanticMediaWiki/SemanticResultFormats.git"
+  },
+  {
+    "package": "mediawiki/semantic-scribunto",
+    "version": "3.0.0",
+    "manifestVersion": "3.0.0",
+    "directory": "SemanticScribunto",
+    "commit": "57e0d386b8e687b487357b8c57b8961b263dd1cf",
+    "requires": {
+      "MediaWiki": ">= 1.43",
+      "extensions": {
+        "Scribunto": "*",
+        "SemanticMediaWiki": ">= 7.0"
+      }
+    },
+    "source": "https://github.com/SemanticMediaWiki/SemanticScribunto.git"
+  },
+  {
+    "package": "mediawiki/semantic-drilldown",
+    "version": "5.0.2",
+    "manifestVersion": "5.0.2",
+    "directory": "SemanticDrilldown",
+    "commit": "10e77b60fb505cbfefe97c6d6dafbc903d6d456c",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/SemanticMediaWiki/SemanticDrilldown.git"
+  },
+  {
+    "package": "starcitizentools/apiunto",
+    "version": "3.0.1",
+    "manifestVersion": "3.0.1",
+    "directory": "Apiunto",
+    "commit": "5c1f5107c81e736c07efe46a9d648041566bebc9",
+    "requires": {
+      "MediaWiki": ">= 1.43.0",
+      "extensions": {
+        "Scribunto": "*"
+      }
+    },
+    "source": "https://github.com/StarCitizenTools/mediawiki-extensions-Apiunto.git"
+  },
+  {
+    "package": "mediawiki/page-view-info",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "PageViewInfo",
+    "commit": "20ec2d93ac52f0c02a017d171225c5dee2d5f6b7",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-PageViewInfo.git"
+  },
+  {
+    "package": "mediawiki/pluggable-auth",
+    "version": "7.5.0",
+    "manifestVersion": "7.5.0",
+    "directory": "PluggableAuth",
+    "commit": "afec61097c7b08e0c67641cc9cb5ee27b2d627f7",
+    "requires": {
+      "MediaWiki": ">= 1.40.0"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-PluggableAuth.git"
+  },
+  {
+    "package": "mediawiki/openidconnect",
+    "version": "8.3.0",
+    "manifestVersion": "8.3.0",
+    "directory": "OpenID Connect",
+    "commit": "975992f2978e11f66b1ad5fd64e005592ba2fec3",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "extensions": {
+        "PluggableAuth": ">= 7.4.0"
+      }
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-OpenIDConnect.git"
+  },
+  {
+    "package": "mediawiki/display-title",
+    "version": "4.1.0",
+    "manifestVersion": "4.1.0",
+    "directory": "DisplayTitle",
+    "commit": "53f1a41410df49f4adaff384bcad1eca60da8e76",
+    "requires": {
+      "MediaWiki": ">= 1.43.0"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-DisplayTitle.git"
+  },
+  {
+    "package": "wikimedia/poem",
+    "version": "dev-REL1_43",
+    "manifestVersion": null,
+    "directory": "Poem",
+    "commit": "dffad2ad64c2fbdbc1d9def9de29791d6ee0e22e",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-Poem.git"
+  },
+  {
+    "package": "alpha5130/purge",
+    "version": "2.1.2",
+    "manifestVersion": "2.1.1",
+    "directory": "Purge",
+    "commit": "ca4c5d5f8ad183526970d8c33de052ec0a41753e",
+    "requires": {
+      "MediaWiki": ">= 1.35.0"
+    },
+    "source": "https://github.com/AlPha5130/mediawiki-extensions-Purge.git"
+  },
+  {
+    "package": "wikimedia/templatesandbox",
+    "version": "1.1.0",
+    "manifestVersion": "1.1.0",
+    "directory": "TemplateSandbox",
+    "commit": "86ad8f4620827739ba0837c23cc5d29d13d2fa35",
+    "requires": {
+      "MediaWiki": ">= 1.43"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox.git"
+  },
+  {
+    "package": "wikimedia/usergroups",
+    "version": "1.0.0",
+    "manifestVersion": "1.0.0",
+    "directory": "UserGroups",
+    "commit": "136b3bc2350a397fcd09d0e04f4a1655e57e6deb",
+    "requires": {
+      "MediaWiki": ">= 1.42.0"
+    },
+    "source": "https://github.com/wikimedia/mediawiki-extensions-UserGroups.git"
+  }
+]

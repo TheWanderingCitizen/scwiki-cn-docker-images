@@ -1,900 +1,1517 @@
 {
-        "require": {
-                "mediawiki/advanced-search": "1.43.0",
-                "mediawiki/babel": "2025.03",
-                "mediawiki/checkuser": "1.43.0",
-                "mediawiki/cirrus-search": "1.43.0",
-                "starcitizentools/citizen-skin": "dev-main",
-                "mediawiki/cldr": "2025.03",
-                "mediawiki/code-mirror": "1.43.0",
-                "mediawiki/commons-metadata": "1.43.0",
-                "mediawiki/cookie-warning": "1.43.0",
-                "mediawiki/disambiguator": "1.43.0",
-                "mediawiki/discord": "1.43.0",
-                "mediawiki/discussion-tools": "1.43.0",
-                "mediawiki/dismissablesitenotice": "1.43.0",
-                "chariz/details": "1.43.0",
-                "mediawiki/echo": "1.43.0",
-                "mediawiki/elastica": "1.43.0",
-                "mediawiki/graph": "1.43.0",
-                "mediawiki/json-config": "1.43.0",
-                "mediawiki/linter": "1.43.0",
-                "mediawiki/loops": "1.43.0",
-                "mediawiki/mediasearch": "1.43.0",
-                "octfx/multipurge": "dev-master",
-                "mediawiki/parsermigration": "1.43.0",
-                "mediawiki/nativesvghandler": "1.43.0",
-                "octfx/plausible": "dev-master",
-                "mediawiki/popups": "1.43.0",
-                "mediawiki/related-articles": "1.43.0",
-                "mediawiki/revisionslider": "1.43.0",
-                "mediawiki/rss": "1.43.0",
-                "mediawiki/sandbox-link": "1.43.0",
-                "starcitizentools/short-description": "dev-main",
-                "starcitizentools/tabber-neue": "dev-main",
-                "starcitizentools/thumbro": "dev-main",
-                "starcitizentools/floating-ui": "dev-main",
-                "mediawiki/template-styles": "1.43.0",
-                "octfx/template-styles-extender": "dev-master",
-                "mediawiki/thanks": "1.43.0",
-                "mediawiki/twocolconflict": "1.43.0",
-                "mediawiki/upload-wizard": "1.43.0",
-                "mediawiki/universal-language-selector": "2025.03",
-                "mediawiki/variables": "1.43.0",
-                "mediawiki/webauthn": "1.43.0",
-                "octfx/wiki-seo": "dev-master",
-                "starcitizenwiki/embedvideo": "dev-master",
-                "universal-omega/dynamic-page-list3": "4.0.0-alpha.5",
-                "edwardspec/mediawiki-aws-s3": "dev-master",
-                "mediawiki/swiftmailer": "1.43.0",
-                "mediawiki/semantic-media-wiki": "dev-master",
-                "mediawiki/semantic-extra-special-properties": "dev-master",
-                "mediawiki/semantic-result-formats": "dev-master",
-                "mediawiki/semantic-scribunto": "dev-master",
-                "mediawiki/semantic-drilldown": "1.43.0",
-                "alistair3149/apiunto": "1.43.0",
-                "mediawiki/page-view-info": "1.43.0",
-                "octfx/webp": "dev-develop",
-                "starcitizenwiki/picture-html-support": "dev-master",
-                "wikimedia/pluggable-auth": "1.43.0",
-                "wikimedia/openidconnect": "1.43.0",
-                "mediawiki/display-title": "1.43.0",
-                "wikimedia/poem": "1.43.0",
-                "alpha5130/purge": "2.1.1",
-                "wikimedia/templatesandbox": "1.43.0",
-                "wikimedia/usergroups": "1.43.0"
+  "require": {
+    "mediawiki/advanced-search": "dev-REL1_43",
+    "mediawiki/babel": "dev-REL1_43",
+    "mediawiki/checkuser": "2.5",
+    "mediawiki/cirrussearch": "dev-REL1_43",
+    "starcitizentools/citizen-skin": "3.24.0",
+    "mediawiki/cldr": "4.15.0",
+    "mediawiki/code-mirror": "6.0.0",
+    "mediawiki/commons-metadata": "dev-REL1_43",
+    "mediawiki/cookie-warning": "0.3.0",
+    "mediawiki/disambiguator": "1.4",
+    "mediawiki/discord": "1.0.13",
+    "mediawiki/discussion-tools": "0.0.0",
+    "mediawiki/dismissablesitenotice": "1.0.1",
+    "chariz/mediawiki-extension-details": "1.3.0",
+    "mediawiki/echo": "dev-REL1_43",
+    "mediawiki/elastica": "6.2.0",
+    "mediawiki/json-config": "1.2.0",
+    "mediawiki/linter": "dev-REL1_43",
+    "mediawiki/loops": "1.0.0-beta",
+    "mediawiki/mediasearch": "dev-REL1_43",
+    "octfx/multipurge": "2.0.0",
+    "mediawiki/parsermigration": "2.0.0",
+    "mediawiki/native-svg-handler": "1.5.0",
+    "octfx/plausible": "1.4.0",
+    "mediawiki/popups": "dev-REL1_43",
+    "mediawiki/related-articles": "3.1.0",
+    "mediawiki/revisionslider": "dev-REL1_43",
+    "mediawiki/rss": "2.25.1",
+    "mediawiki/sandbox-link": "dev-REL1_43",
+    "starcitizentools/short-description": "4.0.2",
+    "starcitizentools/tabber-neue": "4.1.0",
+    "starcitizentools/thumbro": "2.1.1",
+    "starcitizentools/floating-ui": "1.0.5",
+    "mediawiki/template-styles": "1.0",
+    "octfx/template-styles-extender": "3.0.0",
+    "mediawiki/thanks": "1.2.0",
+    "mediawiki/twocolconflict": "dev-REL1_43",
+    "mediawiki/upload-wizard": "1.5.0",
+    "mediawiki/universal-language-selector": "dev-REL1_43",
+    "mediawiki/variables": "2.6.0-beta",
+    "octfx/wiki-seo": "2.7.0",
+    "starcitizenwiki/embedvideo": "4.2.0",
+    "universal-omega/dynamic-page-list4": "4.0.0",
+    "edwardspec/mediawiki-aws-s3": "0.14.0",
+    "mediawiki/swiftmailer": "1.1",
+    "mediawiki/semantic-media-wiki": "7.3.1",
+    "mediawiki/semantic-extra-special-properties": "5.0.2",
+    "mediawiki/semantic-result-formats": "6.0.0",
+    "mediawiki/semantic-scribunto": "3.0.0",
+    "mediawiki/semantic-drilldown": "5.0.2",
+    "starcitizentools/apiunto": "3.0.1",
+    "mediawiki/page-view-info": "dev-REL1_43",
+    "mediawiki/pluggable-auth": "7.5.0",
+    "mediawiki/openidconnect": "8.3.0",
+    "mediawiki/display-title": "4.1.0",
+    "wikimedia/poem": "dev-REL1_43",
+    "alpha5130/purge": "2.1.2",
+    "wikimedia/templatesandbox": "1.1.0",
+    "wikimedia/usergroups": "1.0.0"
+  },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/advanced-search",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-AdvancedSearch.git",
+          "reference": "3853b91e84e0f40851c2e40c0253b4cdf18051b0"
         },
-        "config": {
-                "preferred-install": {
-                        "*": "source"
-                }
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-AdvancedSearch/zipball/3853b91e84e0f40851c2e40c0253b4cdf18051b0",
+          "reference": "3853b91e84e0f40851c2e40c0253b4cdf18051b0"
         },
         "extra": {
-                "merge-plugin": {
-                        "include": [
-                                "extensions/Checkuser/composer.json",
-                                "extensions/CirrusSearch/composer.json",
-                                "extensions/Cite/composer.json",
-                                "extensions/Elastica/composer.json",
-                                "extensions/OATHAuth/composer.json",
-                                "extensions/OpenIDConnect/composer.json",
-                                "extensions/PluggableAuth/composer.json",
-                                "extensions/TemplateStyles/composer.json",
-                                "extensions/AWS/composer.json",
-                                "extensions/Swiftmailer/composer.json",
-                                "extensions/Apiunto/composer.json",
-                                "extensions/PageViewInfo/composer.json"
-                        ]
-                }
+          "installer-name": "AdvancedSearch"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Users can easily indicate their language proficiency on their user page",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "php": ">=7.4",
+          "composer/installers": ">=1.0.1"
         },
-        "repositories": [
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/checkuser",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CheckUser/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CheckUser.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "CheckUser"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/dismissablesitenotice",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "DismissableSiteNotice"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/nativesvghandler",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-NativeSvgHandler/archive/master.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-NativeSvgHandler.git",
-                                        "reference": "master"
-                                },
-                                "extra": {
-                                    "installer-name": "NativeSvgHandler"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/graph",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Graph/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Graph.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/loops",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Loops/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Loops.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/revisionslider",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-RevisionSlider/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-RevisionSlider.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "RevisionSlider"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/rss",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-RSS/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-RSS.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "RSS"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/variables",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Variables/archive/master.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Variables.git",
-                                        "reference": "master"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "chariz/details",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/chariz/mediawiki-extensions-Details/archive/main.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/chariz/mediawiki-extensions-Details.git",
-                                        "reference": "main"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/echo",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Echo/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Echo.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/code-mirror",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CodeMirror/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CodeMirror.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/commons-metadata",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CommonsMetadata/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CommonsMetadata.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/template-styles",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/advanced-search",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-AdvancedSearch/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-AdvancedSearch.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/cirrus-search",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CirrusSearch/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CirrusSearch.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/cookie-warning",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CookieWarning/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-CookieWarning.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/discord",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/jayktaylor/mw-discord/archive/2a560d9acc4af06dcb5f1f7fd9d695f848209160.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/jayktaylor/mw-discord.git",
-                                        "reference": "2a560d9acc4af06dcb5f1f7fd9d695f848209160"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/disambiguator",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Disambiguator/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Disambiguator.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/discussion-tools",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DiscussionTools/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DiscussionTools.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/elastica",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Elastica/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Elastica.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/json-config",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-JsonConfig/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-JsonConfig.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/linter",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Linter/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Linter.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/mediasearch",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "MediaSearch"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/parsermigration",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-ParserMigration/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-ParserMigration.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "ParserMigration"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/popups",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Popups/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Popups.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/related-articles",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-RelatedArticles/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-RelatedArticles.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/sandbox-link",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-SandboxLink/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-SandboxLink.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/thanks",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Thanks/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Thanks.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/twocolconflict",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TwoColConflict/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TwoColConflict.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "TwoColConflict"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/upload-wizard",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-UploadWizard/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-UploadWizard.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/webauthn",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-WebAuthn/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-WebAuthn.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "WebAuthn"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/semantic-drilldown",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown/archive/master.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown.git",
-                                        "reference": "master"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/swiftmailer",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer.git",
-                                        "reference": "master"
-                                },
-                                "extra": {
-                                    "installer-name": "SwiftMailer"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/page-view-info",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-PageViewInfo/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-PageViewInfo.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "wikimedia/pluggable-auth",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-PluggableAuth/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-PluggableAuth.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "wikimedia/openidconnect",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-OpenIDConnect/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-OpenIDConnect.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "OpenIDConnect"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "mediawiki/display-title",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DisplayTitle/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-DisplayTitle.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "wikimedia/poem",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Poem/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-Poem.git",
-                                        "reference": "REL1_43"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "alpha5130/purge",
-                                "type": "mediawiki-extension",
-                                "version": "2.1.1",
-                                "dist": {
-                                        "url": "https://github.com/AlPha5130/mediawiki-extensions-Purge/archive/refs/tags/v2.1.1.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/AlPha5130/mediawiki-extensions-Purge/releases.git",
-                                        "reference": "master"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "wikimedia/templatesandbox",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "TemplateSandbox"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "wikimedia/usergroups",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-UserGroups/archive/REL1_43.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/wikimedia/mediawiki-extensions-UserGroups.git",
-                                        "reference": "REL1_43"
-                                },
-                                "extra": {
-                                    "installer-name": "UserGroups"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "starcitizentools/short-description",
-                                "type": "mediawiki-extension",
-                                "version": "dev-main",
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription.git",
-                                        "reference": "main"
-                                },
-                                "extra": {
-                                    "installer-name": "ShortDescription"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "starcitizentools/tabber-neue",
-                                "type": "mediawiki-extension",
-                                "version": "dev-main",
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/StarCitizenTools/mediawiki-extensions-TabberNeue.git",
-                                        "reference": "main"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "starcitizentools/thumbro",
-                                "type": "mediawiki-extension",
-                                "version": "dev-main",
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/StarCitizenTools/mediawiki-extensions-Thumbro.git",
-                                        "reference": "main"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "starcitizentools/floating-ui",
-                                "type": "mediawiki-extension",
-                                "version": "dev-main",
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/StarCitizenTools/mediawiki-extensions-FloatingUI.git",
-                                        "reference": "main"
-                                }
-                        }
-                },
-                {
-                        "type": "package",
-                        "package": {
-                                "name": "alistair3149/apiunto",
-                                "type": "mediawiki-extension",
-                                "version": "1.43.0",
-                                "dist": {
-                                        "url": "https://github.com/alistair3149/Apiunto/archive/feat-v3.zip",
-                                        "type": "zip"
-                                },
-                                "source": {
-                                        "type": "git",
-                                        "url": "https://github.com/alistair3149/Apiunto.git",
-                                        "reference": "feat-v3"
-                                }
-                        }
-                }
-        ]
+        "name": "mediawiki/babel",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Babel.git",
+          "type": "git",
+          "reference": "67edfe76943c19b2218d0f6187f5674487f45b15"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Babel/zipball/67edfe76943c19b2218d0f6187f5674487f45b15",
+          "reference": "67edfe76943c19b2218d0f6187f5674487f45b15"
+        },
+        "extra": {
+          "installer-name": "Babel"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "require": {
+          "firebase/php-jwt": "^7.0.2"
+        },
+        "name": "mediawiki/checkuser",
+        "version": "2.5",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-CheckUser.git",
+          "reference": "9d7c1d311e0ff2687498215c72bcc3e82cf8c90e"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-CheckUser/zipball/9d7c1d311e0ff2687498215c72bcc3e82cf8c90e",
+          "reference": "9d7c1d311e0ff2687498215c72bcc3e82cf8c90e"
+        },
+        "extra": {
+          "installer-name": "CheckUser"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Elasticsearch-powered search for MediaWiki",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "wikimedia/textcat": "1.3.0 || 2.0.0",
+          "wikimedia/lucene-explain-parser": "1.0.0 || 2.0.0"
+        },
+        "name": "mediawiki/cirrussearch",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-CirrusSearch.git",
+          "reference": "3175dbb503462f4fb725dcf3cbaccc4ad6d3afe2"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-CirrusSearch/zipball/3175dbb503462f4fb725dcf3cbaccc4ad6d3afe2",
+          "reference": "3175dbb503462f4fb725dcf3cbaccc4ad6d3afe2"
+        },
+        "extra": {
+          "installer-name": "CirrusSearch"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "A beautiful, usable, responsive MediaWiki skin with in-depth extension support. Originally developed for the Star Citizen Wiki.",
+        "license": "GPL-3.0-or-later",
+        "require": {
+          "composer/installers": "^2|^1.0.1"
+        },
+        "extra": {
+          "installer-name": "Citizen"
+        },
+        "name": "starcitizentools/citizen-skin",
+        "version": "3.24.0",
+        "type": "mediawiki-skin",
+        "source": {
+          "url": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen.git",
+          "type": "git",
+          "reference": "f137342f65b36ad13d3a60d902aa5e6ac13ce646"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/StarCitizenTools/mediawiki-skins-Citizen/zipball/f137342f65b36ad13d3a60d902aa5e6ac13ce646",
+          "reference": "f137342f65b36ad13d3a60d902aa5e6ac13ce646"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "CLDR extension contains local language names for different languages, countries, and currencies extracted from CLDR data",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "php": ">=7.4",
+          "composer/installers": ">=1.0.1"
+        },
+        "name": "mediawiki/cldr",
+        "version": "4.15.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/wikimedia/mediawiki-extensions-cldr.git",
+          "type": "git",
+          "reference": "8b36e6d82d0fff8e7f226472e81c65945f2c127f"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-cldr/zipball/8b36e6d82d0fff8e7f226472e81c65945f2c127f",
+          "reference": "8b36e6d82d0fff8e7f226472e81c65945f2c127f"
+        },
+        "extra": {
+          "installer-name": "Cldr"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/code-mirror",
+        "version": "6.0.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-CodeMirror.git",
+          "reference": "5f8024885bded867def734d32e443cf9b83f3588"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-CodeMirror/zipball/5f8024885bded867def734d32e443cf9b83f3588",
+          "reference": "5f8024885bded867def734d32e443cf9b83f3588"
+        },
+        "extra": {
+          "installer-name": "CodeMirror"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/commons-metadata",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-CommonsMetadata.git",
+          "reference": "c3a523b6518985746a82d342df70e41f7312b5a4"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-CommonsMetadata/zipball/c3a523b6518985746a82d342df70e41f7312b5a4",
+          "reference": "c3a523b6518985746a82d342df70e41f7312b5a4"
+        },
+        "extra": {
+          "installer-name": "CommonsMetadata"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/cookie-warning",
+        "version": "0.3.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-CookieWarning.git",
+          "reference": "306b52c94c6112fb387e32e2d1ff80eb21fec675"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-CookieWarning/zipball/306b52c94c6112fb387e32e2d1ff80eb21fec675",
+          "reference": "306b52c94c6112fb387e32e2d1ff80eb21fec675"
+        },
+        "extra": {
+          "installer-name": "CookieWarning"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/disambiguator",
+        "version": "1.4",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Disambiguator.git",
+          "reference": "ab6e9e60581360ce5ae831b4a392dc427a14aaea"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Disambiguator/zipball/ab6e9e60581360ce5ae831b4a392dc427a14aaea",
+          "reference": "ab6e9e60581360ce5ae831b4a392dc427a14aaea"
+        },
+        "extra": {
+          "installer-name": "Disambiguator"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/discord",
+        "version": "1.0.13",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jayktaylor/mw-discord.git",
+          "reference": "2a560d9acc4af06dcb5f1f7fd9d695f848209160"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/jayktaylor/mw-discord/zipball/2a560d9acc4af06dcb5f1f7fd9d695f848209160",
+          "reference": "2a560d9acc4af06dcb5f1f7fd9d695f848209160"
+        },
+        "extra": {
+          "installer-name": "Discord"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "require": {
+          "php": ">=7.4.3",
+          "ext-json": "*",
+          "ext-dom": "*"
+        },
+        "name": "mediawiki/discussion-tools",
+        "version": "0.0.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-DiscussionTools.git",
+          "reference": "b0c34619101b92b91f171767e4d1a275169ec1ea"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-DiscussionTools/zipball/b0c34619101b92b91f171767e4d1a275169ec1ea",
+          "reference": "b0c34619101b92b91f171767e4d1a275169ec1ea"
+        },
+        "extra": {
+          "installer-name": "DiscussionTools"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/dismissablesitenotice",
+        "version": "1.0.1",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice.git",
+          "reference": "30318e187e24bc36609964146cf401505e6ff75b"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-DismissableSiteNotice/zipball/30318e187e24bc36609964146cf401505e6ff75b",
+          "reference": "30318e187e24bc36609964146cf401505e6ff75b"
+        },
+        "extra": {
+          "installer-name": "DismissableSiteNotice"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Semantic, browser-supported collapsible content in articles using <details> and <summary> tags.",
+        "license": "GPL-3.0-or-later",
+        "name": "chariz/mediawiki-extension-details",
+        "version": "1.3.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/chariz/mediawiki-extensions-Details.git",
+          "reference": "c0ef4d78a7c291eb6f99cfc2414f0f3ba3cae4d2"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/chariz/mediawiki-extensions-Details/zipball/c0ef4d78a7c291eb6f99cfc2414f0f3ba3cae4d2",
+          "reference": "c0ef4d78a7c291eb6f99cfc2414f0f3ba3cae4d2"
+        },
+        "extra": {
+          "installer-name": "Details"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/echo",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Echo.git",
+          "reference": "72a03a8a9f2163e3caabd28f178c927f409a4889"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Echo/zipball/72a03a8a9f2163e3caabd28f178c927f409a4889",
+          "reference": "72a03a8a9f2163e3caabd28f178c927f409a4889"
+        },
+        "extra": {
+          "installer-name": "Echo"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Provides the elastica library and a connection layer as a MediaWiki extension",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "ruflin/elastica": "7.3.1",
+          "elasticsearch/elasticsearch": "7.17.3",
+          "ext-curl": "*"
+        },
+        "name": "mediawiki/elastica",
+        "version": "6.2.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Elastica.git",
+          "reference": "dc22ccac223a628226e0c6b42074b16361f2cbd5"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Elastica/zipball/dc22ccac223a628226e0c6b42074b16361f2cbd5",
+          "reference": "dc22ccac223a628226e0c6b42074b16361f2cbd5"
+        },
+        "extra": {
+          "installer-name": "Elastica"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/json-config",
+        "version": "1.2.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-JsonConfig.git",
+          "reference": "e094b361cd65128128620f5d5f8547af96921500"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-JsonConfig/zipball/e094b361cd65128128620f5d5f8547af96921500",
+          "reference": "e094b361cd65128128620f5d5f8547af96921500"
+        },
+        "extra": {
+          "installer-name": "JsonConfig"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/linter",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Linter.git",
+          "reference": "e8d3c7b8c1e837a05b02b0d39aca1b09c0232478"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Linter/zipball/e8d3c7b8c1e837a05b02b0d39aca1b09c0232478",
+          "reference": "e8d3c7b8c1e837a05b02b0d39aca1b09c0232478"
+        },
+        "extra": {
+          "installer-name": "Linter"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/loops",
+        "version": "1.0.0-beta",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Loops.git",
+          "reference": "e8d412a46bda50eada9178bd4a834c81712b3e4d"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Loops/zipball/e8d412a46bda50eada9178bd4a834c81712b3e4d",
+          "reference": "e8d412a46bda50eada9178bd4a834c81712b3e4d"
+        },
+        "extra": {
+          "installer-name": "Loops"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/mediasearch",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-MediaSearch.git",
+          "reference": "bb1d8c98e69c7670e0466989b0f437af6b4c3aef"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-MediaSearch/zipball/bb1d8c98e69c7670e0466989b0f437af6b4c3aef",
+          "reference": "bb1d8c98e69c7670e0466989b0f437af6b4c3aef"
+        },
+        "extra": {
+          "installer-name": "MediaSearch"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Purge multiple services like cloudflare and varnish on page modification",
+        "license": "GPL-2.0+",
+        "require": {
+          "php": ">=8.0",
+          "ext-json": "*",
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "MultiPurge"
+        },
+        "name": "octfx/multipurge",
+        "version": "2.0.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/octfx/mediawiki-extensions-MultiPurge.git",
+          "type": "git",
+          "reference": "09f4457ba6302c950a5503541b97732a287ac8df"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/octfx/mediawiki-extensions-MultiPurge/zipball/09f4457ba6302c950a5503541b97732a287ac8df",
+          "reference": "09f4457ba6302c950a5503541b97732a287ac8df"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/parsermigration",
+        "version": "2.0.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-ParserMigration.git",
+          "reference": "8b7d1df4560dd02d9069bb4d8231eedc75e97352"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-ParserMigration/zipball/8b7d1df4560dd02d9069bb4d8231eedc75e97352",
+          "reference": "8b7d1df4560dd02d9069bb4d8231eedc75e97352"
+        },
+        "extra": {
+          "installer-name": "ParserMigration"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Serves SVG images directly to clients",
+        "license": "GPL-3.0",
+        "require": {
+          "composer/installers": ">=1.0.1"
+        },
+        "name": "mediawiki/native-svg-handler",
+        "version": "1.5.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-NativeSvgHandler.git",
+          "reference": "4eb0474815f240d747a339e9365214fc16430be6"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-NativeSvgHandler/zipball/4eb0474815f240d747a339e9365214fc16430be6",
+          "reference": "4eb0474815f240d747a339e9365214fc16430be6"
+        },
+        "extra": {
+          "installer-name": "NativeSvgHandler"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Integrates plausible analytics",
+        "license": "GPL-2.0+",
+        "require": {
+          "php": ">=8.0",
+          "ext-json": "*",
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "Plausible"
+        },
+        "name": "octfx/plausible",
+        "version": "1.4.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/octfx/mediawiki-extension-Plausible.git",
+          "type": "git",
+          "reference": "d36aa56da250f8e0ffeaaa8d7bdf9c8ac5d1e220"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/octfx/mediawiki-extension-Plausible/zipball/d36aa56da250f8e0ffeaaa8d7bdf9c8ac5d1e220",
+          "reference": "d36aa56da250f8e0ffeaaa8d7bdf9c8ac5d1e220"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/popups",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Popups.git",
+          "reference": "13157a7d24a95572c66c2bddf9bf04ea7398525d"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Popups/zipball/13157a7d24a95572c66c2bddf9bf04ea7398525d",
+          "reference": "13157a7d24a95572c66c2bddf9bf04ea7398525d"
+        },
+        "extra": {
+          "installer-name": "Popups"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/related-articles",
+        "version": "3.1.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-RelatedArticles.git",
+          "reference": "aa924c220ccbdc8462aee59ce3931e4cc9b2503d"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-RelatedArticles/zipball/aa924c220ccbdc8462aee59ce3931e4cc9b2503d",
+          "reference": "aa924c220ccbdc8462aee59ce3931e4cc9b2503d"
+        },
+        "extra": {
+          "installer-name": "RelatedArticles"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/revisionslider",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-RevisionSlider.git",
+          "reference": "ff841a050ee27ae5e2245d7e244efe8eddeccd3b"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-RevisionSlider/zipball/ff841a050ee27ae5e2245d7e244efe8eddeccd3b",
+          "reference": "ff841a050ee27ae5e2245d7e244efe8eddeccd3b"
+        },
+        "extra": {
+          "installer-name": "RevisionSlider"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/rss",
+        "version": "2.25.1",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-RSS.git",
+          "reference": "30fe44130573f3f26e4b6b7ebf30625638d00585"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-RSS/zipball/30fe44130573f3f26e4b6b7ebf30625638d00585",
+          "reference": "30fe44130573f3f26e4b6b7ebf30625638d00585"
+        },
+        "extra": {
+          "installer-name": "RSS"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/sandbox-link",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-SandboxLink.git",
+          "reference": "2e1540131f1bc5a2a4b11aeaa0d2283ad92a38fd"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-SandboxLink/zipball/2e1540131f1bc5a2a4b11aeaa0d2283ad92a38fd",
+          "reference": "2e1540131f1bc5a2a4b11aeaa0d2283ad92a38fd"
+        },
+        "extra": {
+          "installer-name": "SandboxLink"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Adds the required magic word and API to mimic the short description provided by Wikibase on Wikimedia projects",
+        "license": "GPL-3.0",
+        "require": {
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "ShortDescription"
+        },
+        "name": "starcitizentools/short-description",
+        "version": "4.0.2",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/StarCitizenTools/mediawiki-extensions-ShortDescription.git",
+          "reference": "8e96b77024581fe25f0394d12eaa7ac7d7db5405"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/StarCitizenTools/mediawiki-extensions-ShortDescription/zipball/8e96b77024581fe25f0394d12eaa7ac7d7db5405",
+          "reference": "8e96b77024581fe25f0394d12eaa7ac7d7db5405"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Allows to create tabs within a page. Forked from Extension:Tabber",
+        "license": "GPL-3.0-or-later",
+        "require": {
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "TabberNeue"
+        },
+        "name": "starcitizentools/tabber-neue",
+        "version": "4.1.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/StarCitizenTools/mediawiki-extensions-TabberNeue.git",
+          "type": "git",
+          "reference": "cbdb62ba4b45c3060aa27001a0519e16cdc63523"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/StarCitizenTools/mediawiki-extensions-TabberNeue/zipball/cbdb62ba4b45c3060aa27001a0519e16cdc63523",
+          "reference": "cbdb62ba4b45c3060aa27001a0519e16cdc63523"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Imrproves and expands thumbnails in MediaWiki.",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "Thumbro"
+        },
+        "name": "starcitizentools/thumbro",
+        "version": "2.1.1",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/StarCitizenTools/mediawiki-extensions-Thumbro.git",
+          "type": "git",
+          "reference": "b67cbd3fdd9227ce154d767cf2efd93afda5b2c5"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/StarCitizenTools/mediawiki-extensions-Thumbro/zipball/b67cbd3fdd9227ce154d767cf2efd93afda5b2c5",
+          "reference": "b67cbd3fdd9227ce154d767cf2efd93afda5b2c5"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Implements the FloatingUI Javascript library.",
+        "license": "GPL-3.0-or-later",
+        "require": {
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "FloatingUI"
+        },
+        "name": "starcitizentools/floating-ui",
+        "version": "1.0.5",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/StarCitizenTools/mediawiki-extensions-FloatingUI.git",
+          "type": "git",
+          "reference": "a3335dd9ae9d1eb80bfb408570a6204687937677"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/StarCitizenTools/mediawiki-extensions-FloatingUI/zipball/a3335dd9ae9d1eb80bfb408570a6204687937677",
+          "reference": "a3335dd9ae9d1eb80bfb408570a6204687937677"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "wikimedia/css-sanitizer": "^6.0.0"
+        },
+        "name": "mediawiki/template-styles",
+        "version": "1.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles.git",
+          "reference": "e74200b2bcc2d5b36c1b0c02086c2907caa49eb1"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-TemplateStyles/zipball/e74200b2bcc2d5b36c1b0c02086c2907caa49eb1",
+          "reference": "e74200b2bcc2d5b36c1b0c02086c2907caa49eb1"
+        },
+        "extra": {
+          "installer-name": "TemplateStyles"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Extends TemplateStyles with new CSS properties",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "TemplateStylesExtender"
+        },
+        "name": "octfx/template-styles-extender",
+        "version": "3.0.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/octfx/mediawiki-extensions-TemplateStylesExtender.git",
+          "type": "git",
+          "reference": "3fe48353290c0d64fa5f172970dc0844a0c2be9e"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/octfx/mediawiki-extensions-TemplateStylesExtender/zipball/3fe48353290c0d64fa5f172970dc0844a0c2be9e",
+          "reference": "3fe48353290c0d64fa5f172970dc0844a0c2be9e"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/thanks",
+        "version": "1.2.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Thanks.git",
+          "reference": "4f6b3773711c2119696bdde6edd9a1de9a3ac29a"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Thanks/zipball/4f6b3773711c2119696bdde6edd9a1de9a3ac29a",
+          "reference": "4f6b3773711c2119696bdde6edd9a1de9a3ac29a"
+        },
+        "extra": {
+          "installer-name": "Thanks"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/twocolconflict",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-TwoColConflict.git",
+          "reference": "d140c8ee8e96ea4b4171a15a3fff965692a28fd2"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-TwoColConflict/zipball/d140c8ee8e96ea4b4171a15a3fff965692a28fd2",
+          "reference": "d140c8ee8e96ea4b4171a15a3fff965692a28fd2"
+        },
+        "extra": {
+          "installer-name": "TwoColConflict"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/upload-wizard",
+        "version": "1.5.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-UploadWizard.git",
+          "reference": "f66453997d66f7e7657678f1e99836a9d643e230"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-UploadWizard/zipball/f66453997d66f7e7657678f1e99836a9d643e230",
+          "reference": "f66453997d66f7e7657678f1e99836a9d643e230"
+        },
+        "extra": {
+          "installer-name": "UploadWizard"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "The primary aim is to allow users to select a language and configure its support in an easy way. Main features are language selection, input methods and web fonts.",
+        "license": [
+          "GPL-2.0-or-later",
+          "MIT"
+        ],
+        "require": {
+          "php": ">=7.4",
+          "composer/installers": ">=1.0.1"
+        },
+        "name": "mediawiki/universal-language-selector",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/wikimedia/mediawiki-extensions-UniversalLanguageSelector.git",
+          "type": "git",
+          "reference": "92ba94a8369e583e232c0519167ac2cc79d5d959"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-UniversalLanguageSelector/zipball/92ba94a8369e583e232c0519167ac2cc79d5d959",
+          "reference": "92ba94a8369e583e232c0519167ac2cc79d5d959"
+        },
+        "extra": {
+          "installer-name": "UniversalLanguageSelector"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "The Variables extension allows you to define a variable on a page, use it later in that same page or included templates, change its value, possibly to a value given by an expression in terms of the old value, etc.",
+        "license": "ISC",
+        "name": "mediawiki/variables",
+        "version": "2.6.0-beta",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Variables.git",
+          "reference": "12ad832a68e1a002c821f5d1c127b04ac047181e"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Variables/zipball/12ad832a68e1a002c821f5d1c127b04ac047181e",
+          "reference": "12ad832a68e1a002c821f5d1c127b04ac047181e"
+        },
+        "extra": {
+          "installer-name": "Variables"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Allows per page meta settings like keywords and description, changing the title and various site verification tags.",
+        "license": "GPL-2.0+",
+        "require": {
+          "php": ">=7.4",
+          "ext-json": "*",
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "WikiSEO"
+        },
+        "name": "octfx/wiki-seo",
+        "version": "2.7.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/wikimedia/mediawiki-extensions-WikiSEO.git",
+          "type": "git",
+          "reference": "3b135415f9fe0eff4d23659b4143bd50009238ab"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-WikiSEO/zipball/3b135415f9fe0eff4d23659b4143bd50009238ab",
+          "reference": "3b135415f9fe0eff4d23659b4143bd50009238ab"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Adds a parser function embedding video from popular sources.",
+        "license": "MIT",
+        "require": {
+          "php": ">=8.1.0",
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "EmbedVideo"
+        },
+        "name": "starcitizenwiki/embedvideo",
+        "version": "4.2.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/StarCitizenWiki/mediawiki-extensions-EmbedVideo.git",
+          "type": "git",
+          "reference": "d0aa2a3245c1308362b2ce77df1f6bb3e2bf6579"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/StarCitizenWiki/mediawiki-extensions-EmbedVideo/zipball/d0aa2a3245c1308362b2ce77df1f6bb3e2bf6579",
+          "reference": "d0aa2a3245c1308362b2ce77df1f6bb3e2bf6579"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "The DynamicPageList4 extension allows creating lists of other articles based on their category, namespace, title, references or template usage and include contents or arguments of template calls of those articles into your page.",
+        "license": "GPL-3.0-or-later",
+        "require": {
+          "composer/installers": ">=1.0.1"
+        },
+        "name": "universal-omega/dynamic-page-list4",
+        "version": "4.0.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/Universal-Omega/DynamicPageList4.git",
+          "type": "git",
+          "reference": "c50712c64f6d8b111eeb68f91fdd73dc83aef9fa"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/Universal-Omega/DynamicPageList4/zipball/c50712c64f6d8b111eeb68f91fdd73dc83aef9fa",
+          "reference": "c50712c64f6d8b111eeb68f91fdd73dc83aef9fa"
+        },
+        "extra": {
+          "installer-name": "DynamicPageList4"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Allows MediaWiki to use Amazon S3 to store uploaded files.",
+        "license": "GPL-2.0+",
+        "require": {
+          "aws/aws-sdk-php": "^3.67",
+          "composer/installers": "^1 || ^2"
+        },
+        "extra": {
+          "installer-name": "AWS"
+        },
+        "name": "edwardspec/mediawiki-aws-s3",
+        "version": "0.14.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/edwardspec/mediawiki-aws-s3.git",
+          "type": "git",
+          "reference": "87134a4d19d87c1bc3329efde7f0bde642668015"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/edwardspec/mediawiki-aws-s3/zipball/87134a4d19d87c1bc3329efde7f0bde642668015",
+          "reference": "87134a4d19d87c1bc3329efde7f0bde642668015"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "SwiftMailer library for Mediawiki extension SwiftMailer",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "symfony/mailer": "^6.4"
+        },
+        "name": "mediawiki/swiftmailer",
+        "version": "1.1",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer.git",
+          "reference": "3e97ae1e9050db78d969b2b881b3fcf380944084"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-SwiftMailer/zipball/3e97ae1e9050db78d969b2b881b3fcf380944084",
+          "reference": "3e97ae1e9050db78d969b2b881b3fcf380944084"
+        },
+        "extra": {
+          "installer-name": "SwiftMailer"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "An extension to MediaWiki that lets you store and query structured data within wiki pages",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "php": ">=8.1",
+          "ext-mbstring": "*",
+          "composer/installers": "^2.2.0|^1.0.1",
+          "param-processor/param-processor": "~1.13",
+          "serialization/serialization": "~4.0",
+          "jeroen/message-reporter": "~1.0",
+          "jeroen/file-fetcher": "^6|^5|^4.4",
+          "wikimedia/textcat": "^2|^1.1"
+        },
+        "autoload": {
+          "files": [
+            "src/Defines.php",
+            "src/enableSemantics.php"
+          ]
+        },
+        "extra": {
+          "branch-alias": {
+            "dev-master": "7.x-dev"
+          },
+          "installer-name": "SemanticMediaWiki"
+        },
+        "name": "mediawiki/semantic-media-wiki",
+        "version": "7.3.1",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/SemanticMediaWiki/SemanticMediaWiki.git",
+          "type": "git",
+          "reference": "60637e855c294f3d223ddeef57af24338def7a8a"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/SemanticMediaWiki/SemanticMediaWiki/zipball/60637e855c294f3d223ddeef57af24338def7a8a",
+          "reference": "60637e855c294f3d223ddeef57af24338def7a8a"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Provides extra special properties for Semantic MediaWiki",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "php": ">=8.1",
+          "composer/installers": "^2|^1.0.1"
+        },
+        "extra": {
+          "branch-alias": {
+            "dev-master": "5.x-dev"
+          },
+          "installer-name": "SemanticExtraSpecialProperties"
+        },
+        "name": "mediawiki/semantic-extra-special-properties",
+        "version": "5.0.2",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/SemanticMediaWiki/SemanticExtraSpecialProperties.git",
+          "type": "git",
+          "reference": "7c472825a17d6e307dd4e3c4df987da22c910d2b"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/SemanticMediaWiki/SemanticExtraSpecialProperties/zipball/7c472825a17d6e307dd4e3c4df987da22c910d2b",
+          "reference": "7c472825a17d6e307dd4e3c4df987da22c910d2b"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Provides additional result formats for queries using Semantic MediaWiki",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "php": ">=8.2",
+          "composer/installers": ">=1.0.1",
+          "nicmart/tree": "^0.4.0",
+          "data-values/geo": "~4.0"
+        },
+        "autoload": {
+          "psr-4": {
+            "SRF\\": "src/"
+          },
+          "files": [
+            "SemanticResultFormats.php"
+          ],
+          "classmap": [
+            "formats/",
+            "SemanticResultFormats.hooks.php",
+            "SemanticResultFormats.parser.php",
+            "SemanticResultFormats.utils.php"
+          ]
+        },
+        "name": "mediawiki/semantic-result-formats",
+        "version": "6.0.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/SemanticMediaWiki/SemanticResultFormats.git",
+          "type": "git",
+          "reference": "f3f55e7b1af50f0f991c03e2bed98715db7c055f"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/SemanticMediaWiki/SemanticResultFormats/zipball/f3f55e7b1af50f0f991c03e2bed98715db7c055f",
+          "reference": "f3f55e7b1af50f0f991c03e2bed98715db7c055f"
+        },
+        "extra": {
+          "installer-name": "SemanticResultFormats"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "A Semantic Mediawiki extension to natively support the Scribunto extension",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "php": ">=8.1",
+          "composer/installers": "^2|^1.0.1"
+        },
+        "extra": {
+          "branch-alias": {
+            "dev-master": "3.x-dev"
+          },
+          "installer-name": "SemanticScribunto"
+        },
+        "name": "mediawiki/semantic-scribunto",
+        "version": "3.0.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "url": "https://github.com/SemanticMediaWiki/SemanticScribunto.git",
+          "type": "git",
+          "reference": "57e0d386b8e687b487357b8c57b8961b263dd1cf"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/SemanticMediaWiki/SemanticScribunto/zipball/57e0d386b8e687b487357b8c57b8961b263dd1cf",
+          "reference": "57e0d386b8e687b487357b8c57b8961b263dd1cf"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Provides a page for drilling down into the category-based and semantic data of a site, using easily-created filters",
+        "license": "GPL-2.0-or-later",
+        "require": {
+          "php": ">=8.1"
+        },
+        "name": "mediawiki/semantic-drilldown",
+        "version": "5.0.2",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/SemanticMediaWiki/SemanticDrilldown.git",
+          "reference": "10e77b60fb505cbfefe97c6d6dafbc903d6d456c"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/SemanticMediaWiki/SemanticDrilldown/zipball/10e77b60fb505cbfefe97c6d6dafbc903d6d456c",
+          "reference": "10e77b60fb505cbfefe97c6d6dafbc903d6d456c"
+        },
+        "extra": {
+          "installer-name": "SemanticDrilldown"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Lua Extension for MediaWiki to access the REST APIs",
+        "license": "MIT",
+        "require": {
+          "php": ">=8.1",
+          "composer/installers": ">=1.0.1"
+        },
+        "extra": {
+          "installer-name": "Apiunto"
+        },
+        "name": "starcitizentools/apiunto",
+        "version": "3.0.1",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/StarCitizenTools/mediawiki-extensions-Apiunto.git",
+          "reference": "5c1f5107c81e736c07efe46a9d648041566bebc9"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/StarCitizenTools/mediawiki-extensions-Apiunto/zipball/5c1f5107c81e736c07efe46a9d648041566bebc9",
+          "reference": "5c1f5107c81e736c07efe46a9d648041566bebc9"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/page-view-info",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-PageViewInfo.git",
+          "reference": "20ec2d93ac52f0c02a017d171225c5dee2d5f6b7"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-PageViewInfo/zipball/20ec2d93ac52f0c02a017d171225c5dee2d5f6b7",
+          "reference": "20ec2d93ac52f0c02a017d171225c5dee2d5f6b7"
+        },
+        "extra": {
+          "installer-name": "PageViewInfo"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "extra": {
+          "installer-name": "PluggableAuth"
+        },
+        "license": "MIT",
+        "description": "An authentication framework for MediaWiki",
+        "require": {
+          "composer/installers": ">=1.0.1|~2"
+        },
+        "name": "mediawiki/pluggable-auth",
+        "version": "7.5.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-PluggableAuth.git",
+          "reference": "afec61097c7b08e0c67641cc9cb5ee27b2d627f7"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-PluggableAuth/zipball/afec61097c7b08e0c67641cc9cb5ee27b2d627f7",
+          "reference": "afec61097c7b08e0c67641cc9cb5ee27b2d627f7"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Provides authentication using OpenID Connect in conjunction with PluggableAuth",
+        "license": "MIT",
+        "require": {
+          "jumbojett/openid-connect-php": "1.0.2",
+          "composer/installers": "~1.0|~2"
+        },
+        "extra": {
+          "installer-name": "OpenID Connect"
+        },
+        "name": "mediawiki/openidconnect",
+        "version": "8.3.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-OpenIDConnect.git",
+          "reference": "975992f2978e11f66b1ad5fd64e005592ba2fec3"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-OpenIDConnect/zipball/975992f2978e11f66b1ad5fd64e005592ba2fec3",
+          "reference": "975992f2978e11f66b1ad5fd64e005592ba2fec3"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "description": "Uses displaytitle page property in link text, subtitle, and talk page title; provides parser function to query displaytitle",
+        "license": "MIT",
+        "name": "mediawiki/display-title",
+        "version": "4.1.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-DisplayTitle.git",
+          "reference": "53f1a41410df49f4adaff384bcad1eca60da8e76"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-DisplayTitle/zipball/53f1a41410df49f4adaff384bcad1eca60da8e76",
+          "reference": "53f1a41410df49f4adaff384bcad1eca60da8e76"
+        },
+        "extra": {
+          "installer-name": "DisplayTitle"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wikimedia/poem",
+        "version": "dev-REL1_43",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-Poem.git",
+          "reference": "dffad2ad64c2fbdbc1d9def9de29791d6ee0e22e"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-Poem/zipball/dffad2ad64c2fbdbc1d9def9de29791d6ee0e22e",
+          "reference": "dffad2ad64c2fbdbc1d9def9de29791d6ee0e22e"
+        },
+        "extra": {
+          "installer-name": "Poem"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "alpha5130/purge",
+        "version": "2.1.2",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/AlPha5130/mediawiki-extensions-Purge.git",
+          "reference": "ca4c5d5f8ad183526970d8c33de052ec0a41753e"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/AlPha5130/mediawiki-extensions-Purge/zipball/ca4c5d5f8ad183526970d8c33de052ec0a41753e",
+          "reference": "ca4c5d5f8ad183526970d8c33de052ec0a41753e"
+        },
+        "extra": {
+          "installer-name": "Purge"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wikimedia/templatesandbox",
+        "version": "1.1.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox.git",
+          "reference": "86ad8f4620827739ba0837c23cc5d29d13d2fa35"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-TemplateSandbox/zipball/86ad8f4620827739ba0837c23cc5d29d13d2fa35",
+          "reference": "86ad8f4620827739ba0837c23cc5d29d13d2fa35"
+        },
+        "extra": {
+          "installer-name": "TemplateSandbox"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wikimedia/usergroups",
+        "version": "1.0.0",
+        "type": "mediawiki-extension",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/wikimedia/mediawiki-extensions-UserGroups.git",
+          "reference": "136b3bc2350a397fcd09d0e04f4a1655e57e6deb"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/wikimedia/mediawiki-extensions-UserGroups/zipball/136b3bc2350a397fcd09d0e04f4a1655e57e6deb",
+          "reference": "136b3bc2350a397fcd09d0e04f4a1655e57e6deb"
+        },
+        "extra": {
+          "installer-name": "UserGroups"
+        }
+      }
+    }
+  ]
 }

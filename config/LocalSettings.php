@@ -28,9 +28,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 #ini_set( 'display_startup_errors', 1 );
 
 /* DEBUG ONLY */
-$wgShowExceptionDetails = true;
-$wgDebugDumpSql = true;
-$wgDebugComments = true;
+$wgShowExceptionDetails = false;
+$wgDebugDumpSql = false;
+$wgDebugComments = false;
 #Maintenance
 #$wgReadOnly = 'Maintenance is underway. Website is on read-only mode';
 
@@ -306,7 +306,7 @@ wfLoadExtension( 'Disambiguator' );
 wfLoadExtension( 'Discord' );
 wfLoadExtension( 'DiscussionTools' );
 wfLoadExtension( 'DismissableSiteNotice' );
-wfLoadExtension( 'DynamicPageList3' );
+wfLoadExtension( 'DynamicPageList4' );
 wfLoadExtension( 'DisplayTitle' );
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Elastica' );
@@ -352,6 +352,8 @@ wfLoadExtension( 'SemanticScribunto' );
 wfLoadExtension( 'Scribunto' );
 wfLoadExtension( 'ShortDescription' );
 wfLoadExtension( 'SwiftMailer' );
+// REL1_43 registers SymfonyMailer but its transport requests SwiftMailer.
+$wgConfigRegistry['SwiftMailer'] = 'GlobalVarConfig::newInstance';
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'TabberNeue' );
 wfLoadExtension( 'TemplateData' );
@@ -368,17 +370,30 @@ wfLoadExtension( 'UserGroups' );
 wfLoadExtension( 'Variables' );
 wfLoadExtension( 'VisualEditor' );
 #wfLoadExtension( 'WebP' );
-wfLoadExtension( 'WebAuthn' );
+// Temporarily disabled for the security recovery; enrolled keys are preserved.
+// Administrators must verify existing TOTP/recovery access before deployment.
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'WikiSEO' );
+wfLoadExtension( 'RecoveryCompat', "$IP/recovery/extension.json" );
 
-enableSemantics( 'citizenwiki.cn' );
+// SMW 7 is registered by wfLoadExtension above. Preserve the RDF namespace.
+$smwgNamespace = '.citizenwiki.cn'; // Exact value produced by SMW 6 enableSemantics().
 #=============================================== Extension Config ===============================================
 # Apiunto 
 $wgApiuntoKey = ''; 
 $wgApiuntoUrl = 'https://api.star-citizen.wiki';
 $wgApiuntoTimeout = '10'; // 5 seconds
 $wgApiuntoDefaultLocale = 'zh_CN'; 
+// Apiunto 3 source; RecoveryCompat preserves the deployed fork's Lua methods.
+$wgApiuntoSources = [
+    'StarCitizenWikiAPI' => [
+        'baseUrl' => 'https://api.star-citizen.wiki/api/',
+        'token' => $wgApiuntoKey,
+        'timeout' => (int)$wgApiuntoTimeout,
+        'cacheDuration' => 3600,
+        'followRedirects' => false,
+    ],
+];
 
 # AWS
 $wgAWSCredentials = [
@@ -550,6 +565,7 @@ $smwgNamespacesWithSemanticLinks[828] = true;
 
 # Semantic Extra Special Properties
 $sespgUseFixedTables = true;
+$sespgDefinitionsFile = "$IP/recovery/sesp-definitions.json";
 # Required by Module:DependencyList
 $sespgLocalDefinitions['_LINKSTO'] = [
     'id'    => '_LINKSTO',
@@ -557,7 +573,7 @@ $sespgLocalDefinitions['_LINKSTO'] = [
     'alias' => 'sesp-property-links-to',
     'desc' => 'sesp-property-links-to-desc',
     'label' => 'Links to',
-    'callback'  => static function(\SESP\AppFactory $appFactory, \SMW\DIProperty $property, \SMW\SemanticData $semanticData ) {
+    'callback'  => static function(\SESP\AppFactory $appFactory, \SMW\DataItems\Property $property, \SMW\DataModel\SemanticData $semanticData ) {
         $page = $semanticData->getSubject()->getTitle();
 
         // The namespaces where the property will be added
@@ -572,25 +588,25 @@ $sespgLocalDefinitions['_LINKSTO'] = [
 
         $where = [];
         $where[] = sprintf('pl.pl_from = %s', $page->getArticleID() );
-        $where[] = sprintf('pl.pl_title != %s', $con->addQuotes( $page->getDBkey() ) );
+        $where[] = sprintf('lt.lt_title != %s', $con->addQuotes( $page->getDBkey() ) );
 
         if ( !empty( $targetNS ) ) {
-            $where[] = sprintf( 'pl.pl_namespace IN (%s)', implode(',', $targetNS ) );
+            $where[] = sprintf( 'lt.lt_namespace IN (%s)', implode(',', $targetNS ) );
         }
 
         $res = $con->select(
-            [ 'pl' => 'pagelinks', 'page' ],
-            [ 'sel_title' => 'pl.pl_title', 'sel_ns' => 'pl.pl_namespace' ],
+            [ 'pl' => 'pagelinks', 'lt' => 'linktarget', 'page' ],
+            [ 'sel_title' => 'lt.lt_title', 'sel_ns' => 'lt.lt_namespace' ],
             $where,
             __METHOD__,
             [ 'DISTINCT' ],
-            [ 'page' => [ 'JOIN', 'page_id=pl_from' ] ]
+            [ 'lt' => [ 'JOIN', 'pl_target_id=lt_id' ], 'page' => [ 'JOIN', 'page_id=pl_from' ] ]
         );
 
         foreach( $res as $row ) {
-            $title = Title::newFromText( $row->sel_title, $row->sel_ns );
+            $title = \MediaWiki\Title\Title::newFromText( $row->sel_title, $row->sel_ns );
             if ( $title !== null && $title->exists() ) {
-                $semanticData->addPropertyObjectValue( $property,\SMW\DIWikiPage::newFromTitle( $title ) );
+                $semanticData->addPropertyObjectValue( $property,\SMW\DataItems\WikiPage::newFromTitle( $title ) );
             }
         }
     }
@@ -609,7 +625,7 @@ $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024; # 50 MB
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10; # Seconds
 
 # SyntaxHighlight
-# $wgPygmentizePath = '/usr/lib/python3/dist-packages/pygments';
+$wgPygmentizePath = '/usr/local/bin/pygmentize';
 
 # TemplateStyles
 $wgTemplateStylesAllowedUrls = [

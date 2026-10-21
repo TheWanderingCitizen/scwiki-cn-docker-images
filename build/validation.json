@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-22",
+  "baselineCommit": "7cb68f167425b0cbe0aa17c1a7937e314c3f559c",
+  "image": "scwiki-mediawiki:main-security-recovery",
+  "imageId": "sha256:8b923860847abbd581e175ea340af35a6381a40c3a3289fea6aeea71e5112d78",
+  "repeatImageId": "sha256:8b923860847abbd581e175ea340af35a6381a40c3a3289fea6aeea71e5112d78",
+  "productionLockSha256": "ea93d7470240deb4e350365d6261d7f8cbb654db717966e25744f189542cc995",
+  "productionPackages": 168,
+  "developmentPackages": 82,
+  "productionAdvisories": 0,
+  "developmentAdvisories": 0,
+  "abandonedDevelopmentPackages": [
+    "doctrine/cache"
+  ],
+  "passed": [
+    "signed-source-and-complete-image-build",
+    "repeat-168-package-install-and-all-refs",
+    "88-upstream-runtime-manifest-requirements",
+    "production-and-development-platform-checks",
+    "audit-negative-cases",
+    "fresh-install",
+    "latest-production-database-schema-upgrade",
+    "repeat-database-update",
+    "production-DependencyList-DPL-and-VehicleHardpoint-import",
+    "Apiunto-native-and-deployed-legacy-contract",
+    "501-row-Lua-boundary-no-duplicates",
+    "custom-LINKSTO-id-and-filtering",
+    "SESP-SRF-table-sum",
+    "FPM-PHP8.3.36-www-data-upload-progress-disabled",
+    "Imagick-WebP",
+    "SyntaxHighlight",
+    "JWT-CheckUser",
+    "SMTP-local-delivery",
+    "S3-offline-signing",
+    "Guzzle-sync-async-redirect-PSR-streams-YAML",
+    "HTTP-local-login-edit-upload-Citizen-render",
+    "30-production-snapshot-jobs-at-512MiB",
+    "large-production-page-refresh-at-512MiB",
+    "16-PHP-files-syntax-check"
+  ],
+  "backupTotpEnrollments": 4,
+  "backupAdministratorsWithTotp": 1,
+  "pending": [
+    "legacy-SMW-install-state-survivor-flags",
+    "existing-administrator-full-TOTP-or-recovery-login",
+    "full-production-report-output-signoff",
+    "deployed-OIDC-S3-SMTP-TLS",
+    "mounted-code-and-all-worker-inventory",
+    "app-uploads-backup-restore-and-matching-patched-PHP-rollback"
+  ],
+  "published": false,
+  "deployed": false
+}

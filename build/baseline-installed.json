@@ -1,0 +1,345 @@
+{
+  "provenance": "Published MW 1.43.3 vendor manifest; not the deployed application inventory",
+  "packages": [
+    {
+      "name": "bacon/bacon-qr-code",
+      "version": "v3.0.1",
+      "reference": "f9cc1f52b5a463062251d666761178dbdb6b544f"
+    },
+    {
+      "name": "christian-riesen/base32",
+      "version": "1.6.0",
+      "reference": "2e82dab3baa008e24a505649b0d583c31d31e894"
+    },
+    {
+      "name": "composer/semver",
+      "version": "3.4.3",
+      "reference": "4313d26ada5e0c4edfbd1dc481a92ff7bff91f12"
+    },
+    {
+      "name": "cssjanus/cssjanus",
+      "version": "v2.3.0",
+      "reference": "c5868a543c466c994ba5bf9b3297e150105ab803"
+    },
+    {
+      "name": "dasprid/enum",
+      "version": "1.0.5",
+      "reference": "6faf451159fb8ba4126b925ed2d78acfce0dc016"
+    },
+    {
+      "name": "endroid/qr-code",
+      "version": "5.1.0",
+      "reference": "393fec6c4cbdc1bd65570ac9d245704428010122"
+    },
+    {
+      "name": "guzzlehttp/guzzle",
+      "version": "7.9.2",
+      "reference": "d281ed313b989f213357e3be1a179f02196ac99b"
+    },
+    {
+      "name": "guzzlehttp/promises",
+      "version": "2.0.4",
+      "reference": "f9c436286ab2892c7db7be8c8da4ef61ccf7b455"
+    },
+    {
+      "name": "guzzlehttp/psr7",
+      "version": "2.7.0",
+      "reference": "a70f5c95fb43bc83f07c9c948baa0dc1829bf201"
+    },
+    {
+      "name": "jakobo/hotp-php",
+      "version": "v2.0.0",
+      "reference": "ff2f13d1918001e54b3f49deb1d366bcfcc98437"
+    },
+    {
+      "name": "justinrainbow/json-schema",
+      "version": "5.3.0",
+      "reference": "feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8"
+    },
+    {
+      "name": "liuggio/statsd-php-client",
+      "version": "v1.0.18",
+      "reference": "c42e6d6687b7b2d7683186ec7f4f03351cc3dbca"
+    },
+    {
+      "name": "mck89/peast",
+      "version": "v1.16.3",
+      "reference": "645ec21b650bc2aced18285c85f220d22afc1430"
+    },
+    {
+      "name": "monolog/monolog",
+      "version": "2.9.3",
+      "reference": "a30bfe2e142720dfa990d0a7e573997f5d884215"
+    },
+    {
+      "name": "oojs/oojs-ui",
+      "version": "v0.51.2",
+      "reference": "9a2b2b42aac087db15c8a91fd6bbcef78dbd9898"
+    },
+    {
+      "name": "pear/console_getopt",
+      "version": "v1.4.3",
+      "reference": "a41f8d3e668987609178c7c4a9fe48fecac53fa0"
+    },
+    {
+      "name": "pear/mail",
+      "version": "v2.0.0",
+      "reference": "eb053f8b74f4f3178105fcf001626e63068c0dbc"
+    },
+    {
+      "name": "pear/mail_mime",
+      "version": "1.10.12",
+      "reference": "d032c7c9335e96d5954ac6e93d33955f3b7246e2"
+    },
+    {
+      "name": "pear/net_smtp",
+      "version": "1.12.1",
+      "reference": "5d7ba854d75a7c207d8581de1cc6fd2895ae2518"
+    },
+    {
+      "name": "pear/net_socket",
+      "version": "v1.2.2",
+      "reference": "bbe6a12bb4f7059dba161f6ddd43f369c0ec8d09"
+    },
+    {
+      "name": "pear/net_url2",
+      "version": "v2.2.3",
+      "reference": "c1f2b316ed9b05e881cdb494f7550ddf817c76c8"
+    },
+    {
+      "name": "pear/pear-core-minimal",
+      "version": "v1.10.15",
+      "reference": "ce0adade8b97561656ace07cdaac4751c271ea8c"
+    },
+    {
+      "name": "pear/pear_exception",
+      "version": "v1.0.2",
+      "reference": "b14fbe2ddb0b9f94f5b24cf08783d599f776fff0"
+    },
+    {
+      "name": "psr/container",
+      "version": "1.1.2",
+      "reference": "513e0666f7216c7459170d56df27dfcefe1689ea"
+    },
+    {
+      "name": "psr/http-client",
+      "version": "1.0.3",
+      "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90"
+    },
+    {
+      "name": "psr/http-factory",
+      "version": "1.1.0",
+      "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
+    },
+    {
+      "name": "psr/http-message",
+      "version": "1.1",
+      "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
+    },
+    {
+      "name": "psr/log",
+      "version": "1.1.4",
+      "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+    },
+    {
+      "name": "ralouphie/getallheaders",
+      "version": "3.0.3",
+      "reference": "120b605dfeb996808c31b6477290a714d356e822"
+    },
+    {
+      "name": "symfony/deprecation-contracts",
+      "version": "v2.5.3",
+      "reference": "80d075412b557d41002320b96a096ca65aa2c98d"
+    },
+    {
+      "name": "symfony/polyfill-php82",
+      "version": "v1.31.0",
+      "reference": "5d2ed36f7734637dacc025f179698031951b1692"
+    },
+    {
+      "name": "symfony/polyfill-php83",
+      "version": "v1.31.0",
+      "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491"
+    },
+    {
+      "name": "symfony/yaml",
+      "version": "v5.4.45",
+      "reference": "a454d47278cc16a5db371fe73ae66a78a633371e"
+    },
+    {
+      "name": "wikimedia/assert",
+      "version": "v0.5.1",
+      "reference": "27c983fddac1197dc37f6a7cec00fc02861529cd"
+    },
+    {
+      "name": "wikimedia/at-ease",
+      "version": "v3.0.0",
+      "reference": "89f2ec17fd99f551d4f61db59ac60d9a8e3bbc34"
+    },
+    {
+      "name": "wikimedia/base-convert",
+      "version": "v2.0.2",
+      "reference": "aa997185e0b42c1f61a11f3e1980cad144175111"
+    },
+    {
+      "name": "wikimedia/bcp-47-code",
+      "version": "v2.0.0",
+      "reference": "0d2204a8c3bb99be6253f9326df1c61093d2bb05"
+    },
+    {
+      "name": "wikimedia/cdb",
+      "version": "3.0.0",
+      "reference": "3d7622f39319ea2149cac92415222d1fb39c46d0"
+    },
+    {
+      "name": "wikimedia/cldr-plural-rule-parser",
+      "version": "v2.0.0",
+      "reference": "83d78cb8018d5c0f66fd6d0efff6a8ae2de92d36"
+    },
+    {
+      "name": "wikimedia/common-passwords",
+      "version": "v0.5.0",
+      "reference": "ff3920985ef3c2e23d3b262e0620ff3f83292ac3"
+    },
+    {
+      "name": "wikimedia/composer-merge-plugin",
+      "version": "v2.1.0",
+      "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc"
+    },
+    {
+      "name": "wikimedia/equivset",
+      "version": "1.7.0",
+      "reference": "2a8cae4bb2c1aa102eea9fcb6e4d4de1d46e59f3"
+    },
+    {
+      "name": "wikimedia/html-formatter",
+      "version": "4.1.0",
+      "reference": "c2fdae55da33feb6d44d34ddc66c4b007981bcf2"
+    },
+    {
+      "name": "wikimedia/idle-dom",
+      "version": "v1.0.0",
+      "reference": "631555d5868bf29427cb015906e666faf09abeea"
+    },
+    {
+      "name": "wikimedia/ip-utils",
+      "version": "5.0.0",
+      "reference": "119e0ed321e967b4f5748a404fa8a3eb5dad4aa3"
+    },
+    {
+      "name": "wikimedia/json-codec",
+      "version": "v3.0.3",
+      "reference": "6950c6aae8b97cbb37779675f4a475616caeaf46"
+    },
+    {
+      "name": "wikimedia/less.php",
+      "version": "v5.1.2",
+      "reference": "39b1fbbdd3d95c5279f231d2298f3866fa869fcd"
+    },
+    {
+      "name": "wikimedia/minify",
+      "version": "2.9.0",
+      "reference": "244bbb0c0acf0c1679078cc87cbc95c79ad9f33f"
+    },
+    {
+      "name": "wikimedia/normalized-exception",
+      "version": "v2.0.0",
+      "reference": "ae352bb80f1c345d5cd74b82bbd02e012bf01662"
+    },
+    {
+      "name": "wikimedia/object-factory",
+      "version": "v5.0.1",
+      "reference": "a0439aac5f14e218dc1f40a98eb14e4b26a01341"
+    },
+    {
+      "name": "wikimedia/parsoid",
+      "version": "v0.20.3",
+      "reference": "c31cc6f74c422926bae5f2d0e19b6b7ccaf053fa"
+    },
+    {
+      "name": "wikimedia/php-session-serializer",
+      "version": "v3.0.0",
+      "reference": "9d52c57064a1db78cd494a70ec316e1952cf7f1a"
+    },
+    {
+      "name": "wikimedia/purtle",
+      "version": "v2.0.0",
+      "reference": "af5b7f1da5bbfea6f2b7992600bfdaf258f61762"
+    },
+    {
+      "name": "wikimedia/relpath",
+      "version": "4.0.1",
+      "reference": "313611bd8a11d1a624d5f67311f92f9f85906298"
+    },
+    {
+      "name": "wikimedia/remex-html",
+      "version": "4.1.1",
+      "reference": "3dd8344b57b2939f604a474b76d422f24471b436"
+    },
+    {
+      "name": "wikimedia/request-timeout",
+      "version": "2.0.0",
+      "reference": "eb2e714381584678148423f5f760abd4edab5d2e"
+    },
+    {
+      "name": "wikimedia/running-stat",
+      "version": "v2.1.0",
+      "reference": "0aa66cf58f98ca2de9972a8177cbec625c4c9969"
+    },
+    {
+      "name": "wikimedia/scoped-callback",
+      "version": "v5.0.0",
+      "reference": "7fa061561a70c49e5e5e6d40dd8f7c151affa0f3"
+    },
+    {
+      "name": "wikimedia/services",
+      "version": "4.0.0",
+      "reference": "87f71136c19ca4769dcb2b870e565dceb72e23fb"
+    },
+    {
+      "name": "wikimedia/shellbox",
+      "version": "4.1.1",
+      "reference": "6fd831dca0a025685c953effbc489fe67c6accfc"
+    },
+    {
+      "name": "wikimedia/timestamp",
+      "version": "v4.1.1",
+      "reference": "138f3099b46e3f6679ac100e5ab1932e89746a05"
+    },
+    {
+      "name": "wikimedia/utfnormal",
+      "version": "4.0.0",
+      "reference": "6f3690d3ca446d9745fa3410bb993470afd7bc25"
+    },
+    {
+      "name": "wikimedia/wait-condition-loop",
+      "version": "v2.0.2",
+      "reference": "9bb0894e8c5195d43b2f2babbe4cc8f36bd5be0e"
+    },
+    {
+      "name": "wikimedia/wikipeg",
+      "version": "4.0.2",
+      "reference": "d1fc85f7896368def625a99c2a97f6803bc795d7"
+    },
+    {
+      "name": "wikimedia/wrappedstring",
+      "version": "v4.0.1",
+      "reference": "0d526868d92fa855c70a845336a777c63b30b400"
+    },
+    {
+      "name": "wikimedia/xmp-reader",
+      "version": "0.9.4",
+      "reference": "0c13a18f322c3fdd4013148d5a647c1670ad82d3"
+    },
+    {
+      "name": "wikimedia/zest-css",
+      "version": "3.0.1",
+      "reference": "e61a0fc4b9704b9c6b89d99b896ef8011deefc94"
+    },
+    {
+      "name": "zordius/lightncandy",
+      "version": "v1.2.6",
+      "reference": "b451f73e8b5c73e62e365997ba3c993a0376b72a"
+    }
+  ]
+}

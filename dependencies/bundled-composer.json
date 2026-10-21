@@ -1,0 +1,1235 @@
+{
+  "extensions/AbuseFilter/composer.json": {
+    "name": "mediawiki/abuse-filter",
+    "type": "mediawiki-extension",
+    "description": "The AbuseFilter extension allows privileged users to set specific controls on actions by users, such as edits, and create automated reactions for certain behaviors.",
+    "homepage": "https://www.mediawiki.org/wiki/Extension:AbuseFilter",
+    "license": "GPL-2.0-or-later",
+    "require": {
+      "wikimedia/equivset": "^1.7.0"
+    },
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/CategoryTree/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/Cite/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/CiteThisPage/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/CodeEditor/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/ConfirmEdit/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/DiscussionTools/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "dbschema": [
+        "php ../../maintenance/generateSchemaSql.php --json sql/discussiontools_subscription.json --sql sql/mysql/discussiontools_subscription.sql --type mysql",
+        "php ../../maintenance/generateSchemaSql.php --json sql/discussiontools_persistent.json --sql sql/mysql/discussiontools_persistent.sql --type mysql",
+        "php ../../maintenance/generateSchemaSql.php --json sql/discussiontools_subscription.json --sql sql/postgres/discussiontools_subscription.sql --type postgres",
+        "php ../../maintenance/generateSchemaSql.php --json sql/discussiontools_persistent.json --sql sql/postgres/discussiontools_persistent.sql --type postgres",
+        "php ../../maintenance/generateSchemaSql.php --json sql/discussiontools_subscription.json --sql sql/sqlite/discussiontools_subscription.sql --type sqlite",
+        "php ../../maintenance/generateSchemaSql.php --json sql/discussiontools_persistent.json --sql sql/sqlite/discussiontools_persistent.sql --type sqlite"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "require": {
+      "php": ">=7.4.3",
+      "ext-json": "*",
+      "ext-dom": "*"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      }
+    }
+  },
+  "extensions/Echo/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/Gadgets/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar --allow-polyfill-parser",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/ImageMap/composer.json": {
+    "name": "mediawiki/image-map",
+    "type": "mediawiki-extension",
+    "description": "Allows clickable HTML image maps",
+    "keywords": [
+      "Wiki",
+      "MediaWiki",
+      "ImageMap"
+    ],
+    "homepage": "https://www.mediawiki.org/wiki/Extension:ImageMap",
+    "license": "GPL-2.0-or-later",
+    "require": {
+      "composer/installers": "1.*,>=1.0.1"
+    },
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "composer/installers": true,
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/InputBox/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/Interwiki/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/Linter/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/LoginNotify/composer.json": {
+    "homepage": "https://www.mediawiki.org/wiki/Extension:LoginNotify",
+    "license": "MIT",
+    "name": "mediawiki/loginnotify",
+    "type": "mediawiki-extension",
+    "description": "MediaWiki extension to notify users if someone tries to login to their account",
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/Math/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules --exclude src/WikiTexVC/Parser.php",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "require": {
+      "ext-intl": "*"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      }
+    }
+  },
+  "extensions/MultimediaViewer/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/Nuke/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/OATHAuth/composer.json": {
+    "require": {
+      "christian-riesen/base32": "^1.4.0",
+      "endroid/qr-code": "5.1.0",
+      "jakobo/hotp-php": "2.0.0"
+    },
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "lint": "parallel-lint . --exclude vendor --exclude node_modules",
+      "phpcs": "phpcs -p -s --cache",
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "composer lint",
+        "composer phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/PageImages/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/ParserFunctions/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/PdfHandler/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/Poem/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/ReplaceText/composer.json": {
+    "name": "mediawiki/replace-text",
+    "type": "mediawiki-extension",
+    "description": "Allows users to do a global string find-and-replace on all the pages of a wiki",
+    "license": "GPL-2.0-or-later",
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules --exclude .phan",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/Scribunto/composer.json": {
+    "require-dev": {
+      "mediawiki/lua-sandbox": "4.1.2",
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "repositories": [
+      {
+        "type": "package",
+        "package": {
+          "name": "mediawiki/lua-sandbox",
+          "version": "4.1.2",
+          "source": {
+            "url": "https://gerrit.wikimedia.org/r/mediawiki/php/luasandbox.git",
+            "type": "git",
+            "reference": "tags/4.1.2"
+          }
+        }
+      }
+    ],
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/SecureLinkFixer/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/SpamBlacklist/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/SyntaxHighlight_GeSHi/composer.json": {
+    "name": "mediawiki/syntax-highlight",
+    "description": "Syntax highlighting extension for MediaWiki",
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "license": "GPL-2.0-or-later",
+    "authors": [
+      {
+        "name": "Brion Vibber",
+        "email": "brion@wikimedia.org"
+      },
+      {
+        "name": "Niklas Laxstr\u00f6m",
+        "email": "nlaxstrom@wikimedia.org"
+      },
+      {
+        "name": "Ori Livneh",
+        "email": "ori@wikimedia.org"
+      },
+      {
+        "name": "Rob Church"
+      },
+      {
+        "name": "Tim Starling",
+        "email": "tstarling@wikimedia.org"
+      }
+    ],
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/TemplateData/composer.json": {
+    "require": {
+      "ext-zlib": "*"
+    },
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/TextExtracts/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/Thanks/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "doc": [
+        "doxygen"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/TitleBlacklist/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/VisualEditor/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "minus-x check .",
+        "@phpcs"
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "extensions/WikiEditor/composer.json": {
+    "license": "GPL-2.0-or-later",
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "skins/MinervaNeue/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "test": [
+        "parallel-lint . --exclude vendor --exclude node_modules",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test:size": "php ../../vendor/phpunit/phpunit/phpunit -c ../../phpunit.xml.dist tests/phpunit/structure/BundleSizeTest.php",
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      }
+    }
+  },
+  "skins/MonoBook/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "skins/Timeless/composer.json": {
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      },
+      "audit": {
+        "block-insecure": false
+      }
+    }
+  },
+  "skins/Vector/composer.json": {
+    "name": "mediawiki/vector-skin",
+    "type": "mediawiki-skin",
+    "description": "Modern version of the MonoBook skin",
+    "keywords": [
+      "wiki",
+      "MediaWiki",
+      "skin"
+    ],
+    "homepage": "https://www.mediawiki.org/wiki/Skin:Vector",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+      {
+        "name": "Trevor Parscal"
+      },
+      {
+        "name": "Roan Kattouw"
+      }
+    ],
+    "support": {
+      "wiki": "https://www.mediawiki.org/wiki/Skin:Vector",
+      "forum": "https://www.mediawiki.org/wiki/Skin_talk:Vector",
+      "source": "http://gerrit.wikimedia.org/g/mediawiki/skins/Vector",
+      "irc": "irc://irc.libera.chat/mediawiki"
+    },
+    "require": {
+      "composer/installers": ">1.0.12"
+    },
+    "extra": {
+      "branch-alias": {
+        "dev-master": "1.x-dev"
+      },
+      "installer-name": "Vector"
+    },
+    "require-dev": {
+      "mediawiki/mediawiki-codesniffer": "45.0.0",
+      "mediawiki/mediawiki-phan-config": "0.14.0",
+      "mediawiki/minus-x": "1.1.3",
+      "php-parallel-lint/php-console-highlighter": "1.0.0",
+      "php-parallel-lint/php-parallel-lint": "1.4.0"
+    },
+    "scripts": {
+      "fix": [
+        "minus-x fix .",
+        "phpcbf"
+      ],
+      "test": [
+        "parallel-lint . --exclude node_modules --exclude vendor",
+        "@phpcs",
+        "minus-x check ."
+      ],
+      "test:size": "php ../../vendor/phpunit/phpunit/phpunit -c ../../phpunit.xml.dist tests/phpunit/structure/BundleSizeTest.php",
+      "phan": "phan -d . --long-progress-bar",
+      "phpcs": "phpcs -sp --cache"
+    },
+    "config": {
+      "allow-plugins": {
+        "composer/installers": true,
+        "dealerdirect/phpcodesniffer-composer-installer": true
+      }
+    }
+  }
+}

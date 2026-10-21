@@ -1,0 +1,11 @@
+.git
+*mariadb-dump*.gz
+*.sql
+*.sql.gz
+.env
+**/__pycache__
+build/.cache
+tools/vendor
+tests/.artifacts
+production-rehearsal
+*.log
