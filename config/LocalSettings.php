@@ -382,15 +382,15 @@ $smwgNamespace = '.citizenwiki.cn'; // Exact value produced by SMW 6 enableSeman
 # Apiunto 
 $wgApiuntoKey = ''; 
 $wgApiuntoUrl = 'https://api.star-citizen.wiki';
-$wgApiuntoTimeout = '10'; // 5 seconds
+$wgApiuntoTimeout = '10'; // seconds
 $wgApiuntoDefaultLocale = 'zh_CN'; 
 // Apiunto 3 source; RecoveryCompat preserves the deployed fork's Lua methods.
 $wgApiuntoSources = [
     'StarCitizenWikiAPI' => [
-        'baseUrl' => 'https://api.star-citizen.wiki/api/',
+        'baseUrl' => rtrim( $wgApiuntoUrl, '/' ) . '/api/',
         'token' => $wgApiuntoKey,
         'timeout' => (int)$wgApiuntoTimeout,
-        'cacheDuration' => 3600,
+        'cacheDuration' => 86400, // Deployed fork's Default cache lifetime.
         'followRedirects' => false,
     ],
 ];

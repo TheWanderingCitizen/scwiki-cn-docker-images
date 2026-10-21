@@ -9,3 +9,4 @@ tools/vendor
 tests/.artifacts
 production-rehearsal
 *.log
+tested-image*

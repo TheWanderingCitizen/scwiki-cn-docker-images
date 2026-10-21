@@ -105,7 +105,8 @@ not rewrite upstream PHP or stored wiki pages.
   current production modules. It keeps `get_raw`, the old helper paths (including
   the historical armor-path quirk), the four forwarded arguments, default locale,
   include/locale array encoding and raw response strings. The native `fetch`
-  interface is also available. Network/cache handling uses the maintained source.
+  interface is also available. The deployed default 24-hour cache lifetime is
+  retained. Network/cache handling uses the maintained source.
   Redirects are disabled for the production source, as in the candidate config.
 * VehicleHardpoint requests `limit=1000`. The SemanticScribunto adapter handles
   that exact array argument with two ordinary 500-row inline queries, preserving
@@ -115,7 +116,11 @@ not rewrite upstream PHP or stored wiki pages.
   still need sign-off against representative page results.
 * DPL4 is a rewrite and a rename. Its load name changes to DynamicPageList4;
   existing DPL configuration is retained. Actual production DependencyList/DPL
-  execution passes. Review other production DPL reports before reopening writes.
+  execution passes. Its updater deletes the obsolete `Template:Extension DPL`
+  helper and schedules link refreshes; this occurred in the copied database.
+  Preserve any custom changes to that template in the backup. Bare underscores
+  in title matching are now literal; the one-character wildcard is `[_]`.
+  Review other production DPL reports before reopening writes.
 * SwiftMailer's current REL1_43 code uses Symfony Mailer. Its manifest registers
   `SymfonyMailer`, but its transport requests `SwiftMailer`; a configuration alias
   fixes that upstream mismatch. Local SMTP delivery passes. No SwiftMailer 6
@@ -244,7 +249,9 @@ database schema or generated-key TOTP tests passed.
    if writes occurred. Do not simply point old code at the migrated database.
 
 CI retains GHCR `main-latest` and `main-YY.MM.DD` publication targets. PR checks
-never publish. Actions are pinned. Main publication requires local checks and
+never publish. Main publication transfers the tested image as a short-lived
+artifact and verifies its image ID, rather than rebuilding after tests. Actions
+are pinned. Main publication requires local checks and
 reviewed production evidence in `build/release-gates.json`; all gates currently
 remain closed until the outstanding operator validations are completed.
 

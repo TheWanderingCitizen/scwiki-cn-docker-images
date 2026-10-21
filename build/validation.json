@@ -2,8 +2,8 @@
   "date": "2026-10-22",
   "baselineCommit": "7cb68f167425b0cbe0aa17c1a7937e314c3f559c",
   "image": "scwiki-mediawiki:main-security-recovery",
-  "imageId": "sha256:8b923860847abbd581e175ea340af35a6381a40c3a3289fea6aeea71e5112d78",
-  "repeatImageId": "sha256:8b923860847abbd581e175ea340af35a6381a40c3a3289fea6aeea71e5112d78",
+  "imageId": "sha256:23b9a46f7505f4a441bc26fb926f4b4e2b0c0a29526a66bd4035256d81a01576",
+  "repeatImageId": "sha256:23b9a46f7505f4a441bc26fb926f4b4e2b0c0a29526a66bd4035256d81a01576",
   "productionLockSha256": "ea93d7470240deb4e350365d6261d7f8cbb654db717966e25744f189542cc995",
   "productionPackages": 168,
   "developmentPackages": 82,
@@ -36,7 +36,8 @@
     "HTTP-local-login-edit-upload-Citizen-render",
     "30-production-snapshot-jobs-at-512MiB",
     "large-production-page-refresh-at-512MiB",
-    "16-PHP-files-syntax-check"
+    "16-PHP-files-syntax-check",
+    "tested-image-archive-save-load-and-ID"
   ],
   "backupTotpEnrollments": 4,
   "backupAdministratorsWithTotp": 1,
@@ -49,5 +50,7 @@
     "app-uploads-backup-restore-and-matching-patched-PHP-rollback"
   ],
   "published": false,
-  "deployed": false
+  "deployed": false,
+  "localImageArchive": "tests/.artifacts/scwiki-main-security-recovery.tar",
+  "imageArchiveSha256": "8a02e5d6d0ef5f15e599ee1e1c13238c7b87538312dfc1bbfc31faaa393caa1b"
 }

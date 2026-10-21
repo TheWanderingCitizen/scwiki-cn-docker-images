@@ -86,5 +86,6 @@ production-rehearsal/
 /*mariadb-dump*.gz
 /*.sql
 /*.sql.gz
+/tested-image*
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux

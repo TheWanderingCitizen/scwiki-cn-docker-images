@@ -30,8 +30,21 @@ jobs:
           docker run --rm --user "$(id -u):$(id -g)" -e COMPOSER_HOME=/tmp/composer -v "$PWD:/workspace" -w /workspace/tools --entrypoint sh scwiki-mediawiki:main-security-recovery -c 'composer install --prefer-dist --no-interaction --no-scripts && vendor/bin/parallel-lint ../compat ../scripts ../tests ../config/LocalSettings.php'
       - name: Repeat locked installation and compare all references
         run: |
-          docker build --no-cache-filter builder -t scwiki-mediawiki:locked-repeat .
+          docker buildx build --load --no-cache-filter builder -t scwiki-mediawiki:locked-repeat .
           docker run --rm -v "$PWD:/checks:ro" --entrypoint php scwiki-mediawiki:locked-repeat /checks/scripts/verify-installed.php
+      - name: Preserve the tested image for main publication
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          docker save -o tested-image.tar scwiki-mediawiki:main-security-recovery
+          docker image inspect scwiki-mediawiki:main-security-recovery --format '{{.Id}}' > tested-image-id.txt
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          name: tested-mediawiki-${{ github.sha }}
+          path: tested-image*
+          retention-days: 1
+          compression-level: 0
+          if-no-files-found: error
   publish:
     needs: validate
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -45,14 +58,22 @@ jobs:
         run: python3 scripts/check-release.py
       - id: calver
         run: echo "version=$(date -u +%y.%m.%d)" >> "$GITHUB_OUTPUT"
-      - uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: tested-mediawiki-${{ github.sha }}
+          path: /tmp/tested-mediawiki
+      - name: Load and verify the exact image that passed validation
+        run: |
+          docker load -i /tmp/tested-mediawiki/tested-image.tar
+          test "$(docker image inspect scwiki-mediawiki:main-security-recovery --format '{{.Id}}')" = "$(cat /tmp/tested-mediawiki/tested-image-id.txt)"
       - uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4.6.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
-        with:
-          push: true
-          cache-from: type=gha
-          tags: ghcr.io/thewanderingcitizen/mediawiki:main-latest,ghcr.io/thewanderingcitizen/mediawiki:main-${{ steps.calver.outputs.version }}
+      - name: Publish the tested image to the existing main targets
+        run: |
+          docker tag scwiki-mediawiki:main-security-recovery ghcr.io/thewanderingcitizen/mediawiki:main-latest
+          docker tag scwiki-mediawiki:main-security-recovery ghcr.io/thewanderingcitizen/mediawiki:main-${{ steps.calver.outputs.version }}
+          docker push ghcr.io/thewanderingcitizen/mediawiki:main-latest
+          docker push ghcr.io/thewanderingcitizen/mediawiki:main-${{ steps.calver.outputs.version }}
