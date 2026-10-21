@@ -1,0 +1,47 @@
+--- a/extensions/SwiftMailer/SwiftMailerHooks.php
++++ b/extensions/SwiftMailer/SwiftMailerHooks.php
+@@ -42,7 +42,7 @@
+ 		MailAddress $from,
+ 		$subject, $body
+ 	) {
+-		$message = Swift_Message::newInstance()
++		$message = (new Swift_Message())
+ 				->setSubject( $subject )
+ 				->setFrom( [ $from->address => $from->name ] )
+ 				->setBody( $body );
+@@ -58,7 +58,7 @@
+ 		}
+ 
+ 		// Create the SwiftMailer::Mailer Object using the above Transport
+-		$mailer = Swift_Mailer::newInstance( $transport );
++		$mailer = new Swift_Mailer( $transport );
+ 
+ 		wfDebug( "Sending mail via Swift::Mail\n" );
+ 
+@@ -79,22 +79,22 @@
+ 	/**
+ 	 * Generate the SwiftMailer transport object
+ 	 *
+-	 * @return SwiftMailer::Transport object Swift_MailTransport|Swift_SmtpTransport
++	 * @return SwiftMailer::Transport object Swift_SendmailTransport|Swift_SmtpTransport
+ 	 */
+ 	protected static function getSwiftMailer() {
+ 		global $wgSMTP, $wgSMTPAuthenticationMethod;
+ 		static $swiftTransport = null;
+ 		if ( !$swiftTransport ) {
+ 			if ( is_array( $wgSMTP ) ) {
+-				// Create the Transport with Swift_Message::newInstance() method
+-				$swiftTransport = Swift_SmtpTransport::newInstance( $wgSMTP['host'], $wgSMTP['port'] )
++				// SwiftMailer 6 removed the newInstance factories.
++				$swiftTransport = (new Swift_SmtpTransport( $wgSMTP['host'], $wgSMTP['port'] ))
+ 					->setUsername( $wgSMTP['username'] )
+ 					->setPassword( $wgSMTP['password'] );
+ 				if ( $wgSMTP['auth'] === true && $wgSMTPAuthenticationMethod ) {
+ 					$swiftTransport->setEncryption( $wgSMTPAuthenticationMethod );
+ 				}
+ 			} else {
+-				$swiftTransport = Swift_MailTransport::newInstance();
++				$swiftTransport = new Swift_SendmailTransport( ini_get( 'sendmail_path' ) );
+ 			}
+ 		}
+ 

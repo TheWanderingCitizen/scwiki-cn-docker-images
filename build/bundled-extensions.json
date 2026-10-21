@@ -1,0 +1,296 @@
+[
+  {
+    "path": "extensions/AbuseFilter/extension.json",
+    "name": "Abuse Filter",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/CategoryTree/extension.json",
+    "name": "CategoryTree",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/Cite/extension.json",
+    "name": "Cite",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/CiteThisPage/extension.json",
+    "name": "CiteThisPage",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/CodeEditor/extension.json",
+    "name": "CodeEditor",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "extensions": {
+        "WikiEditor": ">= 0.5.2"
+      }
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/ConfirmEdit/extension.json",
+    "name": "ConfirmEdit",
+    "version": "1.6.0",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "1.6.0"
+  },
+  {
+    "path": "extensions/Gadgets/extension.json",
+    "name": "Gadgets",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/ImageMap/extension.json",
+    "name": "ImageMap",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/InputBox/extension.json",
+    "name": "InputBox",
+    "version": "0.3.0",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "0.3.0"
+  },
+  {
+    "path": "extensions/Interwiki/extension.json",
+    "name": "Interwiki",
+    "version": "3.2",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "3.2"
+  },
+  {
+    "path": "extensions/Math/extension.json",
+    "name": "Math",
+    "version": "3.0.0",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "3.0.0"
+  },
+  {
+    "path": "extensions/MultimediaViewer/extension.json",
+    "name": "MultimediaViewer",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/Nuke/extension.json",
+    "name": "Nuke",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/OATHAuth/extension.json",
+    "name": "OATHAuth",
+    "version": "0.5.0",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "0.5.0"
+  },
+  {
+    "path": "extensions/PageImages/extension.json",
+    "name": "PageImages",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/ParserFunctions/extension.json",
+    "name": "ParserFunctions",
+    "version": "1.6.1",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "1.6.1"
+  },
+  {
+    "path": "extensions/PdfHandler/extension.json",
+    "name": "PDF Handler",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/Renameuser/extension.json",
+    "name": "Renameuser",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/ReplaceText/extension.json",
+    "name": "Replace Text",
+    "version": "1.7",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "1.7"
+  },
+  {
+    "path": "extensions/Scribunto/extension.json",
+    "name": "Scribunto",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/SecureLinkFixer/extension.json",
+    "name": "SecureLinkFixer",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/SpamBlacklist/extension.json",
+    "name": "SpamBlacklist",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/SyntaxHighlight_GeSHi/extension.json",
+    "name": "SyntaxHighlight",
+    "version": "2.0",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "ability-shell": true
+      }
+    },
+    "previous": "2.0"
+  },
+  {
+    "path": "extensions/TemplateData/extension.json",
+    "name": "TemplateData",
+    "version": "0.1.2",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "0.1.2"
+  },
+  {
+    "path": "extensions/TextExtracts/extension.json",
+    "name": "TextExtracts",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "extensions/TitleBlacklist/extension.json",
+    "name": "TitleBlacklist",
+    "version": "1.5.0",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "1.5.0"
+  },
+  {
+    "path": "extensions/VisualEditor/extension.json",
+    "name": "VisualEditor",
+    "version": "0.1.2",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "0.1.2"
+  },
+  {
+    "path": "extensions/WikiEditor/extension.json",
+    "name": "WikiEditor",
+    "version": "0.5.3",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "0.5.3"
+  },
+  {
+    "path": "skins/MinervaNeue/skin.json",
+    "name": "MinervaNeue",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "skins/MonoBook/skin.json",
+    "name": "MonoBook",
+    "version": "bundled",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "bundled"
+  },
+  {
+    "path": "skins/Timeless/skin.json",
+    "name": "Timeless",
+    "version": "0.9.1",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "0.9.1"
+  },
+  {
+    "path": "skins/Vector/skin.json",
+    "name": "Vector",
+    "version": "1.0.0",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    },
+    "previous": "1.0.0"
+  }
+]

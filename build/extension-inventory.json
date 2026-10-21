@@ -1,0 +1,586 @@
+[
+  {
+    "package": "mediawiki/advanced-search",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "07367cad8661906317b0fee57136ebfbb58b57da",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/babel",
+    "previous": "2023.12",
+    "selected": "2023.12",
+    "commit": "0cd8f47583fad62e56aea6922d4c89a480b2cf97",
+    "requires": {
+      "MediaWiki": ">= 1.37.0"
+    }
+  },
+  {
+    "package": "mediawiki/checkuser",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "11fbd4a0e78c32dbe83307b9a23bc3215c17c667",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "ext-openssl": "*"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/cirrus-search",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "fa1f2403f35cfed1d992f6ed07097e8f824cff7d",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "extensions": {
+        "Elastica": ">= 6.0.1"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/citizen-skin",
+    "previous": "2.16.0",
+    "selected": "2.40.2",
+    "commit": "524b174ab6c0fd6a640894f2f7e9adb740917b0f",
+    "requires": {
+      "MediaWiki": ">= 1.39.4"
+    }
+  },
+  {
+    "package": "mediawiki/cldr",
+    "previous": "2023.12",
+    "selected": "2026.09",
+    "commit": "65b782dd845e6c4f9459e6350678803bee2b7a67",
+    "requires": {
+      "MediaWiki": ">= 1.34.0"
+    }
+  },
+  {
+    "package": "mediawiki/code-mirror",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "6db41acfa9116eef8ed1029bef25898a46a299d1",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/commons-metadata",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "98e8f221f48c168323b76127d920867fc441f674",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/cookie-warning",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "1575b84436437bdc80591af50ac63147f35521ca",
+    "requires": {
+      "MediaWiki": ">= 1.35.0"
+    }
+  },
+  {
+    "package": "mediawiki/disambiguator",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "6cef18f808335872801d82f404dea375ac610e0b",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/discord",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "2a560d9acc4af06dcb5f1f7fd9d695f848209160",
+    "requires": {
+      "MediaWiki": ">= 1.38.0"
+    }
+  },
+  {
+    "package": "mediawiki/discussion-tools",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "f6b06a030f746f72440983d1a7ddbdef936b825f",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "extensions": {
+        "VisualEditor": ">= 0.1.2",
+        "Linter": "*"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/dismissablesitenotice",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "1472645c7d3f305434131891c9c880f5e15bf6b4",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/echo",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "4835b6b1cb1261f96f067fa68da1f9a4fbbe94c8",
+    "requires": {
+      "MediaWiki": ">= 1.37.0"
+    }
+  },
+  {
+    "package": "mediawiki/elastica",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "4fb6424addd70e565c0dbd26d33086d4009550ba",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "ext-curl": "*"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/json-config",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "11138226c0e5afa5662ef9380c6230058ed89f97",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/linter",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "82f32ce524537a597b836c6d7e8b0df6766016f8",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/loops",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "00e0c9e35ec13fe5f629ccb7f4d23c5f28033d34",
+    "requires": {
+      "MediaWiki": ">=1.29"
+    }
+  },
+  {
+    "package": "mediawiki/mediasearch",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "96e868b1e46aff1b97cb3a94c654a90132fab380",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "octfx/multipurge",
+    "previous": "dev-master",
+    "selected": "1.2.1",
+    "commit": "da1a7cd0728df9c120085fbd55017f99cdcf9cd9",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "php": ">=8.0"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/nativesvghandler",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "2d5d95f31a5ea5f5e57e7ffa0dd0ce1a0399872c",
+    "requires": {
+      "MediaWiki": ">= 1.35.0"
+    }
+  },
+  {
+    "package": "octfx/plausible",
+    "previous": "dev-master",
+    "selected": "1.4.0",
+    "commit": "d36aa56da250f8e0ffeaaa8d7bdf9c8ac5d1e220",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "php": ">=8.0"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/popups",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "95f341e41eac6ca049bf242c0b8ba0ec3d7eb37e",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/related-articles",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "e5431a1c0bc3c8bfcce0b02d965324a51c5e4bc5",
+    "requires": {
+      "MediaWiki": ">= 1.31.0"
+    }
+  },
+  {
+    "package": "mediawiki/revisionslider",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "2acd352760c3ab57d2f54b3d4c69b4a27a14f2a0",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/rss",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "2da8200963089d4dbae4c9947dcadebe933ed9ae",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/sandbox-link",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "d153d515c2babbbfefece585d13d86b1857b07e2",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/shortdescription",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "9a103cce76d43c6f4bcdf314314904da7e951b88",
+    "requires": {
+      "MediaWiki": ">= 1.39.4"
+    }
+  },
+  {
+    "package": "mediawiki/tabber-neue",
+    "previous": "1.39.0",
+    "selected": "2.7.4",
+    "commit": "6e31b391f2d9c38863f959cdf176302252aae188",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/template-styles",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "bc7dd326920dd3342a1931a79b73c3ba1a2f85e0",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "octfx/template-styles-extender",
+    "previous": "dev-master",
+    "selected": "1.2.2",
+    "commit": "5b97d8f4481b03e148782cad0b52ae55457a24ba",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "php": ">=8.0"
+      },
+      "extensions": {
+        "TemplateStyles": ">= 1.0"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/thanks",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "e693b7bdb15d909207336c6380df2050c778bab2",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "extensions": {
+        "Echo": "*"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/twocolconflict",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "3a1ea91df930dff4c50349d9fa2aa88db2ec74b8",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/upload-wizard",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "70ebc5daf42322ab92443a6e241c6c11c8c06fe1",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "mediawiki/universal-language-selector",
+    "previous": "2023.12",
+    "selected": "2023.12",
+    "commit": "d1f42080b72421b1ae20d50f794c2a04f43932e2",
+    "requires": {
+      "MediaWiki": ">= 1.37.0"
+    }
+  },
+  {
+    "package": "mediawiki/variables",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "3efd415ccdcd1607d54ff771103a1b23333e9245",
+    "requires": {
+      "MediaWiki": ">= 1.29.0"
+    }
+  },
+  {
+    "package": "mediawiki/webauthn",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "c28d80d5f2fb09b75f3039aa7a6f3400e5c2831a",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "extensions": {
+        "OATHAuth": ">= 0.4.4"
+      }
+    }
+  },
+  {
+    "package": "octfx/wiki-seo",
+    "previous": "dev-REL1_39",
+    "selected": "v2.7.0",
+    "commit": "b204ec4c66f773265495c658484e288d109f4486",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "php": ">=7.4.0"
+      }
+    }
+  },
+  {
+    "package": "starcitizenwiki/embedvideo",
+    "previous": "dev-develop",
+    "selected": "3.4.3",
+    "commit": "5c0f542d29c59fe57b020868093d38e99c3bc95b",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "platform": {
+        "php": ">=8.0"
+      }
+    }
+  },
+  {
+    "package": "universal-omega/dynamic-page-list3",
+    "previous": "dev-main",
+    "selected": "3.5.2",
+    "commit": "f6a5bb468a6b808a5316d41c6fb6fdb50014ec27",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "edwardspec/mediawiki-aws-s3",
+    "previous": "v0.13.0",
+    "selected": "v0.13.1",
+    "commit": "f85bb579b57f22175ff0cbca7664ad26cacdbb58",
+    "requires": {
+      "MediaWiki": ">= 1.35.0"
+    }
+  },
+  {
+    "package": "mediawiki/swiftmailer",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "531d029701ee8e5b4e131ab78e3efe64fd855d11",
+    "requires": {
+      "MediaWiki": ">= 1.29.0"
+    }
+  },
+  {
+    "package": "mediawiki/semantic-media-wiki",
+    "previous": "~4.0",
+    "selected": "4.2.0",
+    "commit": "0a8af7546b81f6dcab3f336f14023c8e7aea3805",
+    "requires": {
+      "MediaWiki": ">= 1.35"
+    }
+  },
+  {
+    "package": "mediawiki/semantic-extra-special-properties",
+    "previous": "~3.0",
+    "selected": "3.0.5",
+    "commit": "37d3bd4769f14d211a24c49ecc8a11ee1c97cc1c",
+    "requires": {
+      "MediaWiki": ">= 1.35",
+      "extensions": {
+        "SemanticMediaWiki": "*"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/semantic-result-formats",
+    "previous": "~4.0",
+    "selected": "5.2.0",
+    "commit": "a2682d7841c442e82533360fd0f35e2b40c17d68",
+    "requires": {
+      "MediaWiki": ">= 1.39",
+      "extensions": {
+        "SemanticMediaWiki": ">= 4.2"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/semantic-scribunto",
+    "previous": "~2.2",
+    "selected": "2.3.3",
+    "commit": "af2e61df59f4dca2384636345d182e2897067189",
+    "requires": {
+      "MediaWiki": ">= 1.39",
+      "extensions": {
+        "Scribunto": "*",
+        "SemanticMediaWiki": ">= 4.1"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/semantic-drilldown",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "a55c844476bca53e295cd91f62e707bceebfa320",
+    "requires": {
+      "MediaWiki": ">= 1.39",
+      "platform": {
+        "php": ">= 7.4"
+      }
+    }
+  },
+  {
+    "package": "starcitizenwiki/apiunto",
+    "previous": "dev-develop",
+    "selected": "2.0.0",
+    "commit": "dcde187199658c0d383335762c5a5163669eac6a",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "extensions": {
+        "Scribunto": "*"
+      },
+      "platform": {
+        "php": ">=7.3.19"
+      }
+    }
+  },
+  {
+    "package": "mediawiki/page-view-info",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "82e5a1f8e45e0632a41dbe5fc0a3b73e1ed2a201",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "octfx/webp",
+    "previous": "dev-develop",
+    "selected": "2.0.0",
+    "commit": "7b056bcba8d82893fa2d105606079b326522c4de",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "extensions": {
+        "PictureHtmlSupport": "*"
+      }
+    }
+  },
+  {
+    "package": "starcitizenwiki/picture-html-support",
+    "previous": "dev-master",
+    "selected": "1.0.0",
+    "commit": "3a8fca91e24b6efb7b7f33d94cfaf9c5c96d251a",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "wikimedia/pluggable-auth",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "f7ba03299b82780ebc792c79780f46b4dc0cec37",
+    "requires": {
+      "MediaWiki": ">= 1.35.0"
+    }
+  },
+  {
+    "package": "wikimedia/open-i-d-connect",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "9b349a0c4b289074530dcc687067d192e852955e",
+    "requires": {
+      "MediaWiki": ">= 1.39.0",
+      "extensions": {
+        "PluggableAuth": ">= 7.0"
+      }
+    }
+  },
+  {
+    "package": "wikimedia/display-title",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "c94bb8f3b74a2b84bf4971d3e78550b2fce13fff",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "wikimedia/poem",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "a3eaff7d3608f39148e978afaffedf7f84ba919f",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "alpha5130/purge",
+    "previous": "2.1.1",
+    "selected": "2.1.1",
+    "commit": "4d162fe732a971d21cd9d3d67593c86c23a505d3",
+    "requires": {
+      "MediaWiki": ">= 1.35.0"
+    }
+  },
+  {
+    "package": "wikimedia/templatesandbox",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "fc1143264ec8a683ec10eb348a697bab5c2a31b4",
+    "requires": {
+      "MediaWiki": ">= 1.39.0"
+    }
+  },
+  {
+    "package": "wikimedia/usergroups",
+    "previous": "1.39.0",
+    "selected": "1.39.0",
+    "commit": "003eac8f360a977d2997702c012e7c9826e07774",
+    "requires": {
+      "MediaWiki": ">= 1.38.0"
+    }
+  }
+]

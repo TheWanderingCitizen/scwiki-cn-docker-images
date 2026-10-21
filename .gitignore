@@ -77,5 +77,14 @@ $RECYCLE.BIN/
 
 # env
 .env
+build/.metadata-cache/
+tools/vendor/
+tests/.artifacts/
+**/__pycache__/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux
+
+build/*.log
+build/diagnostic*.json
+tools/*.log
+image-validation.log

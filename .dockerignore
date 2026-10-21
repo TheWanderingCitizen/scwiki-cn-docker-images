@@ -1,0 +1,11 @@
+.git
+.env
+build/.metadata-cache
+tools/vendor
+tests/.artifacts
+**/__pycache__
+
+build/*.log
+build/diagnostic*.json
+tools/*.log
+image-validation.log

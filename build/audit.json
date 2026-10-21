@@ -1,0 +1,240 @@
+{
+    "advisories": {
+        "mediawiki/semantic-media-wiki": [
+            {
+                "advisoryId": "PKSA-8k3f-637m-ptt7",
+                "packageName": "mediawiki/semantic-media-wiki",
+                "affectedVersions": ">=3.0.0,<=7.2.1",
+                "title": "Semantic MediaWiki'a missing authorization in the smwtask API module allows unauthenticated access to admin-only maintenance tasks",
+                "cve": null,
+                "link": "https://github.com/advisories/GHSA-jr78-w6w5-m8f8",
+                "reportedAt": "2026-09-18T16:59:31+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-jr78-w6w5-m8f8"
+                    }
+                ],
+                "severity": "high"
+            },
+            {
+                "advisoryId": "PKSA-rt5h-3dwq-vdnx",
+                "packageName": "mediawiki/semantic-media-wiki",
+                "affectedVersions": ">=4.2.0,<=7.2.0",
+                "title": "Semantic MediaWiki's Special:FacetedSearch cstate hidden inputs enable reflected XSS (residual of CVE-2025-10354)",
+                "cve": null,
+                "link": "https://github.com/advisories/GHSA-9rcc-pmj8-ffhr",
+                "reportedAt": "2026-09-18T16:59:16+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-9rcc-pmj8-ffhr"
+                    }
+                ],
+                "severity": "medium"
+            },
+            {
+                "advisoryId": "PKSA-5kcn-7vbr-1pdw",
+                "packageName": "mediawiki/semantic-media-wiki",
+                "affectedVersions": "<=7.1.0",
+                "title": "Semantic MediaWiki has a query debug output XSS (`DebugFormatter`)",
+                "cve": "CVE-2026-77610",
+                "link": "https://github.com/advisories/GHSA-q5fm-9mx6-44f4",
+                "reportedAt": "2026-09-18T16:53:23+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-q5fm-9mx6-44f4"
+                    }
+                ],
+                "severity": "medium"
+            },
+            {
+                "advisoryId": "PKSA-k3v8-z9j2-2f38",
+                "packageName": "mediawiki/semantic-media-wiki",
+                "affectedVersions": "<=7.1.0",
+                "title": "Semantic MediaWiki has an open redirect in Special:URIResolver",
+                "cve": "CVE-2026-77609",
+                "link": "https://github.com/advisories/GHSA-hw3m-8j5x-94ff",
+                "reportedAt": "2026-09-18T16:51:25+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-hw3m-8j5x-94ff"
+                    }
+                ],
+                "severity": "medium"
+            },
+            {
+                "advisoryId": "PKSA-stqx-crkb-215f",
+                "packageName": "mediawiki/semantic-media-wiki",
+                "affectedVersions": "<=7.1.0",
+                "title": "Semantic MediaWiki affected by Special:Ask table `sep` parameter reflected XSS",
+                "cve": "CVE-2026-77607",
+                "link": "https://github.com/advisories/GHSA-7xv3-gf2g-498h",
+                "reportedAt": "2026-09-18T16:50:01+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-7xv3-gf2g-498h"
+                    }
+                ],
+                "severity": "medium"
+            },
+            {
+                "advisoryId": "PKSA-2trz-n7bz-xg2h",
+                "packageName": "mediawiki/semantic-media-wiki",
+                "affectedVersions": "<=7.1.0",
+                "title": "Semantic MediaWiki has reflected XSS in `Special:SearchByProperty` (`property` and `value` parameters)",
+                "cve": "CVE-2026-77608",
+                "link": "https://github.com/advisories/GHSA-59xw-qv23-j3rc",
+                "reportedAt": "2026-09-18T16:42:50+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-59xw-qv23-j3rc"
+                    }
+                ],
+                "severity": "medium"
+            },
+            {
+                "advisoryId": "PKSA-6xyn-p8dg-1kgj",
+                "packageName": "mediawiki/semantic-media-wiki",
+                "affectedVersions": "<=7.1.0",
+                "title": "Semantic MediaWiki has reflected XSS in Special:Ask plain table headers",
+                "cve": "CVE-2026-77606",
+                "link": "https://github.com/advisories/GHSA-3jp5-3h47-28qf",
+                "reportedAt": "2026-09-18T16:40:36+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-3jp5-3h47-28qf"
+                    }
+                ],
+                "severity": "medium"
+            },
+            {
+                "advisoryId": "PKSA-q8ty-xz99-jhhj",
+                "packageName": "mediawiki/semantic-media-wiki",
+                "affectedVersions": ">=3.1.0,<7.0.0",
+                "title": "Semantic MediaWiki vulnerable to stored XSS through wikitext via improper use of non-reserved data attributes",
+                "cve": "CVE-2025-61682",
+                "link": "https://github.com/advisories/GHSA-hg8h-557g-q8pp",
+                "reportedAt": "2026-09-18T16:07:29+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-hg8h-557g-q8pp"
+                    }
+                ],
+                "severity": "high"
+            }
+        ],
+        "starcitizenwiki/embedvideo": [
+            {
+                "advisoryId": "PKSA-1f7b-5f9b-ggt9",
+                "packageName": "starcitizenwiki/embedvideo",
+                "affectedVersions": "<=4.0.0",
+                "title": "Mediawiki EmbedVideo Extension has stored XSS via malformed src url with $wgEmbedVideoRequireConsent disabled",
+                "cve": "CVE-2026-57440",
+                "link": "https://github.com/advisories/GHSA-v65j-hff3-753c",
+                "reportedAt": "2026-09-25T15:03:43+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-v65j-hff3-753c"
+                    }
+                ],
+                "severity": "high"
+            },
+            {
+                "advisoryId": "PKSA-wg3k-7dyt-r1n5",
+                "packageName": "starcitizenwiki/embedvideo",
+                "affectedVersions": "<=4.0.0",
+                "title": "StarCitizenWiki Extension Embed Video: Stored XSS via malformed src url with $wgEmbedVideoRequireConsent enabled",
+                "cve": "CVE-2026-55692",
+                "link": "https://github.com/advisories/GHSA-5c7p-g73q-rpg5",
+                "reportedAt": "2026-06-19T21:41:57+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-5c7p-g73q-rpg5"
+                    }
+                ],
+                "severity": "high"
+            },
+            {
+                "advisoryId": "PKSA-17vj-28c7-d53v",
+                "packageName": "starcitizenwiki/embedvideo",
+                "affectedVersions": "<=4.0.0",
+                "title": "StarCitizenWiki Extension Embed Video: Stored XSS via unsanitized class passed to template",
+                "cve": "CVE-2026-55691",
+                "link": "https://github.com/advisories/GHSA-7h5p-637f-jfr7",
+                "reportedAt": "2026-06-19T21:15:03+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-7h5p-637f-jfr7"
+                    }
+                ],
+                "severity": "high"
+            },
+            {
+                "advisoryId": "PKSA-bvqp-6135-khxc",
+                "packageName": "starcitizenwiki/embedvideo",
+                "affectedVersions": "<=4.0.0",
+                "title": "StarCitizenWiki Extension Embed Video: Stored XSS via unsanitized service name in exception text",
+                "cve": "CVE-2026-55690",
+                "link": "https://github.com/advisories/GHSA-c29q-5xm7-5p62",
+                "reportedAt": "2026-06-19T21:14:15+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-c29q-5xm7-5p62"
+                    }
+                ],
+                "severity": "high"
+            },
+            {
+                "advisoryId": "PKSA-fnny-x6d4-t1qw",
+                "packageName": "starcitizenwiki/embedvideo",
+                "affectedVersions": "<=4.0.0",
+                "title": "Star Citizen  EmbedVideo Extension Stored XSS through wikitext caused by usage of non-reserved data attributes",
+                "cve": "CVE-2025-59839",
+                "link": "https://github.com/advisories/GHSA-4j5h-mvj3-m48v",
+                "reportedAt": "2025-09-24T20:11:17+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-4j5h-mvj3-m48v"
+                    }
+                ],
+                "severity": "high"
+            }
+        ],
+        "universal-omega/dynamic-page-list3": [
+            {
+                "advisoryId": "PKSA-5fdy-91p7-w18s",
+                "packageName": "universal-omega/dynamic-page-list3",
+                "affectedVersions": "<3.6.4",
+                "title": "DynamicPageList3 vulnerability exposes hidden/suppressed usernames",
+                "cve": "CVE-2025-53625",
+                "link": "https://github.com/advisories/GHSA-7pgw-q3qp-6pgq",
+                "reportedAt": "2025-07-10T13:10:20+00:00",
+                "sources": [
+                    {
+                        "name": "GitHub",
+                        "remoteId": "GHSA-7pgw-q3qp-6pgq"
+                    }
+                ],
+                "severity": "high"
+            }
+        ]
+    },
+    "abandoned": {
+        "fgrosse/phpasn1": null,
+        "swiftmailer/swiftmailer": "symfony/mailer",
+        "web-auth/metadata-service": "web-auth/webauthn-lib"
+    },
+    "filter": []
+}
