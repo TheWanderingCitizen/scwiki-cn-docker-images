@@ -8,10 +8,11 @@ advisory exceptions from that work are retained. Do not restore its application
 artifacts or SwiftMailer patch.
 
 The complete candidate builds and passes fresh-install and restored-database
-checks described below. **It is not yet cleared for publication or production
-deployment.** `build/release-gates.json` records the outstanding gates; CI refuses
-publication while any gate or its evidence is missing. A clean audit alone is
-not release authorization. No merge or production deployment is automatic.
+checks described below. Publication to the existing main GHCR targets follows
+successful automated validation after merge. Per the owner's instruction,
+production evidence is not an additional CI publication gate. Outstanding
+operator checks remain documented below and in `build/validation.json`; they
+are not represented as completed. No merge or production deployment is automatic.
 
 ## Baseline evidence
 
@@ -197,7 +198,7 @@ on one refresh job. Job tests now explicitly use `--memory-limit 512M`; FPM
 capacity is unchanged. The affected page's refresh was rerun successfully at
 512 MiB. This is a bounded CLI setting, not an unlimited memory workaround.
 
-Still required: legacy SMW state migration, existing administrator TOTP/recovery
+Outstanding operator checks: legacy SMW state migration, existing administrator TOTP/recovery
 login, complete representative production report/output comparisons, deployed
 OIDC, S3 and SMTP/TLS, actual mounted-code inventory, uploads/volume restoration
 and a matching rollback rehearsal. Do not mark these passed merely because the
@@ -255,9 +256,9 @@ CI retains GHCR `main-latest` and dated `main-YY.MM.DD.RUN` publication targets
 (the workflow run number makes repeated releases on one day distinct). PR checks
 never publish. Main publication transfers the tested image as a short-lived
 artifact and verifies its image ID, rather than rebuilding after tests. Actions
-are pinned. Main publication requires local checks and
-reviewed production evidence in `build/release-gates.json`; all gates currently
-remain closed until the outstanding operator validations are completed.
+are pinned. Main publication requires the automated validation job to pass.
+There is no additional manual-evidence gate; deployment checks remain operator
+follow-up items and do not block image publication.
 
 ## Upstream references
 
