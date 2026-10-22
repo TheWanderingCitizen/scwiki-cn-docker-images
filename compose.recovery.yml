@@ -1,0 +1,16 @@
+# Use with docker-compose.production.yml after completing docs/security-recovery.md.
+services:
+  mediawiki:
+    image: ${RECOVERY_IMAGE:?Set the validated immutable application image}
+    volumes:
+      - recovery-smw-state:/usr/local/smw
+  mediawiki-web:
+    image: nginx:stable-bookworm@sha256:552e7481ca93ffccd046aa658dbbed22caefbc09c66fa7cd247cbb90b8a5c609
+volumes:
+  mediawiki-app:
+    name: ${RECOVERY_APP_VOLUME:?Set a NEW versioned application volume}
+  mediawiki-cache:
+    name: ${RECOVERY_CACHE_VOLUME:?Set a NEW versioned disposable cache volume}
+  recovery-smw-state:
+    external: true
+    name: ${RECOVERY_SMW_VOLUME:?Set the restored copy of legacy SMW state}

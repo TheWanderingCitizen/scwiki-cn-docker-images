@@ -1,0 +1,7 @@
+{
+    "advisories": [],
+    "abandoned": {
+        "doctrine/cache": null
+    },
+    "filter": []
+}

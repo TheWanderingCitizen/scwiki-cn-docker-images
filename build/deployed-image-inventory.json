@@ -1,0 +1,841 @@
+{
+  "imageTag": "main-25.09.12.40",
+  "indexDigest": "sha256:43aed5b54cb1729e3d1d4e38fc6105241c96c1f33ee42de9eb887872fc29f1f6",
+  "amd64Digest": "sha256:176c7690b1dc6f04a457430bdc149dc3c5eb982e5923ed98383ef53038bcbbfe",
+  "php": "8.3.25",
+  "mediawiki": "1.43.3",
+  "smw": "6.0.1",
+  "scope": "Image filesystem; mounted production application volume still needs inventory",
+  "packages": [
+    {
+      "name": "alistair3149/apiunto",
+      "version": "1.43.0",
+      "reference": "feat-v3"
+    },
+    {
+      "name": "alpha5130/purge",
+      "version": "2.1.1",
+      "reference": "master"
+    },
+    {
+      "name": "aws/aws-crt-php",
+      "version": "v1.2.7",
+      "reference": "d71d9906c7bb63a28295447ba12e74723bd3730e"
+    },
+    {
+      "name": "aws/aws-sdk-php",
+      "version": "3.337.3",
+      "reference": "06dfc8f76423b49aaa181debd25bbdc724c346d6"
+    },
+    {
+      "name": "bacon/bacon-qr-code",
+      "version": "v3.0.1",
+      "reference": "f9cc1f52b5a463062251d666761178dbdb6b544f"
+    },
+    {
+      "name": "chariz/details",
+      "version": "1.43.0",
+      "reference": "main"
+    },
+    {
+      "name": "christian-riesen/base32",
+      "version": "1.6.0",
+      "reference": "2e82dab3baa008e24a505649b0d583c31d31e894"
+    },
+    {
+      "name": "composer/installers",
+      "version": "v2.3.0",
+      "reference": "12fb2dfe5e16183de69e784a7b84046c43d97e8e"
+    },
+    {
+      "name": "composer/semver",
+      "version": "3.4.3",
+      "reference": "4313d26ada5e0c4edfbd1dc481a92ff7bff91f12"
+    },
+    {
+      "name": "cssjanus/cssjanus",
+      "version": "v2.3.0",
+      "reference": "c5868a543c466c994ba5bf9b3297e150105ab803"
+    },
+    {
+      "name": "dasprid/enum",
+      "version": "1.0.6",
+      "reference": "8dfd07c6d2cf31c8da90c53b83c026c7696dda90"
+    },
+    {
+      "name": "data-values/common",
+      "version": "1.2.0",
+      "reference": "b21c2bd3b213d6233a645003df4f88956afc52f4"
+    },
+    {
+      "name": "data-values/data-values",
+      "version": "3.1.0",
+      "reference": "1084142918095dfedf9b6cc0de0755f8c4628264"
+    },
+    {
+      "name": "data-values/geo",
+      "version": "4.5.1",
+      "reference": "eb1996b7ece9d501a86772755b1ba5dac25a540f"
+    },
+    {
+      "name": "data-values/interfaces",
+      "version": "1.2.0",
+      "reference": "22573cd52a7b37416f28ed6a8d8706543b0d430a"
+    },
+    {
+      "name": "data-values/validators",
+      "version": "1.0.0",
+      "reference": "83dbac2c5e9442e8fa2119c8b941ecb88156abe8"
+    },
+    {
+      "name": "edwardspec/mediawiki-aws-s3",
+      "version": "dev-master",
+      "reference": "7a9b9b0587429a4e8842dd1e68abc41c0efd1177"
+    },
+    {
+      "name": "elasticsearch/elasticsearch",
+      "version": "v7.17.3",
+      "reference": "b8a60b4136ee31117d1aa1b19879530eb6d11efb"
+    },
+    {
+      "name": "endroid/qr-code",
+      "version": "5.1.0",
+      "reference": "393fec6c4cbdc1bd65570ac9d245704428010122"
+    },
+    {
+      "name": "ezimuel/guzzlestreams",
+      "version": "4.1.0",
+      "reference": "903161be81e9f497cc42fb7db982404a4e6441b0"
+    },
+    {
+      "name": "ezimuel/ringphp",
+      "version": "1.4.0",
+      "reference": "bc983599ec7add50c00e420e867c403c8ed16ae7"
+    },
+    {
+      "name": "guzzlehttp/guzzle",
+      "version": "7.9.2",
+      "reference": "d281ed313b989f213357e3be1a179f02196ac99b"
+    },
+    {
+      "name": "guzzlehttp/promises",
+      "version": "2.3.0",
+      "reference": "481557b130ef3790cf82b713667b43030dc9c957"
+    },
+    {
+      "name": "guzzlehttp/psr7",
+      "version": "2.8.0",
+      "reference": "21dc724a0583619cd1652f673303492272778051"
+    },
+    {
+      "name": "jakobo/hotp-php",
+      "version": "v2.0.0",
+      "reference": "ff2f13d1918001e54b3f49deb1d366bcfcc98437"
+    },
+    {
+      "name": "jeroen/file-fetcher",
+      "version": "6.1.1",
+      "reference": "d9fadc0486ef690ce7dd9c6d32d6e5f2857bfd80"
+    },
+    {
+      "name": "jumbojett/openid-connect-php",
+      "version": "v1.0.2",
+      "reference": "f327e7eb0626d55ddb6abc7b7c9e6ad3af4e5d51"
+    },
+    {
+      "name": "justinrainbow/json-schema",
+      "version": "5.3.0",
+      "reference": "feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8"
+    },
+    {
+      "name": "liuggio/statsd-php-client",
+      "version": "v1.0.18",
+      "reference": "c42e6d6687b7b2d7683186ec7f4f03351cc3dbca"
+    },
+    {
+      "name": "mck89/peast",
+      "version": "v1.16.3",
+      "reference": "645ec21b650bc2aced18285c85f220d22afc1430"
+    },
+    {
+      "name": "mediawiki/advanced-search",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/babel",
+      "version": "2025.03",
+      "reference": "e4633d84107e3093bfb019f507037123d571dd0c"
+    },
+    {
+      "name": "mediawiki/checkuser",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/cirrus-search",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/cldr",
+      "version": "2025.03",
+      "reference": "0c5960510afd076e752f923d847887dd093a6da9"
+    },
+    {
+      "name": "mediawiki/code-mirror",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/commons-metadata",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/cookie-warning",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/disambiguator",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/discord",
+      "version": "1.43.0",
+      "reference": "2a560d9acc4af06dcb5f1f7fd9d695f848209160"
+    },
+    {
+      "name": "mediawiki/discussion-tools",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/dismissablesitenotice",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/display-title",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/echo",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/elastica",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/graph",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/http-request",
+      "version": "2.0.0",
+      "reference": "1818e0731561621121fcc9da90f244a727ef0989"
+    },
+    {
+      "name": "mediawiki/json-config",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/linter",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/loops",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/mediasearch",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/nativesvghandler",
+      "version": "1.43.0",
+      "reference": "master"
+    },
+    {
+      "name": "mediawiki/page-view-info",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/parser-hooks",
+      "version": "1.6.1",
+      "reference": "45660efef737bcf33abbbb12c1ddb049c4e713fe"
+    },
+    {
+      "name": "mediawiki/parsermigration",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/popups",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/related-articles",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/revisionslider",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/rss",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/sandbox-link",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/semantic-drilldown",
+      "version": "1.43.0",
+      "reference": "master"
+    },
+    {
+      "name": "mediawiki/semantic-extra-special-properties",
+      "version": "dev-master",
+      "reference": "a5aa90a6af1fb2459b9c5bd085adc90b78566a3a"
+    },
+    {
+      "name": "mediawiki/semantic-media-wiki",
+      "version": "dev-master",
+      "reference": "e3abb6e255174a67ceb9c2b23c07ba6b3283dfbf"
+    },
+    {
+      "name": "mediawiki/semantic-result-formats",
+      "version": "dev-master",
+      "reference": "fd6dfd804bf44d5923a1527be9a1f6e421e08456"
+    },
+    {
+      "name": "mediawiki/semantic-scribunto",
+      "version": "dev-master",
+      "reference": "15a49f78352ee95c66575b808e1516939fc2e7d8"
+    },
+    {
+      "name": "mediawiki/swiftmailer",
+      "version": "1.43.0",
+      "reference": "master"
+    },
+    {
+      "name": "mediawiki/template-styles",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/thanks",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/twocolconflict",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/universal-language-selector",
+      "version": "2025.03",
+      "reference": "d5eeb430b0ee9914a336d61d681b4fd89e2cc1ce"
+    },
+    {
+      "name": "mediawiki/upload-wizard",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "mediawiki/variables",
+      "version": "1.43.0",
+      "reference": "master"
+    },
+    {
+      "name": "mediawiki/webauthn",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "monolog/monolog",
+      "version": "2.9.3",
+      "reference": "a30bfe2e142720dfa990d0a7e573997f5d884215"
+    },
+    {
+      "name": "mtdowling/jmespath.php",
+      "version": "2.8.0",
+      "reference": "a2a865e05d5f420b50cc2f85bb78d565db12a6bc"
+    },
+    {
+      "name": "nicmart/tree",
+      "version": "0.4.0",
+      "reference": "e992740d9ee7975c3fc324ddaafaf63b21e17704"
+    },
+    {
+      "name": "nyholm/dsn",
+      "version": "2.0.1",
+      "reference": "9445621b426bac8c0ca161db8cd700da00a4e618"
+    },
+    {
+      "name": "octfx/multipurge",
+      "version": "dev-master",
+      "reference": "09f4457ba6302c950a5503541b97732a287ac8df"
+    },
+    {
+      "name": "octfx/plausible",
+      "version": "dev-master",
+      "reference": "f5266f30018ed7a26836c04fe22c64d082ece799"
+    },
+    {
+      "name": "octfx/template-styles-extender",
+      "version": "dev-master",
+      "reference": "06f71602f38b0529ff968e3643b82df1f87ab6da"
+    },
+    {
+      "name": "octfx/webp",
+      "version": "dev-develop",
+      "reference": "53f49a517c3e381c0cc62298820ceee5a0c525a4"
+    },
+    {
+      "name": "octfx/wiki-seo",
+      "version": "dev-master",
+      "reference": "49bee29c5eb53a589d7d9044540f5749734a5117"
+    },
+    {
+      "name": "onoi/blob-store",
+      "version": "1.2.1",
+      "reference": "c3e1f15214977e904fc0e91e0480175a464977ce"
+    },
+    {
+      "name": "onoi/cache",
+      "version": "1.2.0",
+      "reference": "ecc999186aab7c8db411aedd892b2e5fe5a0b422"
+    },
+    {
+      "name": "onoi/callback-container",
+      "version": "2.0.0",
+      "reference": "cf2f4dda1b2479bc786985fdb5554af528d03e52"
+    },
+    {
+      "name": "onoi/event-dispatcher",
+      "version": "1.1.0",
+      "reference": "2af64e3997fc59b6d1e1f8f77e65fd6311c37109"
+    },
+    {
+      "name": "onoi/message-reporter",
+      "version": "1.4.2",
+      "reference": "ead8ef8f2868ccee6881e471295ebbaf8428c96c"
+    },
+    {
+      "name": "oojs/oojs-ui",
+      "version": "v0.51.2",
+      "reference": "9a2b2b42aac087db15c8a91fd6bbcef78dbd9898"
+    },
+    {
+      "name": "paragonie/constant_time_encoding",
+      "version": "v3.0.0",
+      "reference": "df1e7fde177501eee2037dd159cf04f5f301a512"
+    },
+    {
+      "name": "paragonie/random_compat",
+      "version": "v9.99.100",
+      "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
+    },
+    {
+      "name": "param-processor/param-processor",
+      "version": "1.12.0",
+      "reference": "0850dc2af72d31b8f645e0f87a44ff4b68583a64"
+    },
+    {
+      "name": "pear/console_getopt",
+      "version": "v1.4.3",
+      "reference": "a41f8d3e668987609178c7c4a9fe48fecac53fa0"
+    },
+    {
+      "name": "pear/mail",
+      "version": "v2.0.0",
+      "reference": "eb053f8b74f4f3178105fcf001626e63068c0dbc"
+    },
+    {
+      "name": "pear/mail_mime",
+      "version": "1.10.12",
+      "reference": "d032c7c9335e96d5954ac6e93d33955f3b7246e2"
+    },
+    {
+      "name": "pear/net_smtp",
+      "version": "1.12.1",
+      "reference": "5d7ba854d75a7c207d8581de1cc6fd2895ae2518"
+    },
+    {
+      "name": "pear/net_socket",
+      "version": "v1.2.2",
+      "reference": "bbe6a12bb4f7059dba161f6ddd43f369c0ec8d09"
+    },
+    {
+      "name": "pear/net_url2",
+      "version": "v2.2.3",
+      "reference": "c1f2b316ed9b05e881cdb494f7550ddf817c76c8"
+    },
+    {
+      "name": "pear/pear-core-minimal",
+      "version": "v1.10.16",
+      "reference": "c0f51b45f50683bf5bbf558036854ebc9b54d033"
+    },
+    {
+      "name": "pear/pear_exception",
+      "version": "v1.0.2",
+      "reference": "b14fbe2ddb0b9f94f5b24cf08783d599f776fff0"
+    },
+    {
+      "name": "phpseclib/phpseclib",
+      "version": "3.0.46",
+      "reference": "56483a7de62a6c2a6635e42e93b8a9e25d4f0ec6"
+    },
+    {
+      "name": "psr/container",
+      "version": "1.1.2",
+      "reference": "513e0666f7216c7459170d56df27dfcefe1689ea"
+    },
+    {
+      "name": "psr/http-client",
+      "version": "1.0.3",
+      "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90"
+    },
+    {
+      "name": "psr/http-factory",
+      "version": "1.1.0",
+      "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
+    },
+    {
+      "name": "psr/http-message",
+      "version": "1.1",
+      "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
+    },
+    {
+      "name": "psr/log",
+      "version": "1.1.4",
+      "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+    },
+    {
+      "name": "ralouphie/getallheaders",
+      "version": "3.0.3",
+      "reference": "120b605dfeb996808c31b6477290a714d356e822"
+    },
+    {
+      "name": "react/promise",
+      "version": "v3.3.0",
+      "reference": "23444f53a813a3296c1368bb104793ce8d88f04a"
+    },
+    {
+      "name": "ruflin/elastica",
+      "version": "7.3.1",
+      "reference": "7c61a630c3d456b00a5610960ae3a9bd29987469"
+    },
+    {
+      "name": "seld/jsonlint",
+      "version": "1.10.2",
+      "reference": "9bb7db07b5d66d90f6ebf542f09fc67d800e5259"
+    },
+    {
+      "name": "serialization/serialization",
+      "version": "4.1.0",
+      "reference": "4403fbab83e0187791d35caef4eef4395811e58d"
+    },
+    {
+      "name": "starcitizentools/citizen-skin",
+      "version": "dev-main",
+      "reference": "5b27b26edc76ec2d65d92f6b9708b9082140d23c"
+    },
+    {
+      "name": "starcitizentools/floating-ui",
+      "version": "dev-main",
+      "reference": "main"
+    },
+    {
+      "name": "starcitizentools/short-description",
+      "version": "dev-main",
+      "reference": "main"
+    },
+    {
+      "name": "starcitizentools/tabber-neue",
+      "version": "dev-main",
+      "reference": "main"
+    },
+    {
+      "name": "starcitizentools/thumbro",
+      "version": "dev-main",
+      "reference": "main"
+    },
+    {
+      "name": "starcitizenwiki/embedvideo",
+      "version": "dev-master",
+      "reference": "6e48692fa0e16a8b1b9fb5311f8c35fcd3732910"
+    },
+    {
+      "name": "starcitizenwiki/picture-html-support",
+      "version": "dev-master",
+      "reference": "3c838e54ae31fd0550b0bad266c79833fc282b8e"
+    },
+    {
+      "name": "symfony/css-selector",
+      "version": "v5.4.45",
+      "reference": "4f7f3c35fba88146b56d0025d20ace3f3901f097"
+    },
+    {
+      "name": "symfony/deprecation-contracts",
+      "version": "v3.6.0",
+      "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+    },
+    {
+      "name": "symfony/polyfill-php73",
+      "version": "v1.33.0",
+      "reference": "0f68c03565dcaaf25a890667542e8bd75fe7e5bb"
+    },
+    {
+      "name": "symfony/polyfill-php82",
+      "version": "v1.31.0",
+      "reference": "5d2ed36f7734637dacc025f179698031951b1692"
+    },
+    {
+      "name": "symfony/polyfill-php83",
+      "version": "v1.31.0",
+      "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491"
+    },
+    {
+      "name": "symfony/yaml",
+      "version": "v5.4.45",
+      "reference": "a454d47278cc16a5db371fe73ae66a78a633371e"
+    },
+    {
+      "name": "universal-omega/dynamic-page-list3",
+      "version": "4.0.0-alpha.5",
+      "reference": "64d615faa5d1e751d0494d2c36792e300422a16b"
+    },
+    {
+      "name": "wikimedia/assert",
+      "version": "v0.5.1",
+      "reference": "27c983fddac1197dc37f6a7cec00fc02861529cd"
+    },
+    {
+      "name": "wikimedia/at-ease",
+      "version": "v3.0.0",
+      "reference": "89f2ec17fd99f551d4f61db59ac60d9a8e3bbc34"
+    },
+    {
+      "name": "wikimedia/base-convert",
+      "version": "v2.0.2",
+      "reference": "aa997185e0b42c1f61a11f3e1980cad144175111"
+    },
+    {
+      "name": "wikimedia/bcp-47-code",
+      "version": "v2.0.0",
+      "reference": "0d2204a8c3bb99be6253f9326df1c61093d2bb05"
+    },
+    {
+      "name": "wikimedia/cdb",
+      "version": "3.0.0",
+      "reference": "3d7622f39319ea2149cac92415222d1fb39c46d0"
+    },
+    {
+      "name": "wikimedia/cldr-plural-rule-parser",
+      "version": "v2.0.0",
+      "reference": "83d78cb8018d5c0f66fd6d0efff6a8ae2de92d36"
+    },
+    {
+      "name": "wikimedia/common-passwords",
+      "version": "v0.5.0",
+      "reference": "ff3920985ef3c2e23d3b262e0620ff3f83292ac3"
+    },
+    {
+      "name": "wikimedia/composer-merge-plugin",
+      "version": "v2.1.0",
+      "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc"
+    },
+    {
+      "name": "wikimedia/css-sanitizer",
+      "version": "v5.5.0",
+      "reference": "72d751f04c09ff92b31426208025e5c859e9b4af"
+    },
+    {
+      "name": "wikimedia/html-formatter",
+      "version": "4.1.0",
+      "reference": "c2fdae55da33feb6d44d34ddc66c4b007981bcf2"
+    },
+    {
+      "name": "wikimedia/idle-dom",
+      "version": "v1.0.0",
+      "reference": "631555d5868bf29427cb015906e666faf09abeea"
+    },
+    {
+      "name": "wikimedia/ip-utils",
+      "version": "5.0.0",
+      "reference": "119e0ed321e967b4f5748a404fa8a3eb5dad4aa3"
+    },
+    {
+      "name": "wikimedia/json-codec",
+      "version": "v3.0.3",
+      "reference": "6950c6aae8b97cbb37779675f4a475616caeaf46"
+    },
+    {
+      "name": "wikimedia/less.php",
+      "version": "v5.1.2",
+      "reference": "39b1fbbdd3d95c5279f231d2298f3866fa869fcd"
+    },
+    {
+      "name": "wikimedia/lucene-explain-parser",
+      "version": "2.0.0",
+      "reference": "82a90019468290a6009a9f61010bd0ffd7e8fc10"
+    },
+    {
+      "name": "wikimedia/minify",
+      "version": "2.9.0",
+      "reference": "244bbb0c0acf0c1679078cc87cbc95c79ad9f33f"
+    },
+    {
+      "name": "wikimedia/normalized-exception",
+      "version": "v2.0.0",
+      "reference": "ae352bb80f1c345d5cd74b82bbd02e012bf01662"
+    },
+    {
+      "name": "wikimedia/object-factory",
+      "version": "v5.0.1",
+      "reference": "a0439aac5f14e218dc1f40a98eb14e4b26a01341"
+    },
+    {
+      "name": "wikimedia/openidconnect",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "wikimedia/parsoid",
+      "version": "v0.20.3",
+      "reference": "c31cc6f74c422926bae5f2d0e19b6b7ccaf053fa"
+    },
+    {
+      "name": "wikimedia/php-session-serializer",
+      "version": "v3.0.0",
+      "reference": "9d52c57064a1db78cd494a70ec316e1952cf7f1a"
+    },
+    {
+      "name": "wikimedia/pluggable-auth",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "wikimedia/poem",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "wikimedia/purtle",
+      "version": "v2.0.0",
+      "reference": "af5b7f1da5bbfea6f2b7992600bfdaf258f61762"
+    },
+    {
+      "name": "wikimedia/relpath",
+      "version": "4.0.1",
+      "reference": "313611bd8a11d1a624d5f67311f92f9f85906298"
+    },
+    {
+      "name": "wikimedia/remex-html",
+      "version": "4.1.1",
+      "reference": "3dd8344b57b2939f604a474b76d422f24471b436"
+    },
+    {
+      "name": "wikimedia/request-timeout",
+      "version": "2.0.0",
+      "reference": "eb2e714381584678148423f5f760abd4edab5d2e"
+    },
+    {
+      "name": "wikimedia/running-stat",
+      "version": "v2.1.0",
+      "reference": "0aa66cf58f98ca2de9972a8177cbec625c4c9969"
+    },
+    {
+      "name": "wikimedia/scoped-callback",
+      "version": "v5.0.0",
+      "reference": "7fa061561a70c49e5e5e6d40dd8f7c151affa0f3"
+    },
+    {
+      "name": "wikimedia/services",
+      "version": "4.0.0",
+      "reference": "87f71136c19ca4769dcb2b870e565dceb72e23fb"
+    },
+    {
+      "name": "wikimedia/shellbox",
+      "version": "4.1.1",
+      "reference": "6fd831dca0a025685c953effbc489fe67c6accfc"
+    },
+    {
+      "name": "wikimedia/templatesandbox",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "wikimedia/textcat",
+      "version": "2.0.0",
+      "reference": "dfdfb1c41bb016814a9d4da3aa68b62437b54a82"
+    },
+    {
+      "name": "wikimedia/timestamp",
+      "version": "v4.1.1",
+      "reference": "138f3099b46e3f6679ac100e5ab1932e89746a05"
+    },
+    {
+      "name": "wikimedia/usergroups",
+      "version": "1.43.0",
+      "reference": "REL1_43"
+    },
+    {
+      "name": "wikimedia/utfnormal",
+      "version": "4.0.0",
+      "reference": "6f3690d3ca446d9745fa3410bb993470afd7bc25"
+    },
+    {
+      "name": "wikimedia/wait-condition-loop",
+      "version": "v2.0.2",
+      "reference": "9bb0894e8c5195d43b2f2babbe4cc8f36bd5be0e"
+    },
+    {
+      "name": "wikimedia/wikipeg",
+      "version": "4.0.2",
+      "reference": "d1fc85f7896368def625a99c2a97f6803bc795d7"
+    },
+    {
+      "name": "wikimedia/wrappedstring",
+      "version": "v4.0.1",
+      "reference": "0d526868d92fa855c70a845336a777c63b30b400"
+    },
+    {
+      "name": "wikimedia/xmp-reader",
+      "version": "0.9.4",
+      "reference": "0c13a18f322c3fdd4013148d5a647c1670ad82d3"
+    },
+    {
+      "name": "wikimedia/zest-css",
+      "version": "3.0.4",
+      "reference": "636a1c88bbd8681c08f0c9fc8eed83a2a443b4f4"
+    },
+    {
+      "name": "zordius/lightncandy",
+      "version": "v1.2.6",
+      "reference": "b451f73e8b5c73e62e365997ba3c993a0376b72a"
+    }
+  ]
+}
